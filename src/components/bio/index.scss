@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .bio {
   margin-bottom: 24px;
@@ -16,7 +16,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       height: 50px;
-      content: "";
+      content: '';
       -webkit-transform: rotate(-42deg);
       transform: rotate(-42deg);
       top: -30px;
@@ -60,6 +60,7 @@
   a {
     margin-right: 8px;
     font-size: 80%;
+    display: inline-block;
 
     &.visited {
       text-decoration: none;
