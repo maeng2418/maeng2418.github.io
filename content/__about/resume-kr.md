@@ -5,22 +5,23 @@ lang: 'ko'
 thumbnail: ''
 ---
 
-<h1 class='title'>
-안녕하세요, 김명성 입니다.
+<h1 class='title'>{ Maeng }</h1>
+
+<h1>
+  <span class='highlight'>About Me</span>
 </h1>
 
-**저는 이런 것들에 가치를 두고 있습니다.**
+<div class="about-me">
 
-- 사용자 경험
-- 좋은 설계와 코드
-- 자동화와 생산성
-- 지식과 경험 공유
+![](./profile.png)
 
-|            |                                |
+| **김명성** |                                |
 | :--------: | ------------------------------ |
 | **GitHub** | <https://github.com/maeng2418> |
 |  **Blog**  | <https://maeng2418.github.io>  |
 | **E-mail** | maeng2418@gmail.com            |
+
+</div>
 
 <h1>
 <span class='highlight'>Work Experiences</span>

@@ -1,25 +1,13 @@
-// ===Color
-$green: #18cd8c;
-
 .about {
   .title {
-    position: relative;
-
-    &:after {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      top: -6px;
-      left: -16px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: $green;
-    }
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
   }
 
   .highlight {
     position: relative;
+    margin-bottom: 1.375rem;
 
     &:after {
       content: '';
@@ -46,11 +34,50 @@ $green: #18cd8c;
   }
 
   thead tr th {
+    position: relative;
     padding-top: 0;
     word-break: keep-all;
+    font-size: 1.625rem;
+    font-weight: 900;
+    strong {
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        height: 12px;
+        width: 90%;
+        bottom: 10px;
+        background-color: #18cd8c;
+        opacity: 0.2;
+        left: 0;
+      }
+    }
   }
 
   div.final {
     margin-top: 5em !important;
+  }
+
+  div.about-me {
+    display: flex;
+    align-items: center;
+    p {
+      width: 17rem;
+      min-width: 17rem;
+      height: 17rem;
+      display: flex;
+      span {
+        padding: 0 !important;
+        img {
+          position: static !important;
+          width: 100%;
+          border-radius: 1.25rem;
+          border: 1px solid #f0f0f0;
+        }
+      }
+    }
+    table {
+      margin-left: 32px;
+    }
   }
 }

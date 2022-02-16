@@ -1,9 +1,9 @@
-import { graphql } from "gatsby";
-import React from "react";
-import Head from "../components/head";
-import * as Lang from "../constants";
-import "../styles/resume.scss";
-import { rhythm } from "../utils/typography";
+import { graphql } from 'gatsby';
+import React from 'react';
+import AboutMe from '../components/about';
+import Head from '../components/head';
+import * as Lang from '../constants';
+import '../styles/resume.scss';
 
 const About = ({ data }) => {
   const resumeData = data.site.siteMetadata.resume;
@@ -22,15 +22,13 @@ const About = ({ data }) => {
       <div
         className="about"
         style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(0.5)} ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(
-            3 / 4
-          )}`,
+          maxWidth: '60rem',
+          margin: '0 auto',
+          padding: '2rem 0',
+          height: '100%',
         }}
       >
-        <div dangerouslySetInnerHTML={{ __html: resume.html }} />
+        <AboutMe />
       </div>
     </>
   );
