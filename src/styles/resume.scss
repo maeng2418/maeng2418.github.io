@@ -1,0 +1,56 @@
+// ===Color
+$green: #18cd8c;
+
+.about {
+  .title {
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: -6px;
+      left: -16px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $green;
+    }
+  }
+
+  .highlight {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 12px;
+      width: 108%;
+      bottom: 10px;
+      background-color: #18cd8c;
+      opacity: 0.2;
+      left: 0;
+    }
+  }
+  h1,
+  .no-border {
+    border-bottom: transparent !important;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    letter-spacing: -1px;
+  }
+
+  thead tr th {
+    padding-top: 0;
+    word-break: keep-all;
+  }
+
+  div.final {
+    margin-top: 5em !important;
+  }
+}

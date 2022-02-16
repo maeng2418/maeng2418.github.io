@@ -1,0 +1,37 @@
+.switch-container {
+  display: flex;
+  justify-content: right;
+  flex: 1;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    color: #222;
+    font-size: 14px;
+    font-weight: 900;
+    border: 2px solid #fff;
+    background-color: #fff;
+    border-radius: 50%;
+
+    &.uncheckedIcon {
+      * {
+        fill: #faad14;
+        color: #faad14;
+      }
+    }
+
+    &.checkedIcon {
+      border-color: #282c35;
+      background-color: #282c35;
+      * {
+        fill: #faad14;
+        color: #faad14;
+      }
+    }
+  }
+}
