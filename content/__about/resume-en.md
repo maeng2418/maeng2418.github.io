@@ -16,11 +16,11 @@ thumbnail: ''
 - 자동화와 생산성
 - 지식과 경험 공유
 
-|            |                                       |
-| :--------: | ------------------------------------- |
-| **GitHub** | <https://github.com/maeng2418>        |
-|  **Blog**  | <https://https://maeng2418.github.io> |
-| **E-mail** | maeng2418@gmail.com                   |
+|            |                                |
+| :--------: | ------------------------------ |
+| **GitHub** | <https://github.com/maeng2418> |
+|  **Blog**  | <https://maeng2418.github.io>  |
+| **E-mail** | maeng2418@gmail.com            |
 
 <h1>
 <span class='highlight'>Work Experiences</span>
