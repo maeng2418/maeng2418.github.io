@@ -5,21 +5,24 @@ import './index.scss';
 
 const Experience: React.FC = () => {
   const ref: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
+  const observer = useRef<IntersectionObserver>();
 
-  const observer: IntersectionObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle('show', entry.isIntersecting);
-      });
-    },
-    {
-      rootMargin: '-100px',
-    },
-  );
+  useEffect(() => {
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle('show', entry.isIntersecting);
+        });
+      },
+      {
+        rootMargin: '-100px',
+      },
+    );
+  }, []);
 
   useEffect(() => {
     if (ref.current === null || ref.current.children.length === 0) return;
-    Array.from(ref.current.children).forEach((child) => observer.observe(child));
+    Array.from(ref.current.children).forEach((child) => observer.current?.observe(child));
   }, []);
 
   const { igaworks, woowa, zimssa, develup, dable, seoultech } = useStaticQuery(
