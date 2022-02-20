@@ -1,0 +1,186 @@
+.experience-container {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+  @media (max-width: 576px) {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
+  .experience {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    margin-bottom: 1.375rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    border: 1px solid #e3e6e9;
+    box-sizing: border-box;
+    grid-gap: 1rem;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 150ms;
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      padding: 0;
+      border: 0;
+      grid-gap: 0.225rem;
+      gap: 0.225rem;
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      flex-direction: column;
+      padding: 0;
+      border: 0;
+    }
+    .item__image {
+      display: flex;
+      height: 100%;
+      min-width: 4rem;
+      max-width: 6rem;
+      border-radius: 1.25rem;
+      justify-content: flex-start;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: 0 0 0 1px #f0f0f0;
+      img {
+        object-fit: contain;
+        box-shadow: 0 0.08em 0.35em #0000002e;
+        width: 100%;
+        height: auto;
+        background: #fff;
+        aspect-ratio: 1;
+        margin: 0;
+      }
+    }
+    .item__details {
+      width: 100%;
+
+      @media (max-width: 576px) {
+        padding-top: 0.5rem;
+        padding-left: 0.625rem;
+      }
+      .title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin: 0 0 0.25rem;
+        text-align: left;
+        @media (max-width: 576px) {
+          border-bottom: 1px solid #e3e6e9;
+          padding-bottom: 0.225rem;
+        }
+        .term {
+          font-size: 0.875rem;
+          color: #8a8e94;
+          margin-left: 2px;
+          @media (max-width: 576px) {
+            display: block;
+          }
+        }
+      }
+      .description {
+        display: flex;
+        .text {
+          white-space: pre-line;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          text-align: justify;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          position: relative;
+        }
+        .text::before {
+          content: '';
+          height: calc(100% - 24px);
+          float: right;
+        }
+        .text::after {
+          content: '';
+          width: 999vw;
+          height: 999vw;
+          position: absolute;
+          box-shadow: inset calc(100px - 999vw) calc(30px - 999vw) 0 0 #fff;
+          margin-left: -100px;
+        }
+        .btn {
+          float: right;
+          clear: both;
+          margin-left: 10px;
+          font-size: 16px;
+          padding: 0 8px;
+          line-height: 24px;
+          background: rgba(255, 175, 25, 0.1);
+          color: #ffaf19;
+          border-radius: 1.25rem;
+          cursor: pointer;
+        }
+        .btn::before {
+          content: '펼치기';
+        }
+        .exp {
+          display: none;
+        }
+        .exp:checked + .text {
+          -webkit-line-clamp: 999;
+        }
+        .exp:checked + .text::after {
+          visibility: hidden;
+        }
+        .exp:checked + .text .btn::before {
+          content: '접기';
+        }
+        .experience-detail {
+          margin-top: 24px;
+          .sub-title {
+            font-weight: bold;
+            position: relative;
+            width: fit-content;
+            &::after {
+              content: '';
+              width: 100%;
+              height: 6px;
+              background: #ffaf19;
+              position: absolute;
+              bottom: 3px;
+              left: 0;
+              opacity: 0.3;
+              z-index: -1;
+            }
+          }
+          .work-label {
+            font-weight: 500;
+            &::before {
+              content: '•';
+              font-size: 18px;
+              margin-right: 10px;
+            }
+          }
+          .works {
+            & > li {
+              margin-bottom: 20px;
+              ul {
+                margin-left: 10px;
+                li::before {
+                  content: '-';
+                  margin-right: 10px;
+                }
+              }
+            }
+            .role {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+  .experience.show {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 150ms;
+  }
+}

@@ -1,0 +1,44 @@
+.education-container {
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+  @media (max-width: 576px) {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 576px) and (max-width: 767px) {
+    margin-bottom: 1rem;
+  }
+  .education {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    user-select: none;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1.25rem;
+    box-sizing: border-box;
+    grid-gap: 1rem;
+    gap: 1rem;
+    &::before {
+      content: '';
+      width: 5px;
+      background: #ccd5dd;
+    }
+    .item__details {
+      width: 100%;
+      .term {
+        font-size: 0.875rem;
+      }
+      .title {
+        font-size: 1.125rem;
+        font-weight: 500;
+        margin: 0 0 0.25rem;
+        text-align: left;
+        line-height: normal;
+      }
+      .description {
+        color: #8a8e94;
+      }
+    }
+  }
+}

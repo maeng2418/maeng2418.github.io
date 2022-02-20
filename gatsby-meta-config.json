@@ -1,20 +1,22 @@
 {
   "title": "Maeng's Blog",
   "description": "Blog posted about ...",
+  "name": "김명성",
   "author": "Maeng",
   "introduction": "📝 Maeng의 개발 성장로그",
-  "siteUrl": "https://gatsby-starter-bee.netlify.com",
+  "siteUrl": "https://maeng2418.github.io",
   "social": {
     "github": "maeng2418",
     "facebook": "100005653248720",
     "linkedin": "명성-김-4988b61ba",
-    "instagram": "maeng25"
+    "instagram": "maeng25",
+    "email": "maeng2418@gmail.com"
   },
   "icon": "content/assets/logo.png",
   "resume": {
     "title": "About Maeng",
-    "description": "docs: Update RESUME.md for introducing myself",
-    "thumbnail": "https://maeng-blog.com/resume_thumbnail.png"
+    "description": "Hello My name is Myeongseong Kim",
+    "thumbnail": "https://maeng2418.github.io/resume_thumbnail.png"
   },
   "keywords": ["blog"],
   "comment": {
