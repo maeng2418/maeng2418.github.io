@@ -51,6 +51,10 @@ const Head: React.FC<HeadProps> = ({
                   name: 'google-site-verification',
                   content: data.site.siteMetadata.googleSearchConsole,
                 },
+                {
+                  name: 'naver-site-verification',
+                  content: data.site.siteMetadata.naverSearchAdvisor,
+                },
               ].concat(
                 keywords.length > 0
                   ? {
@@ -76,6 +80,7 @@ const detailsQuery = graphql`
         description
         author
         googleSearchConsole
+        naverSearchAdvisor
       }
     }
   }
