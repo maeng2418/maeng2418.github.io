@@ -1,1 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[My Personal Blog RSS Feed]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Feb 2022 05:15:22 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><link>https://maeng2418.github.ioundefined</link><guid isPermaLink="false">https://maeng2418.github.ioundefined</guid></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 22 Feb 2022 06:11:41 GMT</lastBuildDate><item><title><![CDATA[AWS 도메인 등록하기]]></title><description><![CDATA[도메인 도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다. 무료 도메인 사이트 Freenom - A Name for Everyone (.tk .ml .ga .cf .gq…]]></description><link>https://maeng2418.github.io/development/register_domain/</link><guid isPermaLink="false">https://maeng2418.github.io/development/register_domain/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;도메인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8&quot; aria-label=&quot;도메인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인&lt;/h2&gt;
+&lt;p&gt;도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다.&lt;/p&gt;
+&lt;h2 id=&quot;무료-도메인-사이트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8&quot; aria-label=&quot;무료 도메인 사이트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;무료 도메인 사이트&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.freenom.com/en/index.html?lang=en&quot;&gt;Freenom - A Name for Everyone&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(.tk .ml .ga .cf .gq) 무료 도메인을 만들 수 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;도메인-연결&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%97%B0%EA%B2%B0&quot; aria-label=&quot;도메인 연결 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인 연결&lt;/h2&gt;
+&lt;p&gt;Route 53에 호스팅 영역 생성하기.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACPUlEQVQoz4WSzWoTURTHZ+3CRTe13XRpjWkaG6PGnS4qFFHbR3Dpwo9qVAQXEoQ2Uij4DIIPUGNta76kQh9B0DjFECJxvu/cO3NnMn85d1IpEXHgN+dwzrn/c+bc0fKFAgrFi1g4fxmlCyUUcvNYmMshfzaL3JlMSiaD+bkscqdnkSd/NrWKbBalS0VcKZVQzJ6D9vzlOiprG6huvMa1OxXMrJQxs/wIUzceKqaVXcX0ShlT1x9gYuk+Ti7excTSKk7deozJ5SeYvFnGicV7uHr7GbShDHD01L6YWG/o2GwfYq2uK/9VU0e1oaNa11Ft6qjsdvDiODsdVPY6eFr7itZ3B5pl/EIYBEiSBIK56OrfYA36QCRG8GO+AOIxVJ4DIQMNpxmmBSkjNSEXAofdHvQfPdiuB9OyYTkuqIZ8wlDWgWHaqob5HF4gwQIJHgTQbNv5IxiEIQaGhV5/AN/noJzjurBsW/nHoZjnMXDOwX92IQY9BCToul4ipSS9xOcc/X4fjDE1LTUICSlTwlAdYr6v8iIMIXwG/ukt3MYbCMagOY4Ln3NaoRJwPAbLZYiiCIz5oGZkSUwEgaqhGAmTNS0LTAQQMlJ5jXORxHGsJqSutBdL7cZXn+t6HmzHVb7H2F+QoGGaKq8Ew1DG1Gk4HCZHBbadXgDt6X/YjqOgc7R3DUA0+g0TekVxhHgYp8RjjGJUM46M1D1Aa+0fRO39A9Rbn5P3uw1sbe9ha/vjP3n3oQ6qI2ojm9LETr2N31nTMu7qHJRiAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/a6445639f9febeda245ff4ef4bb27e6f/c1b63/1.png&quot;
+        srcset=&quot;/static/a6445639f9febeda245ff4ef4bb27e6f/5a46d/1.png 300w,
+/static/a6445639f9febeda245ff4ef4bb27e6f/0a47e/1.png 600w,
+/static/a6445639f9febeda245ff4ef4bb27e6f/c1b63/1.png 1200w,
+/static/a6445639f9febeda245ff4ef4bb27e6f/b3154/1.png 1681w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;구매한 도메인을 입력해줍니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 821px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvElEQVQ4y51T23LaMBD1/39dSmkHSCYhFDC2JV91tWWdzq6AUuKHTjVzvLuSfPaqbLvb4eXbCqvva5YvqzXKukPX9/+FTEqJ0+mMc56jEgJKaRhrYf8RdNcYw1BaIxNCYrPdYbPZ4vNwQNt2oL26biBlzXpViWTXNYRMNul0rrXGOI4McpDRxzkHPwXMMWKaJozjxJL1Jzudj2mf7BAQQsA8z/DeI2u7jiPcvn2gblPt6GKMkR3EK0inn+6IEc9rmgIyYyzKsuLwqQ7WOvhxZM/k0ToH5z1fDvOcwFHNTHJzmAgnZF3XoyhKnPMLRNNDa5NgkvR+vEYVvxA8Syakn2TTQMgasmnR9cOdjDpIkcbndK9YjJDTCSHhWvT4WLsFIgLdWySkSAaleP5Ip44vrfnWmAcni4RN2+JYSAzWw3oP4zyUsRjuddTcnOf1WL+/CGtl8fNQYv36jh9ve3zkFU6iw6+qRaMtD/r+84Dj6Yz8UnDXb7VdJBzciLwzeD9XeD1esC9qCOVRKQ890YhMKCuB/FKyLMoKNLvhSvhlDnulMNA7tA7aunu6CZpT5nfr3J+3ay3vc0keQG/5N61QPeUfAFkxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/f004e8953e3aa7ec7672bfb378f121b5/02cd5/2.png&quot;
+        srcset=&quot;/static/f004e8953e3aa7ec7672bfb378f121b5/5a46d/2.png 300w,
+/static/f004e8953e3aa7ec7672bfb378f121b5/0a47e/2.png 600w,
+/static/f004e8953e3aa7ec7672bfb378f121b5/02cd5/2.png 821w&quot;
+        sizes=&quot;(max-width: 821px) 100vw, 821px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;레코드를 생성해줍니다. 유형 A에는 인스턴스 퍼플릭 IP주소를 값으로 입력하고, 유형 CNAME에는 도메인주소를 값으로 입력합니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAByklEQVQoz42R6W7bQAyE9f7v1Fco2h8NmjixZR0+JHtv7upw/BW7TYKiB1ABAw7J4YBcVedh4GmzYVfvuWqD8/6/YIzlqhTnYSzxdB5QWlMZa+kPR7a7GqUU0zwTYySm9AfSbzHGhMRISrHMZq9Ka8311DIMQzE+jyPWub8iD5j3aG2pOe+wQTBxxnpPldfs+h5lDC4PWvdPwxBCMfIhICLkZS7aorsN6usn7OX08+TzeMH6UIQ+SDknSCznvJ+VsSwL0zQxzwvrupancSES1RlpvuH0lSqbRBGctYgEJASsMR8xeM+UjUVKnmMSQbwvmKKglCGkpfyoKpx6wnbD+PjAfGhJ3R5pdoUvx474ltvthvbLZ8J+i7R1qWXt1DdMh5a52eK7hkq8Yw0eUVdeU+QWhVVC4fcplfwmAX8ZeX544LDbsQTP7B3MiXvWpQhTJAVPJdPMDUjryh0Kz8g8f69vXPvAZrdnULr03+v3X7RpWanyZqu6IMOJm9Es6sKir7w6w91bblYX6K7l8PRIHM6sRnEzqvTvWecMOENSVyp37PH1M+PmO7Z+KfD7LbFriH2DtHtCU5e6enliOnb4Zkdo69L/QFvj+5YfNaVHN+VPsRQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/d6e3d555e9e7c20fa80e97b7e86eec64/c1b63/3.png&quot;
+        srcset=&quot;/static/d6e3d555e9e7c20fa80e97b7e86eec64/5a46d/3.png 300w,
+/static/d6e3d555e9e7c20fa80e97b7e86eec64/0a47e/3.png 600w,
+/static/d6e3d555e9e7c20fa80e97b7e86eec64/c1b63/3.png 1200w,
+/static/d6e3d555e9e7c20fa80e97b7e86eec64/b5a09/3.png 1360w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;네입서버의 값을 도메인호스팅 사이트의 네임서버에 입력해줍니다.&lt;/p&gt;</content:encoded></item></channel></rss>
