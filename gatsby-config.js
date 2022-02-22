@@ -170,5 +170,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: metaConfig.siteUrl,
+        stripQueryString: true,
+      },
+    },
   ],
 };

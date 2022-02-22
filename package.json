@@ -6,6 +6,7 @@
   "author": "Maeng[MyeongseongKim]<maeng2418@gmail.com>",
   "dependencies": {
     "gatsby": "^4.7.1",
+    "gatsby-plugin-canonical-urls": "^4.7.0",
     "gatsby-plugin-feed": "^4.7.0",
     "gatsby-plugin-google-adsense": "^1.1.3",
     "gatsby-plugin-google-analytics": "^4.7.0",
