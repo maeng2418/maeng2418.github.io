@@ -1,21 +1,18 @@
-import { graphql, StaticQuery } from "gatsby";
-import React from "react";
-import Helmet from "react-helmet";
+import { graphql, StaticQuery } from 'gatsby';
+import React from 'react';
+import Helmet from 'react-helmet';
 
 interface HeadProps {
   description: string;
   lang: string;
-  meta: React.DetailedHTMLProps<
-    React.MetaHTMLAttributes<HTMLMetaElement>,
-    HTMLMetaElement
-  >[];
+  meta: React.DetailedHTMLProps<React.MetaHTMLAttributes<HTMLMetaElement>, HTMLMetaElement>[];
   keywords: string[];
   title: string;
 }
 
 const Head: React.FC<HeadProps> = ({
   description,
-  lang = "en",
+  lang = 'en',
   meta = [],
   keywords = [],
   title,
@@ -24,8 +21,7 @@ const Head: React.FC<HeadProps> = ({
     <StaticQuery
       query={detailsQuery}
       render={(data) => {
-        const metaDescription =
-          description || data.site.siteMetadata.description;
+        const metaDescription = description || data.site.siteMetadata.description;
         return (
           <Helmet
             htmlAttributes={{
@@ -51,13 +47,17 @@ const Head: React.FC<HeadProps> = ({
                   property: `og:type`,
                   content: `website`,
                 },
+                {
+                  name: 'google-site-verification',
+                  content: data.site.siteMetadata.googleSearchConsole,
+                },
               ].concat(
                 keywords.length > 0
                   ? {
                       name: `keywords`,
                       content: keywords.join(`, `),
                     }
-                  : []
+                  : [],
               ),
               ...meta,
             ]}
@@ -75,6 +75,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        googleSearchConsole
       }
     }
   }
