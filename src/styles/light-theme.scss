@@ -43,18 +43,6 @@ body.light {
     }
   }
 
-  .thumbnail {
-    h3 {
-      color: $dark-gray;
-    }
-    p {
-      color: $middle-gray;
-    }
-    &:hover {
-      text-shadow: $light-hover-text-shadow;
-    }
-  }
-
   .footer {
     color: $light-gray;
     a {
