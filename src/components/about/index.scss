@@ -28,33 +28,34 @@ body,
   }
 }
 
-li {
-  list-style: none;
-}
-
-button {
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: middle;
-}
-
 .about {
   max-width: 60rem;
   margin: 0 auto;
   padding-top: 2rem;
   height: 100%;
+
+  li {
+    list-style: none;
+  }
+
+  button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+  }
+
   @media (max-width: 576px) {
     padding: 0 1rem;
   }
