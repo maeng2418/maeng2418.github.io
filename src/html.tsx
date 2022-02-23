@@ -1,4 +1,5 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes } from 'react';
+import metaConfig from '../gatsby-meta-config.json';
 
 interface HTMLProps {
   htmlAttributes: HTMLAttributes<HTMLHtmlElement>;
@@ -20,6 +21,11 @@ const HTML: React.FC<HTMLProps> = (props) => {
           content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"
         />
         {props.headComponents}
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${metaConfig.ad}`}
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
