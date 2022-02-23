@@ -1,4 +1,183 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Feb 2022 02:10:21 GMT</lastBuildDate><item><title><![CDATA[AWS 도메인 등록하기]]></title><description><![CDATA[도메인 도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다. 무료 도메인 사이트 Freenom - A Name for Everyone (.tk .ml .ga .cf .gq…]]></description><link>https://maeng2418.github.io/development/register_domain/</link><guid isPermaLink="false">https://maeng2418.github.io/development/register_domain/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;도메인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8&quot; aria-label=&quot;도메인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Feb 2022 09:21:50 GMT</lastBuildDate><item><title><![CDATA[라이브러리 배포 cjs? ejs?]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/development/library_deploy/</link><guid isPermaLink="false">https://maeng2418.github.io/development/library_deploy/</guid><pubDate>Fri, 20 Aug 2021 23:29:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
+&lt;p&gt;언젠가 한번 나만의 라이브러리를 만들어서 배포해보고 싶다는 생각을 갖구있다가 이번에 디자인시스템 개발을 도전하게 되었다. 리액트 컴포넌트 기반으로 디자인시스템 개발에 대한 자료를 찾아보다가 &lt;code class=&quot;language-text&quot;&gt;Typescript&lt;/code&gt; + &lt;code class=&quot;language-text&quot;&gt;Storybook&lt;/code&gt; + &lt;code class=&quot;language-text&quot;&gt;React&lt;/code&gt; 을 활용하여 개발을 진행하고 웹팩대신 &lt;code class=&quot;language-text&quot;&gt;Rollup&lt;/code&gt; 이용해서 빌드하여 npm으로 배포를 한다는 블로그 글들을 많이 찾게 되었고 도전해보기로 했다&lt;/p&gt;
+&lt;h2 id=&quot;rollup-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rollup-&quot; aria-label=&quot;rollup  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Rollup ?&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Typescript&lt;/code&gt; , &lt;code class=&quot;language-text&quot;&gt;Storybook&lt;/code&gt; 그리고 &lt;code class=&quot;language-text&quot;&gt;React&lt;/code&gt; 요것들(?)은 뭐 기존에 프론트 개발을 하면서 많이 사용해봐서 알겠는데 웹팩 말고 Rollup? 이건 뭐하는거지?? 내가 아는 번들러라고는 웹팩이 유일무이했는데 Rollup이란게 있다고?&lt;/p&gt;
+&lt;p&gt;라이브러리를 배포하려면, 보통 webpack 과 같은 도구로 라이브러리도 번들링을 해주어야 한다. 번들링은 필수는 아니며 TypeScript 또는 Babel로 코드를 트랜스파일해서 등록을 할 수도 있다.&lt;/p&gt;
+&lt;p&gt;그럼 번들링 도구로 webpack을 쓸 수도 있는데 Rollup을 쓰는 이유는 뭘까?&lt;/p&gt;
+&lt;p&gt;webpack은 ES Module 형태로 번들을 할 수 없다. webpack을 사용 할 때에는 일반적으로 commonjs 형태로 번들링을 하게 되는데, commonjs로 번들링한 라이브러리를 나중에 다른 프로젝트에서 사용하게 되면 Tree-Shaking 을 지원하지 않는다고 한다.&lt;/p&gt;
+&lt;p&gt;그럼 또 Tree-Shaking은 뭐지???&lt;/p&gt;
+&lt;aside&gt;
+💡 배포한 라이브러리를 설치하고 그 중에서 Button 컴포넌트만 사용한다고 할 때, Tree-shaking이 되었다면 프로젝트를 빌드할 때, Button 컴포넌트 외에 다른 컴포넌트를 사용하지 않았기 때문에 빌드된 파일에도 다른 컴포넌트와 관련된 코드가 포함되지 않게 된다. 즉, 사용한 컴포넌트만 코드에 포함된다고 한다.
+&lt;/aside&gt;
+&lt;br/&gt;
+&lt;p&gt;🚀 &lt;strong&gt;참고&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://perfectacle.github.io/2017/03/12/webpack2-tree-shaking/&quot;&gt;(Webpack 2) 트리 쉐이킹을 해보자!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;오… 그럼 ES Module 형태로 배포하는게 좋은건가보네?&lt;/p&gt;
+&lt;h2 id=&quot;시작하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot; aria-label=&quot;시작하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;시작하기&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// rollup.config.js&lt;/span&gt;
+&lt;span class=&quot;token literal-property property&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;build/index.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;es&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;sourcemap&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;exports&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;named&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;rollup.config.js에 output에 format을 ‘es’로 설정해주면 ES Module 형태로 번들링해준다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 546px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnElEQVQoz4WSSW4UQRBF6wpcoN1VlZmVWVPWPHT1aOShoZEM10CyhMSeFWw5CId8qNKmEZZtFrGIkPLHi//TMyYmNjFf3p/4dHNF2hX0h5FyqBGhRCqFlH9LCPlP72ahJCkyIqPxtDZESnH/4SPvtreYJqffj6Rljr/wCfyQYBkQLMOz2FPRuTdJjIoiPCEEWmfE5ZJv39esphY71LS7nu4w0u4G+suVo9ax+Q+hmQUlOkooCs3n+2vGqSOrC8q+cmcXXUnZ11Srxj14VnDWMAalIryHDYJAGt5EG4Qt6Y5r2uMWOzU01xNZX+Evg5dPDgRJbTE2xRPzUEhCqVk0B1RmyRpL1pUkVU7aWJLKvh6KkESzh1rjKSlZLCWbXvHrh884JlQ3W7rjhmrfkw81wUVwTvtZwUCQNsUD4TwIQolNFXdXijjRpG3pCOeKi4zQD129lnIUmz+EiotHwp9fJXmV0p32DKcd1WFwlO3tmvHuEpOnzu+nhOFM2BZuuXfeECneTpIs15jSktbWnTH7OJ8yB6OMftlDo90//A12bS/W7ahocAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/3e6e3ee660709ea2981ed73429028d04/76aed/1.png&quot;
+        srcset=&quot;/static/3e6e3ee660709ea2981ed73429028d04/5a46d/1.png 300w,
+/static/3e6e3ee660709ea2981ed73429028d04/76aed/1.png 546w&quot;
+        sizes=&quot;(max-width: 546px) 100vw, 546px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1032px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVQoz42RS27bQBQEdY2Q8/88cigOKYkUwUiQEdtC7n+jCuxsslMWhUZvCmj0YepGZql0ZWLcboj0VDnSxcDl2CExYqxHa40x5iUHEwQRYRwEyQHrPDYKLhess8ToiL5Bte3/CfPQUy8zp21hvq5M68bl55W6nDhfK/tjYV4rPglN29IohdIarRRaK9RXV+03XysOl+q4L5VtvnFddpaPd5Z9476deH6+8f7rwfP3k7d9Zzv27NORPid8Xwm5p0xnhvPKeFqJIXJY5khJkTEJXfDkLiE5MvaZqWTGPjGVRImBURJVEil4bEi4EAgpE3JHyh3OOg7OWrSyaKOw1mCNxRhF07T8+IemVX95Nfk8zmznK1NN7PeZ22Nh3Qr9MeGTI4rHBUfMHuctRr84RUrGZ0fsAqlE8hC/U8ZE6iO5RKIEZEiE5F8K/wAhZuRqeG5sDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/5350c30ef002685761b77f759882570b/12bff/2.png&quot;
+        srcset=&quot;/static/5350c30ef002685761b77f759882570b/5a46d/2.png 300w,
+/static/5350c30ef002685761b77f759882570b/0a47e/2.png 600w,
+/static/5350c30ef002685761b77f759882570b/12bff/2.png 1032w&quot;
+        sizes=&quot;(max-width: 1032px) 100vw, 1032px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;
+빌드를 해주면 &lt;code class=&quot;language-text&quot;&gt;export&lt;/code&gt;를 사용해서 위와 같이 내가 만든 Button 컴포넌트를 내보낸다.&lt;/p&gt;
+&lt;p&gt;이제 &lt;code class=&quot;language-text&quot;&gt;npm publish&lt;/code&gt; 이용해서 배포를 해보고 CRA(create-react-app) CNA(create-next-app)을 이용해서 프로젝트를 생성하고 내가 만들어서 배포한 라이브러리를 설치해서 Button 컴포넌트를 제대로 불러오는지 실험해보았다. &lt;code class=&quot;language-text&quot;&gt;Unexpected token &apos;export&apos;...&lt;/code&gt; 에러가 발생했다…😇&lt;/p&gt;
+&lt;p&gt;뭔데… 왜 안되는데 문제 있는거 아니야?? 뭐 설정을 잘못했나? 뭐가 문제인데?? 흠…&lt;/p&gt;
+&lt;p&gt;흠… 뭐지? 내가 설정을 잘못했나?싶어 여러 다른 라이브러리를 찾아보던 중 &lt;code class=&quot;language-text&quot;&gt;[class101 ui](https://ui.class101.dev/)&lt;/code&gt; 라는 &lt;strong&gt;클래스101&lt;/strong&gt; 에서 사용하는지는 잘 모르겠지만 클래스101에서 개발한 디자인시스템이 rollup으로 빌드를 해서 배포한 것이라 동일하게 CRA와 CNA 프로젝트에 설치하여 컴포넌트를 불러온 결과는 역시 똑같다…&lt;/p&gt;
+&lt;p&gt;그럼 다른 라이브러리는 괜찮나? 싶어 &lt;code class=&quot;language-text&quot;&gt;Antd&lt;/code&gt; 와 &lt;code class=&quot;language-text&quot;&gt;Material-ui&lt;/code&gt; 를 설치해서 실험해보도록 했다.&lt;/p&gt;
+&lt;p&gt;실험 결과, 모두 정상 동작한다. 역시 유명 라이브러리는 다르네…&lt;/p&gt;
+&lt;p&gt;이후 계속 다른 블로그들을 찾아보며 여러 설정을 바꿔보면서 파악한 결과, &lt;code class=&quot;language-text&quot;&gt;ES Module&lt;/code&gt;로 빌드하여 배포한 것은 CNA에서 이상하게도 에러를 뱉어내고 &lt;code class=&quot;language-text&quot;&gt;CommonJS&lt;/code&gt; 형태로 빌드한 것은 잘 동작하는 것을 실험을 통해 알게 됨.&lt;/p&gt;
+&lt;p&gt;흠… 그럼 유명 라이브러리랑 내가 배포한 라이브러리랑 차이는 뭔데…?&lt;/p&gt;
+&lt;p&gt;차이를 알아보고자 삽질을 해보도록 했다. 해당 라이브러리를 뜯어보고 또 평소에는 그냥 모르고 지나쳤던 node의 package 관리에 대해 정보를 찾아보며 무엇을 잘못했나에 대해 찾아보았다.&lt;/p&gt;
+&lt;p&gt;여러 라이브러리 배포에 대해 포스팅한 블로그를 살펴보았고 , 그 중 rollup으로 배포를 시도한 몇몇 포스팅에서 ejs와 cjs 모두 빌드하고 package.json에 main은 cjs의 경로를 module은 ejs의 경로를 지정하는 것을 발견하였다.&lt;/p&gt;
+&lt;p&gt;뭐지? 둘중 하나도 아니고 둘다 빌드를 한다고? 흠… 그럼 자동으로 ESModule 프로젝트이면 ejs로 빌드된 코드를 가져오고, CommonJS 프로젝트에서는 cjs 코드를 가져온다는 의미인가? 어떻게 동작하는 거지???&lt;/p&gt;
+&lt;p&gt;라는 궁금증이 생겼다. 뭔가 하나를 알려고 팠더니 파도파도 계속 궁금한게 늘어만 간다…☠️&lt;/p&gt;
+&lt;p&gt;먼저, package.json의 main이라는 키값에 대한 설명을 찾았다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 811px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuklEQVQY061QWQqFMAzs/a9XsUVw3xdErbsf85iAnuAVSjKTzCSt8n0f8zzjX0eN44iqqpDnObIsQ1EUSJIEcRwLn6ap8My7rkPbth9HTV3XgpkPwwBFAwKalGUpAs/zEASBNJNjPQxDGUJMA+IoinCeJ67rwn3feJ4H6p1KMSMFzGnCYe9m5F/zpmlkG+bU9H0vNb5WWWvBf9Rawxgjzfu+Y5ombNuGdV0FMzrnJJLn5d8vy/Lxx3HgBwlzeA8Uw8rxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/06d319d5c083e89d2b95d9ddb2ac1947/fd28b/3.png&quot;
+        srcset=&quot;/static/06d319d5c083e89d2b95d9ddb2ac1947/5a46d/3.png 300w,
+/static/06d319d5c083e89d2b95d9ddb2ac1947/0a47e/3.png 600w,
+/static/06d319d5c083e89d2b95d9ddb2ac1947/fd28b/3.png 811w&quot;
+        sizes=&quot;(max-width: 811px) 100vw, 811px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이처럼 package.json에서 main은 디렉토리가 위치한 엔트리 포인트를 나타낸다. 즉, 이 패키지의 메인 파일명에 대한 지정을 나타낸다. 따라서, 빌드한 파일로 떨궈진(?) index.js에 대한 경로를 적어주면, 라이브러리를 import 하거나 require 할 때, 이 main에 적혀진 파일을 참조하여 가져온다.&lt;/p&gt;
+&lt;p&gt;음…? 그럼 만약 내 프로젝트가 ES Module 로 작성된 플젝이면…?? package.json의 main에 cjs 경로 적어주고 module에 ejs 경로 적어줬으니깐 알아서 자동으로 module에 적혀있는 ejs를 가져다 쓴다는건가??&lt;/p&gt;
+&lt;p&gt;그래서 시작된 노가다…&lt;/p&gt;
+&lt;p&gt;먼저, 플젝에 &lt;code class=&quot;language-text&quot;&gt;const { Button } = require(&apos;my-library&apos;)&lt;/code&gt; 를 삽입하고 어떤 것을 참조하나 보았다.&lt;/p&gt;
+&lt;p&gt;당연하게도, package.json의 main에 설정해두었던 경로를 참조한다.&lt;/p&gt;
+&lt;p&gt;두 번째, package.json 에 &lt;code class=&quot;language-text&quot;&gt;&quot;type&quot; : &quot;module&quot;&lt;/code&gt; 로 지정하여 ES Module을 사용하는 플젝을 하나 파서 &lt;code class=&quot;language-text&quot;&gt;import { Button } from &apos;my-library&apos;&lt;/code&gt; 해보고 어떤 것을 참조하나 보았다.&lt;/p&gt;
+&lt;p&gt;뭐지…? package.json의 module이 아니라 main인 cjs 코드 참조하네…;;&lt;/p&gt;
+&lt;p&gt;그럼 뭔데 어떻게 동작하는건데~~!!! 그리고 ES Module 플젝인데 cjs코드 가져다가 임포트시켜도 동작하네…?&lt;/p&gt;
+&lt;p&gt;계속해서 궁금증이 또 추가 되었다…&lt;/p&gt;
+&lt;p&gt;일단 알게된 ES Module과 CommonJS 차이점!&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 700px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 86%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAACMElEQVQ4y4VUiY7aQAzN//8OiFYCSkEggSgsQoQjy01BAXKQg9zJq2wxaZayW0sWYM882+95kFCwLMvYyTzPQ7fbZR8MBuh0OphMJvnZfr+PZrOJRqOBarWK7XbLcQlPJgDJjscj2u02er0exuMx7vd7nguCgIuIQiInvQKLoog7pEOmaeJ2u8FxHPi+D9d1Oe4HPjRd4zzFKEdxKU1TFJ1ACSxJEv79XIzBfP95sPz+PyOT0YXi6EVAz/eQRDGcxIERmQi8gIuI4tJqtcLhcGC+drsdFEXhDpEBXuIjSEJk6V9w13OBFJjcZfw0WjBVA8q7wjQx4GKxQKVSYaXq9Tqm0ynzQ/bt8h1D8w07ZQd5JiOOY4RhCPNmQr9qsG82jAfHhmFwTqJRVFXlAHf2UJA5yR6epsypyOm6zpOMRiO0Wi3IsozlcsnifMrhZ0Y56lQIYdv2B765Q6FuUUnqhEYoOgFZlsUrJGLUOX2K8x8AhVIESMkojpls4XSZOqLRBJ98rnDm67V5eLF7yglFX5lEBO/3e5xOJ1wuF2iaBv8hTqaqwGyGg6risN/nb5zGe2VUVCKwWq2GcrmMUqmE4XDIF4gnx7ahn8/QdB3n85mfme3aQAK8WSPUrz9w/X3BbD7LheSRqbPNZsPrwMvrurzstE6/BgP+t1mv15jP57hqVyRxAj/1YUUW4jCGe3fztZKen9jz06PvJIQwHjn8YmRBuFD6v2/Z81jZ4v9nUbQ/A9gcuGBCOJ4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/6434a7b39735d0872e7bbe65a30d703f/8c557/4.png&quot;
+        srcset=&quot;/static/6434a7b39735d0872e7bbe65a30d703f/5a46d/4.png 300w,
+/static/6434a7b39735d0872e7bbe65a30d703f/0a47e/4.png 600w,
+/static/6434a7b39735d0872e7bbe65a30d703f/8c557/4.png 700w&quot;
+        sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pencilflip.medium.com/using-es-modules-with-commonjs-modules-in-node-js-1015786dab03&quot;&gt;Using ES modules with CommonJS modules in Node.js&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;아~ CommonJS는 걍 다 사용 가능하네~~&lt;/p&gt;
+&lt;p&gt;그냥 cjs로만 빌드해서 사용할까? 근데 그럼 Tree-Shaking 안된다며…?&lt;/p&gt;
+&lt;p&gt;하… 포기할까…? 하다가 끈기를 가지고 다시 도전!!!🔥&lt;/p&gt;
+&lt;p&gt;그러다 package.json의 main과 module의 차이점에 대한 포스팅 발견!!&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/42708484/what-is-the-module-package-json-field-for&quot;&gt;What is the “module” package.json field for?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://levelup.gitconnected.com/code-splitting-for-libraries-bundling-for-npm-with-rollup-1-0-2522c7437697#9f6f&quot;&gt;Code-splitting for libraries-bundling for npm with Rollup 1.0&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVQY042QbWuDMBSF/f//bl1faNVGEzWaGOtgHRrbPMOsG2Mw6IHz4bzcy+Um1+sVYwzWWpxzkeN4wbn+xxuGgRDCU0zmeWaaJvyy4L2PXJYb3i/M3rPmq/cskgBI7WiNo+ocmTKca4vqRkTTI+oe0TgK7aIvaotuOzrryCsTO6Ue4tz7x0QSApwKzT5XHAvNLq85nitEqTjkis1JchA6cnMs2aaKXSbZ5xXbrOIgmpi9pvJ7YSCVhpfH4Lky5Kojk+3jop601PGaVZftQPrIMtnF7topasvtfv9a2JhLDFr3Fv+wer/xV0P494efc8rIHQRth2EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;5&quot;
+        title=&quot;5&quot;
+        src=&quot;/static/9fd5f93a57b47f159fb7e530941724ff/c1b63/5.png&quot;
+        srcset=&quot;/static/9fd5f93a57b47f159fb7e530941724ff/5a46d/5.png 300w,
+/static/9fd5f93a57b47f159fb7e530941724ff/0a47e/5.png 600w,
+/static/9fd5f93a57b47f159fb7e530941724ff/c1b63/5.png 1200w,
+/static/9fd5f93a57b47f159fb7e530941724ff/2a333/5.png 1484w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;아! &lt;code class=&quot;language-text&quot;&gt;module&lt;/code&gt;은 공식적인게 아니지만! 나중에 번들러가 참조하는거구나!!!&lt;/p&gt;
+&lt;p&gt;이제 좀 이해가 가기 시작한다…&lt;/p&gt;
+&lt;p&gt;어디서든 실행가능하도록 main은 cjs를 가리키게 하고 프로젝트 빌드할때 번들러가 &lt;code class=&quot;language-text&quot;&gt;module&lt;/code&gt;을 참조하는거구나~&lt;/p&gt;
+&lt;p&gt;지금까지 알아낸 결과를 정리하자면…&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;cjs로 만든 라이브러리는 프로젝트에서 import export 로 불러오고 내보내고 가능 (단, ejs로 작성된 라이브러리는 require로 못 불러낸다.)&lt;/li&gt;
+&lt;li&gt;그러면 당연히 라이브러리를 만든다하면 대부분 지원되는 cjs로 배포하는게 이득인가??&lt;/li&gt;
+&lt;li&gt;하지만 cjs는 트리쉐이킹이 안되자나!!!&lt;/li&gt;
+&lt;li&gt;그럼 어쩌란거지???&lt;/li&gt;
+&lt;li&gt;라이브러리 A를 만들 때 cjs버젼 ejs버젼 둘다 만든다. package.json에 module이라는 키 추가해서 값으로 ejs 경로 추가해줌. main은 cjs 경로 가리킴.&lt;/li&gt;
+&lt;li&gt;프로젝트에 라이브러리 A를 인스톨하고 모듈들을 사용함. (import로 불러오든 require로 불러오든 상관 ㄴㄴ)&lt;/li&gt;
+&lt;li&gt;프로젝트 완성후 완성한 프로젝트를 웹팩같은 번들러로 빌드를 할때 라이브러리 A의 package.json의 module을 참고해서 ejs형식을 참고하게되고 트리쉐이킹 가능해서 빌드할 때 현재 플젝에서 라이브러리 A에서 사용한 것만 긁어서 빌드한다!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;끝!!!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AWS 무료 도메인 등록하기]]></title><description><![CDATA[도메인 도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다. 무료 도메인 사이트 Freenom - A Name for Everyone (.tk .ml .ga .cf .gq…]]></description><link>https://maeng2418.github.io/development/register_domain/</link><guid isPermaLink="false">https://maeng2418.github.io/development/register_domain/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;도메인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8&quot; aria-label=&quot;도메인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인&lt;/h2&gt;
 &lt;p&gt;도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다.&lt;/p&gt;
 &lt;h2 id=&quot;무료-도메인-사이트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8&quot; aria-label=&quot;무료 도메인 사이트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;무료 도메인 사이트&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.freenom.com/en/index.html?lang=en&quot;&gt;Freenom - A Name for Everyone&lt;/a&gt;&lt;/p&gt;
@@ -75,4 +254,365 @@
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;네입서버의 값을 도메인호스팅 사이트의 네임서버에 입력해줍니다.&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;네입서버의 값을 도메인호스팅 사이트의 네임서버에 입력해줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[V8 엔진]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/javascript/v8_engine/</link><guid isPermaLink="false">https://maeng2418.github.io/javascript/v8_engine/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;인간과 컴퓨터는 서로 사용하는 언어가 다릅니다. 따라서, 컴퓨터가 이해할 수 있는 통역사가 필요한다. 여기서 말하는 통역사의 역할을 하는 것이 바로 &lt;strong&gt;컴파일러 혹은 인터프리터&lt;/strong&gt;입니다. 우리가 컴퓨터와 소통하기 위해서는 코드를 작성하고 이러한 코드를 기계어로 변환하여 컴퓨터와 소통할 수 있습니다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;컴파일러 VS 인터프리터&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;컴파일러는 소스코드 전체를 한 번 훑고 컴퓨터 프로세서가 실행 할 수 있도록 바로 기계어로 변환한다.&lt;/li&gt;
+&lt;li&gt;인터프리터는 고레벨 언어를 중간 코드(intermediate code)로 변환하고 이를 각 행을 연속적으로 실행한다.&lt;/li&gt;
+&lt;li&gt;일반적으로 컴파일러가 인터프리터보다는 실행시간이 빠르다.&lt;/li&gt;
+&lt;li&gt;컴파일러는 전체 소스코드를 변환 한 뒤 에러를 보고하지만 인터프리터는 각 행 마다 실행하는 도중 에러가 보고되면 이후 작성된 코드를 살펴보지 않는다.
+&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;v8-엔진이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#v8-%EC%97%94%EC%A7%84%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;v8 엔진이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;V8 엔진이란?&lt;/h2&gt;
+&lt;p&gt;C++ 로 작성된 구글의 오픈소스 자바스크립트 엔진.&lt;/p&gt;
+&lt;p&gt;즉, 자바스크립트 코드를 바이트코드 혹은 기계어로 바로 변환해주는 역할을 합니다.&lt;/p&gt;
+&lt;p&gt;세상에는 V8 엔진뿐만 아니라 다양한 종류의 자바스크립트 엔진이 존재하나, 모두 ECMAScript 표준을 따릅니다.&lt;/p&gt;
+&lt;p&gt;하지만, V8은 다른 엔진과 달리 모두 기계어로 변환하지 않고 바이트 코드와 기계어로 변환한다.
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h2 id=&quot;작동원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;작동원리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;작동원리&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVQoz62R7UtTYRjG9x/0H/Q/CH3sS9+EJD8UBSUVFJEW0RcpMCQq/RAm9EaatqCSaJW45bZakIUK5htLHTo7OXXvrnQ7Z2cv55zn+cXONArSvnTBxX3DAz+u+3ocQluhkJpCSwYxvgdBlFALBpmszrpWRAhJOKkyF80SqjiWwxKSiqSszt/l0CcvMv9wF196dhPv30M+s0Bdaz81TY+oaXIyHY5yumeC/R2j1HWMcLxrnHzR3B5opkcozN+jFPVj/JjFMouMhmJ4PysEppbQ9CKB2RTOjwpDoSRKSsUSAqRA/mFp28F/lqNKt5DCqk4p7QSmJeyuRHENCsuQj1RdXEXmvyE0BSMXxsyF7V3qy0hhVIDyV9ytXrZ2YeqQ9vNhqJW2xw3ccB7D/76FcsTF7cGz3BxspM1zhm7feYzIM6S2+PeTbWgFWM5B2os7cIVL3Ydp7jrEa99lZMxDp/cc1z2N3A804/l0FUPpQ6qhnYGYGt+XX0DCbYNtxz3oS6/Ql1zklOcQq7z5MGacWGvB7YFsAqNKH6XkAGLdh550s6a8JLvowky9gcwgVtqN2HiLEezFSk79I6GhUkwMoE70oro7yfTfIv/uDiLhRnW1s+G8RvZJOxsPWijPOJG5uZ0TyrKGXPcTv3uBWH0tiRNHiJ+sJ7vwlPipA8T37SXRcJDE0VqMuV6kvsOnsJlSFmNYqUnKkTHKq+MYK2N2+eXFYQpjXspfhzHT04jcPNIq8ROLEWXko429ogAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/c4bc15954e0a10b459e1cda766908056/c1b63/1.png&quot;
+        srcset=&quot;/static/c4bc15954e0a10b459e1cda766908056/5a46d/1.png 300w,
+/static/c4bc15954e0a10b459e1cda766908056/0a47e/1.png 600w,
+/static/c4bc15954e0a10b459e1cda766908056/c1b63/1.png 1200w,
+/static/c4bc15954e0a10b459e1cda766908056/49b61/1.png 1756w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;V8은 소스코드를 가져다가 파서에게 넘긴다.&lt;/li&gt;
+&lt;li&gt;소스 코드를 분석후 AST(Abstract Syntax Tree) 즉, 추상 구문 트리로 변환하고 Ignition에게 넘겨준다.&lt;/li&gt;
+&lt;li&gt;Ignition은 자바스크립트를 &lt;strong&gt;바이트 코드&lt;/strong&gt;로 컴파일해주는 역할을 수행한다.&lt;/li&gt;
+&lt;li&gt;이후 이 바이트 코드를 실행함으로써 소스 코드가 실제로 작동한다.&lt;/li&gt;
+&lt;li&gt;그 중, 자주 사용되는 코드는 TurboFan에 넘겨져 최적화시키기 위해 다시 &lt;strong&gt;기계어&lt;/strong&gt;로 컴파일 된다.
+&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;v8의-역할&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#v8%EC%9D%98-%EC%97%AD%ED%95%A0&quot; aria-label=&quot;v8의 역할 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;V8의 역할&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;JS, WASM 코드 컴파일 및 실행&lt;/li&gt;
+&lt;li&gt;콜 스택 처리 (함수 실행)&lt;/li&gt;
+&lt;li&gt;메모리 할당&lt;/li&gt;
+&lt;li&gt;가비지 컬렉션
+&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@godori/JavaScript-engine-1&quot;&gt;JavaScript 엔진 톺아보기&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git과 Github]]></title><description><![CDATA[Git? GitHub? Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다. GitHub은 Git…]]></description><link>https://maeng2418.github.io/git/git&amp;github/</link><guid isPermaLink="false">https://maeng2418.github.io/git/git&amp;github/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;git-github&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-github&quot; aria-label=&quot;git github permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git? GitHub?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다.&lt;/li&gt;
+&lt;li&gt;GitHub은 Git을 호스팅 해 주는 사이트로, ‘소셜 코딩’을 표방하며 가장 유명하고 널리 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;git-설치하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0&quot; aria-label=&quot;git 설치하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git 설치하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;https://git-scm.com/downloads&lt;/a&gt; ← 설치!&lt;/p&gt;
+&lt;h2 id=&quot;github에-저장소-생성하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github%EC%97%90-%EC%A0%80%EC%9E%A5%EC%86%8C-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;github에 저장소 생성하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;GitHub에 저장소 생성하기&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 84.66666666666669%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsTAAALEwEAmpwYAAACHElEQVQ4y6VUyYrbQBT0/99CIPcQyCE/EALJKYRchiSQgxmIPZZkW1u3ltbWi1oV3pNlPCaeGUhDuV9b6lK9UrVW3nsIISGLAlVVQUoJIQRjHEe8dEzTxPOKNm0fdngIQgT7GNvggPvNDmF0QFlVUKpB07RQTXueVdOgaed1VStobc6kK1JYK4WybpArC6EscuUw+gl0zVr3b7h5NtZyJ0TGhEvxSL4fYa1l+JttTycAlxyscL1eI8syFGXFT81ygT+bLZI0Q9/1oHv9NMF596yPrDAIQwRhhP3hiFwI5LlgMlmUELKAlAX/n4oMVVWzt0UtIOoMhRLIyxTOzQ9bUZFmOdKTwq7v2TvHHlkYY87tz/7NtTYDtNWwznBNe5iQFCZpiuhwRJLmOMYpq6LNbhzh3AnX9egfwbpxaRnoBoO27TBofVaxGE3wFzWv/YTRe1ZFWGomdB4oW4ckSbl1IhsGjb4fGGQB5azr+nnd9RyVW4NbHp2GlPOLuCbrhxOpMayE2l38uo7bmdAYIug5/YsKWlPddh2fDPLuMnO3sLLOYx8LziGdaSElx4YQJwmv6fhdZu1pQg8EaYVoH2Efx3ymD8cYcZJiF0askKJD89LqU2PFv8ZDN5rhBsetUnQIRVGipGvWPauOFWpn8GX3HZ8fvuHT5ivujr9PHwXLb5MCTh8K8v9FhMq0eP3zHd78eo9XP97iw/1H/M/4C6ngKYQ0crJOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/058cfc60506a820a390e9c165ef98b04/c1b63/1.png&quot;
+        srcset=&quot;/static/058cfc60506a820a390e9c165ef98b04/5a46d/1.png 300w,
+/static/058cfc60506a820a390e9c165ef98b04/0a47e/1.png 600w,
+/static/058cfc60506a820a390e9c165ef98b04/c1b63/1.png 1200w,
+/static/058cfc60506a820a390e9c165ef98b04/64639/1.png 1568w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;팀원에게-편집-권한-부여하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%80%EC%9B%90%EC%97%90%EA%B2%8C-%ED%8E%B8%EC%A7%91-%EA%B6%8C%ED%95%9C-%EB%B6%80%EC%97%AC%ED%95%98%EA%B8%B0&quot; aria-label=&quot;팀원에게 편집 권한 부여하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;팀원에게 편집 권한 부여하기&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABC0lEQVQoz32PzW4DIQyE9/1fqJcee+uppz5AqyjJ/mSBxQZjmAiyaYgU1dJIHn4+ewazMWZDWB3DcwCFiI0YVPvde7PCHg8QIohmSNKmKAkcIkKUPw1AQStN8OcTxNlmmRnjOGHzhKwKDQxNilwKNGeUUppqlU5Du6hGFes0guwNSBxxHC9YVgu7Ec7zBT+HI07T0pI00B3aacj5MWWaF0hKOzBgvtgWSXMB1/jELVZSfQL2GrBXNcZaiNyAIgLvPdI+4D60f9/rfjb0xjkHVd0fPT5XaAgB1id4iuDAT5CXwFrWOYQQW5+fNgCm0y/ev97w+f0BNua27asN+wj/xclJsGwTHJkdhJeRrzk1c//HnZbDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/10b8537688e7a7108db2bf7af1acca23/c1b63/2.png&quot;
+        srcset=&quot;/static/10b8537688e7a7108db2bf7af1acca23/5a46d/2.png 300w,
+/static/10b8537688e7a7108db2bf7af1acca23/0a47e/2.png 600w,
+/static/10b8537688e7a7108db2bf7af1acca23/c1b63/2.png 1200w,
+/static/10b8537688e7a7108db2bf7af1acca23/d61c2/2.png 1800w,
+/static/10b8537688e7a7108db2bf7af1acca23/97a96/2.png 2400w,
+/static/10b8537688e7a7108db2bf7af1acca23/c7443/2.png 3488w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;로컬에-클론만들기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A1%9C%EC%BB%AC%EC%97%90-%ED%81%B4%EB%A1%A0%EB%A7%8C%EB%93%A4%EA%B8%B0&quot; aria-label=&quot;로컬에 클론만들기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;로컬에 클론만들기&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git clone https://github.com/maeng2418/Exercise.git&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;develop-브랜치를-default로-설정하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#develop-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%A5%BC-default%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&quot; aria-label=&quot;develop 브랜치를 default로 설정하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Develop 브랜치를 Default로 설정하기&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 41.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABHElEQVQoz52RyU7DMBRF8+98Az/CGpYskCoxSCyRADUdgu16SJy4Hg5yWkFhRXnS8eZJx1f3NTlG1GZDt2zxWjPsFF7vcFJAShymnADO9Rhjsb1j6ieu3265uLvk6uWGJjvLrl0iVivUekUaevLoibbKDX0CF35ip4J0YUa5Pa9S8bR+p7X6IBycI/3KUZPL9ZYP4zFDwI4R67+RxiOtR5gBqT2dcAw+0uTeopVCaoPtB6awJ+ZCyYlRCsYpEGMkpUxK6YucCzlnSinz3o8jUwg1oWHothghWLcd241itJbkDMUZzpn6aUMpiLblcbHg+f5hPkqpHfaOHPd1Paf4K001jyHQCYm2DqF2aGOP9zxPNgvrU7s4pRy7+Q+fKTduI03m4MgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/46caef035762f43a8a2dbd7f44344fc1/c1b63/3.png&quot;
+        srcset=&quot;/static/46caef035762f43a8a2dbd7f44344fc1/5a46d/3.png 300w,
+/static/46caef035762f43a8a2dbd7f44344fc1/0a47e/3.png 600w,
+/static/46caef035762f43a8a2dbd7f44344fc1/c1b63/3.png 1200w,
+/static/46caef035762f43a8a2dbd7f44344fc1/d61c2/3.png 1800w,
+/static/46caef035762f43a8a2dbd7f44344fc1/17009/3.png 1932w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAUlEQVQoz22SiW7DIBBE8/9/2UZt02I7xuFm4VVgR3GcrDRiOWbYYTk572mwznEzFh9iz63zfb4Ygw8Bax3LPJOzIKUiUpCygxSyCCd2oZeF4EPPS60MSqGUwjlHjBHJmZTSW+ScO+9Ua6UCNSWm8ydmUFRnKfqK/r0wnD/Q44ixrhOb8Iot39aeBHuIMH1/kcwNYkDMjVkppssPulkVoZ0tpbxARPDe9/1VcBMdpyshxlW/VIZxQg0jf0oxTjPaeEIIneyc70+xH58qbKMxllpqz18BKeXNYuoVH+NR4b0peiGEuFmrbwhrR+9Wj5c+mrJN2ndplu63vSMcK9qfbYL/nYxz3N64X6oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/58f5487aac8d301e1448074ec503a05c/c1b63/4.png&quot;
+        srcset=&quot;/static/58f5487aac8d301e1448074ec503a05c/5a46d/4.png 300w,
+/static/58f5487aac8d301e1448074ec503a05c/0a47e/4.png 600w,
+/static/58f5487aac8d301e1448074ec503a05c/c1b63/4.png 1200w,
+/static/58f5487aac8d301e1448074ec503a05c/d61c2/4.png 1800w,
+/static/58f5487aac8d301e1448074ec503a05c/97a96/4.png 2400w,
+/static/58f5487aac8d301e1448074ec503a05c/20337/4.png 3082w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;버젼-작성자-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B2%84%EC%A0%BC-%EC%9E%91%EC%84%B1%EC%9E%90-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;버젼 작성자 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;버젼 &lt;strong&gt;작성자 설정&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git config --global user.name &quot;자신의 닉네임&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git config --global user.email &quot;자신의 이메일&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. 이 설정은 ~/.gitconfig 파일에 저장되고 1번만 해주면 됩니다.&lt;/p&gt;
+&lt;h2 id=&quot;git-commit-에디터-설정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-commit-%EC%97%90%EB%94%94%ED%84%B0-%EC%84%A4%EC%A0%95&quot; aria-label=&quot;git commit 에디터 설정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git commit 에디터 설정&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git config --global core.editor &quot;vim&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;작업-시나리오&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%91%EC%97%85-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4&quot; aria-label=&quot;작업 시나리오 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;작업 시나리오&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;로컬에 클론을 받는다. (default 브랜치로 받아짐.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;feature 브랜치를 만든다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git checkout -b feature/readme&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;옵션 b : 브랜치를 생성하고 바로 전환.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;작업을 하고 커밋을 하고 &lt;code class=&quot;language-text&quot;&gt;push&lt;/code&gt;를 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;github으로 가서 &lt;code class=&quot;language-text&quot;&gt;pull-request&lt;/code&gt;를 날린다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;dev에 &lt;code class=&quot;language-text&quot;&gt;merge&lt;/code&gt;를 시킨다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;로컬에서 dev 브랜치로 전환하고 &lt;code class=&quot;language-text&quot;&gt;pull&lt;/code&gt;을 해서 업데이트를 한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;로컬과 원격 feature 브랜치를 삭제한다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git branch -d B(브랜치명)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git push origin --delete 브랜치명&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;git-명령어-정리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-%EB%AA%85%EB%A0%B9%EC%96%B4-%EC%A0%95%EB%A6%AC&quot; aria-label=&quot;git 명령어 정리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;git 명령어 정리&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git clone&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;원격(remote) 저장소를 지역(local) 저장소로 복제&lt;/li&gt;
+&lt;li&gt;별도의 remote 설정없이 clone을 통해서 원격 저장소와 연결된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git add &amp;lt;파일이름&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;작업공간에서 변경이 발생한 파일을 다음 커밋에 포함되도록 예약하는 것&lt;/li&gt;
+&lt;li&gt;파일은 스테이지 영역(stage area)에 들어가 있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git rm &amp;lt;파일이름&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git add 명령어의 반대입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git commit&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;파일 및 폴더의 추가/변경 사항들에 대해 기록을 하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git push&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 상의 원격 저장소로 변경된 파일을 업로드하는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git pull&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;다른 사람의 변경사항에 대해서 내 로컬에 적용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;훌륭한-git-커밋-메시지의-일곱-가지-규칙&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9B%8C%EB%A5%AD%ED%95%9C-git-%EC%BB%A4%EB%B0%8B-%EB%A9%94%EC%8B%9C%EC%A7%80%EC%9D%98-%EC%9D%BC%EA%B3%B1-%EA%B0%80%EC%A7%80-%EA%B7%9C%EC%B9%99&quot; aria-label=&quot;훌륭한 git 커밋 메시지의 일곱 가지 규칙 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;훌륭한 Git 커밋 메시지의 일곱 가지 규칙&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;제목과 본문을 빈 행으로 분리한다&lt;/li&gt;
+&lt;li&gt;제목 행을 50자로 제한한다&lt;/li&gt;
+&lt;li&gt;제목 행 첫 글자는 대문자로 쓴다&lt;/li&gt;
+&lt;li&gt;제목 행 끝에 마침표를 넣지 않는다&lt;/li&gt;
+&lt;li&gt;제목 행에 명령문을 사용한다&lt;/li&gt;
+&lt;li&gt;본문을 72자 단위로 개행한다&lt;/li&gt;
+&lt;li&gt;어떻게 보다는 무엇과 왜를 설명한다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;자주 사용하는 타입명&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;docs&lt;/code&gt; : 문서와 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;feat&lt;/code&gt; : 기능 개발과 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;style&lt;/code&gt; : 스타일링과 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;refactor&lt;/code&gt; : 코드 리팩토링과 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;fix&lt;/code&gt; : 버그 해결과 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;hotfix&lt;/code&gt; : 급한 버그 해결과 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;test&lt;/code&gt; : 테스트 코드와 관련된 커밋입니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;chore&lt;/code&gt; : 환경설정 및 기타 변경사항에 사용하는 커밋입니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Issue Wiki Milestone Project]]></title><description><![CDATA[Github Issue 프로젝트를 진행하면서 발생하는 모든 이슈 (버그 발생, 개발, 풀 리퀘스트 등등) 이슈 생성하기 https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E3…]]></description><link>https://maeng2418.github.io/git/issue_wiki/</link><guid isPermaLink="false">https://maeng2418.github.io/git/issue_wiki/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;github-issue&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-issue&quot; aria-label=&quot;github issue permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Issue&lt;/h2&gt;
+&lt;p&gt;프로젝트를 진행하면서 발생하는 모든 이슈 (버그 발생, 개발, 풀 리퀘스트 등등)&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;이슈 생성하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E35&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E35&quot;&gt;&lt;/p&gt;
+&lt;p&gt;→ 참고로 이슈페이지에서 &lt;code class=&quot;language-text&quot;&gt;@이름&lt;/code&gt; 을 통해 다른 사용자를 언급할 수 있고, &lt;code class=&quot;language-text&quot;&gt;#num&lt;/code&gt; 을 통해 커밋, 이슈 들을 참조해 소통을 원활하게 할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Label 설정하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;각 이슈에 tag / label을 부여하여 이슈의 검색효율을 높인다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99EA75385C4D66722D&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99EA75385C4D66722D&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;해당 이슈에 대해 Assignees(책임자)를 부여&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99A223405C4D667231&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99A223405C4D667231&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/998B0C405C4D667133&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/998B0C405C4D667133&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Assignees와 Labels를 각 이슈들에 부여한 후 목록페이지로 돌아오면 다음과 같이 깔끔하게 정리되어 있다. 이 label과 assignee를 통해 Filters 란에서 필터링하여 이슈를 검색할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Issue 키워드&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;close&lt;/li&gt;
+&lt;li&gt;closes&lt;/li&gt;
+&lt;li&gt;closed&lt;/li&gt;
+&lt;li&gt;fix&lt;/li&gt;
+&lt;li&gt;fixes&lt;/li&gt;
+&lt;li&gt;fised&lt;/li&gt;
+&lt;li&gt;resolve&lt;/li&gt;
+&lt;li&gt;resolves&lt;/li&gt;
+&lt;li&gt;resolved
+&lt;code class=&quot;language-text&quot;&gt;$ git commit -m &quot;css 문제 해결 close #20&quot;&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ git commit -m &quot;router 개발 close #20, #21, #23&quot;&lt;/code&gt;
+⇒ 커밋 제목이나 내용에 추가하면 됨.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;github-milestone&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-milestone&quot; aria-label=&quot;github milestone permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github MileStone&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;각 기능별 서로 유사한 이슈들이 존재하며, 이 관련된 이슈들을 찾거나 해당 기능들이 얼마나 구현되었는지 파악하기 위해선 일일히 추적해야하는 어려움을 해소시킨다. ⇒&lt;/strong&gt; 마일스톤은 말그대로 이정표 역할을 하며, 이슈들을 그룹화하고 진행상황을 표현.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99A110385C4D66742F&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99A110385C4D66742F&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이전에 Label을 부여한 것과 같이 이슈 상세페이지에서 마일스톤을 부여할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;마일스톤으로 3개의 이슈를 모두 묶을 수 있고, 만약 아래와 같이 하나의 이슈가 완료(close)되면 마일스톤의 진행상황이 업데이트 된다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB7ElEQVQoz3WSycrUQBSF+/23voGISxeufABFBXWhoAsFsYf0lKRS85h8UpVu/XG4cChq4NY9wyZ7jx8FSimU1si6KoW1lnlZKPPM/B+klDDeE3JZkTIbgAJIY1szrQ2vvw2MyuCcJcZYn7AsS/vg/kmt0Xievbvw9K3gyZuRF5/E2nAuBe0czjmC91jnMEbjrCWG0M5yzqy1cK+SM965X/s69aZTlm4y9JPmMip6oRkm3fbCBKRLTDaiXMLGGe0zo/Ztb3xgVIJcSmNQSmHjU8bEhHGemEpDiJlcKjXaWpEaZmKecSGR8ox0mo/dF1wKLPPSWDTKWQjE7kDMuVFMKRJjYJ7LSnF5gIeUq1TaNInWKWFjc0EJiRkGtHVYW7VcdUwpt4c5l3W9IeXczqrLg5jYHzqOpzNKGzadNJy0bfYLZZiMw/iEdhHt401byVVIhLJN5/M4cbyOWB+Q09Qi5r1viWiUbYhsd/v2W81T1epfiLmsKAWXEqN1SPvb5Vprw2pKpVrjUUqzv+pzx/3sz9I2tqhV1Pvq9NrQBw6XgVMv6K493XXgIiS9XONTsT1e2J6vLVYfzl95vnvF977jeOi4Dj2lGXibsE4Rbu5WoSv+msZYBilxJvLy8J5Hnx/zQ+5Z0sJ+PKK8aQ1/AjELoirR3KaVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/f6b5387e1a98a5972253df4fc926bfc4/6af66/1.png&quot;
+        srcset=&quot;/static/f6b5387e1a98a5972253df4fc926bfc4/5a46d/1.png 300w,
+/static/f6b5387e1a98a5972253df4fc926bfc4/0a47e/1.png 600w,
+/static/f6b5387e1a98a5972253df4fc926bfc4/6af66/1.png 640w&quot;
+        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이슈가 종료되면 아래 이미지와 같이 main page라는 마일스톤의 진행상황이 업데이트 되는 것을 볼 수 있다. 이 마일스톤 기능을 통해 연관된 이슈의 추적과 진행상황을 한 눈에 파악할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA20lEQVQY03XQPU4DMRAFYF+Nu3AMGlokytyFih4KhJQiFUXQBpGwIO/6Z8fj8Ty0EwgJgmd90nhkW7bd9U2Hs6sVFrdbzGmq+C96NL7nc1gqLpcLnN9fwL32HtuPgHcfUEoFEYPK3yo3CKvhItazPYUx5oR+8HDDOCCliForqshe/cFcD/rssYlvJlC2HpUComJ1IYZbP6/RbTrkaUKeMlLOyF+I6OTJq90T7rpHPLwssRt7xJDsQJG2v4AIXIwRYRYC/DBY3VqDiBhVPaCpghKjxQJtauv0159/AjbbgT2o65DEAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/78a042ddd4d0b8863f5c77a0fbbc56a8/6af66/2.png&quot;
+        srcset=&quot;/static/78a042ddd4d0b8863f5c77a0fbbc56a8/5a46d/2.png 300w,
+/static/78a042ddd4d0b8863f5c77a0fbbc56a8/0a47e/2.png 600w,
+/static/78a042ddd4d0b8863f5c77a0fbbc56a8/6af66/2.png 640w&quot;
+        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;github-project&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-project&quot; aria-label=&quot;github project permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Project&lt;/h2&gt;
+&lt;p&gt;프로젝트의 &lt;strong&gt;칸반보드&lt;/strong&gt; 기능을 이용하면, 이슈들을 좀 더 조직화할 수 있고, 우선순위에 따라 정렬하거나 보다 한 눈에 workflow를 볼 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99477B4E5C4D6BCF31&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99477B4E5C4D6BCF31&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;프로젝트의 이름과 템플릿을 설정한다. 여기서는
+&lt;strong&gt;“automated Kanban”&lt;/strong&gt;
+을 선택해, 기본 템플릿이 있고 이슈를 알아서 어느정도 관리해주는 템플릿을 선택한다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99956E4E5C4D6BCF0A&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99956E4E5C4D6BCF0A&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;프로젝트가 생성되면 아래와 같이 3개의 열로 구성된 기본 템플릿이 메인 창에 나타나며, 오른쪽 사이트 바엔 이전에 생성했던 열려있는(open) 이슈 카드 목록이 보인다. 3개의 열은 ” To do ”, ” In Progress ”, ” Done “으로 구성되어, 해야할 Task와 진행 중인 Task, 완료된 Task를 묶을 수 있다.(그냥 Trello 보드랑 똑같이 쓰면 된다.)&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/995FAF4E5C4D6BD00C&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/995FAF4E5C4D6BD00C&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;직접 issue 카드를 생성할 수 있으며, 설정의 “Convert to issue” 통해 실제 issue로도 변환할 수 있다.&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9949C24E5C4D6BD00D&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/9949C24E5C4D6BD00D&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이전에는 Trello 보드를 이용해 이슈들을 관리했었는데, Github 내에서도 이 project 기능을 통해 별도의 트렐로와 같은 툴을 쓰지 않아도 프로젝트의 이슈들을 정리하고 관리할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;github-wiki&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-wiki&quot; aria-label=&quot;github wiki permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Wiki&lt;/h2&gt;
+&lt;p&gt;위키는 HTML보다 간단한 마크업 언어(markup language)를 이용하여 문서를 공동으로 작성하고 관리할 수 있도록 해주는 방식이다. 별도의 위키 문법을 사용하여 문서를 편집하며 출력할 때에는 HTML로 변환되어 보여 지기 때문에 작성하는 사람과 보는 사람 모두에게 좋은 문서 환경을 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 어디서나 가능하다.&lt;/li&gt;
+&lt;li&gt;한 문서 여러 사람이 편집할 수 있다.&lt;/li&gt;
+&lt;li&gt;최근 편집된 문서를 알 수 있다.&lt;/li&gt;
+&lt;li&gt;문서 편집 기록을 남길 수 있다.&lt;/li&gt;
+&lt;li&gt;문서를 검색할 수 있다.&lt;/li&gt;
+&lt;li&gt;footer, sidebar 등을 생성할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⇒ 마크다운 파일을 웹페이지로 확장한 개념으로 이해하면 될 것 같다.&lt;/p&gt;</content:encoded></item></channel></rss>
