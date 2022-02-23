@@ -1,7 +1,7 @@
 ---
 title: 'AWS 무료 도메인 등록하기'
 date: 2021-5-23 21:09:47
-category: 'development'
+category: 'Development'
 draft: false
 ---
 

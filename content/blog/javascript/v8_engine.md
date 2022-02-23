@@ -1,7 +1,7 @@
 ---
 title: 'V8 엔진'
 date: 2021-5-23 09:47:12
-category: 'javascript'
+category: 'Javascript'
 draft: false
 ---
 

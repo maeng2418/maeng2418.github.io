@@ -1,7 +1,7 @@
 ---
 title: 'Git과 Github'
 date: 2021-5-23 09:47:12
-category: 'git'
+category: 'Git'
 draft: false
 ---
 

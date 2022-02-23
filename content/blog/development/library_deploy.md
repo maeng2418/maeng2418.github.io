@@ -1,7 +1,7 @@
 ---
 title: '라이브러리 배포 cjs? ejs?'
 date: 2021-8-20 23:29:47
-category: 'development'
+category: 'Development'
 draft: false
 ---
 
