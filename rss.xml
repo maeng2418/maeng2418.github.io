@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 23 Feb 2022 15:10:30 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[Node.js 디버깅 Created: 2021년 5월 23일 오후 9:47
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 24 Feb 2022 01:31:11 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[Node.js 디버깅 Created: 2021년 5월 23일 오후 9:47
 Tags: Debug, Node.js VSCODE-NodeJS 디버깅 vscode의 디버깅 탭에서 create a launch.json file을 클릭한다. .vscode…]]></description><link>https://maeng2418.github.io/node/debugging/</link><guid isPermaLink="false">https://maeng2418.github.io/node/debugging/</guid><content:encoded>&lt;h1 id=&quot;nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js 디버깅&lt;/h1&gt;
 &lt;p&gt;Created: 2021년 5월 23일 오후 9:47
 Tags: Debug, Node.js&lt;/p&gt;
@@ -218,7 +218,495 @@ Tags: Debug, Node.js&lt;/p&gt;
 &lt;li&gt;프로젝트에 라이브러리 A를 인스톨하고 모듈들을 사용함. (import로 불러오든 require로 불러오든 상관 ㄴㄴ)&lt;/li&gt;
 &lt;li&gt;프로젝트 완성후 완성한 프로젝트를 웹팩같은 번들러로 빌드를 할때 라이브러리 A의 package.json의 module을 참고해서 ejs형식을 참고하게되고 트리쉐이킹 가능해서 빌드할 때 현재 플젝에서 라이브러리 A에서 사용한 것만 긁어서 빌드한다!&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;끝!!!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[MySQL]]></title><description><![CDATA[MySQL MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다. Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다. Install - MacOS   ← MySQL…]]></description><link>https://maeng2418.github.io/development/mysql/</link><guid isPermaLink="false">https://maeng2418.github.io/development/mysql/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;mysql&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql&quot; aria-label=&quot;mysql permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL&lt;/h2&gt;
+&lt;p&gt;끝!!!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[아토믹 디자인]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/react/atomic_design/</link><guid isPermaLink="false">https://maeng2418.github.io/react/atomic_design/</guid><pubDate>Mon, 24 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;아토믹-디자인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;아토믹 디자인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아토믹 디자인&lt;/h2&gt;
+&lt;p&gt;디자인 요소들을 나누어 파악하고 이 요소들을 조합을 통해서 디자인을 구성하는 방식. 즉, 컴포넌트 중심의 디자인 패턴.&lt;/p&gt;
+&lt;p&gt;리액트는 컴포넌트를 중심으로 만들어지는 프레임워크로, 컴포넌트의 재사용성이 매우 중요하다. 중복이 되는 컴포넌트를 공통으로 사용할 수 있도록 빼는 것이 관건인데, 이것은 개발을 진행하다 보면 일일히 생각하며 진행하는 것이 어렵다. 결국에는 중복되는 코드가 많아지고, 이를 관리하는 것이 어려워지게 되는 것이다. 그렇기에 개발 단계 처음부터 재사용성이 용이하며, 여러 개의 컴포넌트들을 모아 또 다른 컴포넌트를 만들 수 있도록(조립) 고민하며 개발하는 것이 아토믹 디자인이다.&lt;/p&gt;
+&lt;h2 id=&quot;컴포넌트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8&quot; aria-label=&quot;컴포넌트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컴포넌트&lt;/h2&gt;
+&lt;p&gt;하나의 컴포넌트는 한 가지 일을 하는게 이상적(단일 책임 원칙)&lt;/p&gt;
+&lt;h2 id=&quot;컴포넌트-분리-기준&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EB%B6%84%EB%A6%AC-%EA%B8%B0%EC%A4%80&quot; aria-label=&quot;컴포넌트 분리 기준 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컴포넌트 분리 기준&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWUlEQVQoz5VRy0rDUBDND7r0H/wAF7py21WXvkDc6EpQCi5asKAbaZC2oZZU2xCkNk3zaGjej5v0yFxNqCKCBw73nrlzh5k5AjawXq/xXRf4DZRXFEWVT/c8z7kW7KWD0esYgT7mj2EYYii2EScp1zNliEnvgVNTZVAJwzCg6zo/CaqqQpIkyLIMQRbbsM+28HZ3hAzAS/cerdo2Js9PPPnx+hC39R1OsXGKOGWIwhBZlsGyLMRxDNu2kSQJBoMBhFG/g2njACNJhLWK0L2qoXO+i/5NHX5SoNe6QPN4D82TfXRbl0hZgTiOwBiDaZq8MJ0ERVEgJCnDu+UhzRgPzmdTGLoGXZtx7a2WcEwNjjlH4DpgLIfneRVpb4vFgneraRqEv0z5D8gYgkBFShJoFBqj5KdOOfOvN4qV3GyEu/yzO1puEATcbdd1EUVRNR4ZQDHf96uc8m/JDzLcXDuo4tEeAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/97d8c798f6f2716d66fc26dec55ab5b7/c1b63/1.png&quot;
+        srcset=&quot;/static/97d8c798f6f2716d66fc26dec55ab5b7/5a46d/1.png 300w,
+/static/97d8c798f6f2716d66fc26dec55ab5b7/0a47e/1.png 600w,
+/static/97d8c798f6f2716d66fc26dec55ab5b7/c1b63/1.png 1200w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/1ba101c4e022c660ed66c0340e14735c/2.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;아톰-atoms&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%ED%86%B0-atoms&quot; aria-label=&quot;아톰 atoms permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아톰 (Atoms)&lt;/h2&gt;
+&lt;p&gt;Label, Input, CheckBox, Select같은 HTML 태그 같이 기능적/의미론적으로 가장 작은 단위의 컴포넌트.&lt;/p&gt;
+&lt;p&gt;특정 기능을 수행하는 것이 아니라 일반적으로 사용할 수 있도록 구현.&lt;/p&gt;
+&lt;p&gt;ex) Input 태그의 onChange와 값이 어딘가에 종속되지 않도록 props로 전달받아 사용.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 642px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 32.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAhElEQVQY062QywpDIQxE/f9f7F2LKHaj4tspIygWettNA4c8JMlEgcPGGPiU0/fet/+GCCHgcV14GrObz0G0Wiucc/Deb3LOaK3NN8K4lALBJgbkHHjCzWz4pW4qxJ9NLFUppTd40iLGOGtUcHfFYg9USkFKCWMMtNaw1s7aysn5LXcKX6v22KcuY2cPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/8f7a5ab03825d80f1c577a1ce102f6e6/1bba8/3.png&quot;
+        srcset=&quot;/static/8f7a5ab03825d80f1c577a1ce102f6e6/5a46d/3.png 300w,
+/static/8f7a5ab03825d80f1c577a1ce102f6e6/0a47e/3.png 600w,
+/static/8f7a5ab03825d80f1c577a1ce102f6e6/1bba8/3.png 642w&quot;
+        sizes=&quot;(max-width: 642px) 100vw, 642px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;모큘-molecules&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AA%A8%ED%81%98-molecules&quot; aria-label=&quot;모큘 molecules permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;모큘 (Molecules)&lt;/h2&gt;
+&lt;p&gt;Atoms를 조합한 컴포넌트. Label + (Input | CheckBox | Select) 조합으로 FormItem 이라는 컴포넌트를 만들 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 480px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAApUlEQVQoz61RQQrEIAz0/7/ruailFq/SS6tVO8sEXJZiL90ODJOYECZGreuKYRigxxElJZRaUMoz1lqhcs4gzvP8axiZUoI6jgNvgbNk4FsUh21d8i6+8trXckL1Hu+ae/k1Foe8zu9xGvjec9urNchAXmiaJjjnRLXWWJYF3nvM8yw5NYQgaq2FMaZr4rsyi/xY6r7viDFKzphkzF7qtm1S7zn8AMk5w7STqZE1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/c00567decf4bfbd713ce082dfcee266a/e85cb/4.png&quot;
+        srcset=&quot;/static/c00567decf4bfbd713ce082dfcee266a/5a46d/4.png 300w,
+/static/c00567decf4bfbd713ce082dfcee266a/e85cb/4.png 480w&quot;
+        sizes=&quot;(max-width: 480px) 100vw, 480px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;올가니즘-organisms&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%AC%EA%B0%80%EB%8B%88%EC%A6%98-organisms&quot; aria-label=&quot;올가니즘 organisms permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;올가니즘 (Organisms)&lt;/h2&gt;
+&lt;p&gt;Molecule과 Atoms를 조합. FormItem 여러 개와 버튼을 조합하여 SignUpForm을 만들 수 있다.&lt;/p&gt;
+&lt;p&gt;Organism 역시 특정 기능을 직접적으로 수행하진 않지만, 특정한 컴포넌트들을 조합하다 보니 재사용성이 조금 떨어짐&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 410px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 105.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsTAAALEwEAmpwYAAABgElEQVQ4y61Ui27CMAzM/38fG5V4ChBaX1CaPmhDe9N5M9pQm06MSqcE7F6d88Wmqirs93ucTie84jGXywVBEAhp0zS4Xq9PwzkHY61FnucgcZqmT4Gni+MYRVHAZFmGMAzljyRJvPDlRFEEFmd4TOpY17WsY2BcMRTj2rYtjCjZ/03wvptONEkcI//ucN/3g+ATRhGCt3f0zo3mCiFL1Q6x5DEwxxZ2NE7p5MjO80UFkwlfZV3XfRFqsqJt/BVMVjgo/kAFU6e4a0jv0EM0Z5KmsFn2v6tHsuVyiePxiN1uh/gjlK/dbjfRheCeoN4+MNcwkQQ8vwjrHKoHA+tdVeIhqEvM3RLWCklZFCjLUsC7SZCUq+r0qOuvLivz1HGmfMouy7TBix8zZhOfbYbiujc/X3jUZYjIFxfC8/mM2WyG9XotU3s+n2O1WmGz2YiNDoeDxLbbrexpMf5eLBZiNU57zkklFtvo1GWXubKr7Dq7rzOQe+0+48xj5znpGVfCT/ZLaF4QbDbCAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;5&quot;
+        title=&quot;5&quot;
+        src=&quot;/static/3e9fd4d220f36c93222c9e05fcf7f0c3/d68e4/5.png&quot;
+        srcset=&quot;/static/3e9fd4d220f36c93222c9e05fcf7f0c3/5a46d/5.png 300w,
+/static/3e9fd4d220f36c93222c9e05fcf7f0c3/d68e4/5.png 410w&quot;
+        sizes=&quot;(max-width: 410px) 100vw, 410px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;템플릿-templates&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%85%9C%ED%94%8C%EB%A6%BF-templates&quot; aria-label=&quot;템플릿 templates permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;템플릿 (Templates)&lt;/h2&gt;
+&lt;p&gt;레이아웃, 컴포넌트를 주입받기 위해 준비하는 Template. 비즈니스 로직이 아니라 완전히 스타일링에 집중한 단위.&lt;/p&gt;
+&lt;p&gt;컴포넌트를 주입만 하면 바로 사용할 수 있음.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 556px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 138.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA00lEQVRIx+VVYQuFIAz0///UoJLS+mC6xwkLK+VpWvB4g8s17dDtXGJZFtJaE8YaMIeAs20bWWurAA6lFIl1XamV+R2C0DlXBRjGAyEHS+2HCZvmsGmV8WilQ08opaRhGAhjiHEcDz6/930fXc8xv8OSfIHYGLPnLcSlyjkGQhwvVu2obL5VMyS8fVPC+PuEd4pyJrwUpcQgjdRJwCWmafKNMQdoxl3XEb6BH87N8+zjghfmgtv9GUz8zF2u7TbJm/Inv4BHctjKdmFDlLniToGF/QE3dqEtkqR/NgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;6&quot;
+        title=&quot;6&quot;
+        src=&quot;/static/72be68244b40c67baec4d5251f54724c/96638/6.png&quot;
+        srcset=&quot;/static/72be68244b40c67baec4d5251f54724c/5a46d/6.png 300w,
+/static/72be68244b40c67baec4d5251f54724c/96638/6.png 556w&quot;
+        sizes=&quot;(max-width: 556px) 100vw, 556px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;페이지-pages&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8E%98%EC%9D%B4%EC%A7%80-pages&quot; aria-label=&quot;페이지 pages permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;페이지 (Pages)&lt;/h2&gt;
+&lt;p&gt;템플릿에 알맞은 컴포넌트를 주입하게 되면, template에서 미리 만들어 놓은 레이아웃에 맞게끔 사용할 수 있도록 한다. 전체적인 로직이나 상태 등을 Page 레벨에서 컨트롤해야 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 544px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 154%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAfCAYAAADnTu3OAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8ElEQVRIx62V628UVRjG59/ULwJyaywUEiNfFG/EwAdNBEGIiAJSLhUb5FMjBhKoAS1t6e6yl+nu7M7s7uy93d25nNnbz7ynTFOQGI2e5Nn3nLPnPO9zbs8YaTvi92zEUzNiaQeWC4plS7FSVKyUFKu2YtVRPCsrNvqKfq9Lt7uFXq/H5uYmnudhnJiLePOLgD1nQnYLTofsORuw/5LPwcs+U1cD3rnmM33D5/Ccx8y8h9kYMFQ+vb6nSWIMh0OMk7cVu04HHPw6ZP+5gP3nQqYuBkx/7zN9xefQDz4zsz5Hb3ocnfN4VwjrinbTxSqWKJfLGq1Wi8lkskX41pcBBzRhyL6zAXvPBxy46DN1yefYTZ/D13xmrvscEdIffdYbA2DE68pLhHu/CnjvcsjJecVn84pTP4ecuhsyfdXn8GzAzHUhDEg5HhXbwq3VcF2X0Wik1WmFp37aueSQqfMhh74JOXQp5MiVgCNXA730WOXRWwGZakin1dB7KIchhFI04Ylbijc+l0MJNLGoFew6E7D7XMDbF3z2XfQ58J334pB8zPoIeja+5zGeTLbJNOGFhYhjlxXHZxXvX9vCB4JZxfEbig/nFB/dDvl4PuSTOwGf3g2x22MYdAmC4KXlasLReMJgKBj/Y0xeqHq1jMdjjI2NDp7XF9FMJuO/hUyQIvt27949Hjx4wOLiosbCwgLJZBKj3+8TRZEeLPIljseTF3H81/ZkosfXajWazaa+f4J6va5fjCHZbNumWCzq6DgOlUpFT5Aol1bqAnlmUiSxvIzX3kNRKHcpziZRJktGqUtsNBq6T5LHJyoHEu+lJIhXZ7Tbba1OJgmEVPpixG2JsSohEnJR/KpSQzpFoSiRGKsV8lhlXN/Y2NieKERCKhC1vu9rlXoPRaHsneyhZVl6cqfT2Z4gSUWlbE+sUA5AEsSEYRhuEcpg2XghiVVWq1W9RBksxDF2Eoqi2LaELL7khjTi7FLfiXgpMkmiUuqlVzF55dnJXTX4n4uhlI/X32Q4jAh8j253k+EgYjzqo8KuNoB+v4fve3j9Hps9Dz8IGQ4HBIFPFIUMBorRcEQYRhit1jr1eoVOq4pbdSgWsqTWVmjUUuTM38hkMjjFDPlcEjObIpk1sWybmutQtgu06i52qUSpuEa3V8RoNEu4jTKriecksnlqNZf1bIKllaeYhUfkzQSryQyJpBAmKFo5nFIBM5ej7hbY2MxSqS2Syf+C28hjFOwS6dwyD5fSLKdNcmYKM7uEba/Tbi5RKy+TyBRYz+dJJxOY2TS2/Yx07gGV2kOanT9ot3NUy0XarRZGOl+m6DwnbyWwrDWcUopWwyZv5rCsZRz3PnYhRzbzBKe6TLb4CLf5mI3OCpVyCrfisG5mqZSLeP0ORtWtYRXWyJuP6bTqdNp1HNtiPZcmk12i6P7Kk8wd7j/7llxpkXwhRS6boVTIUKsmcasl6jWHomXSbNQwxAtVGOiTlTKIFGEYaIsaDAK8sEtXtVFhn9BXun80jPQY+T+KlPZSpbburdHaNoCOdhT5WP/bstO/DXl2+Xwe0zT1ExRCufViRfHtH2+79oTJjv7tvp3fFFmCkMSfwv9SNKFUxCDk8Yt7xCYrliXt2FFioxDjkBibiYyXtuyfXrL8iBXFrhx/K8Qw4onSjiFuJEYi42WMJBT7Ew4h/BPeqfAxq1T4HQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;7&quot;
+        title=&quot;7&quot;
+        src=&quot;/static/62b3a423a9c10bdf15c65a0afd2fda5b/b3e51/7.png&quot;
+        srcset=&quot;/static/62b3a423a9c10bdf15c65a0afd2fda5b/5a46d/7.png 300w,
+/static/62b3a423a9c10bdf15c65a0afd2fda5b/b3e51/7.png 544w&quot;
+        sizes=&quot;(max-width: 544px) 100vw, 544px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;디렉토리-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;디렉토리 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;디렉토리 구조&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;src
+├── components
+│	  ├── atoms
+│   │   ├── atom1
+│		│   │   ├── index.tsx
+│		│   │   ├── index.stories.tsx
+│		│   │   └── style.ts
+│	  │   └── ...
+│	  ├── mocules
+│   │   ├── mocule1
+│		│   │   ├── index.tsx
+│		│   │   ├── index.stories.tsx
+│		│   │   └── style.ts
+│	  │   └── ...
+│	  └── organisms
+│       ├── organism1
+│		    │   ├── index.tsx
+│	      │   ├── index.stories.tsx
+│		    │   └── style.ts
+│	      └── ...
+└── pages
+ 	  ├── BasedTemplate
+ 		│   ├── index.tsx
+ 		│   ├── index.stories.tsx
+ 		│   └── style.ts
+ 	  ├──page1
+ 		│   ├── template
+		│		│ 	├── index.tsx
+		│		│		└── style.ts
+ 		│   ├── index.tsx
+ 		│   ├── index.stories.tsx
+ 		│   └── style.ts
+		└── ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;상태관리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC&quot; aria-label=&quot;상태관리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;상태관리&lt;/h2&gt;
+&lt;p&gt;각각 컴포넌트의 일반적인 상태 (disabled, focused 등)은 각 컴포넌트에서의 상태를 관리하되 직접적인 사용이 필요한 데이터에 대한 상태는 Page 레벨에서 주입하여 props로 내리는 방식으로 관리.&lt;/p&gt;
+&lt;p&gt;전역으로 관리할 state를 제외하곤 각 page 별로 state를 관리했고, 해당 상태를 page -&gt; organism -&gt; molecule -&gt; atom으로 props를 내려주는 방식이지만, 실질적으로 low level(atom)에서부터 general 하게 구현을 했기 때문에 크게 신경을 쓸 부분은 page뿐일 것이다. 다만, 주의를 해야 할 부분은 props로 전달하다 보니 의도치 않은 props를 내려줄 실수가 발생할 수 있는데 typescript를 도입함으로써 props의 타입을 강제함으로써 그러한 이슈를 막을 수 있을 것이다.&lt;/p&gt;
+&lt;h2 id=&quot;간소화된-아토믹-디자인-설계&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%84%EC%86%8C%ED%99%94%EB%90%9C-%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%84%A4%EA%B3%84&quot; aria-label=&quot;간소화된 아토믹 디자인 설계 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;간소화된 아토믹 디자인 설계&lt;/h2&gt;
+&lt;p&gt;기존의 아토믹 디자인은 컴포넌트 분리를 세분화 시키다보니 초기 설계를 잘못하다보면 분리 기준이 모호한 컴포넌트가 발생하며 재사용성이라는 처음의 도입 목적과 다르게 원래의 코드로 돌아갈 가능성이 있다. 따라서 이러한 세분화 보다는 조금 간소화 시켜 아토믹 디자인을 도입하는 방법을 고민해보았다.&lt;/p&gt;
+&lt;h3 id=&quot;line의-아토믹-적용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#line%EC%9D%98-%EC%95%84%ED%86%A0%EB%AF%B9-%EC%A0%81%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;line의 아토믹 적용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Line의 아토믹 적용 방법&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAACAklEQVQoz22S3WsTQRTF95/12QffRJ+KCCqI4IsvIkRsFQpaaKCtH6jEGNakNs2HjSbppsmaZJPNfsxsd5Pd/ckMptjiwGHO7J2799w51+CflaYpQRDgez5Wd4CQIZPJlOFoSCQjFt6CMAyZTqcMLIvFYkGr0eB7raa5ihmVSoVqtaohpWS1XFEql7jx4hofa+95+aHA4537tH+02Ni8yX65iDf38H2fZqPB2WBAuVSi1+0SRRFGsVjk4OBAIxQhSZxw3DzmweYdzG8mW+8KPNt7QvOkwe6XN9RPjnAmDrY9ot/rYZ2ecnR4yG/bRgiBcbVlVVlJbx21Ne//OqXb6eHOXTrtn0zGU0ajEfV6Hdd1sSyLTqeDkFLfN9IsJc0yjTzPybJMY10gJ9dcxYQUJMuE/6113iWFeZYRx/EFsjQnS3KSJNFIk4x0mWouhWDmOJfuq+9GtIqRqxi1L1dL7bDnewR+wNvP+7z6VGC+mDObzdir7FJrm4hQ0u/3KO7saIfPz8+1y7rljVqBjdpzbptPGYUOkZAEYYDn+DzavsetrevYgzFTZ8LD7bvsll8jAslweKaNqJqmVuZ5nh45w40D3DhE7fEy0VVUUI1Qs9GiXPqKFFKrVgaMx2MdU3NoVirYtq1NVDla4dWHVbO0xvrt1meVqH6mWlRnGUUXPPrL/wBvKeN827FklgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;8&quot;
+        title=&quot;8&quot;
+        src=&quot;/static/3f283fea9909e5179d3d3ee1c1d5bac8/c1b63/8.png&quot;
+        srcset=&quot;/static/3f283fea9909e5179d3d3ee1c1d5bac8/5a46d/8.png 300w,
+/static/3f283fea9909e5179d3d3ee1c1d5bac8/0a47e/8.png 600w,
+/static/3f283fea9909e5179d3d3ee1c1d5bac8/c1b63/8.png 1200w,
+/static/3f283fea9909e5179d3d3ee1c1d5bac8/d61c2/8.png 1800w,
+/static/3f283fea9909e5179d3d3ee1c1d5bac8/97a96/8.png 2400w,
+/static/3f283fea9909e5179d3d3ee1c1d5bac8/3c3f0/8.png 2976w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8UlEQVQozzWSW2/TQBSE8//fEBJIlYAigfqARClUQqVSS9QWtSpEhbSBxkkcO741azu7vsSOneQDr8s8zTmjOTt7djtbtrCB5x+esHf+SvOmt16v2W63NDjrn/Ly+BlJmui60TabjeaObfP15ET3GnR4xNsvuxxe7GveDFytVpo1uOh32T3aIctyXTfa/8OEENzd3lJVVTuwJVu8mY/wheZ1VWuxrtdU9YZYKFw7oKxy6rp81GqdyvdcpuaEoljqXmexWGA7DnGisP0Z4UKSpqk2WX7I+/M+B1f3HN0YvLs6pu/PtJbnOWmWk68q4jyhrNYopegolZBFKUshSQJBGWcsl4U2KbVg5o2YOEPGzhhjOuIhDrVWlgW2F3D9Z8Tl4J7B1CFNMzpSST6N9tgfvuZg+IZ3gxc8qKBduFhweD3kZuxiTC0M2yGM43aPZYnpuHR/3nHa6/Pjfqxv1lFK8svucTP7Ts+/4tLtIlOpTRM3YOfzNy6HFqY1YjybEMk2YVEUzEOB5TvYvkMQzduBUkqmYwspEpq0ztwmz5faNHICnn68oDuYMpwY/DbHzGPRPsqqpD/xOLs1MV0PL4xIk6RJqAgCnzAKSVSCkoosy7QpjCJ6AwNHREgpiBeCJFU0P6auVtwZFj3DJIp9okb7N/AvdGKeaOdGDjEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;9&quot;
+        title=&quot;9&quot;
+        src=&quot;/static/01e5da0702eb0c495a1425844200dd39/c1b63/9.png&quot;
+        srcset=&quot;/static/01e5da0702eb0c495a1425844200dd39/5a46d/9.png 300w,
+/static/01e5da0702eb0c495a1425844200dd39/0a47e/9.png 600w,
+/static/01e5da0702eb0c495a1425844200dd39/c1b63/9.png 1200w,
+/static/01e5da0702eb0c495a1425844200dd39/d61c2/9.png 1800w,
+/static/01e5da0702eb0c495a1425844200dd39/97a96/9.png 2400w,
+/static/01e5da0702eb0c495a1425844200dd39/9634a/9.png 3274w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;디렉토리-구조-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EA%B5%AC%EC%A1%B0-1&quot; aria-label=&quot;디렉토리 구조 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;디렉토리 구조&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;src
+└── components
+ 	  ├── atoms
+    │   ├── atom1
+ 		│   │   ├── index.ts
+ 		│   │   └── index.stories.ts
+ 	  │   └── ...
+ 	  ├── modules
+    │   ├── module1
+ 		│   │   ├── index.ts
+ 		│   │   └── index.stories.ts
+ 	  └── templates
+        ├── template1
+ 		    │   ├── index.ts
+ 		    │   └── index.stories.ts
+ 	      └── ...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;아토믹-디자인의-효율을-높이기-위한-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8%EC%9D%98-%ED%9A%A8%EC%9C%A8%EC%9D%84-%EB%86%92%EC%9D%B4%EA%B8%B0-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;아토믹 디자인의 효율을 높이기 위한 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아토믹 디자인의 효율을 높이기 위한 방법&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;재사용성을 높이기 위한 Styled-Component 사용
+&lt;ul&gt;
+&lt;li&gt;컴포넌트 생성과 동시에 스타일링을 하기 때문에 스타일을 여러 곳에서 불러올 필요가 없다.&lt;/li&gt;
+&lt;li&gt;porps 값을 스타일링 할 때 그대로 사용가능하다.&lt;/li&gt;
+&lt;li&gt;컴포넌트별 반응형 스타일 지정이 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;컴포넌트 단위의 개발 효율을 높여주는 Storybook 사용
+&lt;ul&gt;
+&lt;li&gt;외부 환경에 의존하지 않고 독립된 환경에서 뷰에만 집중하여 UI를 컴포넌트 별로 분리한 개발환경을 제공하는 툴&lt;/li&gt;
+&lt;li&gt;다양한 유스케이스를 한눈에 확인할 수 있다.&lt;/li&gt;
+&lt;li&gt;Addon을 통해 개발에 필요한 옵션을 직접 추가할 수 있다.&lt;/li&gt;
+&lt;li&gt;간단하게 정적인 페이지를 내보낼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;아토믹-디자인-규칙&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8-%EA%B7%9C%EC%B9%99&quot; aria-label=&quot;아토믹 디자인 규칙 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아토믹 디자인 규칙&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;원자에 margin이나 position과 같은 위치에 영향을 주는 속성을 지정하지 않는다. (페이지내에서 사이드 이펙트를 일으킬 수 있음)&lt;/li&gt;
+&lt;li&gt;컴포넌트들은 상태를 가지지 않아야 한다.&lt;/li&gt;
+&lt;li&gt;오직 분자나, 유기체만이 원자들의 위치를 지정할 수 있으며 마찬가지로 자기 자신의 position과 margin을 지정해선 안된다.&lt;/li&gt;
+&lt;li&gt;템플릿은 오직 그리드만을 가져야하고, 특정 컴포넌트의 위치를 지정해선 안된다.&lt;/li&gt;
+&lt;li&gt;템플릿위에 컴포넌트를 렌더링하여 페이지를 완성시킨다.&lt;/li&gt;
+&lt;li&gt;변수를 모아두는 파일(테마나 색상 변수값들)을 만들고 모든 아토믹 컴포넌트가 이 변수를 사용하게끔 만든다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;참고자료&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0%EC%9E%90%EB%A3%8C&quot; aria-label=&quot;참고자료 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고자료&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@inthewalter/atomic-design-for-react-514660f93ba&quot;&gt;Atomic Design for React&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.slideshare.net/NaverEngineering/line-entry-atomic-design&quot;&gt;Line Entry의 Atomic Design 적용기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://ui.toast.com/weekly-pick/ko_20200213/&quot;&gt;리액트 어플리케이션 구조 - 아토믹 디자인&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://simsimjae.tistory.com/392&quot;&gt;storybook and atomic design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/diegohaz/arc&quot;&gt;diegohaz/arc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bradfrost.com/blog/post/atomic-web-design/&quot;&gt;Atomic Design&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.muz.li/atomic-design-methodology-166261ce47c2&quot;&gt;Atomic Design -Methodology&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://ko.reactjs.org/docs/thinking-in-react.html&quot;&gt;React로 사고하기 - React&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://codeburst.io/atomic-design-with-react-e7aea8152957&quot;&gt;Atomic Design with React&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Portal]]></title><description><![CDATA[리액트 포탈 논리적으로 하위 컴포넌트여야 하는데, 시각적으로는 상위 컴포넌트를 덮어야 할 상황일 때 사용 리액트 v16 에서 도입된 기능으로, 기존의 리액트에서 컴포넌트를 렌더링 하게 될 때, children 은 부모컴포넌트의 DOM…]]></description><link>https://maeng2418.github.io/react/portal/</link><guid isPermaLink="false">https://maeng2418.github.io/react/portal/</guid><pubDate>Mon, 24 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;리액트-포탈&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%AC%EC%95%A1%ED%8A%B8-%ED%8F%AC%ED%83%88&quot; aria-label=&quot;리액트 포탈 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;리액트 포탈&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;논리적으로 하위 컴포넌트여야 하는데, 시각적으로는 상위 컴포넌트를 덮어야 할 상황일 때 사용&lt;/p&gt;
+&lt;p&gt;리액트 v16 에서 도입된 기능으로, 기존의 리액트에서 컴포넌트를 렌더링 하게 될 때, children 은 부모컴포넌트의 DOM 내부에 렌더링 되어야 하지만, Portals 를 사용하면 DOM 의 계층구조 시스템에 종속되지 않으면서 컴포넌트를 렌더링 할 수 있습니다. 따라서 모달창과 같은 다이얼로그 컴포넌트를 리액트 포탈을 이용해 개선&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PortalContainer 구현&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Portal Component&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useRef&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useEffect &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; createPortal &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-dom&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IPortalProps&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  children&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ReactNode&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  selector&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; PortalContainer&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FC&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IPortalProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; children&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; selector &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; ref &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token generic-function&quot;&gt;&lt;span class=&quot;token function&quot;&gt;useRef&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;mounted&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setMounted&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    ref&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;selector&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;setMounted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;selector&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; mounted &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;createPortal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;children&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ref&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;current&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;모달 컴포넌트 구현 (모달 레이아웃)&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Modal Component&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Dispatch&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; SetStateAction &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; styles &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./Modal.module.scss&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; classNames &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;classnames/bind&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; PortalContainer &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../../containers/commons/PortalContainer&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; cx &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;classNames&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IModalProps&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  setModalVisible&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Dispatch&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;SetStateAction&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token function-variable function&quot;&gt;onSubmitHandler&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;MouseEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  visible&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;boolean&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  children&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ReactNode&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Modal&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FC&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IModalProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; setModalVisible&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; onSubmitHandler&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; visible&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; children &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;PortalContainer&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;selector&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;modal &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;visible &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;visible&apos;&lt;/span&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;modal-content&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;title&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;모달 확인&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;h1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;content&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;children&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;button-container&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;cancel-btn&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setModalVisible&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              취소하기
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;ok-btn&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;onSubmitHandler&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+              확인하기
+            &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;modal-bg&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setModalVisible&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;PortalContainer&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; Modal&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;테스트 모달 구현&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Modal &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../Modal&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; IModalProps &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../Modal/Modal&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; styles &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./TestModal.scss&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; classNames &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;classnames/bind&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; cx &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;classNames&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;styles&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IProps&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; IModalProps&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; TestModal&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FC&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; visible&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setModalVisible&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; onSubmitHandler &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;button&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;cx&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;modal-btn button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setModalVisible&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+        Modal Test
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;visible &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Modal&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;visible&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;visible&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;setModalVisible&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;setModalVisible&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+          &lt;span class=&quot;token attr-name&quot;&gt;onSubmitHandler&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;onSubmitHandler&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+          콘텐츠
+        &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Modal&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; TestModal&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;→ 버튼 컴포넌트가 렌더링되고 클릭 시 모달 컴포넌트가 body 태그 아래에 렌더링되게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;테스트 화면&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAACCUlEQVQoz02RS08UQRRG5zeYuHOGobqqn9XVPT0PhoERCUrUJWpI5DGGhBANuJkwPEYFgpBI4n+QlSvj1uBKiBs3xrgxupWNf+KYrsFHJd/i3uSeujm34Ps+vucSNK7jT8wSTdwluHoPvz1DEGpcpajUGtSbLeI4tom0JowigiAgiiLCSBPHhiTNKLiuiyMEM/eXeNx/waPePqubh6x0d4l0jHQcXM/HmIQkSf9CtY5RUqKNYazdZrTZxBhDwfM8hHB4sLjA/t4ztjfX6W9tsL3Zw5gYx3Hw/YAsrTBSq5KkFfwgYDAniOKY2miLrNYgSZIBsFwus7q6xsnJe05Pz/j65TPHx8d2SEqJ0TENY2gajQlDHCntR4PtPaYnm8zcbhOFPoXcYbFYpN/v8//7cPbRbpArkUoxLARlIWwvB0npoJSkdKXEy+fLnL47op5GA2CpVKLb7XJ+/pNv33/w5tMvXr1+i++qAVAqhIVIG6WU7eVxpKLVSJkar+K66o9DQafT4eDggN2dHY4O93j6pG/F5wCtNZVKRlatWk/5jD1MHNtLS+Xh+iFZlv0DLszPW1hvfZ2trW02ej07lB+sWVfcnNLcuBYy2XYZGxlitF6kVS9SNZdJo0uMj5RsXcil5oLv3JpmbWmR5blZHnbmWJmfxYSB9Ze7UlKglIObx72oLyLlMI4YsvkNbhg+C1YSa0gAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/portal/1.png&quot;
+        title=&quot;./images/portal/1.png&quot;
+        src=&quot;/static/f24966f86ac1192e88935eebb9d8be81/c1b63/1.png&quot;
+        srcset=&quot;/static/f24966f86ac1192e88935eebb9d8be81/5a46d/1.png 300w,
+/static/f24966f86ac1192e88935eebb9d8be81/0a47e/1.png 600w,
+/static/f24966f86ac1192e88935eebb9d8be81/c1b63/1.png 1200w,
+/static/f24966f86ac1192e88935eebb9d8be81/d61c2/1.png 1800w,
+/static/f24966f86ac1192e88935eebb9d8be81/97a96/1.png 2400w,
+/static/f24966f86ac1192e88935eebb9d8be81/be061/1.png 3584w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;→ 앱안에 있는 ‘Modal Test’ 버튼을 이용하여 앱밖으로 모달창을 조작할 수 있게 되었다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[커서와 HTML Element의 위치]]></title><description><![CDATA[MouseEvent 해당 마우스 이벤트의 위치를 알기 위해 사용되는 프로퍼티는 다음과 같다. pageX, pageY ClientX, ClientY offsetX, offsetY layerX, layerY screenX, screenY…]]></description><link>https://maeng2418.github.io/javascript/event_position/</link><guid isPermaLink="false">https://maeng2418.github.io/javascript/event_position/</guid><pubDate>Mon, 24 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;mouseevent&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mouseevent&quot; aria-label=&quot;mouseevent permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MouseEvent&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 마우스 이벤트의 위치를 알기 위해 사용되는 프로퍼티는 다음과 같다.
+&lt;ul&gt;
+&lt;li&gt;pageX, pageY&lt;/li&gt;
+&lt;li&gt;ClientX, ClientY&lt;/li&gt;
+&lt;li&gt;offsetX, offsetY&lt;/li&gt;
+&lt;li&gt;layerX, layerY&lt;/li&gt;
+&lt;li&gt;screenX, screenY&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;마우스이벤트의 &lt;code class=&quot;language-text&quot;&gt;__proto__&lt;/code&gt; 를 살펴보자
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 332px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 214.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAArCAYAAAB4pah1AAAACXBIWXMAAAsTAAALEwEAmpwYAAADdUlEQVRIx52W6XLiQAyE8/6vt792E8IRwAbbc182R29Jxo4JBGymasq7VckXSS2p562ua+z3e+x2O2TbDGVRwnuPqqqw2+VQUuB8PoNO93103g6HAwPXmzWyPMM226IsSzhrkJcGwjSEArFGAemHjscjxE5ivyhQritYa+GchTIBzREX4HNYD6STZIJaGMhPhegifPAIweN8PvXpjo6QThABcqEgVwrBB4QQ4JzrQWPrOABGqJXmG30bIYlzPn0DJkUYZYReG8i5YqhYSRhhUTc1Yow4nU7TIowqwWwMpy0+JExmOW2CUepj6/gtiqk5wmom4YRvQd6haZrXUiYgpUoRBtvW0Fl3k+r4CHWC+JRcQ5NbxBRYlJTSVbrPwIMIE8zWovqQ8CpwhNZYbvqfgEdRXkVocwe51FBfGuW/CvJL9aLQzI9JvQf6MkDMFQtDkdrM8b/1xsBow0CCjwaGKnD95FIhuLZ+1DZ0SJjuDmt5r66Dxk7QX4aFETMJnWuuIzV2J8yj03Heuv8EFaGWmmEUKaVqpYXTDt4HHI8n1HXi1OlSf9KX/thQOAamOqFYllALjepDcKQ8MZ8SemsgRMB2m+P9/R2LxQLz+Ryr1QrL5RKbzYbLcwU8HA8whYVZWwYRhEbP7ixiaKBNQFWVyPMcRVH0X631TeNf1VCtDMNIjBDbO6Z2d0WhtuEpySy3B6XxnQp+VXcIuwukGrrScTMTkDzn5y/9BrzpQ96DF5WttqwgQe+N3/ONXcVWWVpfhWvreNmHk2z0amNTY88kgmkFIfebEt0NkNf/WiOGyMDOpF5yPRJl92cPW9iLhYabXThpwfrCo/wr4I1HahJCCtzw9+Z1pCihHbmNgs7brxct9NAcem+ZZAHsy0vNrwe6pmxbh/Yh9eM0oKlhNu0s28LBX5Qm4FjYrQVkjm2UXS96bpvh8E8yKTL6zpe9DCwKL9hD/esyfdqH5CUszMUK1Fbz9vFVaJdpTDdm9TBlAtJSrf4J3jq0rYOJ3EqUOsGeTc4gZZpljWomeFLoUsqn84nvSynTHNP6ojeiUYYVpqh+CjPORkVrUvRykHMNb30/zy+tL1KZgPwmrGueZZqOzotfeH0ldj2r6KEUGTiM7KX1RS3jpe9fDWPfM3eBta/5CdJt6qmp3gJdza1C49a9aaak2gH/A/PuK3KI8S+iAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/event_position/1.png&quot;
+        title=&quot;./images/event_position/1.png&quot;
+        src=&quot;/static/419f46bb08cbad853ec37dfb7007df34/f8dc5/1.png&quot;
+        srcset=&quot;/static/419f46bb08cbad853ec37dfb7007df34/5a46d/1.png 300w,
+/static/419f46bb08cbad853ec37dfb7007df34/f8dc5/1.png 332w&quot;
+        sizes=&quot;(max-width: 332px) 100vw, 332px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;screenX, screenY:&lt;/strong&gt;
+모니터 화면 기준으로 현재 커서의 위치를 알려줍니다. 즉 브라우저 위치를 변경하면 같은 HTMLElement를 가르키고 있다고 해도, 다를 수 있습니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;pageX, pageY:&lt;/strong&gt;
+브라우저의 내용이 보이는 부분(뷰 포트) 최상단 왼쪽을 (0,0)을 기준으로 하여서 현재 마우스의 위치를 알려줍니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;clientX, clientY:&lt;/strong&gt;
+위의 pageX, pageY와 동일하나, 뷰 포트에 스크롤이 있을 경우에 달라집니다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;offsetX, offsetY:&lt;/strong&gt;
+현재 마우스가 올려져있는 Elements 중 가장 자식 Elements의 최상단 왼쪽을 기준으로 마우스 위치를 알려줍니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;htmlelement의-위치-구하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#htmlelement%EC%9D%98-%EC%9C%84%EC%B9%98-%EA%B5%AC%ED%95%98%EA%B8%B0&quot; aria-label=&quot;htmlelement의 위치 구하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTMLElement의 위치 구하기&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTMLElement의 위치를 구하는 방법은 3가지가 있다.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;getBoundingClientRect();&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;getClientRects();&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;offsetLeft, offsetTop, offsetRight, offsetBottom&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;offsetx-시리즈&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#offsetx-%EC%8B%9C%EB%A6%AC%EC%A6%88&quot; aria-label=&quot;offsetx 시리즈 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;offsetX 시리즈&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTMLElement의 위치의 기준이 &lt;strong&gt;position이 relative인&lt;/strong&gt; 부모 엘리먼트들 중에서 가장 가까운 부모 엘리먼트와의 거리를 알려준다. 기준이 position: absolute일 때 기준이 되는 부모 엘리먼트와 동일하다고 볼 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;getboundingclientrect-vs-getclientrects&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#getboundingclientrect-vs-getclientrects&quot; aria-label=&quot;getboundingclientrect vs getclientrects permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;getBoundingClientRect vs getClientRects&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;W3C docs&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The getClientRects() method, when invoked, must return the result of the following algorithm:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If the element on which it was invoked does not have an associated &lt;a href=&quot;https://www.w3.org/TR/cssom-view/#layout-box&quot;&gt;layout box&lt;/a&gt; return an empty sequence and stop this algorithm.&lt;/li&gt;
+&lt;li&gt;If the element has an associated &lt;a href=&quot;https://www.w3.org/TR/cssom-view/#svg-layout-box&quot;&gt;SVG layout box&lt;/a&gt; return a sequence containing a single &lt;code class=&quot;language-text&quot;&gt;[DOMRect](https://www.w3.org/TR/geometry-1/#dom-domrect)&lt;/code&gt; object that describes the bounding box of the element as defined by the SVG specification, applying the &lt;a href=&quot;https://www.w3.org/TR/cssom-view/#transforms&quot;&gt;transforms&lt;/a&gt; that apply to the element and its ancestors.&lt;/li&gt;
+&lt;li&gt;Return a sequence containing static &lt;code class=&quot;language-text&quot;&gt;[DOMRect](https://www.w3.org/TR/geometry-1/#dom-domrect)&lt;/code&gt; objects in content order, one for each &lt;a href=&quot;https://www.w3.org/TR/css3-break/#box-fragment&quot;&gt;box fragment&lt;/a&gt;, describing its border area (including those with a height or width of zero) with the following constraints:
+&lt;ul&gt;
+&lt;li&gt;Apply the &lt;a href=&quot;https://www.w3.org/TR/cssom-view/#transforms&quot;&gt;transforms&lt;/a&gt; that apply to the element and its ancestors.&lt;/li&gt;
+&lt;li&gt;If the element on which the method was invoked has a computed value for the &lt;a href=&quot;https://www.w3.org/TR/CSS21/visuren.html#propdef-display&quot;&gt;display&lt;/a&gt; property of &lt;a href=&quot;https://www.w3.org/TR/css-display-3/#valdef-display-table&quot;&gt;table&lt;/a&gt; or &lt;a href=&quot;https://www.w3.org/TR/css-display-3/#valdef-display-inline-table&quot;&gt;inline-table&lt;/a&gt; include both the table box and the caption box, if any, but not the anonymous container box.&lt;/li&gt;
+&lt;li&gt;Replace each &lt;a href=&quot;https://www.w3.org/TR/CSS21/visuren.html#anonymous-block-level&quot;&gt;anonymous block box&lt;/a&gt; with its child box(es) and repeat this until no anonymous block boxes are left in the final list.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The getBoundingClientRect() method, when invoked, must return the result of the following algorithm:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Let list be the result of invoking &lt;code class=&quot;language-text&quot;&gt;[getClientRects()](https://www.w3.org/TR/cssom-view/#dom-element-getclientrects)&lt;/code&gt; on the same element this method was invoked on.&lt;/li&gt;
+&lt;li&gt;If the list is empty return a static &lt;code class=&quot;language-text&quot;&gt;[DOMRect](https://www.w3.org/TR/geometry-1/#dom-domrect)&lt;/code&gt; object whose &lt;code class=&quot;language-text&quot;&gt;[x](https://drafts.fxtf.org/geometry-1/#dom-domrect-x)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;[y](https://drafts.fxtf.org/geometry-1/#dom-domrect-y)&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;[width](https://drafts.fxtf.org/geometry-1/#dom-domrect-width)&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;[height](https://drafts.fxtf.org/geometry-1/#dom-domrect-height)&lt;/code&gt; members are zero.&lt;/li&gt;
+&lt;li&gt;Otherwise, return a static &lt;code class=&quot;language-text&quot;&gt;[DOMRect](https://www.w3.org/TR/geometry-1/#dom-domrect)&lt;/code&gt; object describing the smallest rectangle that includes the first rectangle in list and all of the remaining rectangles of which the height or width is not zero.&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[MySQL]]></title><description><![CDATA[MySQL MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다. Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다. Install - MacOS   ← MySQL…]]></description><link>https://maeng2418.github.io/development/mysql/</link><guid isPermaLink="false">https://maeng2418.github.io/development/mysql/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;mysql&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql&quot; aria-label=&quot;mysql permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다.&lt;/li&gt;
 &lt;li&gt;Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다.&lt;/li&gt;
@@ -335,7 +823,32 @@ Tags: Debug, Node.js&lt;/p&gt;
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;네입서버의 값을 도메인호스팅 사이트의 네임서버에 입력해줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Cookie와 Session]]></title><description><![CDATA[HTTP의 특징과 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless…]]></description><link>https://maeng2418.github.io/web/cookie/</link><guid isPermaLink="false">https://maeng2418.github.io/web/cookie/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;http의특징과쿠키와세션을사용하는이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98%ED%8A%B9%EC%A7%95%EA%B3%BC%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;http의특징과쿠키와세션을사용하는이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 특징과 쿠키와 세션을 사용하는 이유&lt;/h2&gt;
+&lt;p&gt;네입서버의 값을 도메인호스팅 사이트의 네임서버에 입력해줍니다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글톤 패턴]]></title><description><![CDATA[Singleton 패턴 애플리케이션이 시작될 때 어떤 클래스가 최초 한번만 메모리를 할당하고(Static) 그 메모리에 인스턴스를 만들어 사용하는 디자인패턴. 전체 시스템에서의 오직 하나의 인스턴스만 존재하도록 보장.]]></description><link>https://maeng2418.github.io/development/singleton/</link><guid isPermaLink="false">https://maeng2418.github.io/development/singleton/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;singleton-패턴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#singleton-%ED%8C%A8%ED%84%B4&quot; aria-label=&quot;singleton 패턴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Singleton 패턴&lt;/h2&gt;
+&lt;p&gt;애플리케이션이 시작될 때 어떤 클래스가 &lt;strong&gt;최초 한번만&lt;/strong&gt; 메모리를 할당하고(Static) 그 메모리에 인스턴스를 만들어 사용하는 디자인패턴.&lt;/p&gt;
+&lt;p&gt;전체 시스템에서의 &lt;strong&gt;오직 하나의 인스턴스만&lt;/strong&gt; 존재하도록 보장.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singleton &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;singleton&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token literal-property property&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token function-variable function&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;instance&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        instance &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; instance&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 이미 인스턴스가 있다면 새로 생성하지 않음.&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singletone1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singletone2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;singletone1 &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; singletone2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Cookie와 Session]]></title><description><![CDATA[HTTP의 특징과 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless…]]></description><link>https://maeng2418.github.io/web/cookie/</link><guid isPermaLink="false">https://maeng2418.github.io/web/cookie/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;http의특징과쿠키와세션을사용하는이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98%ED%8A%B9%EC%A7%95%EA%B3%BC%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;http의특징과쿠키와세션을사용하는이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 특징과 쿠키와 세션을 사용하는 이유&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다.&lt;/li&gt;
 &lt;li&gt;HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless, stateless한 특성이 있기 때문이다.&lt;/li&gt;
