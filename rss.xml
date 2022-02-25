@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Blog posted about ...]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 25 Feb 2022 00:22:51 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[Node.js 디버깅 Created: 2021년 5월 23일 오후 9:47
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Maeng's Blog is for recording Maeng's Developments.]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 25 Feb 2022 00:49:46 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[Node.js 디버깅 Created: 2021년 5월 23일 오후 9:47
 Tags: Debug, Node.js VSCODE-NodeJS 디버깅 vscode의 디버깅 탭에서 create a launch.json file을 클릭한다. .vscode…]]></description><link>https://maeng2418.github.io/node/debugging/</link><guid isPermaLink="false">https://maeng2418.github.io/node/debugging/</guid><content:encoded>&lt;h1 id=&quot;nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js 디버깅&lt;/h1&gt;
 &lt;p&gt;Created: 2021년 5월 23일 오후 9:47
 Tags: Debug, Node.js&lt;/p&gt;
@@ -403,122 +403,7 @@ Tags: Debug, Node.js&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;💡 async 함수를 사용할 때, try-catch문을 중복해서 사용하는 것에 대한 궁금증도 생겼고, 다음 블로그 포스팅을 통해 해결하였다.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://velog.io/@vraimentres/async-%ED%95%A8%EC%88%98%EC%99%80-try-catch&quot;&gt;async 함수와 try-catch&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Storybook 적용하기]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/development/storybook/</link><guid isPermaLink="false">https://maeng2418.github.io/development/storybook/</guid><pubDate>Mon, 24 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;이슈&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%EC%8A%88&quot; aria-label=&quot;이슈 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이슈&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;컴포넌트를 설계할 때, 필요한게 생길 때마다 해당 케이스에 맞게 컴포넌트를 설계하다 보니, 비슷한 기능을 가진 컴포넌트들이 생겨났고, 결과적으로 재활용성이 떨어졌다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;개발은 컴포넌트 단위로 진행하지만 실제 개발환경은 항상 페이지 단위로 만들어지기 때문에 어쩌면 당연히 일어날 수도 있지만 웹 개발에 있어서 재활용성이 떨어진다는 것은 생산성이 나빠지거나 추후에 리팩토링을 할 때, 과정이 커지고 복잡해질 가능성이 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;storybook-이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#storybook-%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;storybook 이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Storybook 이란?&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;스토리북(Storybook)은 UI 컴포넌트를 위한 유저 인터페이스 개발 환경 및 자유롭게 컴포넌트를 테스트할 수 있는 도구이다. 스토리북을 활용하면 개발자는 독립적인 환경에서 UI 컴포넌트가 어떻게 실제로 렌더링되는지 직접 시각적으로 테스트하면서 개발할 수 있고, 개발환경에서 컴포넌트들을 인터랙티브하게 보여줄 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;UI 컴포넌트를 독립적으로 개발함으로써, 컴포넌트 재사용성, 테스트, 개발 속도를 향상시킨다.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;cd &amp;lt;프로젝트 디렉터리&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npx -p @storybook/cli sb init&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.storybook/main.js&lt;/code&gt; 에 필요한 설정 및 에드온 추가&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token literal-property property&quot;&gt;stories&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;../src/**/*.stories.mdx&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../src/**/*.stories.@(js|jsx|ts|tsx)&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token literal-property property&quot;&gt;addons&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-links&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-essentials&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/preset-create-react-app&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-docs&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-actions&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-viewport&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사용 방법&lt;/h2&gt;
-&lt;h3 id=&quot;1-컴포넌트-작성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;1 컴포넌트 작성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 컴포넌트 작성&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// **CartButton.tsx**&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useEffect &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Button &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../components&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; IButtonProps &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../interfaces&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; CartButton&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FC&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IButtonProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; children&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setCart&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token generic-function&quot;&gt;&lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;onClickHandler&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;MouseEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token function&quot;&gt;setCart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token builtin&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Button&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;onClickHandler&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token spread&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;children&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Button&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-CartButton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;defaultProps &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  btnType&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;primary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  children&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;장바구니&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  disabled&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&quot;2-스토리-작성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%8A%A4%ED%86%A0%EB%A6%AC-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;2 스토리 작성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 스토리 작성&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// **CartButton.stories.tsx**&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Story&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Meta &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/react/types-6-0&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; action &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-actions&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; CartButton &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./CartButton&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; IButtonProps &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../interfaces&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;CartButton&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  component&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; CartButton&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; Meta&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Template&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Story&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IButtonProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;CartButton&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token spread&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Default &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-Default&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;args &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  btnType&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;default&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  danger&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  onClick&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;onClick 이벤트&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  children&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;장바구니&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;storybook-실행-이미지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#storybook-%EC%8B%A4%ED%96%89-%EC%9D%B4%EB%AF%B8%EC%A7%80&quot; aria-label=&quot;storybook 실행 이미지 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Storybook 실행 이미지&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 48.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABB0lEQVQoz5WSW0sEMQyF+/9/nPjqm/iwIizKjr3k2qNpd3THnV0wEFqa8HFOmnR4O+KUG96LglghImAWEBFEFGoG1ZnCjKUKjtlQG0FVZ80MLIJSCWk5LQOg5siloLUGM8OtIGLU1tAaodY23nrvI0Ud6ek14/nDwWcFocrdN41rRqy1XOoAr30RZo708JLxeBCw9o2StekvMGyGg3CSc97Uw2Uq8ei+q2Y9L+/MjFrrAMf9GkiKQgb3a8ie4oCUUobKOP1HjI8PSo0NjXUDvJVzTjY2IUBh+fcD+5xhJUXkBPa7wEvwnvoBnArtptX/hLkjfRZCrjQWMwYtd3LURcZq7da+Z/gFhVEU8RtK8qwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Storybook&quot;
-        title=&quot;Storybook&quot;
-        src=&quot;/static/c041314e8a138d0f6fcdc6ca87d3f515/c1b63/1.png&quot;
-        srcset=&quot;/static/c041314e8a138d0f6fcdc6ca87d3f515/5a46d/1.png 300w,
-/static/c041314e8a138d0f6fcdc6ca87d3f515/0a47e/1.png 600w,
-/static/c041314e8a138d0f6fcdc6ca87d3f515/c1b63/1.png 1200w,
-/static/c041314e8a138d0f6fcdc6ca87d3f515/d61c2/1.png 1800w,
-/static/c041314e8a138d0f6fcdc6ca87d3f515/97a96/1.png 2400w,
-/static/c041314e8a138d0f6fcdc6ca87d3f515/ad634/1.png 2873w&quot;
-        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.daleseo.com/storybook/&quot;&gt;Storybook 소개 / 기본 사용법&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook: UI component explorer for frontend developers&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://velopert.gitbook.io/storybook-tutorial/&quot;&gt;TypeScript와 Storybook을 사용하여 디자인 시스템 구축하기&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://meetup.toast.com/posts/178&quot;&gt;실용적인 프론트엔드 테스트 전략 (2) : TOAST Meetup&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.learnstorybook.com/intro-to-storybook/react/kr/simple-component/&quot;&gt;간단한 컴포넌트 만들기&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.learnstorybook.com/design-systems-for-developers/react/kr/build/&quot;&gt;UI 컴포넌트 구축하기&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://simsimjae.tistory.com/395&quot;&gt;스토리북에서 스토리를 작성하는 방법&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Next.js에 카카오맵 추가하기]]></title><description><![CDATA[시작하기 카카오 개발자 사이트에 로그인한다. 로그인 후 앱키(자바스크립트)를 발급받는다. WEB 플랫폼에서 사이트 도메인을 등록한다.  Next.js에 적용하기]]></description><link>https://maeng2418.github.io/development/kakao_map/</link><guid isPermaLink="false">https://maeng2418.github.io/development/kakao_map/</guid><pubDate>Mon, 24 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;시작하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot; aria-label=&quot;시작하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;시작하기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@vraimentres/async-%ED%95%A8%EC%88%98%EC%99%80-try-catch&quot;&gt;async 함수와 try-catch&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Next.js에 카카오맵 추가하기]]></title><description><![CDATA[시작하기 카카오 개발자 사이트에 로그인한다. 로그인 후 앱키(자바스크립트)를 발급받는다. WEB 플랫폼에서 사이트 도메인을 등록한다.  Next.js에 적용하기]]></description><link>https://maeng2418.github.io/development/kakao_map/</link><guid isPermaLink="false">https://maeng2418.github.io/development/kakao_map/</guid><pubDate>Mon, 24 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;시작하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot; aria-label=&quot;시작하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;시작하기&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&quot;https://developers.kakao.com/&quot;&gt;카카오 개발자 사이트&lt;/a&gt;에 로그인한다.&lt;/p&gt;
@@ -853,7 +738,122 @@ carouselSlide&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;s
 &lt;/ul&gt;
 &lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://devdesigner.tistory.com/4&quot;&gt;[Javascript] 캐러셀 슬라이더 2가지 예제&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://medium.com/@claudiaconceic/infinite-plain-javascript-slider-click-and-touch-events-540c8bd174f2&quot;&gt;Infinite plain Javascript slider (click and touch events)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[아토믹 디자인]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/react/atomic_design/</link><guid isPermaLink="false">https://maeng2418.github.io/react/atomic_design/</guid><pubDate>Mon, 24 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;아토믹-디자인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;아토믹 디자인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아토믹 디자인&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@claudiaconceic/infinite-plain-javascript-slider-click-and-touch-events-540c8bd174f2&quot;&gt;Infinite plain Javascript slider (click and touch events)&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Storybook 적용하기]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/development/storybook/</link><guid isPermaLink="false">https://maeng2418.github.io/development/storybook/</guid><pubDate>Mon, 24 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;이슈&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%EC%8A%88&quot; aria-label=&quot;이슈 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이슈&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;컴포넌트를 설계할 때, 필요한게 생길 때마다 해당 케이스에 맞게 컴포넌트를 설계하다 보니, 비슷한 기능을 가진 컴포넌트들이 생겨났고, 결과적으로 재활용성이 떨어졌다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;개발은 컴포넌트 단위로 진행하지만 실제 개발환경은 항상 페이지 단위로 만들어지기 때문에 어쩌면 당연히 일어날 수도 있지만 웹 개발에 있어서 재활용성이 떨어진다는 것은 생산성이 나빠지거나 추후에 리팩토링을 할 때, 과정이 커지고 복잡해질 가능성이 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;storybook-이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#storybook-%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;storybook 이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Storybook 이란?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;스토리북(Storybook)은 UI 컴포넌트를 위한 유저 인터페이스 개발 환경 및 자유롭게 컴포넌트를 테스트할 수 있는 도구이다. 스토리북을 활용하면 개발자는 독립적인 환경에서 UI 컴포넌트가 어떻게 실제로 렌더링되는지 직접 시각적으로 테스트하면서 개발할 수 있고, 개발환경에서 컴포넌트들을 인터랙티브하게 보여줄 수 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UI 컴포넌트를 독립적으로 개발함으로써, 컴포넌트 재사용성, 테스트, 개발 속도를 향상시킨다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98&quot; aria-label=&quot;설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;cd &amp;lt;프로젝트 디렉터리&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;npx -p @storybook/cli sb init&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.storybook/main.js&lt;/code&gt; 에 필요한 설정 및 에드온 추가&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;stories&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;../src/**/*.stories.mdx&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../src/**/*.stories.@(js|jsx|ts|tsx)&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;addons&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-links&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-essentials&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/preset-create-react-app&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-docs&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-actions&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-viewport&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;사용-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;사용 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;사용 방법&lt;/h2&gt;
+&lt;h3 id=&quot;1-컴포넌트-작성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;1 컴포넌트 작성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 컴포넌트 작성&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// **CartButton.tsx**&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; useState&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; useEffect &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Button &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../components&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; IButtonProps &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../interfaces&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; CartButton&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;FC&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IButtonProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; children&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setCart&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token generic-function&quot;&gt;&lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token generic class-name&quot;&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;onClickHandler&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;MouseEvent&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;setCart&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token builtin&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;cart&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Button&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;onClickHandler&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token spread&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;children&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Button&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+CartButton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;defaultProps &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  btnType&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;primary&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  children&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;장바구니&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  disabled&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;2-스토리-작성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-%EC%8A%A4%ED%86%A0%EB%A6%AC-%EC%9E%91%EC%84%B1&quot; aria-label=&quot;2 스토리 작성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. 스토리 작성&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;tsx&quot;&gt;&lt;pre class=&quot;language-tsx&quot;&gt;&lt;code class=&quot;language-tsx&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// **CartButton.stories.tsx**&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Story&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Meta &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/react/types-6-0&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; action &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@storybook/addon-actions&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; CartButton &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./CartButton&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; IButtonProps &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../../interfaces&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;CartButton&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  component&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; CartButton&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; Meta&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Template&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Story&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;IButtonProps&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;CartButton&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token spread&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;args&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Default &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+Default&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;args &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  btnType&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;default&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  danger&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  onClick&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;onClick 이벤트&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  children&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;장바구니&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;storybook-실행-이미지&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#storybook-%EC%8B%A4%ED%96%89-%EC%9D%B4%EB%AF%B8%EC%A7%80&quot; aria-label=&quot;storybook 실행 이미지 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Storybook 실행 이미지&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABB0lEQVQoz5WSW0sEMQyF+/9/nPjqm/iwIizKjr3k2qNpd3THnV0wEFqa8HFOmnR4O+KUG96LglghImAWEBFEFGoG1ZnCjKUKjtlQG0FVZ80MLIJSCWk5LQOg5siloLUGM8OtIGLU1tAaodY23nrvI0Ud6ek14/nDwWcFocrdN41rRqy1XOoAr30RZo708JLxeBCw9o2StekvMGyGg3CSc97Uw2Uq8ei+q2Y9L+/MjFrrAMf9GkiKQgb3a8ie4oCUUobKOP1HjI8PSo0NjXUDvJVzTjY2IUBh+fcD+5xhJUXkBPa7wEvwnvoBnArtptX/hLkjfRZCrjQWMwYtd3LURcZq7da+Z/gFhVEU8RtK8qwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Storybook&quot;
+        title=&quot;Storybook&quot;
+        src=&quot;/static/c041314e8a138d0f6fcdc6ca87d3f515/c1b63/1.png&quot;
+        srcset=&quot;/static/c041314e8a138d0f6fcdc6ca87d3f515/5a46d/1.png 300w,
+/static/c041314e8a138d0f6fcdc6ca87d3f515/0a47e/1.png 600w,
+/static/c041314e8a138d0f6fcdc6ca87d3f515/c1b63/1.png 1200w,
+/static/c041314e8a138d0f6fcdc6ca87d3f515/d61c2/1.png 1800w,
+/static/c041314e8a138d0f6fcdc6ca87d3f515/97a96/1.png 2400w,
+/static/c041314e8a138d0f6fcdc6ca87d3f515/ad634/1.png 2873w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.daleseo.com/storybook/&quot;&gt;Storybook 소개 / 기본 사용법&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://storybook.js.org/&quot;&gt;Storybook: UI component explorer for frontend developers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://velopert.gitbook.io/storybook-tutorial/&quot;&gt;TypeScript와 Storybook을 사용하여 디자인 시스템 구축하기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://meetup.toast.com/posts/178&quot;&gt;실용적인 프론트엔드 테스트 전략 (2) : TOAST Meetup&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.learnstorybook.com/intro-to-storybook/react/kr/simple-component/&quot;&gt;간단한 컴포넌트 만들기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.learnstorybook.com/design-systems-for-developers/react/kr/build/&quot;&gt;UI 컴포넌트 구축하기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://simsimjae.tistory.com/395&quot;&gt;스토리북에서 스토리를 작성하는 방법&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[아토믹 디자인]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/react/atomic_design/</link><guid isPermaLink="false">https://maeng2418.github.io/react/atomic_design/</guid><pubDate>Mon, 24 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;아토믹-디자인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%84%ED%86%A0%EB%AF%B9-%EB%94%94%EC%9E%90%EC%9D%B8&quot; aria-label=&quot;아토믹 디자인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;아토믹 디자인&lt;/h2&gt;
 &lt;p&gt;디자인 요소들을 나누어 파악하고 이 요소들을 조합을 통해서 디자인을 구성하는 방식. 즉, 컴포넌트 중심의 디자인 패턴.&lt;/p&gt;
 &lt;p&gt;리액트는 컴포넌트를 중심으로 만들어지는 프레임워크로, 컴포넌트의 재사용성이 매우 중요하다. 중복이 되는 컴포넌트를 공통으로 사용할 수 있도록 빼는 것이 관건인데, 이것은 개발을 진행하다 보면 일일히 생각하며 진행하는 것이 어렵다. 결국에는 중복되는 코드가 많아지고, 이를 관리하는 것이 어려워지게 되는 것이다. 그렇기에 개발 단계 처음부터 재사용성이 용이하며, 여러 개의 컴포넌트들을 모아 또 다른 컴포넌트를 만들 수 있도록(조립) 고민하며 개발하는 것이 아토믹 디자인이다.&lt;/p&gt;
 &lt;h2 id=&quot;컴포넌트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8&quot; aria-label=&quot;컴포넌트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컴포넌트&lt;/h2&gt;
@@ -1483,72 +1483,7 @@ carouselSlide&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;s
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singletone1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singletone2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;singletone1 &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; singletone2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Cookie와 Session]]></title><description><![CDATA[HTTP의 특징과 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless…]]></description><link>https://maeng2418.github.io/web/cookie/</link><guid isPermaLink="false">https://maeng2418.github.io/web/cookie/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;http의특징과쿠키와세션을사용하는이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98%ED%8A%B9%EC%A7%95%EA%B3%BC%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;http의특징과쿠키와세션을사용하는이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 특징과 쿠키와 세션을 사용하는 이유&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다.&lt;/li&gt;
-&lt;li&gt;HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless, stateless한 특성이 있기 때문이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;사용자-식별---인증을-위한-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%8B%9D%EB%B3%84---%EC%9D%B8%EC%A6%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;사용자 식별   인증을 위한 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;사용자 식별 - 인증을 위한 방법&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;IP 추적&lt;/li&gt;
-&lt;li&gt;HTTP Authentication&lt;/li&gt;
-&lt;li&gt;URL에 식별자 포함&lt;/li&gt;
-&lt;li&gt;Cookie&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일.&lt;/li&gt;
-&lt;li&gt;사용자 인증이 유효한 시간을 명시할 수 있으며, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.&lt;/li&gt;
-&lt;li&gt;쿠키는 클라이언트의 상태 정보를 로컬에 저장하고 참조한다.&lt;/li&gt;
-&lt;li&gt;클라이언트에 300개까지 쿠키저장 가능, 하나의 도메인당 20개의 값만 가질 수 있다.&lt;/li&gt;
-&lt;li&gt;하나의 쿠키 값은 4KB까지 저장.&lt;/li&gt;
-&lt;li&gt;Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있다.&lt;/li&gt;
-&lt;li&gt;쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 Request Header를 넣어서 자동으로 서버에 전송.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;쿠키의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;쿠키의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 구성 요소&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;이름 : 각각의 쿠키를 구별하는 데 사용되는 이름&lt;/li&gt;
-&lt;li&gt;값 : 쿠키의 이름과 관련된 값&lt;/li&gt;
-&lt;li&gt;유효시간 : 쿠키의 유지시간&lt;/li&gt;
-&lt;li&gt;도메인 : 쿠키를 전송할 도메인&lt;/li&gt;
-&lt;li&gt;경로 : 쿠키를 전송할 요청 경로&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;쿠키의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;쿠키의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 동작 방식&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;클라이언트가 페이지를 요청&lt;/li&gt;
-&lt;li&gt;서버에서 쿠키를 생성&lt;/li&gt;
-&lt;li&gt;HTTP 헤더에 쿠키를 포함 시켜 응답&lt;/li&gt;
-&lt;li&gt;브라우저가 종료되어도 쿠키 만료 기간이 있다면 클라이언트에서 보관하고 있음&lt;/li&gt;
-&lt;li&gt;같은 요청을 할 경우 HTTP 헤더에 쿠키를 함께 보냄&lt;/li&gt;
-&lt;li&gt;서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w307.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w307.png&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;쿠키의-용도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EC%9A%A9%EB%8F%84&quot; aria-label=&quot;쿠키의 용도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키의 용도&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;세션관리&lt;/li&gt;
-&lt;li&gt;개인화 (예: 장바구니)&lt;/li&gt;
-&lt;li&gt;트래킹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;session&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#session&quot; aria-label=&quot;session permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;session&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 세션은 서버 측에서 관리.&lt;/li&gt;
-&lt;li&gt;서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지.&lt;/li&gt;
-&lt;li&gt;접속 시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능 합니다.&lt;/li&gt;
-&lt;li&gt;사용자에 대한 정보를 서버에 두기 때문에 쿠키보다 보안에 좋지만, 사용자가 많아질수록 서버 메모리를 많이 차지.&lt;/li&gt;
-&lt;li&gt;동접자 수가 많은 웹 사이트인 경우 서버에 과부하를 주게 되므로 성능 저하의 요인이 됨.&lt;/li&gt;
-&lt;li&gt;클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션ID다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;세션의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EC%85%98%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;세션의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세션의 동작 방식&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;클라이언트가 서버에 접속 시 세션 ID를 발급받습니다.&lt;/li&gt;
-&lt;li&gt;클라이언트는 세션 ID에 대해 쿠키를 사용해서 저장하고 가지고 있습니다.&lt;/li&gt;
-&lt;li&gt;클라리언트는 서버에 요청할 때, 이 쿠키의 세션 ID를 서버에 전달해서 사용합니다.&lt;/li&gt;
-&lt;li&gt;서버는 세션 ID를 전달 받아서 별다른 작업없이 세션 ID로 세션에 있는 클라언트 정보를 가져옵니다.&lt;/li&gt;
-&lt;li&gt;클라이언트 정보를 가지고 서버 요청을 처리하여 클라이언트에게 응답합니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w308.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w308.png&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://interconnection.tistory.com/74&quot;&gt;쿠키와 세션 개념&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[HTTP]]></title><description><![CDATA[Web WWW = World Wide Web 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간 웹과 인터넷은 다름! 웹의 3요소: HTTP, HTML, URL HTTP = HyperText Transfer Protocol WWW…]]></description><link>https://maeng2418.github.io/web/http/</link><guid isPermaLink="false">https://maeng2418.github.io/web/http/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;web&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#web&quot; aria-label=&quot;web permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Web&lt;/strong&gt;&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;singletone1 &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; singletone2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[HTTP]]></title><description><![CDATA[Web WWW = World Wide Web 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간 웹과 인터넷은 다름! 웹의 3요소: HTTP, HTML, URL HTTP = HyperText Transfer Protocol WWW…]]></description><link>https://maeng2418.github.io/web/http/</link><guid isPermaLink="false">https://maeng2418.github.io/web/http/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;web&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#web&quot; aria-label=&quot;web permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Web&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;WWW = World Wide Web&lt;/li&gt;
 &lt;li&gt;인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간&lt;/li&gt;
@@ -1642,126 +1577,7 @@ honux77/MMT?file=sum.py#30&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&quot;http-status&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http-status&quot; aria-label=&quot;http status permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP Status&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/HTTP/Status&quot;&gt;HTTP 상태 코드&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://nsinc.tistory.com/192&quot;&gt;URL vs URI vs URN&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Node.js 디버깅]]></title><description><![CDATA[VSCODE-NodeJS 디버깅 vscode의 디버깅 탭에서 create a launch.json file을 클릭한다. .vscode 폴더에 launch.json 파일이 생성된다.  break 포인트를 건다.  디버깅 시작 F…]]></description><link>https://maeng2418.github.io/node/Node js 디 1446b/</link><guid isPermaLink="false">https://maeng2418.github.io/node/Node js 디 1446b/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;vscode nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;VSCODE-NodeJS 디버깅&lt;/strong&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;vscode의 디버깅 탭에서 create a launch.json file을 클릭한다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;.vscode 폴더에 launch.json 파일이 생성된다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 369px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 107.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEP0lEQVQ4y52U248TVRzH+2x8kUtc3d22M3PmPr3MtJ1tp/fdXra77ZZuy7KwsAuIq0BIMHIRxEgCGBJBH3yQxIgKr0ZD/AM/Zo5AQCUxPnzzy++Xcz75Xc7vJK5121w7G7J0vk60XCMqR0RRRLVa/V9KVMKQRr2CXwqwbZtcNkfGy2BZFrZl/2dZlo0QgkS90aDb7RH4AUI3abZXCMtVFGGgGRbCsF5a8Yqv6a8o9oVBKpUkUavVaDbq5IISquOjChNVtxCmg2bYpISJolukhUVKM6UUEYNthGk/tw6q65NUNBK+7+P7ebJBCc10meuc4dDGVQ6tX2Zu41PcnZsos2uY2zfInryFu/M56tHrHB59wqHhZQ5uXGVueVeCF1WdRBiGtJoN8sUlVNNjbusOB/afcODsD7y7/5jW7d+JvviV7t1n1L/8jfX7f9C7+4zDH/7IwbM/cOCjp8zNbsuyJbASRbJkr7DEcUvltKNywhHsSOnMdIVjpspUpJnpaelvmyrHTYUTlsa2LThtpphYGu/FwCAoEJedKYScM9OsVMv0W3Uma31GvRWGnTab6wNWl1uM+n3Gg1WOjseMB30KUR+7tkUpaLBrJJlXDRLFUomynyHnB5yyVNKlLlpzG70xRdQ30aIRor2DKNRQTJO05aDYLpqbIWm6vG9m0HVTVjcfZ9isVWmcvIxe6XDBWGDX0TnheWxZJlPTYmYaUlMtzVSZZ6ouMFUW2FTmOSYW2TZSfKDPs2cpf5UchUWsM/cx2lM8XaBPb7Kw9x3lS48Y3PiZlauPWb7ymOGtpzSv/ETn+i/0PnvC4OZTgguPWDjzPcbkOrZhshAD4/7lPZusX0CxMrwzuMRbszskT31FcPFbsh8/xN1/gH/hGyln/wH2ua/Jn3/I4ql7vL11j4ODi6iGTTIGttptNjc3yRWW5DvMei6u4+DYjtwc23axLAfLdnDcDKZp47oerlxPG10IdE1DszwWVUFid2+P49vHyPhFVMOh3+vR768yGo7odXuMx2NWVwfSn01nrA3WGAzWmByZyHNC6BL6EhhPOZ/Lyk2Jge1Wi15/lbW1dbnjjUaTXq8vL8c2jm9sjHHdDIqiyQm/BgyCgGpUwQ/LKIZNs9FgOBzJLHq9Hp1Ol06nw8pKR8Jifzw+QrlcQVVjoPE6sNvtMlxfI1cMZbDb6bIxnkjoaLTBdDojiqqyX47jStm28/y70v8JjD/FWjWSPYyDOc8ln/XIZrN4mSyel5GXkskUqVT6pX0BE38Hxs8m8PPkCiGa6aEFXRbzXcKoKctvtdqyzLiHcU/j/jWbLTRN/DuwUChQLARyKMLyiBodusOjrA6GcsKTySb1eoN8Pv7mAorFktQbM4w/h0IMLJRkMCwEsgX1el32rlKJyGSyKIoqhxDbWBIm9DcAgxgYyoetKirpdCxFKr78orxX9aYM/wQtC9XrwO/cNQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;1&quot;
-        title=&quot;1&quot;
-        src=&quot;/static/13fcc89d5c86094576e603b10cfbf723/e0cdb/1.png&quot;
-        srcset=&quot;/static/13fcc89d5c86094576e603b10cfbf723/5a46d/1.png 300w,
-/static/13fcc89d5c86094576e603b10cfbf723/e0cdb/1.png 369w&quot;
-        sizes=&quot;(max-width: 369px) 100vw, 369px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;break 포인트를 건다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 433px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3ElEQVQ4y31T23KqQBDkM6Kwd+4EuYOAizHq/39Sp3ZVEo/Jeegaanerp6encYKAoCwTnM9XTNMISiniOEYQhOj7HFoPOBw0lmWB1hplWSBNU3v/GxwpKZJEoes6VFUJxhiEEJBSIc8TVFWBuq7vaCxZFEX2Xin/BY4QFHku0DQNhmFAmmaWkBACQig8z3uCOTdTGNzePMPZuxsIKSE4A/cjRO2CsBgQ7HrsxxrL0uF02uNymXC9zrhcRkxTh7IswTl/amDgDO4GUilIKdfDvBtRzSeU0wfavsHHccBB99C6w/lsCGtoPSHL3l8JqedBKWW7hWFovynj4ELcwDmUktZbzm/4/ubr6CuhS4glMQqtD5674uHbduvCdb1fPXuQParTuhso34cUAkyFiBoNf9dDvjfo+gLzocXn54hxrDFOPeIksUszjX4uZlU4u2+W0I5KGZhUqLIG+3JGmRbodil0W6AvMkx1jn2RIUtiUMZe/LOEjHh2XOOL8VBKAUooBOO3BveHpnJGwSzY37HZegT+XeEje8avh3+urWTNIPlnCS8KjYdBEEAIiTgObDRM9o7HwebPxGSeW/T9YP8QQ2YU/gVH/diSECY6voXvKwSBsk1MvTUV/1VnFH4B8F906bXRElsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;2&quot;
-        title=&quot;2&quot;
-        src=&quot;/static/7de802ea987403d42d817e9fc3030d2a/55fc0/2.png&quot;
-        srcset=&quot;/static/7de802ea987403d42d817e9fc3030d2a/5a46d/2.png 300w,
-/static/7de802ea987403d42d817e9fc3030d2a/55fc0/2.png 433w&quot;
-        sizes=&quot;(max-width: 433px) 100vw, 433px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;디버깅 시작&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;F5 버튼을 누르면 디버깅을 시작한다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;VARIABLES와 WATCH, CALL STACK을 확인할 수 있다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1009px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 65.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2klEQVQ4y52Ty27bMBBF9RuJ3g9LpCiJEkXqmdgJYnfVTf//Y05hLQIUdVq0i4PZEIczmDve9bxhZsPl8sbtdmNdV6x1tG1LpxustUhR4axhnhe07pGypm073LKxbC9M646bLKbXeKN1DL1h31+oKkFRlGT5iSzLKbIYUSvSSiFrQdsIhCiJ45ggCA583z9qGIaEQYg3TQ6lFKO29KrHtIpl0ExdQ5smRElC1Yw0xtENPdb19ENLnueHJIqiX/Ds+UbZ9MzdhOsnuqbBaE2rFFmakqQJWZIcXedlxak8kWbpb6JP4cvtO1dj+GEnPtqGt0ZyVoIPJWjSmCgtyAuFqmukLEniFP/ZJ/CDh3j7tvFt0Oxuw7Ydo+4wumcUFespJRclw9gyWE3dSQpZcJKnoz7CW53ltSqoygpdSzopUVIyiBKThqRljh4VnVHUuqZUJWXzNZ41hqvImfPkYEpjXBqzZxEqCngOQvwnn+cn/4+jfo48GIN1C+/vV5xbmKaFdd2xdiaMYqIo/HIBD5dijKFtOi6Xd15fz4fwfH5jWdbjwaNo/FV4T/492PM849zEMBjKsvpn2aewruuju23bWZblOLH7J/8lHMcRIeRxv865o7s79zP8n5F/AghbfD3/GpEdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;3&quot;
-        title=&quot;3&quot;
-        src=&quot;/static/2bc3bed0508f657dd38b3b770b0356a3/f6f7a/3.png&quot;
-        srcset=&quot;/static/2bc3bed0508f657dd38b3b770b0356a3/5a46d/3.png 300w,
-/static/2bc3bed0508f657dd38b3b770b0356a3/0a47e/3.png 600w,
-/static/2bc3bed0508f657dd38b3b770b0356a3/f6f7a/3.png 1009w&quot;
-        sizes=&quot;(max-width: 1009px) 100vw, 1009px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;→ &lt;strong&gt;watch&lt;/strong&gt;를 이용해서 디버깅을 진행하면서 breakpoint로 디버깅이 멈춘 라인의 상태에서 내가 원하는 변수의 값이나 상태 등을 확인 할 수 있다.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;chrome-nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#chrome-nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;chrome nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Chrome-NodeJS 디버깅&lt;/strong&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;크롬을 열고 F12를 눌러 개발자 도구를 엽니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%98%84%EC%9E%AC%ED%8E%98%EC%9D%B4%EC%A7%80_%EA%B5%AC%EC%84%B1%ED%8C%8C%EC%9D%BC.png&quot; alt=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%98%84%EC%9E%AC%ED%8E%98%EC%9D%B4%EC%A7%80_%EA%B5%AC%EC%84%B1%ED%8C%8C%EC%9D%BC.png&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Sources 탭을 클릭합니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%81%AC%EB%A1%AC_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%8F%84%EA%B5%AC.png&quot; alt=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%81%AC%EB%A1%AC_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%8F%84%EA%B5%AC.png&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;여&lt;strong&gt;기서 디버깅 하고싶은 js파일을 선택해 디버깅을 진행 할 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 40.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVQoz32RaW7EIAxGc5Ys7BASYMIkma2j3v9IX2XPIlVq58cTi/Ez4Oa+FdTTgqVuWOoKYx3GOCGXBYe6YtsvOF9uuN7uOJ2vOCwr6nFHygdmToXJpbKj0TYg5YppLhjjDG0cpFSM1hZCKAxC8khIqSGVxjBILj5NGVp7ODeilAXNvp/xdf9GPW6Y5ox5zhBCMF3XfaCFGASO04oUE4wQsFKi0cZDaQutHWhONxyG4ZnUo+//huJUlC4QxgitDdMYG6BYRGLiIfxP9Fso4cMIYyyU0gwLHzL3FlJC27Yfn0xxOrduJ+ynCzeShS/ZS0xY6xilzLMZ8oFUbyiujUHKGeu2w/vAhRprA7peYIyJiVPCPBf4EGGs5791PsKHiYu+oDXt058T1AfK+QGRtPDxezb9uAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;4&quot;
-        title=&quot;4&quot;
-        src=&quot;/static/4b5d3f96f22da0aec71cd732fc69ac78/c1b63/4.png&quot;
-        srcset=&quot;/static/4b5d3f96f22da0aec71cd732fc69ac78/5a46d/4.png 300w,
-/static/4b5d3f96f22da0aec71cd732fc69ac78/0a47e/4.png 600w,
-/static/4b5d3f96f22da0aec71cd732fc69ac78/c1b63/4.png 1200w,
-/static/4b5d3f96f22da0aec71cd732fc69ac78/d61c2/4.png 1800w,
-/static/4b5d3f96f22da0aec71cd732fc69ac78/09096/4.png 2104w&quot;
-        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[타입스크립트]]></title><description><![CDATA[타입스크립트 컴파일 및 실행 TS 타입스크립트 소스 → 타입스크립트 AST 타입 검사기가 AST를 확인 타입스크립트 AST → 자바스크립트 소스 JS 자바스크립트 소스 → 자바스크립트 AST AST…]]></description><link>https://maeng2418.github.io/typescript/typescript/</link><guid isPermaLink="false">https://maeng2418.github.io/typescript/typescript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;타입스크립트-컴파일-및-실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EB%B0%8F-%EC%8B%A4%ED%96%89&quot; aria-label=&quot;타입스크립트 컴파일 및 실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;타입스크립트 컴파일 및 실행&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nsinc.tistory.com/192&quot;&gt;URL vs URI vs URN&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[타입스크립트]]></title><description><![CDATA[타입스크립트 컴파일 및 실행 TS 타입스크립트 소스 → 타입스크립트 AST 타입 검사기가 AST를 확인 타입스크립트 AST → 자바스크립트 소스 JS 자바스크립트 소스 → 자바스크립트 AST AST…]]></description><link>https://maeng2418.github.io/typescript/typescript/</link><guid isPermaLink="false">https://maeng2418.github.io/typescript/typescript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;타입스크립트-컴파일-및-실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%BB%B4%ED%8C%8C%EC%9D%BC-%EB%B0%8F-%EC%8B%A4%ED%96%89&quot; aria-label=&quot;타입스크립트 컴파일 및 실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;타입스크립트 컴파일 및 실행&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;TS&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;타입스크립트 소스 → 타입스크립트 AST&lt;/li&gt;
@@ -2383,6 +2199,190 @@ devAsh&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; foo&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; myNamespace&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;foo&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token builtin&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;foo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Cookie와 Session]]></title><description><![CDATA[HTTP의 특징과 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless…]]></description><link>https://maeng2418.github.io/web/cookie/</link><guid isPermaLink="false">https://maeng2418.github.io/web/cookie/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;http의특징과쿠키와세션을사용하는이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98%ED%8A%B9%EC%A7%95%EA%B3%BC%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;http의특징과쿠키와세션을사용하는이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 특징과 쿠키와 세션을 사용하는 이유&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다.&lt;/li&gt;
+&lt;li&gt;HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless, stateless한 특성이 있기 때문이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;사용자-식별---인증을-위한-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%8B%9D%EB%B3%84---%EC%9D%B8%EC%A6%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;사용자 식별   인증을 위한 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;사용자 식별 - 인증을 위한 방법&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IP 추적&lt;/li&gt;
+&lt;li&gt;HTTP Authentication&lt;/li&gt;
+&lt;li&gt;URL에 식별자 포함&lt;/li&gt;
+&lt;li&gt;Cookie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일.&lt;/li&gt;
+&lt;li&gt;사용자 인증이 유효한 시간을 명시할 수 있으며, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.&lt;/li&gt;
+&lt;li&gt;쿠키는 클라이언트의 상태 정보를 로컬에 저장하고 참조한다.&lt;/li&gt;
+&lt;li&gt;클라이언트에 300개까지 쿠키저장 가능, 하나의 도메인당 20개의 값만 가질 수 있다.&lt;/li&gt;
+&lt;li&gt;하나의 쿠키 값은 4KB까지 저장.&lt;/li&gt;
+&lt;li&gt;Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있다.&lt;/li&gt;
+&lt;li&gt;쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 Request Header를 넣어서 자동으로 서버에 전송.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쿠키의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;쿠키의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 구성 요소&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;이름 : 각각의 쿠키를 구별하는 데 사용되는 이름&lt;/li&gt;
+&lt;li&gt;값 : 쿠키의 이름과 관련된 값&lt;/li&gt;
+&lt;li&gt;유효시간 : 쿠키의 유지시간&lt;/li&gt;
+&lt;li&gt;도메인 : 쿠키를 전송할 도메인&lt;/li&gt;
+&lt;li&gt;경로 : 쿠키를 전송할 요청 경로&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쿠키의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;쿠키의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 동작 방식&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;클라이언트가 페이지를 요청&lt;/li&gt;
+&lt;li&gt;서버에서 쿠키를 생성&lt;/li&gt;
+&lt;li&gt;HTTP 헤더에 쿠키를 포함 시켜 응답&lt;/li&gt;
+&lt;li&gt;브라우저가 종료되어도 쿠키 만료 기간이 있다면 클라이언트에서 보관하고 있음&lt;/li&gt;
+&lt;li&gt;같은 요청을 할 경우 HTTP 헤더에 쿠키를 함께 보냄&lt;/li&gt;
+&lt;li&gt;서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w307.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w307.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;쿠키의-용도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EC%9A%A9%EB%8F%84&quot; aria-label=&quot;쿠키의 용도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키의 용도&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;세션관리&lt;/li&gt;
+&lt;li&gt;개인화 (예: 장바구니)&lt;/li&gt;
+&lt;li&gt;트래킹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;session&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#session&quot; aria-label=&quot;session permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;session&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 세션은 서버 측에서 관리.&lt;/li&gt;
+&lt;li&gt;서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지.&lt;/li&gt;
+&lt;li&gt;접속 시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능 합니다.&lt;/li&gt;
+&lt;li&gt;사용자에 대한 정보를 서버에 두기 때문에 쿠키보다 보안에 좋지만, 사용자가 많아질수록 서버 메모리를 많이 차지.&lt;/li&gt;
+&lt;li&gt;동접자 수가 많은 웹 사이트인 경우 서버에 과부하를 주게 되므로 성능 저하의 요인이 됨.&lt;/li&gt;
+&lt;li&gt;클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션ID다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;세션의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EC%85%98%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;세션의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세션의 동작 방식&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;클라이언트가 서버에 접속 시 세션 ID를 발급받습니다.&lt;/li&gt;
+&lt;li&gt;클라이언트는 세션 ID에 대해 쿠키를 사용해서 저장하고 가지고 있습니다.&lt;/li&gt;
+&lt;li&gt;클라리언트는 서버에 요청할 때, 이 쿠키의 세션 ID를 서버에 전달해서 사용합니다.&lt;/li&gt;
+&lt;li&gt;서버는 세션 ID를 전달 받아서 별다른 작업없이 세션 ID로 세션에 있는 클라언트 정보를 가져옵니다.&lt;/li&gt;
+&lt;li&gt;클라이언트 정보를 가지고 서버 요청을 처리하여 클라이언트에게 응답합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w308.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w308.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://interconnection.tistory.com/74&quot;&gt;쿠키와 세션 개념&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Node.js 디버깅]]></title><description><![CDATA[VSCODE-NodeJS 디버깅 vscode의 디버깅 탭에서 create a launch.json file을 클릭한다. .vscode 폴더에 launch.json 파일이 생성된다.  break 포인트를 건다.  디버깅 시작 F…]]></description><link>https://maeng2418.github.io/node/Node js 디 1446b/</link><guid isPermaLink="false">https://maeng2418.github.io/node/Node js 디 1446b/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;vscode nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;VSCODE-NodeJS 디버깅&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;vscode의 디버깅 탭에서 create a launch.json file을 클릭한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;.vscode 폴더에 launch.json 파일이 생성된다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 369px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 107.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEP0lEQVQ4y52U248TVRzH+2x8kUtc3d22M3PmPr3MtJ1tp/fdXra77ZZuy7KwsAuIq0BIMHIRxEgCGBJBH3yQxIgKr0ZD/AM/Zo5AQCUxPnzzy++Xcz75Xc7vJK5121w7G7J0vk60XCMqR0RRRLVa/V9KVMKQRr2CXwqwbZtcNkfGy2BZFrZl/2dZlo0QgkS90aDb7RH4AUI3abZXCMtVFGGgGRbCsF5a8Yqv6a8o9oVBKpUkUavVaDbq5IISquOjChNVtxCmg2bYpISJolukhUVKM6UUEYNthGk/tw6q65NUNBK+7+P7ebJBCc10meuc4dDGVQ6tX2Zu41PcnZsos2uY2zfInryFu/M56tHrHB59wqHhZQ5uXGVueVeCF1WdRBiGtJoN8sUlVNNjbusOB/afcODsD7y7/5jW7d+JvviV7t1n1L/8jfX7f9C7+4zDH/7IwbM/cOCjp8zNbsuyJbASRbJkr7DEcUvltKNywhHsSOnMdIVjpspUpJnpaelvmyrHTYUTlsa2LThtpphYGu/FwCAoEJedKYScM9OsVMv0W3Uma31GvRWGnTab6wNWl1uM+n3Gg1WOjseMB30KUR+7tkUpaLBrJJlXDRLFUomynyHnB5yyVNKlLlpzG70xRdQ30aIRor2DKNRQTJO05aDYLpqbIWm6vG9m0HVTVjcfZ9isVWmcvIxe6XDBWGDX0TnheWxZJlPTYmYaUlMtzVSZZ6ouMFUW2FTmOSYW2TZSfKDPs2cpf5UchUWsM/cx2lM8XaBPb7Kw9x3lS48Y3PiZlauPWb7ymOGtpzSv/ETn+i/0PnvC4OZTgguPWDjzPcbkOrZhshAD4/7lPZusX0CxMrwzuMRbszskT31FcPFbsh8/xN1/gH/hGyln/wH2ua/Jn3/I4ql7vL11j4ODi6iGTTIGttptNjc3yRWW5DvMei6u4+DYjtwc23axLAfLdnDcDKZp47oerlxPG10IdE1DszwWVUFid2+P49vHyPhFVMOh3+vR768yGo7odXuMx2NWVwfSn01nrA3WGAzWmByZyHNC6BL6EhhPOZ/Lyk2Jge1Wi15/lbW1dbnjjUaTXq8vL8c2jm9sjHHdDIqiyQm/BgyCgGpUwQ/LKIZNs9FgOBzJLHq9Hp1Ol06nw8pKR8Jifzw+QrlcQVVjoPE6sNvtMlxfI1cMZbDb6bIxnkjoaLTBdDojiqqyX47jStm28/y70v8JjD/FWjWSPYyDOc8ln/XIZrN4mSyel5GXkskUqVT6pX0BE38Hxs8m8PPkCiGa6aEFXRbzXcKoKctvtdqyzLiHcU/j/jWbLTRN/DuwUChQLARyKMLyiBodusOjrA6GcsKTySb1eoN8Pv7mAorFktQbM4w/h0IMLJRkMCwEsgX1el32rlKJyGSyKIoqhxDbWBIm9DcAgxgYyoetKirpdCxFKr78orxX9aYM/wQtC9XrwO/cNQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1&quot;
+        title=&quot;1&quot;
+        src=&quot;/static/13fcc89d5c86094576e603b10cfbf723/e0cdb/1.png&quot;
+        srcset=&quot;/static/13fcc89d5c86094576e603b10cfbf723/5a46d/1.png 300w,
+/static/13fcc89d5c86094576e603b10cfbf723/e0cdb/1.png 369w&quot;
+        sizes=&quot;(max-width: 369px) 100vw, 369px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;break 포인트를 건다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 433px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3ElEQVQ4y31T23KqQBDkM6Kwd+4EuYOAizHq/39Sp3ZVEo/Jeegaanerp6encYKAoCwTnM9XTNMISiniOEYQhOj7HFoPOBw0lmWB1hplWSBNU3v/GxwpKZJEoes6VFUJxhiEEJBSIc8TVFWBuq7vaCxZFEX2Xin/BY4QFHku0DQNhmFAmmaWkBACQig8z3uCOTdTGNzePMPZuxsIKSE4A/cjRO2CsBgQ7HrsxxrL0uF02uNymXC9zrhcRkxTh7IswTl/amDgDO4GUilIKdfDvBtRzSeU0wfavsHHccBB99C6w/lsCGtoPSHL3l8JqedBKWW7hWFovynj4ELcwDmUktZbzm/4/ubr6CuhS4glMQqtD5674uHbduvCdb1fPXuQParTuhso34cUAkyFiBoNf9dDvjfo+gLzocXn54hxrDFOPeIksUszjX4uZlU4u2+W0I5KGZhUqLIG+3JGmRbodil0W6AvMkx1jn2RIUtiUMZe/LOEjHh2XOOL8VBKAUooBOO3BveHpnJGwSzY37HZegT+XeEje8avh3+urWTNIPlnCS8KjYdBEEAIiTgObDRM9o7HwebPxGSeW/T9YP8QQ2YU/gVH/diSECY6voXvKwSBsk1MvTUV/1VnFH4B8F906bXRElsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2&quot;
+        title=&quot;2&quot;
+        src=&quot;/static/7de802ea987403d42d817e9fc3030d2a/55fc0/2.png&quot;
+        srcset=&quot;/static/7de802ea987403d42d817e9fc3030d2a/5a46d/2.png 300w,
+/static/7de802ea987403d42d817e9fc3030d2a/55fc0/2.png 433w&quot;
+        sizes=&quot;(max-width: 433px) 100vw, 433px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;디버깅 시작&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;F5 버튼을 누르면 디버깅을 시작한다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;VARIABLES와 WATCH, CALL STACK을 확인할 수 있다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1009px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB2klEQVQ4y52Ty27bMBBF9RuJ3g9LpCiJEkXqmdgJYnfVTf//Y05hLQIUdVq0i4PZEIczmDve9bxhZsPl8sbtdmNdV6x1tG1LpxustUhR4axhnhe07pGypm073LKxbC9M646bLKbXeKN1DL1h31+oKkFRlGT5iSzLKbIYUSvSSiFrQdsIhCiJ45ggCA583z9qGIaEQYg3TQ6lFKO29KrHtIpl0ExdQ5smRElC1Yw0xtENPdb19ENLnueHJIqiX/Ds+UbZ9MzdhOsnuqbBaE2rFFmakqQJWZIcXedlxak8kWbpb6JP4cvtO1dj+GEnPtqGt0ZyVoIPJWjSmCgtyAuFqmukLEniFP/ZJ/CDh3j7tvFt0Oxuw7Ydo+4wumcUFespJRclw9gyWE3dSQpZcJKnoz7CW53ltSqoygpdSzopUVIyiBKThqRljh4VnVHUuqZUJWXzNZ41hqvImfPkYEpjXBqzZxEqCngOQvwnn+cn/4+jfo48GIN1C+/vV5xbmKaFdd2xdiaMYqIo/HIBD5dijKFtOi6Xd15fz4fwfH5jWdbjwaNo/FV4T/492PM849zEMBjKsvpn2aewruuju23bWZblOLH7J/8lHMcRIeRxv865o7s79zP8n5F/AghbfD3/GpEdAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3&quot;
+        title=&quot;3&quot;
+        src=&quot;/static/2bc3bed0508f657dd38b3b770b0356a3/f6f7a/3.png&quot;
+        srcset=&quot;/static/2bc3bed0508f657dd38b3b770b0356a3/5a46d/3.png 300w,
+/static/2bc3bed0508f657dd38b3b770b0356a3/0a47e/3.png 600w,
+/static/2bc3bed0508f657dd38b3b770b0356a3/f6f7a/3.png 1009w&quot;
+        sizes=&quot;(max-width: 1009px) 100vw, 1009px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;→ &lt;strong&gt;watch&lt;/strong&gt;를 이용해서 디버깅을 진행하면서 breakpoint로 디버깅이 멈춘 라인의 상태에서 내가 원하는 변수의 값이나 상태 등을 확인 할 수 있다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;chrome-nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#chrome-nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;chrome nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Chrome-NodeJS 디버깅&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;크롬을 열고 F12를 눌러 개발자 도구를 엽니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%98%84%EC%9E%AC%ED%8E%98%EC%9D%B4%EC%A7%80_%EA%B5%AC%EC%84%B1%ED%8C%8C%EC%9D%BC.png&quot; alt=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%98%84%EC%9E%AC%ED%8E%98%EC%9D%B4%EC%A7%80_%EA%B5%AC%EC%84%B1%ED%8C%8C%EC%9D%BC.png&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sources 탭을 클릭합니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%81%AC%EB%A1%AC_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%8F%84%EA%B5%AC.png&quot; alt=&quot;https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%81%AC%EB%A1%AC_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%8F%84%EA%B5%AC.png&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;여&lt;strong&gt;기서 디버깅 하고싶은 js파일을 선택해 디버깅을 진행 할 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVQoz32RaW7EIAxGc5Ys7BASYMIkma2j3v9IX2XPIlVq58cTi/Ez4Oa+FdTTgqVuWOoKYx3GOCGXBYe6YtsvOF9uuN7uOJ2vOCwr6nFHygdmToXJpbKj0TYg5YppLhjjDG0cpFSM1hZCKAxC8khIqSGVxjBILj5NGVp7ODeilAXNvp/xdf9GPW6Y5ox5zhBCMF3XfaCFGASO04oUE4wQsFKi0cZDaQutHWhONxyG4ZnUo+//huJUlC4QxgitDdMYG6BYRGLiIfxP9Fso4cMIYyyU0gwLHzL3FlJC27Yfn0xxOrduJ+ynCzeShS/ZS0xY6xilzLMZ8oFUbyiujUHKGeu2w/vAhRprA7peYIyJiVPCPBf4EGGs5791PsKHiYu+oDXt058T1AfK+QGRtPDxezb9uAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;4&quot;
+        title=&quot;4&quot;
+        src=&quot;/static/4b5d3f96f22da0aec71cd732fc69ac78/c1b63/4.png&quot;
+        srcset=&quot;/static/4b5d3f96f22da0aec71cd732fc69ac78/5a46d/4.png 300w,
+/static/4b5d3f96f22da0aec71cd732fc69ac78/0a47e/4.png 600w,
+/static/4b5d3f96f22da0aec71cd732fc69ac78/c1b63/4.png 1200w,
+/static/4b5d3f96f22da0aec71cd732fc69ac78/d61c2/4.png 1800w,
+/static/4b5d3f96f22da0aec71cd732fc69ac78/09096/4.png 2104w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Node.js]]></title><description><![CDATA[Node.js Node.js는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js…]]></description><link>https://maeng2418.github.io/node/nodejs/</link><guid isPermaLink="false">https://maeng2418.github.io/node/nodejs/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs&quot; aria-label=&quot;nodejs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js를 알아가는데 중요한 것은 딱 두가지라고 생각합니다. 싱글스레드에 비동기 방식이라는 것과, 자바스크립트 기반이라는 것이죠. 프론트엔드 뿐만 아니라 백엔드 또한 자바스크립트로 작성할 수 있다는 것은 큰 이점이 될 수 있고, 바로 이 점으로 인해 Node.js의 성장세가 계속 되고 있습니다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt; 는 &lt;strong&gt;서버사이드 자바스크립트&lt;/strong&gt; 이며 구글의 자바스크립트 엔진인 &lt;strong&gt;V8&lt;/strong&gt;을 기반으로 구성된 일종의 소프트웨어 시스템입니다.&lt;/p&gt;
@@ -2842,248 +2842,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@vdongbin/javascript-%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC-single-thread-event-loop-asynchronous-e47e07b24d1c&quot;&gt;Javascript 동작원리 (Single thread, Event loop, Asynchronous)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;#x26;feature=youtu.be&quot;&gt;What the heck is the event loop anyway? | Philip Roberts | JSConf EU&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://steemit.com/js/@huna/js-settimeout&quot;&gt;[JS] setTimeout 문제 - Steemit&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글스레드]]></title><description><![CDATA[들어가기 프로그램 어떤 작업을 위해 실행할 수 있는 파일 ex) 메모장 프로세스 실행중인 프로그램 스레드 실행중인 프로그램 안에서의 실행되는 명령어 ex…]]></description><link>https://maeng2418.github.io/javascript/single_thread/</link><guid isPermaLink="false">https://maeng2418.github.io/javascript/single_thread/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;프로그램&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;어떤 작업을 위해 실행할 수 있는 파일&lt;/p&gt;
-&lt;p&gt;ex) 메모장&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;프로세스&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;실행중인 프로그램&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;스레드&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;실행중인 프로그램 안에서의 실행되는 명령어&lt;/p&gt;
-&lt;p&gt;ex) 특정 노래를 재생하는 스레드 및 새로운 노래를 재생 목록에 추가하기 위한 스레드&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티프로그래밍&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;하나의 CPU 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다. 즉, 하나의 CPU가 I/O를 하게 되면 입출력에 대한 응답을 무한정 기다리게 되는데 이렇게 대기하는 동안 프로세서가 다른 프로세스를 진행 할 수 있도록 하는 것이다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABkklEQVQoz42S7U7bMBRA8yjbXmzbW7DngX8d0sbEN/v4AZNQS9tAKe1YtyUpUUrSJA6kaZ04Z0oKWllL4UrWtS35+Fxfa3IiEaFAhBFCRIRBSByPKCLnX+T57Orx0OI4xrav8LwBnnddzoeuC0qRp+l0KPVsqDaWEe64heWfYLhVBvKcyKjhf9nj6mALcfSV/CZ6PvB27HIZbNG01mmY63T8DZxhHeULpO+SBsPSchZY5Pu5Uoosy8o8LTkJMdwT7PAUOzwrLb3InLt5kd3/e8VaS1IfR36n6+7RGexiJd8IZa/sSJ6rBzaLDGvVKpVKhYt2e2ooblwal5voP7fRezvUuh8wndbdQbXUrCj17ZvXvHr5gncrK/fAhNYPj3YvoPMrQO969J1ozmQRUGUZnw/2WVtb5ejw8A4YZ+gWNM2c+m9JwwTLy5YCl72p5kUZ+y3Y1VO26yN2TuGiP+2qesKwyHNdvhYpH2sJn+qSzabk/XHCmTFZCnxInxkFUKmcOJnwx7Do2w63owkyfbrkxz72X//Xl+I49vgXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/1.png&quot;
-        title=&quot;./images/single_thread/1.png&quot;
-        src=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/1.png&quot;
-        srcset=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/5a46d/1.png 300w,
-/static/49bad81f94bdf05cb20d7ef52604ef89/0a47e/1.png 600w,
-/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/1.png 769w&quot;
-        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkUlEQVQ4y5WS227TQBRF/X1QeAYE/CClFyEeeGiKA0JqlDTN1U3jNk2ob7GaxjZ24saehQaT4DapI46050ijmXVmj7YSRRF5zWYzhAAhxAPJWvaiUizTxrHHf2RbDrZpr8EyzrJvAbr+JWOvz9jTcQOdW/96w7F/0K3Am7lKx/nE6XCP6/AL+rSG2pxyfDbmqGbzvTMljB9aznepNE1Xe0rP/IruqOhOmQu7hPazwqU5RzdC+sYvrqwZ8WL9D/N/m99T3HmbG6/GaFLFjhrcxf2NVjZdlhUEAb7vkyRJ9sKLyWeaxi710Qe67j6DuzJpCqm08lePrUqLsobDIe/fveXlix2OS6UMWG+d0eg2aGpN6q06nV53zdZjq0ugpmm8ef2KnefPODw8yICakXJuCHqmQDMEurWAgtzlB0ib0q43nRLHcQasDuBET1BbHpUraI0Wq3gUBfmpYcp+NWGvKvhYuWe3Ijhq369y9xSwMDY/zkPUts+3TkC5G9IYRFuBhcGWi3frMHEtYJF7wf/DJPA33izl/q8nfAoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/2.png&quot;
-        title=&quot;./images/single_thread/2.png&quot;
-        src=&quot;/static/20425405b0c3fb44ea0321ca3567babf/227ba/2.png&quot;
-        srcset=&quot;/static/20425405b0c3fb44ea0321ca3567babf/5a46d/2.png 300w,
-/static/20425405b0c3fb44ea0321ca3567babf/0a47e/2.png 600w,
-/static/20425405b0c3fb44ea0321ca3567babf/227ba/2.png 769w&quot;
-        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABq0lEQVQ4y5WTfW/SUBSH+Xw6/VuN+gHNnOJrlky2TmMiMivQ0TE7tm5AWwjYl7Slb/cxpWEWYRBPcnpyb5rnnt/vnlsJgoByhmGIECCEWMo8FnVTVIyhiWWO5mkaFubQXIEVnEXdAhy7F4ycX4wcjbGnMXGv1vz2F7oV2J9JnFpv+aHvceXvo9knSC2bQ3nEQcPgi2LjR8uSyzXPLMtu9yrd4RGaJaFZx5ybNdT+dy7MGM0I59kzZ0TJqodlb8t7lfFMoe+ccD1tYAZNfoddiHxIQogDyOK1F7JYe56H67qkaVp0eD59T2uwi6y/oDOpot98wD464ObjG6z9d8Q9be5cuaNcYh66rvP82VMePtjhsFYrgHL7J81Ok5baQm7LKKpCGgSkgU/i+2RxvCRx4Vkeqqry5PEjdu7fo1p9XQDVQcbZQNAdCtSBQDOS1Tu+w7tcZi7XsW2iKCqAjUv4pqVIbYd6D1rXCYhs/VD/A153cOVVI2WvIXhZj9mtCz4p8e3c3fUyNo7N1zMfSXH5fOpx3PFpXgZbgRsHO/84E4vp2ACSUgf/D8uBfwA2EuNCxPTjDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/3.png&quot;
-        title=&quot;./images/single_thread/3.png&quot;
-        src=&quot;/static/ce4fd8e9735fe84489758c55e440a573/227ba/3.png&quot;
-        srcset=&quot;/static/ce4fd8e9735fe84489758c55e440a573/5a46d/3.png 300w,
-/static/ce4fd8e9735fe84489758c55e440a573/0a47e/3.png 600w,
-/static/ce4fd8e9735fe84489758c55e440a573/227ba/3.png 769w&quot;
-        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티태스킹&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;멀티태스킹은 스케줄러 알고리즘에 따라 조금씩 번갈아 가면서 프로세스가 수행되는 것이다. 이때 멀티프로그래밍과 다른점은 멀티 프로그래밍은 하나의 프로세스가 I/O가 당하기 전까지는 끝까지 실행 되지만 멀티 태스킹은 실행되는 도중에 특정 시간 이상 CPU를 점유하게 되면 그다음 프로세스에게 프로세서 자원을 넘겨주는 방식이다&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y42S6W7TQBSF/WDAMwDP08LvUl6j4h9C/CgIiUVBSVVKS2jiZnFMirN53+LYTcbOh+wElERJ6JGOZubOzLlz7h1JCEGSJGsUYgbzOfMVZln2j/k6x9+9VUiBH6APDSzTLjjsj/DDMf9DIbYlLo1jGz1s0DNr9K06RtQm6F4Tfj/HvqiQ1H6gKW0arRayLNNstVBVdfcL/USj45/ys/eGWv8t6vgDtnZOLMv49Spx64bQtrEdF9MwcFwXz/PWbK+WQQriEbduhY5eRjUrdN0y3lTnPth8Xb6WvIlG23lPfXCKPHxXzJ2ouziQpcyX2bcxRxzHWJbFJIqWNbwb0huXaOsfUYxP9KISwV1/mTFbu7xpM8eLoyMePXzA4cHBQtD0B1Rvv1D9VaLaLXHV/YzuaWuCWzu8jL88Pubpk8c8f3ZYJJEsP6WuQWMAzQFc/wbDS3d2cTOeCsF0Oi3+blHDoSs4U+HrTUxJnlBWoO+I4nC2Q3BXUwrLymjGq7OM1xc5U07KguZgtldws66rlJxQcNmJ+NZ0uVQCrtQJpj/ba3kfpMUg8GyDOPL32rmP4B8cR+LJuaWAkQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/4.png&quot;
-        title=&quot;./images/single_thread/4.png&quot;
-        src=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/4.png&quot;
-        srcset=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/5a46d/4.png 300w,
-/static/0e9ea349ae20c47e229820f84ccee6a8/0a47e/4.png 600w,
-/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/4.png 770w&quot;
-        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y5WT2W7TQBSG/WDAMwDP08J1Ka+BuEOIiwghlSVtGhWUYkidzUkTnDhx7MTxFmeZ2B9yNiVgmnKk35450nxnmTOSEILJZLKnxJdYHMcQ818muY6L0e1jmYOlup0eiW8D3Ggb4BDQDwcYXpm2WaQzUDDcEl5orgFR8tkD7wZICyI5E426k+FH+y1F/R11N4M9bR7MZDfrKIq2e8kNe7TsS+rGBY1+jpZ3hV2/YnTxBeP8jHEhT7NcoqgoyLKMoihUq9XU7JK9NBpr1IbvudEzKHqGmv0Bq/udWatFcKsy1ZpMfA8/CHBdF9/3CcNwC0vWlmUxDoJ1D6dd2n6WmnGG2v+4XHuid7DkpMzEXpyc8OjhA46PjlZA09GRW5+Rb7PIzSzXzU8YtrY+tCBe9+dfF/Py9JSnTx7z/NnxMohkOQtuNCjrUNHh5y/ojxapY7Pbq41vIQSz2Qwh5qsedm1BvgHnpZCsMianQme4GuwoBZZ203tjo/bmvM5HvPmWaMGrnKCiz+8E/jnsu5KGnqBQD/hasSmoLteNMaYz/+vgvZ/e6icYDfqEgXNnOfcB/gagsuMZda3cXAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/5.png&quot;
-        title=&quot;./images/single_thread/5.png&quot;
-        src=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/5.png&quot;
-        srcset=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/5a46d/5.png 300w,
-/static/84a3cf9a4e9e0e81edf49a2eb3c44685/0a47e/5.png 600w,
-/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/5.png 770w&quot;
-        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y52T624SQRTH98HUZ1Cfp9XPrb6G8ZsxJhaNNqm0QCJWuZSLZakEdmHZC+xyWbo7zP7MLixSWzV4kn/m/jsz55xRhBAsFosbiudii6IIInYyxXM9jP4Qy7QT9bUB8dwGuKMpU9/GmDTomVU0u4bh1Zn45ga4K1RxF11U94hy7zVV/Q2ql2G0uFoD5Q3odrvdl1JuxornD+iM8qjGGW0zz4/RGWO/u9pMeugX5C4HqcVjZTzvcum840I/otbP8N3J4Mzaqw1ySSTlnU9LYb7vY1kW89lsHcPrPr1plkvjmJZxjHZdwFVz2B/fo314yzR/glqtUKpU+VIsUi5XqNfryDXw8OCAB/fvsb+3twKark6pc0LpKpvoW+cTA61B5DgEpkFomSyDgCAMCYKAMAyTskpv+PzZIY8fPeTpk/0klorlLrnoQkOHpg6VDgy9f2czBS6FSBwJEa5i2B8JCm04rftka3NyLdBskaREyuhWMv6WlOTJrUHIy4LkVTHWkhc5QVMPk0X5hzr8HbotxZkIztUZn5sjzlseX9tzTDf8/8JeNYKxPcSfubditOvX+wmuGONjXOZtAAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/6.png&quot;
-        title=&quot;./images/single_thread/6.png&quot;
-        src=&quot;/static/52b0370ee95e13916bf8834c43f082b8/f4b77/6.png&quot;
-        srcset=&quot;/static/52b0370ee95e13916bf8834c43f082b8/5a46d/6.png 300w,
-/static/52b0370ee95e13916bf8834c43f082b8/0a47e/6.png 600w,
-/static/52b0370ee95e13916bf8834c43f082b8/f4b77/6.png 770w&quot;
-        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1174px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 38.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVQoz02RzWsTQRyG9+KhB29S8OI/4KUgKOKxBaF4EAUPUj/Bi6XgF2IvpSm12NpWqRapoOAfIIgoeCgexI+2VKqpaZLu5muTbDfJ7maTNpJkZ/LojqgdeOGd3/O+AzOjWZZFsVhE13VCn8/nyeVymKbJ1taW8rZtk8lkVK5QKPzLhApnYdZxHBqNBprvV/E8T5Xr9Tqu5ynoea7ah14VXJeq7+P7Pp7r4jquYtVqlXKlQq1Wo9lsorFrlUslXKdCKpXGLjsUrSJ2ySabySrmlEuUyhUsu4RlW2zvbO+u0+l00L4tf+Ttm1d8+PyJhGEQjSeJfl/D1OMYcQM9oRNLxIglEkTjmyQ31slubiiW0lMYaQMjm2MznVW30/Rz3dy8c5Cu6cPsjcygja4wfO0ssYvdTB6bYKjvNvvHe+gamUAbXeb+UD8rAweYPjrDpf5B9o33sGdsAW34HS+/RNGWbvUyMXmGvoXLHJ97Ss+D90xFbrA+foq5gYfcvTrNyfkL9M0+4tDsIk/GBlkaOc2zK8+JXL/Hicfn6Z17wZGp1yx+/YGWTGfJ5y1EMwApQLQJAsHPtmR1bRWzYCJaAqRUrB0IWh0IEMhOOANEyAPardb/TxFSEIg/Ch93u17DzOWoVBx2GjtIKRWTUiBFgBBC6W9HCEnr94G/AA8gIWIWNrmIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/7.png&quot;
-        title=&quot;./images/single_thread/7.png&quot;
-        src=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/04784/7.png&quot;
-        srcset=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/5a46d/7.png 300w,
-/static/b7a751dcd453c12a44d6d4d18ada1e89/0a47e/7.png 600w,
-/static/b7a751dcd453c12a44d6d4d18ada1e89/04784/7.png 1174w&quot;
-        sizes=&quot;(max-width: 1174px) 100vw, 1174px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티프로세싱&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;멀티 프로세싱은 여러 프로세서 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 738px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8UlEQVQoz42Sa08TQRSG97fin1Cj6D+wRPtdq5FEPhhQkTRgKSUUIxShpVx3W2vKlra09LK73Z2ZfcxOSy2I6CRnzmQuz7znYgjl4cs+gXIQytFrFQqiEYahtqv1/wyj4RU4bS3zvfSR4lmSirNK26mBfn8dNvnBX4F2N89pM8Wh/YWT+ipWK8Wlc45SIKS8FXYX1Gh4+1rh7o9PHNhJKv00l25tDAyERKnfgH+BDbtTwLpY4+R8jdN6BvMiTcc914dDoGIQDME31d5mRt3d46S1xE5pnkJ1kXJ/hbZra4VKKX0pUugLiTsQGnxnDmudImYjg1lfx2psYDUzdN26rkekUEiFHIEj8wOJ5wscL8AXIYFUek8otDeqvRyF2geyh+/YLr3nuPWZi351nMMIFkGFGPorcKc/4NHjaZ7FZtjLF7g3NcXySgrDqvUoVLoc2y5HZw67Vpt2b6DlR6GOgVLpcP1RPnvOgNnZtywszFMulYi/eE4ut4NxbIdslSF76LFlKr5Z0OzKUfK5Vl0VhsgRuOf4xGIzvHyVwDRNHj64T3bzK8Z2SbGUh8XcgGResbgLdlv+Uc0JtJ67fY94PE4ikaBYPODpk2ky6xsY6X2HN2s95jYd5rIOr9Ndfjb8Ycg3em4S7vnB+IuotbSXIb8AmT6LBzWezL0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/8.png&quot;
-        title=&quot;./images/single_thread/8.png&quot;
-        src=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/8.png&quot;
-        srcset=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/5a46d/8.png 300w,
-/static/6bed28e76ef6ee26ffc35e9577850b7f/0a47e/8.png 600w,
-/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/8.png 738w&quot;
-        sizes=&quot;(max-width: 738px) 100vw, 738px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티스레딩&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;멀티스레딩은 하나의 프로세스에서 여러 스레드가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
-&lt;p&gt;실제 한번에 두가지 일을 &lt;code class=&quot;language-text&quot;&gt;동시에 병렬&lt;/code&gt;로 처리하는 것이 아니라 번갈아 가며 처리하여 동시에 작업이 처리되는 것처럼 느끼게 하는 방식.&lt;/p&gt;
-&lt;p&gt;ex) 채팅의 경우 - 멀티스레드를 사용하여 상대방의 메시지 다운과 입력을 동시에 처리.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 766px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABt0lEQVQoz5WTDW/SUBSG+SVGf4764+Y/MHExGRITPzM3jWyZoo6AA8oYHzMjg5W2G21hbW/t7X3MhYElQZ1v8vbenPQ+Oefcc3NpmhIGIWEQENw4iiJUmi6NUij0or9/V04IgTmyGNkOlnOJadlYjkP26Gx/C9gMGCeCqWMw7ZcZ//hGaH5nMjom7LTwjhuEJ02U783BGvoPcC6WAm/4Hutok0HlCV6vgDss4dcqOOUv+NVDpHu1BC6spdslpZyti1guTkLMsMyps0dr8IG+f4AdGWRrXvys1sSy0rGckAH++Qu82iZm+TFRL8/l2WvGBx8533nLVXGX1B6tZKgz0up1u+TzW+wVi78zjERIo7FLvfKKevUNR9WXtNufSTwX6bkk7pg0FitAXabWo40N7t29w8MH95lOJjfAKKbZMWm0TYzOiPrJBb0ze205WahWvVaj8CzPu+1t9LTMgbGkdQHNIRgDhTGEUyszfxlAtm9/7GEoJKUu7LdSdio++22o9SVKpWsPrrtl7WUPr6OE54eCrVJM4WvM008xxaaYjfNtX8fKHMpU4fg/sb25LTfGu07mQPX/wF+FRZQR1vXsUAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/9.png&quot;
-        title=&quot;./images/single_thread/9.png&quot;
-        src=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/9.png&quot;
-        srcset=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/5a46d/9.png 300w,
-/static/a9cb83d6466aac9221e6b55237cbc37f/0a47e/9.png 600w,
-/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/9.png 766w&quot;
-        sizes=&quot;(max-width: 766px) 100vw, 766px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;싱글스레드&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;싱글스레드는  하나의 직렬로 처리하는 스레드 방식을 의미한다. 즉, 하나의 요청이 있으면 하나를 처리할 때까지 다음 요청은 대기상태. (하나씩만 실행 할 수 있음)&lt;/p&gt;
-&lt;p&gt;ex) 채팅의 경우 - 상대방의 메시지를 다운 받는 동안 입력 불가.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 625px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 76.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjUlEQVQ4y22TbW/bNhSF/f9/wjCgRfZl/TJ0Qdv1S1CkWLcWaZKmbZq2cWzHlmUperNeKIoUqacgbS8v3TUEkb6H557LczWy1lKWJW3bkiQJQghcDMNw722MIYoixBbn8Lv8DuNiZI3l/fExXy8uOD09ZREsfMIVuksopeTNv/8wm844OjoiiqP/J/R/So1apNishgGsA9nh5wPKoOYJNhcOdK/grcJOo9ISMQ6RQYrO6w3JgwNW9XQ3a8TlErnM0EX9X7H7LXfaJ+tPM9qrFX3R+HYf3uGgenRWbXDTiL4Uvpu7hO7tW9brBl0JVF7jCgzut73DXfTG0OUVppb0eY1qWuxwi9mRjnYLB9jFXYVKKW+IbKXfr5MM1Sm/dhPhcn3f3yocmo7Jy3ecP3vN+f4hxcmVV+eSTV1zE8ekabpxupWsoog8z/0Yaa2J45gsy+i6bqtQG9owo5iF1IsbVFZ5Q1xVN59BEFAUBVVZIRpBGIYsl0s/h66gK+ZIq6ramiIV2dmY4N1n4uOviMnKt+wepyRYBP6AVsofWjnCIPCKWiEIl5u9I98obDpmL9/yZf+Qb/uvWZ+MGYx1BmIYqEWD6vXmjsDvu+3e36NsaTt590sxIDWyqBiEwrbKu2d1j60lbVZiqhbTSO9wm679VLi1aTpUUdMVtcfa3jAaKsn49wM+/vaC872/qP6+2LgbFXx69Jyzvecc//onxeE586dv+Lj3grPHz8gOzkgOPnD0yx+cPNpn+uQVfVox0p1iNZkzvfhOcDllfjnxo4Kx6FLQV+5p6cqG+bcrpl++sxzPCCfXlHHq1e9wg1PorF/FEdPrGXFyQxitNoQPoreG68Xc45I8I8lSmlb8hPsBHJx8BZ5WJdAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;./images/single_thread/10.png&quot;
-        title=&quot;./images/single_thread/10.png&quot;
-        src=&quot;/static/72f4972e709d1f18d80d68d176c04423/80d71/10.png&quot;
-        srcset=&quot;/static/72f4972e709d1f18d80d68d176c04423/5a46d/10.png 300w,
-/static/72f4972e709d1f18d80d68d176c04423/0a47e/10.png 600w,
-/static/72f4972e709d1f18d80d68d176c04423/80d71/10.png 625w&quot;
-        sizes=&quot;(max-width: 625px) 100vw, 625px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[코어 자바스크립트]]></title><description><![CDATA[들어가기 다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.…]]></description><link>https://maeng2418.github.io/javascript/core_javascript/</link><guid isPermaLink="false">https://maeng2418.github.io/javascript/core_javascript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://steemit.com/js/@huna/js-settimeout&quot;&gt;[JS] setTimeout 문제 - Steemit&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[코어 자바스크립트]]></title><description><![CDATA[들어가기 다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.…]]></description><link>https://maeng2418.github.io/javascript/core_javascript/</link><guid isPermaLink="false">https://maeng2418.github.io/javascript/core_javascript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
 &lt;p&gt;다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.&lt;/p&gt;
 &lt;h2 id=&quot;1-데이터-타입&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85&quot; aria-label=&quot;1 데이터 타입 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 데이터 타입&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;변수 :&lt;/strong&gt; 변경 가능한 데이터가 담길 수 있는 공간&lt;/p&gt;
@@ -3930,6 +3689,247 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         srcset=&quot;/static/1f89e06267e7cd69361588f34ec68405/5a46d/8.png 300w,
 /static/1f89e06267e7cd69361588f34ec68405/d743b/8.png 477w&quot;
         sizes=&quot;(max-width: 477px) 100vw, 477px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글스레드]]></title><description><![CDATA[들어가기 프로그램 어떤 작업을 위해 실행할 수 있는 파일 ex) 메모장 프로세스 실행중인 프로그램 스레드 실행중인 프로그램 안에서의 실행되는 명령어 ex…]]></description><link>https://maeng2418.github.io/javascript/single_thread/</link><guid isPermaLink="false">https://maeng2418.github.io/javascript/single_thread/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;프로그램&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;어떤 작업을 위해 실행할 수 있는 파일&lt;/p&gt;
+&lt;p&gt;ex) 메모장&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로세스&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;실행중인 프로그램&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;스레드&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;실행중인 프로그램 안에서의 실행되는 명령어&lt;/p&gt;
+&lt;p&gt;ex) 특정 노래를 재생하는 스레드 및 새로운 노래를 재생 목록에 추가하기 위한 스레드&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티프로그래밍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;하나의 CPU 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다. 즉, 하나의 CPU가 I/O를 하게 되면 입출력에 대한 응답을 무한정 기다리게 되는데 이렇게 대기하는 동안 프로세서가 다른 프로세스를 진행 할 수 있도록 하는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABkklEQVQoz42S7U7bMBRA8yjbXmzbW7DngX8d0sbEN/v4AZNQS9tAKe1YtyUpUUrSJA6kaZ04Z0oKWllL4UrWtS35+Fxfa3IiEaFAhBFCRIRBSByPKCLnX+T57Orx0OI4xrav8LwBnnddzoeuC0qRp+l0KPVsqDaWEe64heWfYLhVBvKcyKjhf9nj6mALcfSV/CZ6PvB27HIZbNG01mmY63T8DZxhHeULpO+SBsPSchZY5Pu5Uoosy8o8LTkJMdwT7PAUOzwrLb3InLt5kd3/e8VaS1IfR36n6+7RGexiJd8IZa/sSJ6rBzaLDGvVKpVKhYt2e2ooblwal5voP7fRezvUuh8wndbdQbXUrCj17ZvXvHr5gncrK/fAhNYPj3YvoPMrQO969J1ozmQRUGUZnw/2WVtb5ejw8A4YZ+gWNM2c+m9JwwTLy5YCl72p5kUZ+y3Y1VO26yN2TuGiP+2qesKwyHNdvhYpH2sJn+qSzabk/XHCmTFZCnxInxkFUKmcOJnwx7Do2w63owkyfbrkxz72X//Xl+I49vgXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/1.png&quot;
+        title=&quot;./images/single_thread/1.png&quot;
+        src=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/1.png&quot;
+        srcset=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/5a46d/1.png 300w,
+/static/49bad81f94bdf05cb20d7ef52604ef89/0a47e/1.png 600w,
+/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/1.png 769w&quot;
+        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABkUlEQVQ4y5WS227TQBRF/X1QeAYE/CClFyEeeGiKA0JqlDTN1U3jNk2ob7GaxjZ24saehQaT4DapI46050ijmXVmj7YSRRF5zWYzhAAhxAPJWvaiUizTxrHHf2RbDrZpr8EyzrJvAbr+JWOvz9jTcQOdW/96w7F/0K3Am7lKx/nE6XCP6/AL+rSG2pxyfDbmqGbzvTMljB9aznepNE1Xe0rP/IruqOhOmQu7hPazwqU5RzdC+sYvrqwZ8WL9D/N/m99T3HmbG6/GaFLFjhrcxf2NVjZdlhUEAb7vkyRJ9sKLyWeaxi710Qe67j6DuzJpCqm08lePrUqLsobDIe/fveXlix2OS6UMWG+d0eg2aGpN6q06nV53zdZjq0ugpmm8ef2KnefPODw8yICakXJuCHqmQDMEurWAgtzlB0ib0q43nRLHcQasDuBET1BbHpUraI0Wq3gUBfmpYcp+NWGvKvhYuWe3Ijhq369y9xSwMDY/zkPUts+3TkC5G9IYRFuBhcGWi3frMHEtYJF7wf/DJPA33izl/q8nfAoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/2.png&quot;
+        title=&quot;./images/single_thread/2.png&quot;
+        src=&quot;/static/20425405b0c3fb44ea0321ca3567babf/227ba/2.png&quot;
+        srcset=&quot;/static/20425405b0c3fb44ea0321ca3567babf/5a46d/2.png 300w,
+/static/20425405b0c3fb44ea0321ca3567babf/0a47e/2.png 600w,
+/static/20425405b0c3fb44ea0321ca3567babf/227ba/2.png 769w&quot;
+        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABq0lEQVQ4y5WTfW/SUBSH+Xw6/VuN+gHNnOJrlky2TmMiMivQ0TE7tm5AWwjYl7Slb/cxpWEWYRBPcnpyb5rnnt/vnlsJgoByhmGIECCEWMo8FnVTVIyhiWWO5mkaFubQXIEVnEXdAhy7F4ycX4wcjbGnMXGv1vz2F7oV2J9JnFpv+aHvceXvo9knSC2bQ3nEQcPgi2LjR8uSyzXPLMtu9yrd4RGaJaFZx5ybNdT+dy7MGM0I59kzZ0TJqodlb8t7lfFMoe+ccD1tYAZNfoddiHxIQogDyOK1F7JYe56H67qkaVp0eD59T2uwi6y/oDOpot98wD464ObjG6z9d8Q9be5cuaNcYh66rvP82VMePtjhsFYrgHL7J81Ok5baQm7LKKpCGgSkgU/i+2RxvCRx4Vkeqqry5PEjdu7fo1p9XQDVQcbZQNAdCtSBQDOS1Tu+w7tcZi7XsW2iKCqAjUv4pqVIbYd6D1rXCYhs/VD/A153cOVVI2WvIXhZj9mtCz4p8e3c3fUyNo7N1zMfSXH5fOpx3PFpXgZbgRsHO/84E4vp2ACSUgf/D8uBfwA2EuNCxPTjDgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/3.png&quot;
+        title=&quot;./images/single_thread/3.png&quot;
+        src=&quot;/static/ce4fd8e9735fe84489758c55e440a573/227ba/3.png&quot;
+        srcset=&quot;/static/ce4fd8e9735fe84489758c55e440a573/5a46d/3.png 300w,
+/static/ce4fd8e9735fe84489758c55e440a573/0a47e/3.png 600w,
+/static/ce4fd8e9735fe84489758c55e440a573/227ba/3.png 769w&quot;
+        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티태스킹&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;멀티태스킹은 스케줄러 알고리즘에 따라 조금씩 번갈아 가면서 프로세스가 수행되는 것이다. 이때 멀티프로그래밍과 다른점은 멀티 프로그래밍은 하나의 프로세스가 I/O가 당하기 전까지는 끝까지 실행 되지만 멀티 태스킹은 실행되는 도중에 특정 시간 이상 CPU를 점유하게 되면 그다음 프로세스에게 프로세서 자원을 넘겨주는 방식이다&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y42S6W7TQBSF/WDAMwDP08LvUl6j4h9C/CgIiUVBSVVKS2jiZnFMirN53+LYTcbOh+wElERJ6JGOZubOzLlz7h1JCEGSJGsUYgbzOfMVZln2j/k6x9+9VUiBH6APDSzTLjjsj/DDMf9DIbYlLo1jGz1s0DNr9K06RtQm6F4Tfj/HvqiQ1H6gKW0arRayLNNstVBVdfcL/USj45/ys/eGWv8t6vgDtnZOLMv49Spx64bQtrEdF9MwcFwXz/PWbK+WQQriEbduhY5eRjUrdN0y3lTnPth8Xb6WvIlG23lPfXCKPHxXzJ2ouziQpcyX2bcxRxzHWJbFJIqWNbwb0huXaOsfUYxP9KISwV1/mTFbu7xpM8eLoyMePXzA4cHBQtD0B1Rvv1D9VaLaLXHV/YzuaWuCWzu8jL88Pubpk8c8f3ZYJJEsP6WuQWMAzQFc/wbDS3d2cTOeCsF0Oi3+blHDoSs4U+HrTUxJnlBWoO+I4nC2Q3BXUwrLymjGq7OM1xc5U07KguZgtldws66rlJxQcNmJ+NZ0uVQCrtQJpj/ba3kfpMUg8GyDOPL32rmP4B8cR+LJuaWAkQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/4.png&quot;
+        title=&quot;./images/single_thread/4.png&quot;
+        src=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/4.png&quot;
+        srcset=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/5a46d/4.png 300w,
+/static/0e9ea349ae20c47e229820f84ccee6a8/0a47e/4.png 600w,
+/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/4.png 770w&quot;
+        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y5WT2W7TQBSG/WDAMwDP08J1Ka+BuEOIiwghlSVtGhWUYkidzUkTnDhx7MTxFmeZ2B9yNiVgmnKk35450nxnmTOSEILJZLKnxJdYHMcQ818muY6L0e1jmYOlup0eiW8D3Ggb4BDQDwcYXpm2WaQzUDDcEl5orgFR8tkD7wZICyI5E426k+FH+y1F/R11N4M9bR7MZDfrKIq2e8kNe7TsS+rGBY1+jpZ3hV2/YnTxBeP8jHEhT7NcoqgoyLKMoihUq9XU7JK9NBpr1IbvudEzKHqGmv0Bq/udWatFcKsy1ZpMfA8/CHBdF9/3CcNwC0vWlmUxDoJ1D6dd2n6WmnGG2v+4XHuid7DkpMzEXpyc8OjhA46PjlZA09GRW5+Rb7PIzSzXzU8YtrY+tCBe9+dfF/Py9JSnTx7z/NnxMohkOQtuNCjrUNHh5y/ojxapY7Pbq41vIQSz2Qwh5qsedm1BvgHnpZCsMianQme4GuwoBZZ203tjo/bmvM5HvPmWaMGrnKCiz+8E/jnsu5KGnqBQD/hasSmoLteNMaYz/+vgvZ/e6icYDfqEgXNnOfcB/gagsuMZda3cXAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/5.png&quot;
+        title=&quot;./images/single_thread/5.png&quot;
+        src=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/5.png&quot;
+        srcset=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/5a46d/5.png 300w,
+/static/84a3cf9a4e9e0e81edf49a2eb3c44685/0a47e/5.png 600w,
+/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/5.png 770w&quot;
+        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABtElEQVQ4y52T624SQRTH98HUZ1Cfp9XPrb6G8ZsxJhaNNqm0QCJWuZSLZakEdmHZC+xyWbo7zP7MLixSWzV4kn/m/jsz55xRhBAsFosbiudii6IIInYyxXM9jP4Qy7QT9bUB8dwGuKMpU9/GmDTomVU0u4bh1Zn45ga4K1RxF11U94hy7zVV/Q2ql2G0uFoD5Q3odrvdl1JuxornD+iM8qjGGW0zz4/RGWO/u9pMeugX5C4HqcVjZTzvcum840I/otbP8N3J4Mzaqw1ySSTlnU9LYb7vY1kW89lsHcPrPr1plkvjmJZxjHZdwFVz2B/fo314yzR/glqtUKpU+VIsUi5XqNfryDXw8OCAB/fvsb+3twKark6pc0LpKpvoW+cTA61B5DgEpkFomSyDgCAMCYKAMAyTskpv+PzZIY8fPeTpk/0klorlLrnoQkOHpg6VDgy9f2czBS6FSBwJEa5i2B8JCm04rftka3NyLdBskaREyuhWMv6WlOTJrUHIy4LkVTHWkhc5QVMPk0X5hzr8HbotxZkIztUZn5sjzlseX9tzTDf8/8JeNYKxPcSfubditOvX+wmuGONjXOZtAAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/6.png&quot;
+        title=&quot;./images/single_thread/6.png&quot;
+        src=&quot;/static/52b0370ee95e13916bf8834c43f082b8/f4b77/6.png&quot;
+        srcset=&quot;/static/52b0370ee95e13916bf8834c43f082b8/5a46d/6.png 300w,
+/static/52b0370ee95e13916bf8834c43f082b8/0a47e/6.png 600w,
+/static/52b0370ee95e13916bf8834c43f082b8/f4b77/6.png 770w&quot;
+        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1174px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVQoz02RzWsTQRyG9+KhB29S8OI/4KUgKOKxBaF4EAUPUj/Bi6XgF2IvpSm12NpWqRapoOAfIIgoeCgexI+2VKqpaZLu5muTbDfJ7maTNpJkZ/LojqgdeOGd3/O+AzOjWZZFsVhE13VCn8/nyeVymKbJ1taW8rZtk8lkVK5QKPzLhApnYdZxHBqNBprvV/E8T5Xr9Tqu5ynoea7ah14VXJeq7+P7Pp7r4jquYtVqlXKlQq1Wo9lsorFrlUslXKdCKpXGLjsUrSJ2ySabySrmlEuUyhUsu4RlW2zvbO+u0+l00L4tf+Ttm1d8+PyJhGEQjSeJfl/D1OMYcQM9oRNLxIglEkTjmyQ31slubiiW0lMYaQMjm2MznVW30/Rz3dy8c5Cu6cPsjcygja4wfO0ssYvdTB6bYKjvNvvHe+gamUAbXeb+UD8rAweYPjrDpf5B9o33sGdsAW34HS+/RNGWbvUyMXmGvoXLHJ97Ss+D90xFbrA+foq5gYfcvTrNyfkL9M0+4tDsIk/GBlkaOc2zK8+JXL/Hicfn6Z17wZGp1yx+/YGWTGfJ5y1EMwApQLQJAsHPtmR1bRWzYCJaAqRUrB0IWh0IEMhOOANEyAPardb/TxFSEIg/Ch93u17DzOWoVBx2GjtIKRWTUiBFgBBC6W9HCEnr94G/AA8gIWIWNrmIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/7.png&quot;
+        title=&quot;./images/single_thread/7.png&quot;
+        src=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/04784/7.png&quot;
+        srcset=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/5a46d/7.png 300w,
+/static/b7a751dcd453c12a44d6d4d18ada1e89/0a47e/7.png 600w,
+/static/b7a751dcd453c12a44d6d4d18ada1e89/04784/7.png 1174w&quot;
+        sizes=&quot;(max-width: 1174px) 100vw, 1174px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티프로세싱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;멀티 프로세싱은 여러 프로세서 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 738px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8UlEQVQoz42Sa08TQRSG97fin1Cj6D+wRPtdq5FEPhhQkTRgKSUUIxShpVx3W2vKlra09LK73Z2ZfcxOSy2I6CRnzmQuz7znYgjl4cs+gXIQytFrFQqiEYahtqv1/wyj4RU4bS3zvfSR4lmSirNK26mBfn8dNvnBX4F2N89pM8Wh/YWT+ipWK8Wlc45SIKS8FXYX1Gh4+1rh7o9PHNhJKv00l25tDAyERKnfgH+BDbtTwLpY4+R8jdN6BvMiTcc914dDoGIQDME31d5mRt3d46S1xE5pnkJ1kXJ/hbZra4VKKX0pUugLiTsQGnxnDmudImYjg1lfx2psYDUzdN26rkekUEiFHIEj8wOJ5wscL8AXIYFUek8otDeqvRyF2geyh+/YLr3nuPWZi351nMMIFkGFGPorcKc/4NHjaZ7FZtjLF7g3NcXySgrDqvUoVLoc2y5HZw67Vpt2b6DlR6GOgVLpcP1RPnvOgNnZtywszFMulYi/eE4ut4NxbIdslSF76LFlKr5Z0OzKUfK5Vl0VhsgRuOf4xGIzvHyVwDRNHj64T3bzK8Z2SbGUh8XcgGResbgLdlv+Uc0JtJ67fY94PE4ikaBYPODpk2ky6xsY6X2HN2s95jYd5rIOr9Ndfjb8Ycg3em4S7vnB+IuotbSXIb8AmT6LBzWezL0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/8.png&quot;
+        title=&quot;./images/single_thread/8.png&quot;
+        src=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/8.png&quot;
+        srcset=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/5a46d/8.png 300w,
+/static/6bed28e76ef6ee26ffc35e9577850b7f/0a47e/8.png 600w,
+/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/8.png 738w&quot;
+        sizes=&quot;(max-width: 738px) 100vw, 738px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티스레딩&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;멀티스레딩은 하나의 프로세스에서 여러 스레드가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
+&lt;p&gt;실제 한번에 두가지 일을 &lt;code class=&quot;language-text&quot;&gt;동시에 병렬&lt;/code&gt;로 처리하는 것이 아니라 번갈아 가며 처리하여 동시에 작업이 처리되는 것처럼 느끼게 하는 방식.&lt;/p&gt;
+&lt;p&gt;ex) 채팅의 경우 - 멀티스레드를 사용하여 상대방의 메시지 다운과 입력을 동시에 처리.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 766px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABt0lEQVQoz5WTDW/SUBSG+SVGf4764+Y/MHExGRITPzM3jWyZoo6AA8oYHzMjg5W2G21hbW/t7X3MhYElQZ1v8vbenPQ+Oefcc3NpmhIGIWEQENw4iiJUmi6NUij0or9/V04IgTmyGNkOlnOJadlYjkP26Gx/C9gMGCeCqWMw7ZcZ//hGaH5nMjom7LTwjhuEJ02U783BGvoPcC6WAm/4Hutok0HlCV6vgDss4dcqOOUv+NVDpHu1BC6spdslpZyti1guTkLMsMyps0dr8IG+f4AdGWRrXvys1sSy0rGckAH++Qu82iZm+TFRL8/l2WvGBx8533nLVXGX1B6tZKgz0up1u+TzW+wVi78zjERIo7FLvfKKevUNR9WXtNufSTwX6bkk7pg0FitAXabWo40N7t29w8MH95lOJjfAKKbZMWm0TYzOiPrJBb0ze205WahWvVaj8CzPu+1t9LTMgbGkdQHNIRgDhTGEUyszfxlAtm9/7GEoJKUu7LdSdio++22o9SVKpWsPrrtl7WUPr6OE54eCrVJM4WvM008xxaaYjfNtX8fKHMpU4fg/sb25LTfGu07mQPX/wF+FRZQR1vXsUAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/9.png&quot;
+        title=&quot;./images/single_thread/9.png&quot;
+        src=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/9.png&quot;
+        srcset=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/5a46d/9.png 300w,
+/static/a9cb83d6466aac9221e6b55237cbc37f/0a47e/9.png 600w,
+/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/9.png 766w&quot;
+        sizes=&quot;(max-width: 766px) 100vw, 766px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;싱글스레드&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;싱글스레드는  하나의 직렬로 처리하는 스레드 방식을 의미한다. 즉, 하나의 요청이 있으면 하나를 처리할 때까지 다음 요청은 대기상태. (하나씩만 실행 할 수 있음)&lt;/p&gt;
+&lt;p&gt;ex) 채팅의 경우 - 상대방의 메시지를 다운 받는 동안 입력 불가.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 625px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjUlEQVQ4y22TbW/bNhSF/f9/wjCgRfZl/TJ0Qdv1S1CkWLcWaZKmbZq2cWzHlmUperNeKIoUqacgbS8v3TUEkb6H557LczWy1lKWJW3bkiQJQghcDMNw722MIYoixBbn8Lv8DuNiZI3l/fExXy8uOD09ZREsfMIVuksopeTNv/8wm844OjoiiqP/J/R/So1apNishgGsA9nh5wPKoOYJNhcOdK/grcJOo9ISMQ6RQYrO6w3JgwNW9XQ3a8TlErnM0EX9X7H7LXfaJ+tPM9qrFX3R+HYf3uGgenRWbXDTiL4Uvpu7hO7tW9brBl0JVF7jCgzut73DXfTG0OUVppb0eY1qWuxwi9mRjnYLB9jFXYVKKW+IbKXfr5MM1Sm/dhPhcn3f3yocmo7Jy3ecP3vN+f4hxcmVV+eSTV1zE8ekabpxupWsoog8z/0Yaa2J45gsy+i6bqtQG9owo5iF1IsbVFZ5Q1xVN59BEFAUBVVZIRpBGIYsl0s/h66gK+ZIq6ramiIV2dmY4N1n4uOviMnKt+wepyRYBP6AVsofWjnCIPCKWiEIl5u9I98obDpmL9/yZf+Qb/uvWZ+MGYx1BmIYqEWD6vXmjsDvu+3e36NsaTt590sxIDWyqBiEwrbKu2d1j60lbVZiqhbTSO9wm679VLi1aTpUUdMVtcfa3jAaKsn49wM+/vaC872/qP6+2LgbFXx69Jyzvecc//onxeE586dv+Lj3grPHz8gOzkgOPnD0yx+cPNpn+uQVfVox0p1iNZkzvfhOcDllfjnxo4Kx6FLQV+5p6cqG+bcrpl++sxzPCCfXlHHq1e9wg1PorF/FEdPrGXFyQxitNoQPoreG68Xc45I8I8lSmlb8hPsBHJx8BZ5WJdAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;./images/single_thread/10.png&quot;
+        title=&quot;./images/single_thread/10.png&quot;
+        src=&quot;/static/72f4972e709d1f18d80d68d176c04423/80d71/10.png&quot;
+        srcset=&quot;/static/72f4972e709d1f18d80d68d176c04423/5a46d/10.png 300w,
+/static/72f4972e709d1f18d80d68d176c04423/0a47e/10.png 600w,
+/static/72f4972e709d1f18d80d68d176c04423/80d71/10.png 625w&quot;
+        sizes=&quot;(max-width: 625px) 100vw, 625px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
