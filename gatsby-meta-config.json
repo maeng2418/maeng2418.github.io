@@ -1,6 +1,6 @@
 {
   "title": "Maeng's Blog",
-  "description": "Blog posted about ...",
+  "description": "Maeng's Blog is for recording Maeng's Developments.",
   "name": "김명성",
   "author": "Maeng",
   "introduction": "📝 Maeng의 개발 성장로그",
@@ -21,7 +21,7 @@
   "keywords": ["blog"],
   "comment": {
     "disqusShortName": "",
-    "utterances": "Maeng2418/Maeng"
+    "utterances": "maeng2418/maeng2418.github.io"
   },
   "configs": {
     "countOfInitialPost": 10
