@@ -273,9 +273,9 @@ const Experience: React.FC = () => {
                   ],
                 },
                 {
-                  contentTitle: '교통 DB 자료 구축 및 Emme 사용법에 대한 연구소 세미나 강연',
+                  contentTitle: '교통 DB 자료 구축 및 Emme 사용법에 대한 연구소 세미나',
                   contentDetails: [
-                    'Python 스크립트를 작성을 통한 교통수요분석 자동화에 대해 연구소내에서 강연',
+                    'Python 기초 교육과 Python 스크립트 작성을 통한 교통수요분석 자동화에 대해 연구소내에서 세미나 진행',
                   ],
                 },
               ],
