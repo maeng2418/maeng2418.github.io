@@ -180,3 +180,33 @@
     transition: 150ms;
   }
 }
+
+.dark {
+  .projects-container .project {
+    .project__details .item__details {
+      .title,
+      .description {
+        color: #eee;
+      }
+    }
+    .project__links {
+      @media (max-width: 576px) {
+        background: #eeeeee;
+      }
+      @media (min-width: 576px) and (max-width: 767px) {
+        background: #eeeeee;
+      }
+
+      .github-logo {
+        background-image: url(../../../../content/assets/github-white.png);
+
+        @media (max-width: 576px) {
+          background-image: url(../../../../content/assets/github.png);
+        }
+        @media (min-width: 576px) and (max-width: 767px) {
+          background-image: url(../../../../content/assets/github.png);
+        }
+      }
+    }
+  }
+}

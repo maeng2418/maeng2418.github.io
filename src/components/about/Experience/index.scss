@@ -194,3 +194,10 @@
     transition: 150ms;
   }
 }
+
+.dark {
+  .experience-container .experience .item__details .description .btn {
+    color: #000000;
+    background-color: rgba(255, 175, 25, 1);
+  }
+}

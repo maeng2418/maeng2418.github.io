@@ -53,3 +53,9 @@
     }
   }
 }
+
+.dark {
+  .skill-sets-container .skill-set .category::after {
+    opacity: 0.8;
+  }
+}
