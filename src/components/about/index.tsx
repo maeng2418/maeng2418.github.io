@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutMe from './AboutMe';
+import DownloadButton from './DownloadButton';
 import Education from './Education';
 import Experience from './Experience';
 import Footer from './Footer';
@@ -21,6 +22,7 @@ const About: React.FC = () => {
         <Timestamp />
         <Experience />
         <Education />
+        <DownloadButton />
       </main>
       <Footer />
     </>
