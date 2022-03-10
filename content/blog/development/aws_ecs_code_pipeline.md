@@ -335,7 +335,7 @@ CodePipeline에 연결할 리포지토리 이름과 브랜치 이름도 입력�
 
 ![Untitled](./images/aws_ecs_code_pipeline/47.png)
 
-추가로, 서브모듈 풀링을 **SSH Key**를 이용하기 때문에 해당 파이프라인에 종속되어 생성된 코드 빌드 역할에 `AWSAppRunnerServicePolicyForECRAccess` \*\*\*\*권한을 추가해주고, BuildSpec의 imagedefinitions.json이 S3에 업로드되기 때문에 `AmazonS3FullAccess` 권한을 CodeBuild 서비스 역할에 연결한다. 그리고, `EC2InstanceProfileForImageBuilderECRContainerBuilds`를 추가하여 이미지를 푸쉬할 수 있도록 한다.
+추가로, 서브모듈 풀링을 **SSH Key**를 이용하기 때문에 해당 파이프라인에 종속되어 생성된 코드 빌드 역할에 `AWSAppRunnerServicePolicyForECRAccess` 권한을 추가해주고, BuildSpec의 imagedefinitions.json이 S3에 업로드되기 때문에 `AmazonS3FullAccess` 권한을 CodeBuild 서비스 역할에 연결한다. 그리고, `EC2InstanceProfileForImageBuilderECRContainerBuilds`를 추가하여 이미지를 푸쉬할 수 있도록 한다.
 
 ![Untitled](./images/aws_ecs_code_pipeline/48.png)
 
@@ -343,7 +343,7 @@ buildspec.yml에 사용할 환경변수를 추가해준다.
 
 ![Untitled](./images/aws_ecs_code_pipeline/49.png)
 
-배포 공급자로 Amazon ECS(Blue/Green)를 선택해주고 애플리케이션과 배포그룹을 선택해준다. 그리고 ECS 작업 정의dhk AWS Code Deploy App Spec 파일로 BuildArtifact을 선택해준다.
+배포 공급자로 Amazon ECS(Blue/Green)를 선택해주고 애플리케이션과 배포그룹을 선택해준다. 그리고 ECS 작업 정의와 AWS Code Deploy App Spec 파일로 BuildArtifact을 선택해준다.
 
 ![Untitled](./images/aws_ecs_code_pipeline/50.png)
 
