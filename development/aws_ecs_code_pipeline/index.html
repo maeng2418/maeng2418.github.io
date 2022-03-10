@@ -1349,7 +1349,7 @@
         decoding="async"
       />
     </span></p>
-<p>추가로, 서브모듈 풀링을 <strong>SSH Key</strong>를 이용하기 때문에 해당 파이프라인에 종속되어 생성된 코드 빌드 역할에 <code class="language-text">AWSAppRunnerServicePolicyForECRAccess</code> ****권한을 추가해주고, BuildSpec의 imagedefinitions.json이 S3에 업로드되기 때문에 <code class="language-text">AmazonS3FullAccess</code> 권한을 CodeBuild 서비스 역할에 연결한다. 그리고, <code class="language-text">EC2InstanceProfileForImageBuilderECRContainerBuilds</code>를 추가하여 이미지를 푸쉬할 수 있도록 한다.</p>
+<p>추가로, 서브모듈 풀링을 <strong>SSH Key</strong>를 이용하기 때문에 해당 파이프라인에 종속되어 생성된 코드 빌드 역할에 <code class="language-text">AWSAppRunnerServicePolicyForECRAccess</code> 권한을 추가해주고, BuildSpec의 imagedefinitions.json이 S3에 업로드되기 때문에 <code class="language-text">AmazonS3FullAccess</code> 권한을 CodeBuild 서비스 역할에 연결한다. 그리고, <code class="language-text">EC2InstanceProfileForImageBuilderECRContainerBuilds</code>를 추가하여 이미지를 푸쉬할 수 있도록 한다.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
@@ -1398,7 +1398,7 @@
         decoding="async"
       />
     </span></p>
-<p>배포 공급자로 Amazon ECS(Blue/Green)를 선택해주고 애플리케이션과 배포그룹을 선택해준다. 그리고 ECS 작업 정의dhk AWS Code Deploy App Spec 파일로 BuildArtifact을 선택해준다.</p>
+<p>배포 공급자로 Amazon ECS(Blue/Green)를 선택해주고 애플리케이션과 배포그룹을 선택해준다. 그리고 ECS 작업 정의와 AWS Code Deploy App Spec 파일로 BuildArtifact을 선택해준다.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; "
