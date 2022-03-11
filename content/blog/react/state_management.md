@@ -306,7 +306,7 @@ const Profile () => {
 
 > React Query는 "전역 상태"를 건드릴 일 없이 리액트와 리액트 네이티브 어플리케이션의 데이터를 패치(fetch), 캐시(cache) 그리고 업데이트합니다.
 
-react-query의 경우, SWR과 많은 부분에 있어 유사하지만, devtools 제공, Data Optimization, Auto Garbage Collection 등 \*\*\*\*더 많은 기능을 제공한다.
+react-query의 경우, SWR과 많은 부분에 있어 유사하지만, devtools 제공, Data Optimization, Auto Garbage Collection 등 더 많은 기능을 제공한다.
 
 ```jsx
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
