@@ -23,7 +23,7 @@ const HTML: React.FC<HTMLProps> = (props) => {
         {props.headComponents}
         <script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-${metaConfig.ad}`}
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${metaConfig.ad}`}
           crossOrigin="anonymous"
         ></script>
       </head>
