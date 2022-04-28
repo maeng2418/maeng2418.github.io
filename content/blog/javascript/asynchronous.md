@@ -38,9 +38,8 @@ sync 2 3
 
 ## **4. callstack & callback queue**
 
-![                                                                 Javascript의 엔진과 외부의 런타임 환경들이 조합된 모습](https://cdn-images-1.medium.com/max/1600/1*FA9NGxNB6-v1oI2qGEtlRQ.png)
-
-                                                                 Javascript의 엔진과 외부의 런타임 환경들이 조합된 모습
+Javascript의 엔진과 외부의 런타임 환경들이 조합된 모습
+![Javascript의 엔진과 외부의 런타임 환경들이 조합된 모습](https://cdn-images-1.medium.com/max/1600/1*FA9NGxNB6-v1oI2qGEtlRQ.png)
 
 - **메모리힙 :** 메모리 할당을 담당하는 곳.
 - **콜스택 :** 코드가 호출되면서 스택으로 쌓이는 곳.

@@ -17,7 +17,7 @@ const Timestamp: React.FC = () => {
         tags: ['graduation'],
       },
       {
-        when: '20.12.01 - 20.07.08',
+        when: '20.12.01 - 21.07.08',
         title: '짐싸 FE 개발자',
         organizer: '짐싸 (Zimssa)',
         tags: ['company'],
