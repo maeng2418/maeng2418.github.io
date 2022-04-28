@@ -39,13 +39,15 @@ draft: false
      - resolve
      - resolves
      - resolved
-       `$ git commit -m "css 문제 해결 close #20"`
-       `$ git commit -m "router 개발 close #20, #21, #23"`
-       ⇒ 커밋 제목이나 내용에 추가하면 됨.
+
+   `$ git commit -m "css 문제 해결 close #20"` <br/>
+   `$ git commit -m "router 개발 close #20, #21, #23"` <br/>
+   ⇒ 커밋 제목이나 내용에 추가하면 됨.
 
 ## Github MileStone
 
-**각 기능별 서로 유사한 이슈들이 존재하며, 이 관련된 이슈들을 찾거나 해당 기능들이 얼마나 구현되었는지 파악하기 위해선 일일히 추적해야하는 어려움을 해소시킨다. ⇒** 마일스톤은 말그대로 이정표 역할을 하며, 이슈들을 그룹화하고 진행상황을 표현.<br/><br/>
+**각 기능별 서로 유사한 이슈들이 존재하며, 이 관련된 이슈들을 찾거나 해당 기능들이 얼마나 구현되었는지 파악하기 위해선 일일히 추적해야하는 어려움을 해소시킨다.** <br/>
+⇒ 마일스톤은 말그대로 이정표 역할을 하며, 이슈들을 그룹화하고 진행상황을 표현.<br/><br/>
 
 ![https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101](https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101)
 
