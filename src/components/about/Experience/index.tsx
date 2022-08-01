@@ -74,6 +74,17 @@ const Experience: React.FC = () => {
               subTitle: 'Adpopcorn SSP',
               contents: [
                 {
+                  contentTitle: 'SSP 콘솔 3.0 리뉴얼',
+                  contentDetails: [
+                    '기존 NextJS를 React18로 리뉴얼',
+                    'React-query 및 Recoil을 활용한 상태관리',
+                    '디자인 개편 및 일관성 유지',
+                    '빌드 및 배포 시간 단축',
+                    '중복 API 요청 이슈 제거',
+                    '라이브러리 최신 업데이트',
+                  ],
+                },
+                {
                   contentTitle: '애드팝콘 SSP 콘솔 리펙토링',
                   contentDetails: [
                     'NextJS 12 업데이트 및 디펜던시 버젼 업데이트',
