@@ -1,29 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import React, { MutableRefObject, useEffect, useMemo, useRef } from 'react';
+import React, { useMemo } from 'react';
 import './index.scss';
 
 const Projects: React.FC = () => {
-  const ref: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
-  const observer = useRef<IntersectionObserver>();
-
-  useEffect(() => {
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle('show', entry.isIntersecting);
-        });
-      },
-      {
-        rootMargin: '-100px',
-      },
-    );
-  }, []);
-
-  useEffect(() => {
-    if (ref.current === null || ref.current.children.length === 0) return;
-    Array.from(ref.current.children).forEach((child) => observer.current?.observe(child));
-  }, []);
   const { maengDesign, bmart, seoul13 } = useStaticQuery(
     graphql`
       query ProjectQuery {
@@ -120,7 +100,7 @@ const Projects: React.FC = () => {
       <div className="subtitle">
         <h3 className="subtitle__h3">Projects</h3>
       </div>
-      <div className="projects-container" ref={ref}>
+      <div className="projects-container">
         {projects.map(
           ({ link, image, details: { title, term, description, attribution, tags }, github }) => (
             <div className="project" key={title}>

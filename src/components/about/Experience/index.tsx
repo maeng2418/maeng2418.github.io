@@ -1,30 +1,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import React, { MutableRefObject, useEffect, useMemo, useRef } from 'react';
+import React, { useMemo } from 'react';
 import './index.scss';
 
 const Experience: React.FC = () => {
-  const ref: MutableRefObject<HTMLDivElement | null> = useRef<HTMLDivElement>(null);
-  const observer = useRef<IntersectionObserver>();
-
-  useEffect(() => {
-    observer.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          entry.target.classList.toggle('show', entry.isIntersecting);
-        });
-      },
-      {
-        rootMargin: '-100px',
-      },
-    );
-  }, []);
-
-  useEffect(() => {
-    if (ref.current === null || ref.current.children.length === 0) return;
-    Array.from(ref.current.children).forEach((child) => observer.current?.observe(child));
-  }, []);
-
   const { igaworks, woowa, zimssa, develup, dable, seoultech } = useStaticQuery(
     graphql`
       query ExperienceQuery {
@@ -361,7 +340,7 @@ const Experience: React.FC = () => {
       <div className="subtitle">
         <h3 className="subtitle__h3">Experiences</h3>
       </div>
-      <div className="experience-container" ref={ref}>
+      <div className="experience-container">
         {experiences.map(({ details: { title, term, description, subDetails }, image }) => (
           <div key={title} className="experience">
             <div className="item__image">
