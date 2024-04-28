@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Maeng's Blog is for recording Maeng's Developments.]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Apr 2024 03:54:29 GMT</lastBuildDate><item><title><![CDATA[React Test 코드 작성]]></title><description><![CDATA[1. 기술스택 react 18 react-router-dom v6 react-query testing-library
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Maeng's Blog is for recording Maeng's Developments.]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Apr 2024 06:43:36 GMT</lastBuildDate><item><title><![CDATA[React Test 코드 작성]]></title><description><![CDATA[1. 기술스택 react 18 react-router-dom v6 react-query testing-library
  기술 스택의 경우, 과  과 같이 최신 버젼의 라이브러리를 사용하였고, API…]]></description><link>https://maeng2418.github.io/markdowns/react/react_testing_library/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/react/react_testing_library/</guid><pubDate>Mon, 06 Jun 2022 23:00:01 GMT</pubDate><content:encoded>&lt;aside&gt;
 💡 &lt;b&gt;개요&lt;/b&gt; &lt;br/&gt;
 모든 개발자들이 테스트코드 작성의 중요성에 대해서 알지만, 쉽사리 실무에서 테스트 코드를 작성하면서 개발을 하기란 쉬운 일이 아니란 것을 공감하실겁니다. 특히나 프론트엔드에서는 시각적인 부분이 많다보니 아무래도 눈으로 직접 검증하는 경우가 많은데요. 테스트 코드를 통해 안정적이고 견고한 서비스를 개발하고 또 유지보수가 용이하도록 만들기 위해 이번에 React에서 테스트 코드를 어떻게 작성하고 테스트 하는지에 대해 알아보고자 하였습니다.
@@ -4774,7 +4774,65 @@ devAsh&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[비동기 프로그래밍]]></title><description><![CDATA[들어가기 자바스크립트는 싱글스레드로 동작한다. (작업을 순차적으로 처리한다.) database나 file에 접근하거나, 네트워크 통신이 필요한 경우 등의 작업이 필요하다면, 비동기 처리를 통해서 blocking…]]></description><link>https://maeng2418.github.io/markdowns/javascript/asynchronous/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/asynchronous/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Node.js]]></title><description><![CDATA[Node.js Node.js는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js…]]></description><link>https://maeng2418.github.io/markdowns/nodejs/nodejs/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/nodejs/nodejs/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs&quot; aria-label=&quot;nodejs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js를 알아가는데 중요한 것은 딱 두가지라고 생각합니다. 싱글스레드에 비동기 방식이라는 것과, 자바스크립트 기반이라는 것이죠. 프론트엔드 뿐만 아니라 백엔드 또한 자바스크립트로 작성할 수 있다는 것은 큰 이점이 될 수 있고, 바로 이 점으로 인해 Node.js의 성장세가 계속 되고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt; 는 &lt;strong&gt;서버사이드 자바스크립트&lt;/strong&gt; 이며 구글의 자바스크립트 엔진인 &lt;strong&gt;V8&lt;/strong&gt;을 기반으로 구성된 일종의 소프트웨어 시스템입니다.&lt;/p&gt;
+&lt;p&gt;이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지원하기 때문에 &lt;strong&gt;비동기식 프로그래밍&lt;/strong&gt; 이 가능합니다. 이 때문에 I/O 부하가 심한 대규모 서비스를 개발하기 적합하다고 할 수 있습니다. 또한 자바스크립트의 표준라이브러리 프로젝트인 CommonJS의 스펙을 따르고 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;노드의-탄생-배경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%85%B8%EB%93%9C%EC%9D%98-%ED%83%84%EC%83%9D-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;노드의 탄생 배경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;노드의 탄생 배경&lt;/h2&gt;
+&lt;p&gt;가장 널리 쓰이는 JSP나 PHP와 같은 언어로 웹 애플리케이션을 개발한다고 한다면 이 웹 애플리케이션은 일반적으로 아파치와 같은 웹 서버에서 동작하게 될 것입니다. 이 때 어떤 클라이언트가 웹 서버에 연결을 요청하게 된다면, 일정한 메모리 공간을 사용하여 새로운 쓰레드를 생성합니다. 이런 형태로 웹 애플리케이션을 개발하여 서비스를 제공하는 경우에는 더 많은 사용자를 지원하기 위해 사업자는 더 많은 서버를 추가할 수 밖에 없었습니다. 이는 단순히 서버 구매 비용뿐만 아니라 이를 운영하는 비용이나 운영에 따라 발생하는 트래픽 비용, 인건비 등 여러 비용을 더하는 문제를 발생시킵니다. 게다가 여러 대의 서버를 사용하더라도 사용자 입장에서는 마치 하나의 서버에 접속하는 것과 같은 효과를 주어야 하기 때문에 모든 서버들은 같은 데이터를 동기화해야 한다는 문제를 발생시키기도 합니다.&lt;/p&gt;
+&lt;p&gt;하지만, 노드는 서버에서 클라이언트로부터의 요청, &lt;strong&gt;즉 연결을 처리하는 방법을 새로운 컨셉으로 변경&lt;/strong&gt; 하여 이 문제를 해결합니다. 기존에는 각 연결에 대해 새로운 쓰레드를 생성하고 그에 따라 메모리를 할당하여 사용자 요청을 처리했다면, 노드에서는 &lt;strong&gt;각 연결이 하나의 이벤트로서 노드 엔진에서 처리됩니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;설치하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0&quot; aria-label=&quot;설치하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치하기&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;NVM 이용해서 설치하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Node Version Manager의 약자로, Node.js의 다양한 릴리스 버전을 관리할 수 있어 가장 많이 사용됩니다. apt 패키지 매니저 대신 사용하는 툴입니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;NVM 문서에 잇는 설치 스크립트를 설치한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo curl -o- [https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh](https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;환경변수 등록하기.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 터미널이 bash라면 /.bash_profile에 zsh라면 /.zshrc에 환경변수를 등록 합니다.
+
+$ vi ~/.bash_profile 혹은$ vi ~/.zshrc
+
+export NVM_DIR=&quot;$HOME/.nvm&quot;
+[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;amp;&amp;amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;적용하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo source ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;설치할 수 있는 Node.js 버젼 확인하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls-remote&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;설치하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install 6.10.1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;확인하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;버젼 변경하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm use 6.10.1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;LTS 버전&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장기적으로 지원이 제공되는 안정적인 버전&lt;/li&gt;
+&lt;li&gt;안정성과 보안성에 초점을 두어 개발함&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install node --latest-npm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Current 버전&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;업데이트가 잦음&lt;/li&gt;
+&lt;li&gt;가장 최신의 버전이므로 불안정하고 숨겨져 있는 버그가 많음&lt;/li&gt;
+&lt;li&gt;추가 기능 개발과 기존 API의 기능 개선을 우선함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;yarn-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#yarn-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;yarn 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;yarn 설치&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl -o- -L [https://yarnpkg.com/install.sh](https://yarnpkg.com/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[비동기 프로그래밍]]></title><description><![CDATA[들어가기 자바스크립트는 싱글스레드로 동작한다. (작업을 순차적으로 처리한다.) database나 file에 접근하거나, 네트워크 통신이 필요한 경우 등의 작업이 필요하다면, 비동기 처리를 통해서 blocking…]]></description><link>https://maeng2418.github.io/markdowns/javascript/asynchronous/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/asynchronous/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;자바스크립트는 싱글스레드로 동작한다. (작업을 순차적으로 처리한다.)&lt;/li&gt;
 &lt;li&gt;database나 file에 접근하거나, 네트워크 통신이 필요한 경우 등의 작업이 필요하다면, 비동기 처리를 통해서 blocking하지 않고 효과적으로 처리할 수 있다.&lt;/li&gt;
@@ -5175,65 +5233,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@vdongbin/javascript-%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC-single-thread-event-loop-asynchronous-e47e07b24d1c&quot;&gt;Javascript 동작원리 (Single thread, Event loop, Asynchronous)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;#x26;feature=youtu.be&quot;&gt;What the heck is the event loop anyway? | Philip Roberts | JSConf EU&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://steemit.com/js/@huna/js-settimeout&quot;&gt;[JS] setTimeout 문제 - Steemit&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Node.js]]></title><description><![CDATA[Node.js Node.js는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js…]]></description><link>https://maeng2418.github.io/markdowns/nodejs/nodejs/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/nodejs/nodejs/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs&quot; aria-label=&quot;nodejs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js를 알아가는데 중요한 것은 딱 두가지라고 생각합니다. 싱글스레드에 비동기 방식이라는 것과, 자바스크립트 기반이라는 것이죠. 프론트엔드 뿐만 아니라 백엔드 또한 자바스크립트로 작성할 수 있다는 것은 큰 이점이 될 수 있고, 바로 이 점으로 인해 Node.js의 성장세가 계속 되고 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt; 는 &lt;strong&gt;서버사이드 자바스크립트&lt;/strong&gt; 이며 구글의 자바스크립트 엔진인 &lt;strong&gt;V8&lt;/strong&gt;을 기반으로 구성된 일종의 소프트웨어 시스템입니다.&lt;/p&gt;
-&lt;p&gt;이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지원하기 때문에 &lt;strong&gt;비동기식 프로그래밍&lt;/strong&gt; 이 가능합니다. 이 때문에 I/O 부하가 심한 대규모 서비스를 개발하기 적합하다고 할 수 있습니다. 또한 자바스크립트의 표준라이브러리 프로젝트인 CommonJS의 스펙을 따르고 있습니다.&lt;/p&gt;
-&lt;h2 id=&quot;노드의-탄생-배경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%85%B8%EB%93%9C%EC%9D%98-%ED%83%84%EC%83%9D-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;노드의 탄생 배경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;노드의 탄생 배경&lt;/h2&gt;
-&lt;p&gt;가장 널리 쓰이는 JSP나 PHP와 같은 언어로 웹 애플리케이션을 개발한다고 한다면 이 웹 애플리케이션은 일반적으로 아파치와 같은 웹 서버에서 동작하게 될 것입니다. 이 때 어떤 클라이언트가 웹 서버에 연결을 요청하게 된다면, 일정한 메모리 공간을 사용하여 새로운 쓰레드를 생성합니다. 이런 형태로 웹 애플리케이션을 개발하여 서비스를 제공하는 경우에는 더 많은 사용자를 지원하기 위해 사업자는 더 많은 서버를 추가할 수 밖에 없었습니다. 이는 단순히 서버 구매 비용뿐만 아니라 이를 운영하는 비용이나 운영에 따라 발생하는 트래픽 비용, 인건비 등 여러 비용을 더하는 문제를 발생시킵니다. 게다가 여러 대의 서버를 사용하더라도 사용자 입장에서는 마치 하나의 서버에 접속하는 것과 같은 효과를 주어야 하기 때문에 모든 서버들은 같은 데이터를 동기화해야 한다는 문제를 발생시키기도 합니다.&lt;/p&gt;
-&lt;p&gt;하지만, 노드는 서버에서 클라이언트로부터의 요청, &lt;strong&gt;즉 연결을 처리하는 방법을 새로운 컨셉으로 변경&lt;/strong&gt; 하여 이 문제를 해결합니다. 기존에는 각 연결에 대해 새로운 쓰레드를 생성하고 그에 따라 메모리를 할당하여 사용자 요청을 처리했다면, 노드에서는 &lt;strong&gt;각 연결이 하나의 이벤트로서 노드 엔진에서 처리됩니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;설치하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0&quot; aria-label=&quot;설치하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치하기&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;NVM 이용해서 설치하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Node Version Manager의 약자로, Node.js의 다양한 릴리스 버전을 관리할 수 있어 가장 많이 사용됩니다. apt 패키지 매니저 대신 사용하는 툴입니다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;NVM 문서에 잇는 설치 스크립트를 설치한다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo curl -o- [https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh](https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;환경변수 등록하기.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 터미널이 bash라면 /.bash_profile에 zsh라면 /.zshrc에 환경변수를 등록 합니다.
-
-$ vi ~/.bash_profile 혹은$ vi ~/.zshrc
-
-export NVM_DIR=&quot;$HOME/.nvm&quot;
-[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;amp;&amp;amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;적용하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo source ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;설치할 수 있는 Node.js 버젼 확인하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls-remote&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;설치하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install 6.10.1&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;확인하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;버젼 변경하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm use 6.10.1&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;LTS 버전&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;장기적으로 지원이 제공되는 안정적인 버전&lt;/li&gt;
-&lt;li&gt;안정성과 보안성에 초점을 두어 개발함&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install node --latest-npm&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Current 버전&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;업데이트가 잦음&lt;/li&gt;
-&lt;li&gt;가장 최신의 버전이므로 불안정하고 숨겨져 있는 버그가 많음&lt;/li&gt;
-&lt;li&gt;추가 기능 개발과 기존 API의 기능 개선을 우선함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;yarn-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#yarn-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;yarn 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;yarn 설치&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl -o- -L [https://yarnpkg.com/install.sh](https://yarnpkg.com/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[코어 자바스크립트]]></title><description><![CDATA[들어가기 다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.…]]></description><link>https://maeng2418.github.io/markdowns/javascript/core_javascript/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/core_javascript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://steemit.com/js/@huna/js-settimeout&quot;&gt;[JS] setTimeout 문제 - Steemit&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[코어 자바스크립트]]></title><description><![CDATA[들어가기 다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.…]]></description><link>https://maeng2418.github.io/markdowns/javascript/core_javascript/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/core_javascript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
 &lt;p&gt;다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.&lt;/p&gt;
 &lt;h2 id=&quot;1-데이터-타입&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85&quot; aria-label=&quot;1 데이터 타입 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 데이터 타입&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;변수 :&lt;/strong&gt; 변경 가능한 데이터가 담길 수 있는 공간&lt;/p&gt;
@@ -6246,7 +6246,249 @@ ted&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_word &lt;span 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;lee&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Person&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;countPrinter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 2&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;countPrinter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// error&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Git과 Github]]></title><description><![CDATA[Git? GitHub? Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다. GitHub은 Git…]]></description><link>https://maeng2418.github.io/markdowns/git/git&amp;github/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/git/git&amp;github/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;git-github&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-github&quot; aria-label=&quot;git github permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git? GitHub?&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;countPrinter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// error&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[싱글스레드]]></title><description><![CDATA[들어가기 프로그램 어떤 작업을 위해 실행할 수 있는 파일 ex) 메모장 프로세스 실행중인 프로그램 스레드 실행중인 프로그램 안에서의 실행되는 명령어 ex…]]></description><link>https://maeng2418.github.io/markdowns/javascript/single_thread/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/single_thread/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;프로그램&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;어떤 작업을 위해 실행할 수 있는 파일&lt;/p&gt;
+&lt;p&gt;ex) 메모장&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로세스&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;실행중인 프로그램&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;스레드&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;실행중인 프로그램 안에서의 실행되는 명령어&lt;/p&gt;
+&lt;p&gt;ex) 특정 노래를 재생하는 스레드 및 새로운 노래를 재생 목록에 추가하기 위한 스레드&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티프로그래밍&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;하나의 CPU 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다. 즉, 하나의 CPU가 I/O를 하게 되면 입출력에 대한 응답을 무한정 기다리게 되는데 이렇게 대기하는 동안 프로세서가 다른 프로세스를 진행 할 수 있도록 하는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.77777777777778%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR42p2T207bQBCG8yyofZ7SB6NPgXoDaZEIaTj0opIvWgjkRFUrIgeCc8Bex2uHxJv14auTADcIFDLSL612tN/+s7OTU2qOL/1MwVLSk6hQsWnkJkHAcNjHETZCOPT7Fv7YhTSFKCaNomyZrg+c6TFO2KDnlpey9V8mN+e4P08YnBWZ/DFIVbg+UIYWTa9ApZendvcN0ztEuNckno/2BLEcQ5K8Ckiy3EJPVeSCqcOtU2Yg6wxlg65zjnwYLpPvKfXZ4TS6Z6ANzPsTmvYp1vwXE21ltAUwWb3lK7G40DAM8vl9Ou32CiikRaVZoNb6Qb1VomweMHJbbzp82vd9n8/bn/j4YYsvOzsroOvNaDQF/9oeZkdSMx1sMV0LqJSiWDzi6+4uV5eXjw6DOGsGVG8jqt0oaw6MZPx4cIN/2HdjTq/huDqnVFGU6tCx1we+6PKd0Hy/UBQqmqOqZu93yM1Ib+4wTlIeZopOt8dg5DBVOhuQZOPR+w/urJhsX6T1xAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_1.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/single_thread_1.png&quot;
+        srcset=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/3684f/single_thread_1.png 225w,
+/static/49bad81f94bdf05cb20d7ef52604ef89/fc2a6/single_thread_1.png 450w,
+/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/single_thread_1.png 769w&quot;
+        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfElEQVR42qWS3U7CQBCF+2pGn0CN+gz4WnhjomKiiUgUCMoFQSgWaIFA+W9LW6VA/6Dd4wJiNCEgMMnZudjk23N2hnEcB45jf8uB67rYpRhZUtCTezMpVFJXhu/7s0tCtgCqAxE9owrVqEEd1qAZdQryt3fYdV/Bq/dgm7eojyJUaST5PhKchjirIFnsY+TMrS4zTGgM8isKU5biqChRVOQYyvITiq0khJYFvjkC3xii1LZgj9dnX0AZ1eHRMVi0PjKQTQ66Xd4osm3bsCwLnufNgdX+AzjpCtnmJXgtBNGIwaNDmT7ok+WDWbhRVRXngQCOjw7xGA7PgWwhgxwVx7PI5tO05yhodcTFFoiiiLPTExzs7+EiGJwDSx0PQoeg1CUQ2gSVzuTPJ6+qaUxd12dOp7FnwIxIkKr6SOQHSNeA94a31uHKtbnLegi9EVynxrihPcJNNgIu1uZnyi+CiWduhFjBRDRvIlWx/h15qcPp8an3oCldTCZj7Fpf8MrmmHvDY1QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_2.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/20425405b0c3fb44ea0321ca3567babf/227ba/single_thread_2.png&quot;
+        srcset=&quot;/static/20425405b0c3fb44ea0321ca3567babf/3684f/single_thread_2.png 225w,
+/static/20425405b0c3fb44ea0321ca3567babf/fc2a6/single_thread_2.png 450w,
+/static/20425405b0c3fb44ea0321ca3567babf/227ba/single_thread_2.png 769w&quot;
+        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR42qWSe0/TUByG99WMfgI16mfAr4X/mHjHyCQICPLH4rZiN7rSbOWyde26Ah3r/fJ4ulrjhaDAm7w9JznNk/c951cLw5AwDH44JIoibqOaObaYmJOFLeGxYZJl2eIwz28AtGc6E7eP7Q6wLwZM3UMBym6e0Ii+oNjvkY7fcDhfE26yu3/OtjxlS7IW+3lYRr0scC5q5L9UqR2Mt9CsDTRzkwNznf3hLr1RgDL0UU48VLEPon93r6A1O1QYuRInpy1MT8YJVPIkEH8kwnG5XqEgCPB9nzRNS2D/fBV5/IL28XOU07ccmR9wP68zXH2HVV8h1tQqw19pbNvm6dISDx/c52O9XgKlbos9YVlp0+40+daViC9mJIVnLpkYpT9VTYGu6zx5/Ih7d+/wbHm5BKqjVNxZjmrk9IY5mpH8dslXqajpOM4iaVF7AWzpOY1+xnZnxtcB7B2lZYICWvk6Y7PSTnndzHnZiHkl1jU5IbsGpBqbn6+80/P4JM/Z7HpsdDwamv/flS9NWHzOnAlTyyBJYm6r73JS4+mN9VZUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_3.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ce4fd8e9735fe84489758c55e440a573/227ba/single_thread_3.png&quot;
+        srcset=&quot;/static/ce4fd8e9735fe84489758c55e440a573/3684f/single_thread_3.png 225w,
+/static/ce4fd8e9735fe84489758c55e440a573/fc2a6/single_thread_3.png 450w,
+/static/ce4fd8e9735fe84489758c55e440a573/227ba/single_thread_3.png 769w&quot;
+        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티태스킹&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;멀티태스킹은 스케줄러 알고리즘에 따라 조금씩 번갈아 가면서 프로세스가 수행되는 것이다. 이때 멀티프로그래밍과 다른점은 멀티 프로그래밍은 하나의 프로세스가 I/O가 당하기 전까지는 끝까지 실행 되지만 멀티 태스킹은 실행되는 도중에 특정 시간 이상 CPU를 점유하게 되면 그다음 프로세스에게 프로세서 자원을 넘겨주는 방식이다&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpUlEQVR42qWRW27TUBiEvShgNcASKrbQPgIbKAuAJ/pQXloqITVqai4NpGoubi5yYrcmjh3f7cTXr8ZpWhBEoHCk0ZmHc+afmV9I05QwComiqMIPniQxFMUdihXye77uCJ7rMdF0jKmJoZsVtyz77sH6r2sEw4WF7ndQjCbKtIkeSbhyE+djHUOsETY+oUhdpF6fRuOMS0lClmWSMtmfHS40hs4hF9f7tK7fMfAOMbTPzEsBr9dhPuwR2jau52OaJr7vEwQBeZ4vExS/1iD4c52xI9LXTxhM64zsU+xI2TBwKehEGoPZER3tgO73A/qz95j+oNIqitJFkd/3+ZOT1e25LleqWvZuLQWDWEcNavQmR6XLDyjBMc5i9FeHq8gvXzzn0cMHPNvaqoYIpqvTlOucy2KFb/IJ2mx8K7decOXw1e4uT588ZmdnmziOEWZeRkuF7tUS7ZJrVvrPDf62lImTIg6h1o44boUVHxnphispBWU95Y2YsXdW8PZLzuvTjAsluZ2+gUM3zGiPQ75empwPHTrqHMNNNne43FiGbU0JfYf/PTdCeuOg4SEYFQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_4.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/single_thread_4.png&quot;
+        srcset=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/3684f/single_thread_4.png 225w,
+/static/0e9ea349ae20c47e229820f84ccee6a8/fc2a6/single_thread_4.png 450w,
+/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/single_thread_4.png 770w&quot;
+        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVR42qWTXW7TQBSFvajS1RSWULEF+ghsoCwAnugDPBQoKkpUcCOqkiiJo1JH+XE62LHr2PFP/JsPx2lQpagBhTM6M+dhdO6ZezVSmqYEYUAYhiUXOkkStoU0dafowsAcW5iGVeqJPdneMIhsDE9haNYLNtC9Nm74a+3ifLHmS25OGAm6zkeaN+9oifeozjFWoN6z2YxVkVUhyZsZDByZa+MMtWB/WsPunjOpnKJ/+YQnV+krTVqdK2q1cxRFQVVV4gf6LDmhQL09QREf6BS8tj8z1uvEN4JwNCQWI5JiULMowvf84pwRxzF5npcGrusy0jRs214a+rGB5lf5qZ8UKU8Z+hWcqP/nyQ9hZfjyxXN2H+3wdH+/fLZkuQb13lcaPbnkj94Zwhrc9SdfbGv9WukFXh0e8uTxHgcHz8rk0u00o6VBZ7Rku9DCTv+Sb8NQdCdF7kK1HVJpBaXum/9uuDaUnpHyRs44upjz9nvO628ZzWFyV32LhG6Q0R4EXF5ZNLoOijbDdJPtEy4nlhXfbUzgOfwvfgPGhePyueRHMAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_5.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/single_thread_5.png&quot;
+        srcset=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/3684f/single_thread_5.png 225w,
+/static/84a3cf9a4e9e0e81edf49a2eb3c44685/fc2a6/single_thread_5.png 450w,
+/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/single_thread_5.png 770w&quot;
+        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR42qWSTW7TUBSFvShgNcASKrZAh3QFZQEwooOCRNvAgBInA1DbyE6iuglu69SNY8c/cf2S2M/+sN2AQB1Q0iudpyM96dxP914lyzISkSCEqFX5NE1Zt5RZNGNsO7gTD9fxah/4wfqBycLHiXtcuielOozjLpG4fgDhwmYY7qNd7aLb7xmEH5mKweq7+GdAURS/VQfGc4eLsM2Z02Q4UTGDJr4w7x14hzAUNoNpg569R/96n7PpAW5sgCzIs5RCZuS5LJX/pV9EsyhiZFn4vn8beLN0sG4OMcaNkvIz1lwl+NHEa+xxdfCB6OsnTK2D1uvTUlV0XcMwDOaLRR2wtfWKJ48f8WJjo26ieJHDianSMdulWhyfq4zs06o1MvRLBTWpLKmk/IN0Rfh6e5vnz56yufmS5XKJMp1JdAv6o1t1S2/78t4TvLOUcZjRHsJhV/BFT2p/PqkOezWn4v8Wo5hOxtu2ZOd7wbtvOW9aEu0yXXVfgzBKJN2LhKNTj84wpGfNcaN0zaMpA6unOovAn5DEIQ+tn5Bw5CpTLKmXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_6.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/52b0370ee95e13916bf8834c43f082b8/f4b77/single_thread_6.png&quot;
+        srcset=&quot;/static/52b0370ee95e13916bf8834c43f082b8/3684f/single_thread_6.png 225w,
+/static/52b0370ee95e13916bf8834c43f082b8/fc2a6/single_thread_6.png 450w,
+/static/52b0370ee95e13916bf8834c43f082b8/f4b77/single_thread_6.png 770w&quot;
+        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 900px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 38.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVR42k2SzWsTQRjG9+BBPHgQ1IP/gCC9WvEqFEsPXvxAsEh78RKxh4IWFLUxLYQUpRgVET34D4ioF9FCQbCCaZPYJiYbs7tJdpPNZ1MSTffj5+xEijPzwMz7PO8777zvKKZpYlkWqqpSLpclNE3DMAxqtRq6rhNoisUilUpFolQqSU2AarUqfWzbptfroWx3Omx3t6nZNdpi32q1aDQbtNstujs7NBoNGazdbku+IzVNYW9Sr9fpdrtC35T2wWCAwr/h+z51cYtdtSgUCmhGCd3Q5UUFkb0tsrWDbComplWlYlZoisD/D8/zUJJfV/nw/i2fVlfICMdUViW5kUDLpslv5cmLczqTFsiSzOTIbqbQc5uSU3+q5H7lyBU1ttTgFR0UY/oos3Mj7Auf4GBkCWXhB3dmLrF+5TCx0/OExm5x5N4IB27Po9xdY/H6BInJY0RHY0ydCXEocpz94ecoNz/yZi2N8n3uLIvRy4w9vsrE0xeMxr8QC8+SCF/g2fQyC6ElzsenGH+4zKlHn4k/uMG3+xd5ee0VkZkY555MMh5/zcnoO1Y2Mih5rSS6ZOEN3KAIAg67rsuuD4nUuqiniu/6e5zjDTkXT85gIWxChOs4w6b4YrrC6Aon1/Vkg/787mPow6/T6/dlwQPekxDhhC7Anp+A4zj8BdC7Ia0wfLvLAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_7.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/1cfc2/single_thread_7.png&quot;
+        srcset=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/3684f/single_thread_7.png 225w,
+/static/b7a751dcd453c12a44d6d4d18ada1e89/fc2a6/single_thread_7.png 450w,
+/static/b7a751dcd453c12a44d6d4d18ada1e89/1cfc2/single_thread_7.png 900w,
+/static/b7a751dcd453c12a44d6d4d18ada1e89/04784/single_thread_7.png 1174w&quot;
+        sizes=&quot;(max-width: 900px) 100vw, 900px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티프로세싱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;멀티 프로세싱은 여러 프로세서 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 738px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB30lEQVR42p2Rf0/TUBSG+znV72D0H/UjOPwEovsfYxYniBUXJWwwnQLbYFnWWSpg1m64zvV3e3+8nnsHMUqimSc5uW/bmydPzzGYiJHxOXIeIBchMjEHFwX+t4xJcoShv4WDk5fojUycRu8wS1xAqs9yeaAX9GBPtzHw3uPLpA7H38E8mUAKgHOxNJIMj8mwhs7pK/TdLTLcxo/EgyAgI2DBBGW5nKHj1zEc78C+aMCZ1RGQoSpOVAXNCk5gDil/B6tn3VdZAcdJB8OpifbXKs1wE05YI0MXgoPM6Jfl4nJB4DRn2lj+RdgYB32cXNRhjxt07sGZ7i4M5S9DPctLA2WqwFFaIMkY5QJpVuh36jS+BYc49jbQHDzHvlPFwDfhRyO9FMY5QaUGqsz4lTEQxBnu3X+A0sojtDtd3Lp5A2/e1mA4XozeWQzLy2GNcnSdELMw1/pqGaqVqYYyoQ1VhwSsVCowTRPnZ+coP32CbvcIhjXiZAY0+zE+2wyfKH8P+eXQry9AwdU8wzjHw1IJj1dXYVkW7t65jcbuHoyWzbHRBtb3M2x2ONYPJNzZdeCfFUQpyuUy1taeYTCwsELw5ocWAYcpqq0Erw9T3S8+RnD94p/AvGDaWFDnbCGgRvETJFuL3LTSfQMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_8.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/single_thread_8.png&quot;
+        srcset=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/3684f/single_thread_8.png 225w,
+/static/6bed28e76ef6ee26ffc35e9577850b7f/fc2a6/single_thread_8.png 450w,
+/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/single_thread_8.png 738w&quot;
+        sizes=&quot;(max-width: 738px) 100vw, 738px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;멀티스레딩&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;멀티스레딩은 하나의 프로세스에서 여러 스레드가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
+&lt;p&gt;실제 한번에 두가지 일을 &lt;code class=&quot;language-text&quot;&gt;동시에 병렬&lt;/code&gt;로 처리하는 것이 아니라 번갈아 가며 처리하여 동시에 작업이 처리되는 것처럼 느끼게 하는 방식.&lt;/p&gt;
+&lt;p&gt;ex) 채팅의 경우 - 멀티스레드를 사용하여 상대방의 메시지 다운과 입력을 동시에 처리.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 766px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABk0lEQVR42p2S/WoTQRTF90UUH0rxddQXEVP/6ZeCBKmKdgvBtiq7+Vqa1kYj3Waz3W23mc1MtvsxPzdpQi0USXPhcC/McDjn3GvkeY6UEjmaoZzH4wS0nkJP+j3KUErRHwzwgwA/DOn7PkE5l2wsU0aSKuRZA9HbI+ruMh5YxJ6DPHCI2nVUp40exde/F1BrJJkkcrfwGiu49grRr02i02+Ipk1oTbpFEYs7CSdxFEUxxT8KYzy1T/fM5MD9zElc43zcuXE8y3LxDLNLxJ8NIquC/+MlqrtK+LvKhVmSf6wSmZ/QF+EthfNFtVotKpVX7JjmDeFICRqNLZpWlab9nrr1juPj7xRCkIsh+fASnaW3VMwtvnj+jEcPH/D0yWOy2R9DyoT2kVdigPPTp9nx6J2E/7U1V1i3bd6+2WR7+wuT87smTHKcvqZ9WlpwC1pl7wXloy7und+UUKic2hGYTsYHS7BzCI6bLXSHd245GmWs7Sas7l2xvp/yunbF18NkSrjMaRt5oTkXKeEMwTAlVhnL1l9Zl5S3eDCIwwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_9.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/single_thread_9.png&quot;
+        srcset=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/3684f/single_thread_9.png 225w,
+/static/a9cb83d6466aac9221e6b55237cbc37f/fc2a6/single_thread_9.png 450w,
+/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/single_thread_9.png 766w&quot;
+        sizes=&quot;(max-width: 766px) 100vw, 766px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;싱글스레드&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;싱글스레드는  하나의 직렬로 처리하는 스레드 방식을 의미한다. 즉, 하나의 요청이 있으면 하나를 처리할 때까지 다음 요청은 대기상태. (하나씩만 실행 할 수 있음)&lt;/p&gt;
+&lt;p&gt;ex) 채팅의 경우 - 상대방의 메시지를 다운 받는 동안 입력 불가.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 625px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.88888888888889%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgUlEQVR42nVT227UMBTc//8GkEAr8cYDqC3lgYIKrbj0wu5SSlvabMJuruukSZw4tpMMx94UUbpEiuIk4/E5M3NGfd+jKArUdY2UMXDOsekyOLZaoaoqpGmKuqo34kaExNfpBOdn3zGZTODMHfuj67p7QK01Dg4PMXccHB0fY7Fc/IeQrrZqIP0ULePopbbV9P8Q2kOEggoytOkat5Gw1y1UWoJ/c1FdLaEybskM6b2WdQe5KlBMHNTXAdQtNzpsIFTaEtZOBOHG0LTeTEgHs2KN8xJoe3C/uWWVV5BEJGlDW0v0gwn3NOxayKyEpsrMobKo0A6yWIkG/OhugyDXurZ9AJBSQghhU2CunGUQvLJr803QrZT6q8JGw907wdnWe7r3wb5cWr0MnYlIEic2Lsb1pmkQRaGNjSYSTXLFcUz/GRrR3JnSoQ4YsrmP4leMJs6thoagyAt4nocVEZZlaTPq+z4817PVmfckSew3g10Tkv3p7AbexxnCo3Ny2kdPrZuWszRDGIaIwgiSquNEaioyBGJoN4oiBEFAhPlASNnyqeXL7Q/4uX2A7POFdZRUREekZcUhlVxrSzcnGRrZ/NFM0EEVEfcYTDHttaUATzLInFPIha2uo8kwWSsjBsFywtQ2DUVI40dYszb7zLqMU+u+ieAItcL8+T6m4x2cjXeR7k1tYM00/Bi/xmz8CqePXyJ9O4W/9YnedzF9uoNo9xjZuxlOHr3A6ZMtXD97Y6doZJyK3AW8i2vE9FzeuOSYsP21XNiKu0pCUYWLK2fALRF7S+QxQ0//zOh2vLFSjVoyICEXHXeOgCLhk8Amdw/mmKRZkhkGF60SJIyc5+WDSfkNpjV8wqOH6U4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;../../images/single_thread_10.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/72f4972e709d1f18d80d68d176c04423/80d71/single_thread_10.png&quot;
+        srcset=&quot;/static/72f4972e709d1f18d80d68d176c04423/3684f/single_thread_10.png 225w,
+/static/72f4972e709d1f18d80d68d176c04423/fc2a6/single_thread_10.png 450w,
+/static/72f4972e709d1f18d80d68d176c04423/80d71/single_thread_10.png 625w&quot;
+        sizes=&quot;(max-width: 625px) 100vw, 625px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git과 Github]]></title><description><![CDATA[Git? GitHub? Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다. GitHub은 Git…]]></description><link>https://maeng2418.github.io/markdowns/git/git&amp;github/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/git/git&amp;github/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;git-github&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-github&quot; aria-label=&quot;git github permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git? GitHub?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다.&lt;/li&gt;
 &lt;li&gt;GitHub은 Git을 호스팅 해 주는 사이트로, ‘소셜 코딩’을 표방하며 가장 유명하고 널리 사용된다.&lt;/li&gt;
@@ -6611,246 +6853,4 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://velog.io/@godori/JavaScript-engine-1&quot;&gt;JavaScript 엔진 톺아보기&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글스레드]]></title><description><![CDATA[들어가기 프로그램 어떤 작업을 위해 실행할 수 있는 파일 ex) 메모장 프로세스 실행중인 프로그램 스레드 실행중인 프로그램 안에서의 실행되는 명령어 ex…]]></description><link>https://maeng2418.github.io/markdowns/javascript/single_thread/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/single_thread/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;프로그램&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;어떤 작업을 위해 실행할 수 있는 파일&lt;/p&gt;
-&lt;p&gt;ex) 메모장&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;프로세스&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;실행중인 프로그램&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;스레드&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;실행중인 프로그램 안에서의 실행되는 명령어&lt;/p&gt;
-&lt;p&gt;ex) 특정 노래를 재생하는 스레드 및 새로운 노래를 재생 목록에 추가하기 위한 스레드&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티프로그래밍&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;하나의 CPU 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다. 즉, 하나의 CPU가 I/O를 하게 되면 입출력에 대한 응답을 무한정 기다리게 되는데 이렇게 대기하는 동안 프로세서가 다른 프로세스를 진행 할 수 있도록 하는 것이다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.77777777777778%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABe0lEQVR42p2T207bQBCG8yyofZ7SB6NPgXoDaZEIaTj0opIvWgjkRFUrIgeCc8Bex2uHxJv14auTADcIFDLSL612tN/+s7OTU2qOL/1MwVLSk6hQsWnkJkHAcNjHETZCOPT7Fv7YhTSFKCaNomyZrg+c6TFO2KDnlpey9V8mN+e4P08YnBWZ/DFIVbg+UIYWTa9ApZendvcN0ztEuNckno/2BLEcQ5K8Ckiy3EJPVeSCqcOtU2Yg6wxlg65zjnwYLpPvKfXZ4TS6Z6ANzPsTmvYp1vwXE21ltAUwWb3lK7G40DAM8vl9Ou32CiikRaVZoNb6Qb1VomweMHJbbzp82vd9n8/bn/j4YYsvOzsroOvNaDQF/9oeZkdSMx1sMV0LqJSiWDzi6+4uV5eXjw6DOGsGVG8jqt0oaw6MZPx4cIN/2HdjTq/huDqnVFGU6tCx1we+6PKd0Hy/UBQqmqOqZu93yM1Ib+4wTlIeZopOt8dg5DBVOhuQZOPR+w/urJhsX6T1xAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_1.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/single_thread_1.png&quot;
-        srcset=&quot;/static/49bad81f94bdf05cb20d7ef52604ef89/3684f/single_thread_1.png 225w,
-/static/49bad81f94bdf05cb20d7ef52604ef89/fc2a6/single_thread_1.png 450w,
-/static/49bad81f94bdf05cb20d7ef52604ef89/227ba/single_thread_1.png 769w&quot;
-        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABfElEQVR42qWS3U7CQBCF+2pGn0CN+gz4WnhjomKiiUgUCMoFQSgWaIFA+W9LW6VA/6Dd4wJiNCEgMMnZudjk23N2hnEcB45jf8uB67rYpRhZUtCTezMpVFJXhu/7s0tCtgCqAxE9owrVqEEd1qAZdQryt3fYdV/Bq/dgm7eojyJUaST5PhKchjirIFnsY+TMrS4zTGgM8isKU5biqChRVOQYyvITiq0khJYFvjkC3xii1LZgj9dnX0AZ1eHRMVi0PjKQTQ66Xd4osm3bsCwLnufNgdX+AzjpCtnmJXgtBNGIwaNDmT7ok+WDWbhRVRXngQCOjw7xGA7PgWwhgxwVx7PI5tO05yhodcTFFoiiiLPTExzs7+EiGJwDSx0PQoeg1CUQ2gSVzuTPJ6+qaUxd12dOp7FnwIxIkKr6SOQHSNeA94a31uHKtbnLegi9EVynxrihPcJNNgIu1uZnyi+CiWduhFjBRDRvIlWx/h15qcPp8an3oCldTCZj7Fpf8MrmmHvDY1QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_2.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/20425405b0c3fb44ea0321ca3567babf/227ba/single_thread_2.png&quot;
-        srcset=&quot;/static/20425405b0c3fb44ea0321ca3567babf/3684f/single_thread_2.png 225w,
-/static/20425405b0c3fb44ea0321ca3567babf/fc2a6/single_thread_2.png 450w,
-/static/20425405b0c3fb44ea0321ca3567babf/227ba/single_thread_2.png 769w&quot;
-        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 769px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR42qWSe0/TUByG99WMfgI16mfAr4X/mHjHyCQICPLH4rZiN7rSbOWyde26Ah3r/fJ4ulrjhaDAm7w9JznNk/c951cLw5AwDH44JIoibqOaObaYmJOFLeGxYZJl2eIwz28AtGc6E7eP7Q6wLwZM3UMBym6e0Ii+oNjvkY7fcDhfE26yu3/OtjxlS7IW+3lYRr0scC5q5L9UqR2Mt9CsDTRzkwNznf3hLr1RgDL0UU48VLEPon93r6A1O1QYuRInpy1MT8YJVPIkEH8kwnG5XqEgCPB9nzRNS2D/fBV5/IL28XOU07ccmR9wP68zXH2HVV8h1tQqw19pbNvm6dISDx/c52O9XgKlbos9YVlp0+40+daViC9mJIVnLpkYpT9VTYGu6zx5/Ih7d+/wbHm5BKqjVNxZjmrk9IY5mpH8dslXqajpOM4iaVF7AWzpOY1+xnZnxtcB7B2lZYICWvk6Y7PSTnndzHnZiHkl1jU5IbsGpBqbn6+80/P4JM/Z7HpsdDwamv/flS9NWHzOnAlTyyBJYm6r73JS4+mN9VZUAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_3.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/ce4fd8e9735fe84489758c55e440a573/227ba/single_thread_3.png&quot;
-        srcset=&quot;/static/ce4fd8e9735fe84489758c55e440a573/3684f/single_thread_3.png 225w,
-/static/ce4fd8e9735fe84489758c55e440a573/fc2a6/single_thread_3.png 450w,
-/static/ce4fd8e9735fe84489758c55e440a573/227ba/single_thread_3.png 769w&quot;
-        sizes=&quot;(max-width: 769px) 100vw, 769px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티태스킹&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;멀티태스킹은 스케줄러 알고리즘에 따라 조금씩 번갈아 가면서 프로세스가 수행되는 것이다. 이때 멀티프로그래밍과 다른점은 멀티 프로그래밍은 하나의 프로세스가 I/O가 당하기 전까지는 끝까지 실행 되지만 멀티 태스킹은 실행되는 도중에 특정 시간 이상 CPU를 점유하게 되면 그다음 프로세스에게 프로세서 자원을 넘겨주는 방식이다&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpUlEQVR42qWRW27TUBiEvShgNcASKrbQPgIbKAuAJ/pQXloqITVqai4NpGoubi5yYrcmjh3f7cTXr8ZpWhBEoHCk0ZmHc+afmV9I05QwComiqMIPniQxFMUdihXye77uCJ7rMdF0jKmJoZsVtyz77sH6r2sEw4WF7ndQjCbKtIkeSbhyE+djHUOsETY+oUhdpF6fRuOMS0lClmWSMtmfHS40hs4hF9f7tK7fMfAOMbTPzEsBr9dhPuwR2jau52OaJr7vEwQBeZ4vExS/1iD4c52xI9LXTxhM64zsU+xI2TBwKehEGoPZER3tgO73A/qz95j+oNIqitJFkd/3+ZOT1e25LleqWvZuLQWDWEcNavQmR6XLDyjBMc5i9FeHq8gvXzzn0cMHPNvaqoYIpqvTlOucy2KFb/IJ2mx8K7decOXw1e4uT588ZmdnmziOEWZeRkuF7tUS7ZJrVvrPDf62lImTIg6h1o44boUVHxnphispBWU95Y2YsXdW8PZLzuvTjAsluZ2+gUM3zGiPQ75empwPHTrqHMNNNne43FiGbU0JfYf/PTdCeuOg4SEYFQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_4.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/single_thread_4.png&quot;
-        srcset=&quot;/static/0e9ea349ae20c47e229820f84ccee6a8/3684f/single_thread_4.png 225w,
-/static/0e9ea349ae20c47e229820f84ccee6a8/fc2a6/single_thread_4.png 450w,
-/static/0e9ea349ae20c47e229820f84ccee6a8/f4b77/single_thread_4.png 770w&quot;
-        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVR42qWTXW7TQBSFvajS1RSWULEF+ghsoCwAnugDPBQoKkpUcCOqkiiJo1JH+XE62LHr2PFP/JsPx2lQpagBhTM6M+dhdO6ZezVSmqYEYUAYhiUXOkkStoU0dafowsAcW5iGVeqJPdneMIhsDE9haNYLNtC9Nm74a+3ifLHmS25OGAm6zkeaN+9oifeozjFWoN6z2YxVkVUhyZsZDByZa+MMtWB/WsPunjOpnKJ/+YQnV+krTVqdK2q1cxRFQVVV4gf6LDmhQL09QREf6BS8tj8z1uvEN4JwNCQWI5JiULMowvf84pwRxzF5npcGrusy0jRs214a+rGB5lf5qZ8UKU8Z+hWcqP/nyQ9hZfjyxXN2H+3wdH+/fLZkuQb13lcaPbnkj94Zwhrc9SdfbGv9WukFXh0e8uTxHgcHz8rk0u00o6VBZ7Rku9DCTv+Sb8NQdCdF7kK1HVJpBaXum/9uuDaUnpHyRs44upjz9nvO628ZzWFyV32LhG6Q0R4EXF5ZNLoOijbDdJPtEy4nlhXfbUzgOfwvfgPGhePyueRHMAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_5.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/single_thread_5.png&quot;
-        srcset=&quot;/static/84a3cf9a4e9e0e81edf49a2eb3c44685/3684f/single_thread_5.png 225w,
-/static/84a3cf9a4e9e0e81edf49a2eb3c44685/fc2a6/single_thread_5.png 450w,
-/static/84a3cf9a4e9e0e81edf49a2eb3c44685/f4b77/single_thread_5.png 770w&quot;
-        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 770px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 63.55555555555556%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmElEQVR42qWSTW7TUBSFvShgNcASKrZAh3QFZQEwooOCRNvAgBInA1DbyE6iuglu69SNY8c/cf2S2M/+sN2AQB1Q0iudpyM96dxP914lyzISkSCEqFX5NE1Zt5RZNGNsO7gTD9fxah/4wfqBycLHiXtcuielOozjLpG4fgDhwmYY7qNd7aLb7xmEH5mKweq7+GdAURS/VQfGc4eLsM2Z02Q4UTGDJr4w7x14hzAUNoNpg569R/96n7PpAW5sgCzIs5RCZuS5LJX/pV9EsyhiZFn4vn8beLN0sG4OMcaNkvIz1lwl+NHEa+xxdfCB6OsnTK2D1uvTUlV0XcMwDOaLRR2wtfWKJ48f8WJjo26ieJHDianSMdulWhyfq4zs06o1MvRLBTWpLKmk/IN0Rfh6e5vnz56yufmS5XKJMp1JdAv6o1t1S2/78t4TvLOUcZjRHsJhV/BFT2p/PqkOezWn4v8Wo5hOxtu2ZOd7wbtvOW9aEu0yXXVfgzBKJN2LhKNTj84wpGfNcaN0zaMpA6unOovAn5DEIQ+tn5Bw5CpTLKmXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_6.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/52b0370ee95e13916bf8834c43f082b8/f4b77/single_thread_6.png&quot;
-        srcset=&quot;/static/52b0370ee95e13916bf8834c43f082b8/3684f/single_thread_6.png 225w,
-/static/52b0370ee95e13916bf8834c43f082b8/fc2a6/single_thread_6.png 450w,
-/static/52b0370ee95e13916bf8834c43f082b8/f4b77/single_thread_6.png 770w&quot;
-        sizes=&quot;(max-width: 770px) 100vw, 770px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 900px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 38.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVR42k2SzWsTQRjG9+BBPHgQ1IP/gCC9WvEqFEsPXvxAsEh78RKxh4IWFLUxLYQUpRgVET34D4ioF9FCQbCCaZPYJiYbs7tJdpPNZ1MSTffj5+xEijPzwMz7PO8777zvKKZpYlkWqqpSLpclNE3DMAxqtRq6rhNoisUilUpFolQqSU2AarUqfWzbptfroWx3Omx3t6nZNdpi32q1aDQbtNstujs7NBoNGazdbku+IzVNYW9Sr9fpdrtC35T2wWCAwr/h+z51cYtdtSgUCmhGCd3Q5UUFkb0tsrWDbComplWlYlZoisD/D8/zUJJfV/nw/i2fVlfICMdUViW5kUDLpslv5cmLczqTFsiSzOTIbqbQc5uSU3+q5H7lyBU1ttTgFR0UY/oos3Mj7Auf4GBkCWXhB3dmLrF+5TCx0/OExm5x5N4IB27Po9xdY/H6BInJY0RHY0ydCXEocpz94ecoNz/yZi2N8n3uLIvRy4w9vsrE0xeMxr8QC8+SCF/g2fQyC6ElzsenGH+4zKlHn4k/uMG3+xd5ee0VkZkY555MMh5/zcnoO1Y2Mih5rSS6ZOEN3KAIAg67rsuuD4nUuqiniu/6e5zjDTkXT85gIWxChOs4w6b4YrrC6Aon1/Vkg/787mPow6/T6/dlwQPekxDhhC7Anp+A4zj8BdC7Ia0wfLvLAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_7.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/1cfc2/single_thread_7.png&quot;
-        srcset=&quot;/static/b7a751dcd453c12a44d6d4d18ada1e89/3684f/single_thread_7.png 225w,
-/static/b7a751dcd453c12a44d6d4d18ada1e89/fc2a6/single_thread_7.png 450w,
-/static/b7a751dcd453c12a44d6d4d18ada1e89/1cfc2/single_thread_7.png 900w,
-/static/b7a751dcd453c12a44d6d4d18ada1e89/04784/single_thread_7.png 1174w&quot;
-        sizes=&quot;(max-width: 900px) 100vw, 900px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티프로세싱&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;멀티 프로세싱은 여러 프로세서 상에서 여러 프로세스가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 738px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB30lEQVR42p2Rf0/TUBSG+znV72D0H/UjOPwEovsfYxYniBUXJWwwnQLbYFnWWSpg1m64zvV3e3+8nnsHMUqimSc5uW/bmydPzzGYiJHxOXIeIBchMjEHFwX+t4xJcoShv4WDk5fojUycRu8wS1xAqs9yeaAX9GBPtzHw3uPLpA7H38E8mUAKgHOxNJIMj8mwhs7pK/TdLTLcxo/EgyAgI2DBBGW5nKHj1zEc78C+aMCZ1RGQoSpOVAXNCk5gDil/B6tn3VdZAcdJB8OpifbXKs1wE05YI0MXgoPM6Jfl4nJB4DRn2lj+RdgYB32cXNRhjxt07sGZ7i4M5S9DPctLA2WqwFFaIMkY5QJpVuh36jS+BYc49jbQHDzHvlPFwDfhRyO9FMY5QaUGqsz4lTEQxBnu3X+A0sojtDtd3Lp5A2/e1mA4XozeWQzLy2GNcnSdELMw1/pqGaqVqYYyoQ1VhwSsVCowTRPnZ+coP32CbvcIhjXiZAY0+zE+2wyfKH8P+eXQry9AwdU8wzjHw1IJj1dXYVkW7t65jcbuHoyWzbHRBtb3M2x2ONYPJNzZdeCfFUQpyuUy1taeYTCwsELw5ocWAYcpqq0Erw9T3S8+RnD94p/AvGDaWFDnbCGgRvETJFuL3LTSfQMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_8.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/single_thread_8.png&quot;
-        srcset=&quot;/static/6bed28e76ef6ee26ffc35e9577850b7f/3684f/single_thread_8.png 225w,
-/static/6bed28e76ef6ee26ffc35e9577850b7f/fc2a6/single_thread_8.png 450w,
-/static/6bed28e76ef6ee26ffc35e9577850b7f/774b6/single_thread_8.png 738w&quot;
-        sizes=&quot;(max-width: 738px) 100vw, 738px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;멀티스레딩&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;멀티스레딩은 하나의 프로세스에서 여러 스레드가 동시에 실행 되는 것을 의미한다.&lt;/p&gt;
-&lt;p&gt;실제 한번에 두가지 일을 &lt;code class=&quot;language-text&quot;&gt;동시에 병렬&lt;/code&gt;로 처리하는 것이 아니라 번갈아 가며 처리하여 동시에 작업이 처리되는 것처럼 느끼게 하는 방식.&lt;/p&gt;
-&lt;p&gt;ex) 채팅의 경우 - 멀티스레드를 사용하여 상대방의 메시지 다운과 입력을 동시에 처리.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 766px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 62.22222222222222%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABk0lEQVR42p2S/WoTQRTF90UUH0rxddQXEVP/6ZeCBKmKdgvBtiq7+Vqa1kYj3Waz3W23mc1MtvsxPzdpQi0USXPhcC/McDjn3GvkeY6UEjmaoZzH4wS0nkJP+j3KUErRHwzwgwA/DOn7PkE5l2wsU0aSKuRZA9HbI+ruMh5YxJ6DPHCI2nVUp40exde/F1BrJJkkcrfwGiu49grRr02i02+Ipk1oTbpFEYs7CSdxFEUxxT8KYzy1T/fM5MD9zElc43zcuXE8y3LxDLNLxJ8NIquC/+MlqrtK+LvKhVmSf6wSmZ/QF+EthfNFtVotKpVX7JjmDeFICRqNLZpWlab9nrr1juPj7xRCkIsh+fASnaW3VMwtvnj+jEcPH/D0yWOy2R9DyoT2kVdigPPTp9nx6J2E/7U1V1i3bd6+2WR7+wuT87smTHKcvqZ9WlpwC1pl7wXloy7und+UUKic2hGYTsYHS7BzCI6bLXSHd245GmWs7Sas7l2xvp/yunbF18NkSrjMaRt5oTkXKeEMwTAlVhnL1l9Zl5S3eDCIwwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_9.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/single_thread_9.png&quot;
-        srcset=&quot;/static/a9cb83d6466aac9221e6b55237cbc37f/3684f/single_thread_9.png 225w,
-/static/a9cb83d6466aac9221e6b55237cbc37f/fc2a6/single_thread_9.png 450w,
-/static/a9cb83d6466aac9221e6b55237cbc37f/f7616/single_thread_9.png 766w&quot;
-        sizes=&quot;(max-width: 766px) 100vw, 766px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;싱글스레드&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;싱글스레드는  하나의 직렬로 처리하는 스레드 방식을 의미한다. 즉, 하나의 요청이 있으면 하나를 처리할 때까지 다음 요청은 대기상태. (하나씩만 실행 할 수 있음)&lt;/p&gt;
-&lt;p&gt;ex) 채팅의 경우 - 상대방의 메시지를 다운 받는 동안 입력 불가.&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 625px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 76.88888888888889%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACgUlEQVR42nVT227UMBTc//8GkEAr8cYDqC3lgYIKrbj0wu5SSlvabMJuruukSZw4tpMMx94UUbpEiuIk4/E5M3NGfd+jKArUdY2UMXDOsekyOLZaoaoqpGmKuqo34kaExNfpBOdn3zGZTODMHfuj67p7QK01Dg4PMXccHB0fY7Fc/IeQrrZqIP0ULePopbbV9P8Q2kOEggoytOkat5Gw1y1UWoJ/c1FdLaEybskM6b2WdQe5KlBMHNTXAdQtNzpsIFTaEtZOBOHG0LTeTEgHs2KN8xJoe3C/uWWVV5BEJGlDW0v0gwn3NOxayKyEpsrMobKo0A6yWIkG/OhugyDXurZ9AJBSQghhU2CunGUQvLJr803QrZT6q8JGw907wdnWe7r3wb5cWr0MnYlIEic2Lsb1pmkQRaGNjSYSTXLFcUz/GRrR3JnSoQ4YsrmP4leMJs6thoagyAt4nocVEZZlaTPq+z4817PVmfckSew3g10Tkv3p7AbexxnCo3Ny2kdPrZuWszRDGIaIwgiSquNEaioyBGJoN4oiBEFAhPlASNnyqeXL7Q/4uX2A7POFdZRUREekZcUhlVxrSzcnGRrZ/NFM0EEVEfcYTDHttaUATzLInFPIha2uo8kwWSsjBsFywtQ2DUVI40dYszb7zLqMU+u+ieAItcL8+T6m4x2cjXeR7k1tYM00/Bi/xmz8CqePXyJ9O4W/9YnedzF9uoNo9xjZuxlOHr3A6ZMtXD97Y6doZJyK3AW8i2vE9FzeuOSYsP21XNiKu0pCUYWLK2fALRF7S+QxQ0//zOh2vLFSjVoyICEXHXeOgCLhk8Amdw/mmKRZkhkGF60SJIyc5+WDSfkNpjV8wqOH6U4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;../../images/single_thread_10.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/72f4972e709d1f18d80d68d176c04423/80d71/single_thread_10.png&quot;
-        srcset=&quot;/static/72f4972e709d1f18d80d68d176c04423/3684f/single_thread_10.png 225w,
-/static/72f4972e709d1f18d80d68d176c04423/fc2a6/single_thread_10.png 450w,
-/static/72f4972e709d1f18d80d68d176c04423/80d71/single_thread_10.png 625w&quot;
-        sizes=&quot;(max-width: 625px) 100vw, 625px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@godori/JavaScript-engine-1&quot;&gt;JavaScript 엔진 톺아보기&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
