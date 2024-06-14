@@ -1,4 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Maeng's Blog is for recording Maeng's Developments.]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 08 Jun 2024 02:45:11 GMT</lastBuildDate><item><title><![CDATA[NextJS PWA 적용하기]]></title><description><![CDATA[ngrok로 localhost:3000 열기 PWABuilder에서 manifest 작성하기 next-pwa 설치해서 () 작성하기]]></description><link>https://maeng2418.github.io/1717643652960/</link><guid isPermaLink="false">https://maeng2418.github.io/1717643652960/</guid><pubDate>Thu, 06 Jun 2024 12:15:13 GMT</pubDate><content:encoded>&lt;ul&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[My Personal Blog RSS Feed]]></title><description><![CDATA[Maeng's Blog is for recording Maeng's Developments.]]></description><link>https://maeng2418.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 14 Jun 2024 14:21:59 GMT</lastBuildDate><item><title><![CDATA[react-i18next와 react-intl을 비교]]></title><description><![CDATA[react-i18next…]]></description><link>https://maeng2418.github.io/1718372290473/</link><guid isPermaLink="false">https://maeng2418.github.io/1718372290473/</guid><pubDate>Fri, 14 Jun 2024 13:38:10 GMT</pubDate><content:encoded>&lt;h3 id=&quot;react-i18next&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-i18next&quot; aria-label=&quot;react i18next permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;react-i18next&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;유연한 설정:&lt;/strong&gt;&lt;br/&gt;
+다양한 설정 옵션과 플러그인을 통해 확장 가능.
+고도로 커스터마이징할 수 있음.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;동적 로드 지원:&lt;/strong&gt;&lt;br/&gt;
+필요에 따라 번역 파일을 동적으로 로드할 수 있음.
+지연 로딩을 통해 초기 로드 시간을 단축.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;다양한 기능:&lt;/strong&gt;&lt;br/&gt;
+번역, 간단한 플루럴라이제이션, 날짜 및 숫자 포맷팅 등 다양한 기능 제공.
+네임스페이스 지원으로 번역 파일 구조를 체계적으로 관리 가능.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TypeScript 지원:&lt;/strong&gt;&lt;br/&gt;
+TypeScript로 작성된 프로젝트에서 타입 안전성을 제공.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;플러그인 시스템:&lt;/strong&gt;&lt;br/&gt;
+커뮤니티에서 다양한 플러그인을 제공하여 기능을 확장할 수 있음.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;복잡한 설정:&lt;/strong&gt;&lt;br/&gt;
+초보자에게는 설정이 복잡하게 느껴질 수 있음.
+다양한 옵션과 설정을 이해하는 데 시간이 걸릴 수 있음.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;react-intl&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-intl&quot; aria-label=&quot;react intl permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;react-intl&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;장점
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ICU 메시지 포맷:&lt;/strong&gt;&lt;br/&gt;
+ICU 메시지 포맷을 사용하여 복잡한 메시지 구조를 관리 가능.
+다양한 언어와 문화권의 메시지를 쉽게 처리할 수 있음.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;간단한 API:&lt;/strong&gt;&lt;br/&gt;
+API가 직관적이고 사용하기 쉬움.
+간단한 설정으로 빠르게 시작 가능.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;다양한 포맷팅 옵션:&lt;/strong&gt;&lt;br/&gt;
+날짜, 시간, 숫자, 통화 등 다양한 포맷팅 옵션 제공.
+각기 다른 로케일에 맞춘 포맷팅이 가능.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;서버사이드 렌더링 지원:&lt;/strong&gt;&lt;br/&gt;
+서버사이드 렌더링(SSR)과 함께 사용하기 용이함.
+SEO 친화적인 애플리케이션을 만들 수 있음.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;단점
+&lt;ol&gt;
+&lt;li&gt;제한된 유연성:
+react-i18next에 비해 설정과 확장이 제한적.
+플러그인 시스템이 없어 커스터마이징에 한계가 있음.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;비교-요약&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B9%84%EA%B5%90-%EC%9A%94%EC%95%BD&quot; aria-label=&quot;비교 요약 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;비교 요약&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;유연성과 확장성:&lt;/strong&gt;&lt;br/&gt;
+react-i18next가 더 유연하고 확장성이 뛰어나며 다양한 설정 옵션과 플러그인을 제공.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;간단한 설정과 사용:&lt;/strong&gt;&lt;br/&gt;
+react-intl은 간단한 API와 설정으로 쉽게 시작할 수 있으며, ICU 메시지 포맷을 사용하여 복잡한 메시지 구조를 관리할 수 있음.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;포맷팅 기능:&lt;/strong&gt;&lt;br/&gt;
+react-intl이 날짜, 시간, 숫자 등 다양한 포맷팅 옵션을 제공하며, 특히 ICU 메시지 포맷을 활용한 포맷팅에 강점을 가짐.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;동적 로드와 네임스페이스 관리:&lt;/strong&gt;&lt;br/&gt;
+react-i18next는 동적 로드와 네임스페이스 관리 기능을 제공하여 대규모 애플리케이션에서 유용함.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;서버사이드 렌더링 지원:&lt;/strong&gt;&lt;br/&gt;
+두 라이브러리 모두 서버사이드 렌더링을 지원하지만, 설정과 사용법에 차이가 있음.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;결론&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%EB%A1%A0&quot; aria-label=&quot;결론 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결론&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;초보자:&lt;/strong&gt; 간단하고 직관적인 설정을 원한다면 react-intl.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;복잡한 요구 사항:&lt;/strong&gt; 고도의 커스터마이징과 다양한 기능이 필요한 경우 react-i18next.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[NextJS PWA 적용하기]]></title><description><![CDATA[ngrok로 localhost:3000 열기 PWABuilder에서 manifest 작성하기 next-pwa 설치해서 () 작성하기]]></description><link>https://maeng2418.github.io/1717643652960/</link><guid isPermaLink="false">https://maeng2418.github.io/1717643652960/</guid><pubDate>Thu, 06 Jun 2024 12:15:13 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;ngrok로 localhost:3000 열기&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.pwabuilder.com/&quot;&gt;PWABuilder&lt;/a&gt;에서 manifest 작성하기&lt;/li&gt;
 &lt;li&gt;next-pwa 설치해서 &lt;code class=&quot;language-text&quot;&gt;sw.js&lt;/code&gt;(&lt;code class=&quot;language-text&quot;&gt;service-worker.js&lt;/code&gt;) 작성하기&lt;/li&gt;
@@ -3686,7 +3756,47 @@ Default&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;args &lt;sp
 &lt;li&gt;Let list be the result of invoking &lt;a href=&quot;https://www.w3.org/TR/cssom-view/#dom-element-getclientrects&quot;&gt;getClientRects()&lt;/a&gt; on the same element this method was invoked on.&lt;/li&gt;
 &lt;li&gt;If the list is empty return a static &lt;a href=&quot;https://www.w3.org/TR/geometry-1/#dom-domrect&quot;&gt;DOMRect&lt;/a&gt; object whose &lt;a href=&quot;https://drafts.fxtf.org/geometry-1/#dom-domrect-x&quot;&gt;x&lt;/a&gt;, &lt;a href=&quot;https://drafts.fxtf.org/geometry-1/#dom-domrect-y&quot;&gt;y&lt;/a&gt;, &lt;a href=&quot;https://drafts.fxtf.org/geometry-1/#dom-domrect-width&quot;&gt;width&lt;/a&gt; and &lt;a href=&quot;https://drafts.fxtf.org/geometry-1/#dom-domrect-height&quot;&gt;height&lt;/a&gt; members are zero.&lt;/li&gt;
 &lt;li&gt;Otherwise, return a static &lt;a href=&quot;https://www.w3.org/TR/geometry-1/#dom-domrect&quot;&gt;DOMRect&lt;/a&gt; object describing the smallest rectangle that includes the first rectangle in list and all of the remaining rectangles of which the height or width is not zero.&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[AWS 무료 도메인 등록하기]]></title><description><![CDATA[도메인 도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다. 무료 도메인 사이트 Freenom - A Name for Everyone (.tk .ml .ga .cf .gq…]]></description><link>https://maeng2418.github.io/markdowns/development/register_domain/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/development/register_domain/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;도메인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8&quot; aria-label=&quot;도메인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[MySQL]]></title><description><![CDATA[MySQL MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다. Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다. Install - MacOS   ← MySQL…]]></description><link>https://maeng2418.github.io/markdowns/development/mysql/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/development/mysql/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;mysql&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql&quot; aria-label=&quot;mysql permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다.&lt;/li&gt;
+&lt;li&gt;Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;install---macos&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#install---macos&quot; aria-label=&quot;install   macos permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install - MacOS&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew install mysql&lt;/code&gt; ← MySQL 최신버젼 설치&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew list&lt;/code&gt; ← brew로 설치한 목록 확인&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql.server start&lt;/code&gt; ← MySQL 서버 실행&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql.server stop&lt;/code&gt; ←MySQL 서버 종료&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql_secure_installation&lt;/code&gt; ← MySQL 설정&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;비밀번호 가이드 설정에 대한 질문입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Would you like to setup VALIDATE PASSWORD component?
+ Press y|Y for Yes, any other key for No&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Yes - 복잡한 비밀번호 설정 (조합형 비밀번호를 설정하여야 합니다.)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No - 쉬운 비밀번호 설정 (ex. “1234”처럼 쉬운 비밀번호를 설정할 수 있습니다.)&lt;/strong&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;사용자 설정을 묻는 질문입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Remove anonymous users? (Press y|Y for Yes. any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Yes - 접속하는 경우 “mysql -uroot”처럼 -u 옵션 필요&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No - 접속하는 경우 “mysql”처럼 -u 옵션 불필요&lt;/strong&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;다른 IP에서 root 아이디로 원격접속을 설정하는 질문입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Disallow root login remotely? (Press y|Y for Yes, any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Yes - 원격접속 불가능&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No - 원격접속 가능&lt;/strong&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test 데이터베이스를 설정하는 질문입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Remove test database and access to it? (Press y|Y for Yes, any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Yes - Test 데이터베이스 제거&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No - Test 데이터베이스 유지&lt;/strong&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;변경된 권한을 테이블에 적용하는 설정에 대한 질문입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Reload privilege tables now? (Press y|Y for Yes, any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Yes - 적용시킨다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;No - 적용시키지 않는다.&lt;/strong&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql -uroot -p&lt;/code&gt; ← 로그인&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://whitepaek.tistory.com/16&quot;&gt;macOS MySQL 설치 및 설정 사용법&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/sequelpro/sequelpro/issues/2908&quot;&gt;SequelPro 로컬호스트 접속 에러 처리&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AWS 무료 도메인 등록하기]]></title><description><![CDATA[도메인 도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다. 무료 도메인 사이트 Freenom - A Name for Everyone (.tk .ml .ga .cf .gq…]]></description><link>https://maeng2418.github.io/markdowns/development/register_domain/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/development/register_domain/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;도메인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8F%84%EB%A9%94%EC%9D%B8&quot; aria-label=&quot;도메인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;도메인&lt;/h2&gt;
 &lt;p&gt;도메인은 사이트를 구분하는 글자입니다. 다른 사람이 당신의 사이트를 찾아가기 위해서, 도메인이라는 “인터넷 주소”가 필요합니다.&lt;/p&gt;
 &lt;h2 id=&quot;무료-도메인-사이트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B4%EB%A3%8C-%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8&quot; aria-label=&quot;무료 도메인 사이트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;무료 도메인 사이트&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.freenom.com/en/index.html?lang=en&quot;&gt;Freenom - A Name for Everyone&lt;/a&gt;&lt;/p&gt;
@@ -3812,47 +3922,7 @@ Default&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;args &lt;sp
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[MySQL]]></title><description><![CDATA[MySQL MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다. Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다. Install - MacOS   ← MySQL…]]></description><link>https://maeng2418.github.io/markdowns/development/mysql/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/development/mysql/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;mysql&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql&quot; aria-label=&quot;mysql permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다.&lt;/li&gt;
-&lt;li&gt;Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;install---macos&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#install---macos&quot; aria-label=&quot;install   macos permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Install - MacOS&lt;/h2&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew update&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew install mysql&lt;/code&gt; ← MySQL 최신버젼 설치&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ brew list&lt;/code&gt; ← brew로 설치한 목록 확인&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql.server start&lt;/code&gt; ← MySQL 서버 실행&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql.server stop&lt;/code&gt; ←MySQL 서버 종료&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql_secure_installation&lt;/code&gt; ← MySQL 설정&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;비밀번호 가이드 설정에 대한 질문입니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Would you like to setup VALIDATE PASSWORD component?
- Press y|Y for Yes, any other key for No&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Yes - 복잡한 비밀번호 설정 (조합형 비밀번호를 설정하여야 합니다.)&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No - 쉬운 비밀번호 설정 (ex. “1234”처럼 쉬운 비밀번호를 설정할 수 있습니다.)&lt;/strong&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;사용자 설정을 묻는 질문입니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Remove anonymous users? (Press y|Y for Yes. any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Yes - 접속하는 경우 “mysql -uroot”처럼 -u 옵션 필요&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No - 접속하는 경우 “mysql”처럼 -u 옵션 불필요&lt;/strong&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;다른 IP에서 root 아이디로 원격접속을 설정하는 질문입니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Disallow root login remotely? (Press y|Y for Yes, any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Yes - 원격접속 불가능&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No - 원격접속 가능&lt;/strong&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Test 데이터베이스를 설정하는 질문입니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Remove test database and access to it? (Press y|Y for Yes, any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Yes - Test 데이터베이스 제거&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No - Test 데이터베이스 유지&lt;/strong&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;변경된 권한을 테이블에 적용하는 설정에 대한 질문입니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;**&quot;Reload privilege tables now? (Press y|Y for Yes, any other key for No)&quot;**&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Yes - 적용시킨다.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No - 적용시키지 않는다.&lt;/strong&gt;
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ mysql -uroot -p&lt;/code&gt; ← 로그인&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://whitepaek.tistory.com/16&quot;&gt;macOS MySQL 설치 및 설정 사용법&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/sequelpro/sequelpro/issues/2908&quot;&gt;SequelPro 로컬호스트 접속 에러 처리&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글톤 패턴]]></title><description><![CDATA[Singleton 패턴 애플리케이션이 시작될 때 어떤 클래스가 최초 한번만 메모리를 할당하고(Static) 그 메모리에 인스턴스를 만들어 사용하는 디자인패턴. 전체 시스템에서의 오직 하나의 인스턴스만 존재하도록 보장.]]></description><link>https://maeng2418.github.io/markdowns/development/singleton/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/development/singleton/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;singleton-패턴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#singleton-%ED%8C%A8%ED%84%B4&quot; aria-label=&quot;singleton 패턴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Singleton 패턴&lt;/h2&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글톤 패턴]]></title><description><![CDATA[Singleton 패턴 애플리케이션이 시작될 때 어떤 클래스가 최초 한번만 메모리를 할당하고(Static) 그 메모리에 인스턴스를 만들어 사용하는 디자인패턴. 전체 시스템에서의 오직 하나의 인스턴스만 존재하도록 보장.]]></description><link>https://maeng2418.github.io/markdowns/development/singleton/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/development/singleton/</guid><pubDate>Sun, 23 May 2021 21:09:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;singleton-패턴&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#singleton-%ED%8C%A8%ED%84%B4&quot; aria-label=&quot;singleton 패턴 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Singleton 패턴&lt;/h2&gt;
 &lt;p&gt;애플리케이션이 시작될 때 어떤 클래스가 &lt;strong&gt;최초 한번만&lt;/strong&gt; 메모리를 할당하고(Static) 그 메모리에 인스턴스를 만들어 사용하는 디자인패턴.&lt;/p&gt;
 &lt;p&gt;전체 시스템에서의 &lt;strong&gt;오직 하나의 인스턴스만&lt;/strong&gt; 존재하도록 보장.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singleton &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -3877,7 +3947,72 @@ Default&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;args &lt;sp
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singletone1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; singletone2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; singleton&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;singletone1 &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; singletone2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[HTTP]]></title><description><![CDATA[Web WWW = World Wide Web 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간 웹과 인터넷은 다름! 웹의 3요소: HTTP, HTML, URL HTTP = HyperText Transfer Protocol WWW…]]></description><link>https://maeng2418.github.io/markdowns/web/http/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/web/http/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;web&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#web&quot; aria-label=&quot;web permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Web&lt;/strong&gt;&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;singletone1 &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; singletone2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Cookie와 Session]]></title><description><![CDATA[HTTP의 특징과 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless…]]></description><link>https://maeng2418.github.io/markdowns/web/cookie/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/web/cookie/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;http의특징과쿠키와세션을사용하는이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98%ED%8A%B9%EC%A7%95%EA%B3%BC%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;http의특징과쿠키와세션을사용하는이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 특징과 쿠키와 세션을 사용하는 이유&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다.&lt;/li&gt;
+&lt;li&gt;HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless, stateless한 특성이 있기 때문이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;사용자-식별---인증을-위한-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%8B%9D%EB%B3%84---%EC%9D%B8%EC%A6%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;사용자 식별   인증을 위한 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;사용자 식별 - 인증을 위한 방법&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IP 추적&lt;/li&gt;
+&lt;li&gt;HTTP Authentication&lt;/li&gt;
+&lt;li&gt;URL에 식별자 포함&lt;/li&gt;
+&lt;li&gt;Cookie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일.&lt;/li&gt;
+&lt;li&gt;사용자 인증이 유효한 시간을 명시할 수 있으며, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.&lt;/li&gt;
+&lt;li&gt;쿠키는 클라이언트의 상태 정보를 로컬에 저장하고 참조한다.&lt;/li&gt;
+&lt;li&gt;클라이언트에 300개까지 쿠키저장 가능, 하나의 도메인당 20개의 값만 가질 수 있다.&lt;/li&gt;
+&lt;li&gt;하나의 쿠키 값은 4KB까지 저장.&lt;/li&gt;
+&lt;li&gt;Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있다.&lt;/li&gt;
+&lt;li&gt;쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 Request Header를 넣어서 자동으로 서버에 전송.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쿠키의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;쿠키의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 구성 요소&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;이름 : 각각의 쿠키를 구별하는 데 사용되는 이름&lt;/li&gt;
+&lt;li&gt;값 : 쿠키의 이름과 관련된 값&lt;/li&gt;
+&lt;li&gt;유효시간 : 쿠키의 유지시간&lt;/li&gt;
+&lt;li&gt;도메인 : 쿠키를 전송할 도메인&lt;/li&gt;
+&lt;li&gt;경로 : 쿠키를 전송할 요청 경로&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;쿠키의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;쿠키의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 동작 방식&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;클라이언트가 페이지를 요청&lt;/li&gt;
+&lt;li&gt;서버에서 쿠키를 생성&lt;/li&gt;
+&lt;li&gt;HTTP 헤더에 쿠키를 포함 시켜 응답&lt;/li&gt;
+&lt;li&gt;브라우저가 종료되어도 쿠키 만료 기간이 있다면 클라이언트에서 보관하고 있음&lt;/li&gt;
+&lt;li&gt;같은 요청을 할 경우 HTTP 헤더에 쿠키를 함께 보냄&lt;/li&gt;
+&lt;li&gt;서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w307.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w307.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;쿠키의-용도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EC%9A%A9%EB%8F%84&quot; aria-label=&quot;쿠키의 용도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키의 용도&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;세션관리&lt;/li&gt;
+&lt;li&gt;개인화 (예: 장바구니)&lt;/li&gt;
+&lt;li&gt;트래킹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;session&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#session&quot; aria-label=&quot;session permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;session&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 세션은 서버 측에서 관리.&lt;/li&gt;
+&lt;li&gt;서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지.&lt;/li&gt;
+&lt;li&gt;접속 시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능 합니다.&lt;/li&gt;
+&lt;li&gt;사용자에 대한 정보를 서버에 두기 때문에 쿠키보다 보안에 좋지만, 사용자가 많아질수록 서버 메모리를 많이 차지.&lt;/li&gt;
+&lt;li&gt;동접자 수가 많은 웹 사이트인 경우 서버에 과부하를 주게 되므로 성능 저하의 요인이 됨.&lt;/li&gt;
+&lt;li&gt;클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션ID다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;세션의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EC%85%98%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;세션의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세션의 동작 방식&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;클라이언트가 서버에 접속 시 세션 ID를 발급받습니다.&lt;/li&gt;
+&lt;li&gt;클라이언트는 세션 ID에 대해 쿠키를 사용해서 저장하고 가지고 있습니다.&lt;/li&gt;
+&lt;li&gt;클라리언트는 서버에 요청할 때, 이 쿠키의 세션 ID를 서버에 전달해서 사용합니다.&lt;/li&gt;
+&lt;li&gt;서버는 세션 ID를 전달 받아서 별다른 작업없이 세션 ID로 세션에 있는 클라언트 정보를 가져옵니다.&lt;/li&gt;
+&lt;li&gt;클라이언트 정보를 가지고 서버 요청을 처리하여 클라이언트에게 응답합니다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w308.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w308.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://interconnection.tistory.com/74&quot;&gt;쿠키와 세션 개념&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[HTTP]]></title><description><![CDATA[Web WWW = World Wide Web 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간 웹과 인터넷은 다름! 웹의 3요소: HTTP, HTML, URL HTTP = HyperText Transfer Protocol WWW…]]></description><link>https://maeng2418.github.io/markdowns/web/http/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/web/http/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;web&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#web&quot; aria-label=&quot;web permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Web&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;WWW = World Wide Web&lt;/li&gt;
 &lt;li&gt;인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간&lt;/li&gt;
@@ -4593,72 +4728,7 @@ devAsh&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; foo&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; myNamespace&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Foo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;foo&apos;&lt;/span&gt;
 &lt;span class=&quot;token builtin&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;foo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Cookie와 Session]]></title><description><![CDATA[HTTP의 특징과 쿠키와 세션을 사용하는 이유 HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다. HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless…]]></description><link>https://maeng2418.github.io/markdowns/web/cookie/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/web/cookie/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;http의특징과쿠키와세션을사용하는이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98%ED%8A%B9%EC%A7%95%EA%B3%BC%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98%EC%9D%84%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;http의특징과쿠키와세션을사용하는이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 특징과 쿠키와 세션을 사용하는 이유&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;HTTP 프로토콜의 특징이자 약점을 보완하기 위해서 사용한다.&lt;/li&gt;
-&lt;li&gt;HTTP 프로토콜 환경에서 서버는 클라이언트가 누구인지 확인해야 한다. 그 이유는 HTTP 프로토콜이 connectionless, stateless한 특성이 있기 때문이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;사용자-식별---인증을-위한-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%8B%9D%EB%B3%84---%EC%9D%B8%EC%A6%9D%EC%9D%84-%EC%9C%84%ED%95%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;사용자 식별   인증을 위한 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;사용자 식별 - 인증을 위한 방법&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;IP 추적&lt;/li&gt;
-&lt;li&gt;HTTP Authentication&lt;/li&gt;
-&lt;li&gt;URL에 식별자 포함&lt;/li&gt;
-&lt;li&gt;Cookie&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;쿠키&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4&quot; aria-label=&quot;쿠키 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일.&lt;/li&gt;
-&lt;li&gt;사용자 인증이 유효한 시간을 명시할 수 있으며, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.&lt;/li&gt;
-&lt;li&gt;쿠키는 클라이언트의 상태 정보를 로컬에 저장하고 참조한다.&lt;/li&gt;
-&lt;li&gt;클라이언트에 300개까지 쿠키저장 가능, 하나의 도메인당 20개의 값만 가질 수 있다.&lt;/li&gt;
-&lt;li&gt;하나의 쿠키 값은 4KB까지 저장.&lt;/li&gt;
-&lt;li&gt;Response Header에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있다.&lt;/li&gt;
-&lt;li&gt;쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 Request Header를 넣어서 자동으로 서버에 전송.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;쿠키의-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;쿠키의 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 구성 요소&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;이름 : 각각의 쿠키를 구별하는 데 사용되는 이름&lt;/li&gt;
-&lt;li&gt;값 : 쿠키의 이름과 관련된 값&lt;/li&gt;
-&lt;li&gt;유효시간 : 쿠키의 유지시간&lt;/li&gt;
-&lt;li&gt;도메인 : 쿠키를 전송할 도메인&lt;/li&gt;
-&lt;li&gt;경로 : 쿠키를 전송할 요청 경로&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;쿠키의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;쿠키의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿠키의 동작 방식&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;클라이언트가 페이지를 요청&lt;/li&gt;
-&lt;li&gt;서버에서 쿠키를 생성&lt;/li&gt;
-&lt;li&gt;HTTP 헤더에 쿠키를 포함 시켜 응답&lt;/li&gt;
-&lt;li&gt;브라우저가 종료되어도 쿠키 만료 기간이 있다면 클라이언트에서 보관하고 있음&lt;/li&gt;
-&lt;li&gt;같은 요청을 할 경우 HTTP 헤더에 쿠키를 함께 보냄&lt;/li&gt;
-&lt;li&gt;서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w307.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w307.png&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;쿠키의-용도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%A0%ED%82%A4%EC%9D%98-%EC%9A%A9%EB%8F%84&quot; aria-label=&quot;쿠키의 용도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;쿠키의 용도&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;세션관리&lt;/li&gt;
-&lt;li&gt;개인화 (예: 장바구니)&lt;/li&gt;
-&lt;li&gt;트래킹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;session&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#session&quot; aria-label=&quot;session permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;session&lt;/strong&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 세션은 서버 측에서 관리.&lt;/li&gt;
-&lt;li&gt;서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지.&lt;/li&gt;
-&lt;li&gt;접속 시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능 합니다.&lt;/li&gt;
-&lt;li&gt;사용자에 대한 정보를 서버에 두기 때문에 쿠키보다 보안에 좋지만, 사용자가 많아질수록 서버 메모리를 많이 차지.&lt;/li&gt;
-&lt;li&gt;동접자 수가 많은 웹 사이트인 경우 서버에 과부하를 주게 되므로 성능 저하의 요인이 됨.&lt;/li&gt;
-&lt;li&gt;클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션ID다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;세션의-동작-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%B8%EC%85%98%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;세션의 동작 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;세션의 동작 방식&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;클라이언트가 서버에 접속 시 세션 ID를 발급받습니다.&lt;/li&gt;
-&lt;li&gt;클라이언트는 세션 ID에 대해 쿠키를 사용해서 저장하고 가지고 있습니다.&lt;/li&gt;
-&lt;li&gt;클라리언트는 서버에 요청할 때, 이 쿠키의 세션 ID를 서버에 전달해서 사용합니다.&lt;/li&gt;
-&lt;li&gt;서버는 세션 ID를 전달 받아서 별다른 작업없이 세션 ID로 세션에 있는 클라언트 정보를 가져옵니다.&lt;/li&gt;
-&lt;li&gt;클라이언트 정보를 가지고 서버 요청을 처리하여 클라이언트에게 응답합니다.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;http://public.codesquad.kr/honux/images/w308.png&quot; alt=&quot;http://public.codesquad.kr/honux/images/w308.png&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;참고&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0&quot; aria-label=&quot;참고 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://interconnection.tistory.com/74&quot;&gt;쿠키와 세션 개념&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Node.js 디버깅]]></title><description><![CDATA[VSCODE-NodeJS 디버깅 vscode의 디버깅 탭에서 create a launch.json file을 클릭한다. .vscode 폴더에 launch.json 파일이 생성된다.  break 포인트를 건다.  디버깅 시작 F…]]></description><link>https://maeng2418.github.io/markdowns/nodejs/debugging/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/nodejs/debugging/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;vscode nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;VSCODE-NodeJS 디버깅&lt;/strong&gt;&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Node.js 디버깅]]></title><description><![CDATA[VSCODE-NodeJS 디버깅 vscode의 디버깅 탭에서 create a launch.json file을 클릭한다. .vscode 폴더에 launch.json 파일이 생성된다.  break 포인트를 건다.  디버깅 시작 F…]]></description><link>https://maeng2418.github.io/markdowns/nodejs/debugging/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/nodejs/debugging/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;vscode-nodejs-디버깅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vscode-nodejs-%EB%94%94%EB%B2%84%EA%B9%85&quot; aria-label=&quot;vscode nodejs 디버깅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;VSCODE-NodeJS 디버깅&lt;/strong&gt;&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;vscode의 디버깅 탭에서 create a launch.json file을 클릭한다.&lt;/strong&gt;&lt;/p&gt;
@@ -4779,7 +4849,65 @@ devAsh&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
       /&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[비동기 프로그래밍]]></title><description><![CDATA[들어가기 자바스크립트는 싱글스레드로 동작한다. (작업을 순차적으로 처리한다.) database나 file에 접근하거나, 네트워크 통신이 필요한 경우 등의 작업이 필요하다면, 비동기 처리를 통해서 blocking…]]></description><link>https://maeng2418.github.io/markdowns/javascript/asynchronous/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/asynchronous/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Node.js]]></title><description><![CDATA[Node.js Node.js는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js…]]></description><link>https://maeng2418.github.io/markdowns/nodejs/nodejs/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/nodejs/nodejs/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs&quot; aria-label=&quot;nodejs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js를 알아가는데 중요한 것은 딱 두가지라고 생각합니다. 싱글스레드에 비동기 방식이라는 것과, 자바스크립트 기반이라는 것이죠. 프론트엔드 뿐만 아니라 백엔드 또한 자바스크립트로 작성할 수 있다는 것은 큰 이점이 될 수 있고, 바로 이 점으로 인해 Node.js의 성장세가 계속 되고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt; 는 &lt;strong&gt;서버사이드 자바스크립트&lt;/strong&gt; 이며 구글의 자바스크립트 엔진인 &lt;strong&gt;V8&lt;/strong&gt;을 기반으로 구성된 일종의 소프트웨어 시스템입니다.&lt;/p&gt;
+&lt;p&gt;이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지원하기 때문에 &lt;strong&gt;비동기식 프로그래밍&lt;/strong&gt; 이 가능합니다. 이 때문에 I/O 부하가 심한 대규모 서비스를 개발하기 적합하다고 할 수 있습니다. 또한 자바스크립트의 표준라이브러리 프로젝트인 CommonJS의 스펙을 따르고 있습니다.&lt;/p&gt;
+&lt;h2 id=&quot;노드의-탄생-배경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%85%B8%EB%93%9C%EC%9D%98-%ED%83%84%EC%83%9D-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;노드의 탄생 배경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;노드의 탄생 배경&lt;/h2&gt;
+&lt;p&gt;가장 널리 쓰이는 JSP나 PHP와 같은 언어로 웹 애플리케이션을 개발한다고 한다면 이 웹 애플리케이션은 일반적으로 아파치와 같은 웹 서버에서 동작하게 될 것입니다. 이 때 어떤 클라이언트가 웹 서버에 연결을 요청하게 된다면, 일정한 메모리 공간을 사용하여 새로운 쓰레드를 생성합니다. 이런 형태로 웹 애플리케이션을 개발하여 서비스를 제공하는 경우에는 더 많은 사용자를 지원하기 위해 사업자는 더 많은 서버를 추가할 수 밖에 없었습니다. 이는 단순히 서버 구매 비용뿐만 아니라 이를 운영하는 비용이나 운영에 따라 발생하는 트래픽 비용, 인건비 등 여러 비용을 더하는 문제를 발생시킵니다. 게다가 여러 대의 서버를 사용하더라도 사용자 입장에서는 마치 하나의 서버에 접속하는 것과 같은 효과를 주어야 하기 때문에 모든 서버들은 같은 데이터를 동기화해야 한다는 문제를 발생시키기도 합니다.&lt;/p&gt;
+&lt;p&gt;하지만, 노드는 서버에서 클라이언트로부터의 요청, &lt;strong&gt;즉 연결을 처리하는 방법을 새로운 컨셉으로 변경&lt;/strong&gt; 하여 이 문제를 해결합니다. 기존에는 각 연결에 대해 새로운 쓰레드를 생성하고 그에 따라 메모리를 할당하여 사용자 요청을 처리했다면, 노드에서는 &lt;strong&gt;각 연결이 하나의 이벤트로서 노드 엔진에서 처리됩니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;설치하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0&quot; aria-label=&quot;설치하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치하기&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;NVM 이용해서 설치하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Node Version Manager의 약자로, Node.js의 다양한 릴리스 버전을 관리할 수 있어 가장 많이 사용됩니다. apt 패키지 매니저 대신 사용하는 툴입니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;NVM 문서에 잇는 설치 스크립트를 설치한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo curl -o- [https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh](https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;환경변수 등록하기.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 터미널이 bash라면 /.bash_profile에 zsh라면 /.zshrc에 환경변수를 등록 합니다.
+
+$ vi ~/.bash_profile 혹은$ vi ~/.zshrc
+
+export NVM_DIR=&quot;$HOME/.nvm&quot;
+[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;amp;&amp;amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;적용하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo source ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;설치할 수 있는 Node.js 버젼 확인하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls-remote&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;설치하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install 6.10.1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;확인하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;버젼 변경하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm use 6.10.1&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;LTS 버전&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;장기적으로 지원이 제공되는 안정적인 버전&lt;/li&gt;
+&lt;li&gt;안정성과 보안성에 초점을 두어 개발함&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install node --latest-npm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Current 버전&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;업데이트가 잦음&lt;/li&gt;
+&lt;li&gt;가장 최신의 버전이므로 불안정하고 숨겨져 있는 버그가 많음&lt;/li&gt;
+&lt;li&gt;추가 기능 개발과 기존 API의 기능 개선을 우선함&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;yarn-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#yarn-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;yarn 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;yarn 설치&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl -o- -L [https://yarnpkg.com/install.sh](https://yarnpkg.com/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[비동기 프로그래밍]]></title><description><![CDATA[들어가기 자바스크립트는 싱글스레드로 동작한다. (작업을 순차적으로 처리한다.) database나 file에 접근하거나, 네트워크 통신이 필요한 경우 등의 작업이 필요하다면, 비동기 처리를 통해서 blocking…]]></description><link>https://maeng2418.github.io/markdowns/javascript/asynchronous/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/asynchronous/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;자바스크립트는 싱글스레드로 동작한다. (작업을 순차적으로 처리한다.)&lt;/li&gt;
 &lt;li&gt;database나 file에 접근하거나, 네트워크 통신이 필요한 경우 등의 작업이 필요하다면, 비동기 처리를 통해서 blocking하지 않고 효과적으로 처리할 수 있다.&lt;/li&gt;
@@ -5180,65 +5308,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://medium.com/@vdongbin/javascript-%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC-single-thread-event-loop-asynchronous-e47e07b24d1c&quot;&gt;Javascript 동작원리 (Single thread, Event loop, Asynchronous)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;#x26;feature=youtu.be&quot;&gt;What the heck is the event loop anyway? | Philip Roberts | JSConf EU&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://steemit.com/js/@huna/js-settimeout&quot;&gt;[JS] setTimeout 문제 - Steemit&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Node.js]]></title><description><![CDATA[Node.js Node.js는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js…]]></description><link>https://maeng2418.github.io/markdowns/nodejs/nodejs/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/nodejs/nodejs/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;nodejs&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nodejs&quot; aria-label=&quot;nodejs permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt;는 웹프로그래밍에서 서버 부분을 만들 때 쓰이는 언어입니다. 노드는 자바스크립트를 기본으로 해서 만들어진 언어입니다. Node.js를 알아가는데 중요한 것은 딱 두가지라고 생각합니다. 싱글스레드에 비동기 방식이라는 것과, 자바스크립트 기반이라는 것이죠. 프론트엔드 뿐만 아니라 백엔드 또한 자바스크립트로 작성할 수 있다는 것은 큰 이점이 될 수 있고, 바로 이 점으로 인해 Node.js의 성장세가 계속 되고 있습니다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Node.js&lt;/strong&gt; 는 &lt;strong&gt;서버사이드 자바스크립트&lt;/strong&gt; 이며 구글의 자바스크립트 엔진인 &lt;strong&gt;V8&lt;/strong&gt;을 기반으로 구성된 일종의 소프트웨어 시스템입니다.&lt;/p&gt;
-&lt;p&gt;이벤트 기반으로 개발이 가능하며 Non-Blocking I/O를 지원하기 때문에 &lt;strong&gt;비동기식 프로그래밍&lt;/strong&gt; 이 가능합니다. 이 때문에 I/O 부하가 심한 대규모 서비스를 개발하기 적합하다고 할 수 있습니다. 또한 자바스크립트의 표준라이브러리 프로젝트인 CommonJS의 스펙을 따르고 있습니다.&lt;/p&gt;
-&lt;h2 id=&quot;노드의-탄생-배경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%85%B8%EB%93%9C%EC%9D%98-%ED%83%84%EC%83%9D-%EB%B0%B0%EA%B2%BD&quot; aria-label=&quot;노드의 탄생 배경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;노드의 탄생 배경&lt;/h2&gt;
-&lt;p&gt;가장 널리 쓰이는 JSP나 PHP와 같은 언어로 웹 애플리케이션을 개발한다고 한다면 이 웹 애플리케이션은 일반적으로 아파치와 같은 웹 서버에서 동작하게 될 것입니다. 이 때 어떤 클라이언트가 웹 서버에 연결을 요청하게 된다면, 일정한 메모리 공간을 사용하여 새로운 쓰레드를 생성합니다. 이런 형태로 웹 애플리케이션을 개발하여 서비스를 제공하는 경우에는 더 많은 사용자를 지원하기 위해 사업자는 더 많은 서버를 추가할 수 밖에 없었습니다. 이는 단순히 서버 구매 비용뿐만 아니라 이를 운영하는 비용이나 운영에 따라 발생하는 트래픽 비용, 인건비 등 여러 비용을 더하는 문제를 발생시킵니다. 게다가 여러 대의 서버를 사용하더라도 사용자 입장에서는 마치 하나의 서버에 접속하는 것과 같은 효과를 주어야 하기 때문에 모든 서버들은 같은 데이터를 동기화해야 한다는 문제를 발생시키기도 합니다.&lt;/p&gt;
-&lt;p&gt;하지만, 노드는 서버에서 클라이언트로부터의 요청, &lt;strong&gt;즉 연결을 처리하는 방법을 새로운 컨셉으로 변경&lt;/strong&gt; 하여 이 문제를 해결합니다. 기존에는 각 연결에 대해 새로운 쓰레드를 생성하고 그에 따라 메모리를 할당하여 사용자 요청을 처리했다면, 노드에서는 &lt;strong&gt;각 연결이 하나의 이벤트로서 노드 엔진에서 처리됩니다.&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;설치하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0&quot; aria-label=&quot;설치하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;설치하기&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;NVM 이용해서 설치하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Node Version Manager의 약자로, Node.js의 다양한 릴리스 버전을 관리할 수 있어 가장 많이 사용됩니다. apt 패키지 매니저 대신 사용하는 툴입니다.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;NVM 문서에 잇는 설치 스크립트를 설치한다.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo curl -o- [https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh](https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;환경변수 등록하기.&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 터미널이 bash라면 /.bash_profile에 zsh라면 /.zshrc에 환경변수를 등록 합니다.
-
-$ vi ~/.bash_profile 혹은$ vi ~/.zshrc
-
-export NVM_DIR=&quot;$HOME/.nvm&quot;
-[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;amp;&amp;amp; . &quot;$NVM_DIR/nvm.sh&quot; # This loads nvm&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;적용하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo source ~/.bash_profile&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;설치할 수 있는 Node.js 버젼 확인하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls-remote&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;설치하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install 6.10.1&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;확인하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm ls&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;버젼 변경하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm use 6.10.1&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;LTS 버전&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;장기적으로 지원이 제공되는 안정적인 버전&lt;/li&gt;
-&lt;li&gt;안정성과 보안성에 초점을 두어 개발함&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ nvm install node --latest-npm&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Current 버전&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;업데이트가 잦음&lt;/li&gt;
-&lt;li&gt;가장 최신의 버전이므로 불안정하고 숨겨져 있는 버그가 많음&lt;/li&gt;
-&lt;li&gt;추가 기능 개발과 기존 API의 기능 개선을 우선함&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;yarn-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#yarn-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;yarn 설치 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;yarn 설치&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl -o- -L [https://yarnpkg.com/install.sh](https://yarnpkg.com/install.sh) | bash&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[코어 자바스크립트]]></title><description><![CDATA[들어가기 다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.…]]></description><link>https://maeng2418.github.io/markdowns/javascript/core_javascript/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/core_javascript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://steemit.com/js/@huna/js-settimeout&quot;&gt;[JS] setTimeout 문제 - Steemit&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[코어 자바스크립트]]></title><description><![CDATA[들어가기 다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.…]]></description><link>https://maeng2418.github.io/markdowns/javascript/core_javascript/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/core_javascript/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
 &lt;p&gt;다음 글은 코어자바스크립트 교재를 참고해서 자바스크립트에 대해 그동안 헷갈리던 부분과 핵심부분을 요약정리한 부분입니다.&lt;/p&gt;
 &lt;h2 id=&quot;1-데이터-타입&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%83%80%EC%9E%85&quot; aria-label=&quot;1 데이터 타입 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 데이터 타입&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;변수 :&lt;/strong&gt; 변경 가능한 데이터가 담길 수 있는 공간&lt;/p&gt;
@@ -6251,65 +6321,7 @@ ted&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;_word &lt;span 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;lee&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Person&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;countPrinter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 2&lt;/span&gt;
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;countPrinter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// error&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[V8 엔진]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/markdowns/javascript/v8_engine/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/v8_engine/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
-&lt;p&gt;인간과 컴퓨터는 서로 사용하는 언어가 다릅니다. 따라서, 컴퓨터가 이해할 수 있는 통역사가 필요한다. 여기서 말하는 통역사의 역할을 하는 것이 바로 &lt;strong&gt;컴파일러 혹은 인터프리터&lt;/strong&gt;입니다. 우리가 컴퓨터와 소통하기 위해서는 코드를 작성하고 이러한 코드를 기계어로 변환하여 컴퓨터와 소통할 수 있습니다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;컴파일러 VS 인터프리터&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;컴파일러는 소스코드 전체를 한 번 훑고 컴퓨터 프로세서가 실행 할 수 있도록 바로 기계어로 변환한다.&lt;/li&gt;
-&lt;li&gt;인터프리터는 고레벨 언어를 중간 코드(intermediate code)로 변환하고 이를 각 행을 연속적으로 실행한다.&lt;/li&gt;
-&lt;li&gt;일반적으로 컴파일러가 인터프리터보다는 실행시간이 빠르다.&lt;/li&gt;
-&lt;li&gt;컴파일러는 전체 소스코드를 변환 한 뒤 에러를 보고하지만 인터프리터는 각 행 마다 실행하는 도중 에러가 보고되면 이후 작성된 코드를 살펴보지 않는다.
-&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;v8-엔진이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#v8-%EC%97%94%EC%A7%84%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;v8 엔진이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;V8 엔진이란?&lt;/h2&gt;
-&lt;p&gt;C++ 로 작성된 구글의 오픈소스 자바스크립트 엔진.&lt;/p&gt;
-&lt;p&gt;즉, 자바스크립트 코드를 바이트코드 혹은 기계어로 바로 변환해주는 역할을 합니다.&lt;/p&gt;
-&lt;p&gt;세상에는 V8 엔진뿐만 아니라 다양한 종류의 자바스크립트 엔진이 존재하나, 모두 ECMAScript 표준을 따릅니다.&lt;/p&gt;
-&lt;p&gt;하지만, V8은 다른 엔진과 달리 모두 기계어로 변환하지 않고 바이트 코드와 기계어로 변환한다.
-&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;h2 id=&quot;작동원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;작동원리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;작동원리&lt;/h2&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 900px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR42o2SS09TURDH+wX8EH4Do3tXunLlk0RZGVkgGjeK8Q0xxhBfMTFAgKJRoyIQoUABNRKJQGwaUEAoxQK5tQ9aoe0tvb2Pc8/PA5i4MFAmmWQm58xv/mfOeNyChpEMkk9MYKeDIAxyhk0qs8aKbuC6knAyz1Q0y7TySS2LIyRbmceYuMJM0y6+Ne1G69iLufKDo7d72FfVyp7KVoKzGlXPxjl0f4TDj0YpbwiQK9gbxVL+D/aI9FescD12zI+98h3XKTI2G8cf+MlgcAG9UGRoJoV3KMLHqTjhhI5wXVXqKuA/V/hNIDs0IQSO45S852GdLsVf3+zkKgXCFayPyi2moLiEKGpqvBpYUcjP4+hhrGwIOxdCqFgWFtVlayuFm/JdUYT0IMOfa6lpKeNW8wm6B6pxtU7q/ee413eWut5KGlRsLrwAPbQ9UDp5SA3Q/6mW695TXGs5yZveamTUx8O+Km50naH+/SV8wzWY8y8hN7k9EFHg91I7VuwdxH2Q8CF+dWMsdmAvdWJE3iq4Okv2YU8/xV0OlgZGI68x412w2o+Z9JGOdJCZa8NJ9UJmALnqR+Y/YE+2qmaBEkBnDTPRQzbQjN5eR+rVXfSeB4hYN7m2O2SeXCXbeJPVx5exJrzIbIknS9tAKhXL3ovEy4+QvFBBouKYmv1z4uePEzuwn+TpMmLHDipgIxihHeyhGUcsj2POfcEMj2BFRtXazGKp3Bjzb+QiM4VUPyyFwR9mNmZxjeXOCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;v8 engine 1&quot;
-        title=&quot;&quot;
-        src=&quot;/static/c4bc15954e0a10b459e1cda766908056/1cfc2/v8_engine_1.png&quot;
-        srcset=&quot;/static/c4bc15954e0a10b459e1cda766908056/3684f/v8_engine_1.png 225w,
-/static/c4bc15954e0a10b459e1cda766908056/fc2a6/v8_engine_1.png 450w,
-/static/c4bc15954e0a10b459e1cda766908056/1cfc2/v8_engine_1.png 900w,
-/static/c4bc15954e0a10b459e1cda766908056/21482/v8_engine_1.png 1350w,
-/static/c4bc15954e0a10b459e1cda766908056/49b61/v8_engine_1.png 1756w&quot;
-        sizes=&quot;(max-width: 900px) 100vw, 900px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;V8은 소스코드를 가져다가 파서에게 넘긴다.&lt;/li&gt;
-&lt;li&gt;소스 코드를 분석후 AST(Abstract Syntax Tree) 즉, 추상 구문 트리로 변환하고 Ignition에게 넘겨준다.&lt;/li&gt;
-&lt;li&gt;Ignition은 자바스크립트를 &lt;strong&gt;바이트 코드&lt;/strong&gt;로 컴파일해주는 역할을 수행한다.&lt;/li&gt;
-&lt;li&gt;이후 이 바이트 코드를 실행함으로써 소스 코드가 실제로 작동한다.&lt;/li&gt;
-&lt;li&gt;그 중, 자주 사용되는 코드는 TurboFan에 넘겨져 최적화시키기 위해 다시 &lt;strong&gt;기계어&lt;/strong&gt;로 컴파일 된다.
-&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;v8의-역할&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#v8%EC%9D%98-%EC%97%AD%ED%95%A0&quot; aria-label=&quot;v8의 역할 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;V8의 역할&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;JS, WASM 코드 컴파일 및 실행&lt;/li&gt;
-&lt;li&gt;콜 스택 처리 (함수 실행)&lt;/li&gt;
-&lt;li&gt;메모리 할당&lt;/li&gt;
-&lt;li&gt;가비지 컬렉션
-&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://velog.io/@godori/JavaScript-engine-1&quot;&gt;JavaScript 엔진 톺아보기&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[싱글스레드]]></title><description><![CDATA[들어가기 프로그램 어떤 작업을 위해 실행할 수 있는 파일 ex) 메모장 프로세스 실행중인 프로그램 스레드 실행중인 프로그램 안에서의 실행되는 명령어 ex…]]></description><link>https://maeng2418.github.io/markdowns/javascript/single_thread/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/single_thread/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;countPrinter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// error&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[싱글스레드]]></title><description><![CDATA[들어가기 프로그램 어떤 작업을 위해 실행할 수 있는 파일 ex) 메모장 프로세스 실행중인 프로그램 스레드 실행중인 프로그램 안에서의 실행되는 명령어 ex…]]></description><link>https://maeng2418.github.io/markdowns/javascript/single_thread/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/single_thread/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;프로그램&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;어떤 작업을 위해 실행할 수 있는 파일&lt;/p&gt;
 &lt;p&gt;ex) 메모장&lt;/p&gt;
@@ -6551,119 +6563,65 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         loading=&quot;lazy&quot;
         decoding=&quot;async&quot;
       /&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Issue Wiki Milestone Project]]></title><description><![CDATA[Github Issue 프로젝트를 진행하면서 발생하는 모든 이슈 (버그 발생, 개발, 풀 리퀘스트 등등) 이슈 생성하기 https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E3…]]></description><link>https://maeng2418.github.io/markdowns/git/issue_wiki/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/git/issue_wiki/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;github-issue&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-issue&quot; aria-label=&quot;github issue permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Issue&lt;/h2&gt;
-&lt;p&gt;프로젝트를 진행하면서 발생하는 모든 이슈 (버그 발생, 개발, 풀 리퀘스트 등등)&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[V8 엔진]]></title><description><![CDATA[…]]></description><link>https://maeng2418.github.io/markdowns/javascript/v8_engine/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/javascript/v8_engine/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;들어가기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%93%A4%EC%96%B4%EA%B0%80%EA%B8%B0&quot; aria-label=&quot;들어가기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;들어가기&lt;/h2&gt;
+&lt;p&gt;인간과 컴퓨터는 서로 사용하는 언어가 다릅니다. 따라서, 컴퓨터가 이해할 수 있는 통역사가 필요한다. 여기서 말하는 통역사의 역할을 하는 것이 바로 &lt;strong&gt;컴파일러 혹은 인터프리터&lt;/strong&gt;입니다. 우리가 컴퓨터와 소통하기 위해서는 코드를 작성하고 이러한 코드를 기계어로 변환하여 컴퓨터와 소통할 수 있습니다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;컴파일러 VS 인터프리터&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;컴파일러는 소스코드 전체를 한 번 훑고 컴퓨터 프로세서가 실행 할 수 있도록 바로 기계어로 변환한다.&lt;/li&gt;
+&lt;li&gt;인터프리터는 고레벨 언어를 중간 코드(intermediate code)로 변환하고 이를 각 행을 연속적으로 실행한다.&lt;/li&gt;
+&lt;li&gt;일반적으로 컴파일러가 인터프리터보다는 실행시간이 빠르다.&lt;/li&gt;
+&lt;li&gt;컴파일러는 전체 소스코드를 변환 한 뒤 에러를 보고하지만 인터프리터는 각 행 마다 실행하는 도중 에러가 보고되면 이후 작성된 코드를 살펴보지 않는다.
+&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;v8-엔진이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#v8-%EC%97%94%EC%A7%84%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;v8 엔진이란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;V8 엔진이란?&lt;/h2&gt;
+&lt;p&gt;C++ 로 작성된 구글의 오픈소스 자바스크립트 엔진.&lt;/p&gt;
+&lt;p&gt;즉, 자바스크립트 코드를 바이트코드 혹은 기계어로 바로 변환해주는 역할을 합니다.&lt;/p&gt;
+&lt;p&gt;세상에는 V8 엔진뿐만 아니라 다양한 종류의 자바스크립트 엔진이 존재하나, 모두 ECMAScript 표준을 따릅니다.&lt;/p&gt;
+&lt;p&gt;하지만, V8은 다른 엔진과 달리 모두 기계어로 변환하지 않고 바이트 코드와 기계어로 변환한다.
+&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h2 id=&quot;작동원리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC&quot; aria-label=&quot;작동원리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;작동원리&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 900px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACMklEQVR42o2SS09TURDH+wX8EH4Do3tXunLlk0RZGVkgGjeK8Q0xxhBfMTFAgKJRoyIQoUABNRKJQGwaUEAoxQK5tQ9aoe0tvb2Pc8/PA5i4MFAmmWQm58xv/mfOeNyChpEMkk9MYKeDIAxyhk0qs8aKbuC6knAyz1Q0y7TySS2LIyRbmceYuMJM0y6+Ne1G69iLufKDo7d72FfVyp7KVoKzGlXPxjl0f4TDj0YpbwiQK9gbxVL+D/aI9FescD12zI+98h3XKTI2G8cf+MlgcAG9UGRoJoV3KMLHqTjhhI5wXVXqKuA/V/hNIDs0IQSO45S852GdLsVf3+zkKgXCFayPyi2moLiEKGpqvBpYUcjP4+hhrGwIOxdCqFgWFtVlayuFm/JdUYT0IMOfa6lpKeNW8wm6B6pxtU7q/ee413eWut5KGlRsLrwAPbQ9UDp5SA3Q/6mW695TXGs5yZveamTUx8O+Km50naH+/SV8wzWY8y8hN7k9EFHg91I7VuwdxH2Q8CF+dWMsdmAvdWJE3iq4Okv2YU8/xV0OlgZGI68x412w2o+Z9JGOdJCZa8NJ9UJmALnqR+Y/YE+2qmaBEkBnDTPRQzbQjN5eR+rVXfSeB4hYN7m2O2SeXCXbeJPVx5exJrzIbIknS9tAKhXL3ovEy4+QvFBBouKYmv1z4uePEzuwn+TpMmLHDipgIxihHeyhGUcsj2POfcEMj2BFRtXazGKp3Bjzb+QiM4VUPyyFwR9mNmZxjeXOCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;v8 engine 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c4bc15954e0a10b459e1cda766908056/1cfc2/v8_engine_1.png&quot;
+        srcset=&quot;/static/c4bc15954e0a10b459e1cda766908056/3684f/v8_engine_1.png 225w,
+/static/c4bc15954e0a10b459e1cda766908056/fc2a6/v8_engine_1.png 450w,
+/static/c4bc15954e0a10b459e1cda766908056/1cfc2/v8_engine_1.png 900w,
+/static/c4bc15954e0a10b459e1cda766908056/21482/v8_engine_1.png 1350w,
+/static/c4bc15954e0a10b459e1cda766908056/49b61/v8_engine_1.png 1756w&quot;
+        sizes=&quot;(max-width: 900px) 100vw, 900px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;이슈 생성하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E35&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E35&quot;&gt;&lt;/p&gt;
-&lt;p&gt;→ 참고로 이슈페이지에서 &lt;code class=&quot;language-text&quot;&gt;@이름&lt;/code&gt; 을 통해 다른 사용자를 언급할 수 있고, &lt;code class=&quot;language-text&quot;&gt;#num&lt;/code&gt; 을 통해 커밋, 이슈 들을 참조해 소통을 원활하게 할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Label 설정하기&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;각 이슈에 tag / label을 부여하여 이슈의 검색효율을 높인다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99EA75385C4D66722D&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99EA75385C4D66722D&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;해당 이슈에 대해 Assignees(책임자)를 부여&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99A223405C4D667231&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99A223405C4D667231&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/998B0C405C4D667133&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/998B0C405C4D667133&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;Assignees와 Labels를 각 이슈들에 부여한 후 목록페이지로 돌아오면 다음과 같이 깔끔하게 정리되어 있다. 이 label과 assignee를 통해 Filters 란에서 필터링하여 이슈를 검색할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Issue 키워드&lt;/strong&gt;
-&lt;ul&gt;
-&lt;li&gt;close&lt;/li&gt;
-&lt;li&gt;closes&lt;/li&gt;
-&lt;li&gt;closed&lt;/li&gt;
-&lt;li&gt;fix&lt;/li&gt;
-&lt;li&gt;fixes&lt;/li&gt;
-&lt;li&gt;fised&lt;/li&gt;
-&lt;li&gt;resolve&lt;/li&gt;
-&lt;li&gt;resolves&lt;/li&gt;
-&lt;li&gt;resolved&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git commit -m &quot;css 문제 해결 close #20&quot;&lt;/code&gt; &lt;br/&gt;
-&lt;code class=&quot;language-text&quot;&gt;$ git commit -m &quot;router 개발 close #20, #21, #23&quot;&lt;/code&gt; &lt;br/&gt;
-⇒ 커밋 제목이나 내용에 추가하면 됨.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;V8은 소스코드를 가져다가 파서에게 넘긴다.&lt;/li&gt;
+&lt;li&gt;소스 코드를 분석후 AST(Abstract Syntax Tree) 즉, 추상 구문 트리로 변환하고 Ignition에게 넘겨준다.&lt;/li&gt;
+&lt;li&gt;Ignition은 자바스크립트를 &lt;strong&gt;바이트 코드&lt;/strong&gt;로 컴파일해주는 역할을 수행한다.&lt;/li&gt;
+&lt;li&gt;이후 이 바이트 코드를 실행함으로써 소스 코드가 실제로 작동한다.&lt;/li&gt;
+&lt;li&gt;그 중, 자주 사용되는 코드는 TurboFan에 넘겨져 최적화시키기 위해 다시 &lt;strong&gt;기계어&lt;/strong&gt;로 컴파일 된다.
+&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&quot;github-milestone&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-milestone&quot; aria-label=&quot;github milestone permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github MileStone&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;각 기능별 서로 유사한 이슈들이 존재하며, 이 관련된 이슈들을 찾거나 해당 기능들이 얼마나 구현되었는지 파악하기 위해선 일일히 추적해야하는 어려움을 해소시킨다.&lt;/strong&gt; &lt;br/&gt;
-⇒ 마일스톤은 말그대로 이정표 역할을 하며, 이슈들을 그룹화하고 진행상황을 표현.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99A110385C4D66742F&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99A110385C4D66742F&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;이전에 Label을 부여한 것과 같이 이슈 상세페이지에서 마일스톤을 부여할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;마일스톤으로 3개의 이슈를 모두 묶을 수 있고, 만약 아래와 같이 하나의 이슈가 완료(close)되면 마일스톤의 진행상황이 업데이트 된다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8klEQVR42n1Ty44TMRDM9/MVHLjwCRwQEickhMTjsJFAYbMLSSbxZGb8fk5R9oQQrQBLpbbTTnV1uWfVf/iIhxcvMfU9xmnCJCVKjkgpoa65FJR/YJ5Lu4OSUKJFjg6rdp5nTFo3sorNfmDUjTTl3PJPUZe2Hp+2A778tPj8w+LrwS6EmX+U1kEbDWuZfBxZwMJxH2OgzPmiZm6YsRAqF/B2PeDNWuH1ncL77wqrkAtsSJiMhaRKwxiDp8IJUvFMFdoY+BBRKTPJc5lbLFV99PizZqx2k8Zu1BDEiehH0+KgSOQL1A0MIV2CmCwFRIws9O24haGARGEhpqXllCIsk9c6F49+7/+Gumxw2Jy2CHzE6sJM5Y3QHU8Qm3t64mD04mP1M7OlKyluCC8e1rzWDv15gKpW8bzqlIWgV9EH+uVgnW9+eR9bC9b75mOF42/GVU8dFB8thIDzMODQdcSRnvNRJC/1ZD/2Z4hBYmRFaUODcsxJQ8/o8aRaru3pcTfw0ay/zG2ug9DUt5YNFR0OHSQH+9a//606iwOVGnZ2a8OVcGJSNhgoti7ZkqSX0thlpAjLbnzKiKmgfkj1zjicIaW6ClkehVX2px7H89har7GSKLZUyWt83J9wv9tDCIlXD+/w7O451mID0QnsRcdCoRH+AjZZojLl6s31AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;issue wiki 1&quot;
-        title=&quot;&quot;
-        src=&quot;/static/f6b5387e1a98a5972253df4fc926bfc4/6af66/issue_wiki_1.png&quot;
-        srcset=&quot;/static/f6b5387e1a98a5972253df4fc926bfc4/3684f/issue_wiki_1.png 225w,
-/static/f6b5387e1a98a5972253df4fc926bfc4/fc2a6/issue_wiki_1.png 450w,
-/static/f6b5387e1a98a5972253df4fc926bfc4/6af66/issue_wiki_1.png 640w&quot;
-        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;이슈가 종료되면 아래 이미지와 같이 main page라는 마일스톤의 진행상황이 업데이트 되는 것을 볼 수 있다. 이 마일스톤 기능을 통해 연관된 이슈의 추적과 진행상황을 한 눈에 파악할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 22.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR42nWPW07DMBBFvUKWwipYALACxDr44hfxARJCQnzQEpWqQJvUr/h5sENIKhBjHV1pZnztKy6u1xydPXF+taZWzvxb+deZB5nTx0uOb08Qn9uOvdJ0e0nvPH0/4g50JLhE8nnAu4hzYaLuKmURbdsipSSESIzpD7U/zEJiY7Ys5IoX9cbOSryP02Pfpg6xfF3SNA1aa7TRKK2KGow1WGtLmjna8/uCm+aeu9UDm+4DXZJVk5Ty9AFh6uVCNZRKDZpTiTZSDX+oMb0NROPKztw/rC8ivoIgO7mVWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;issue wiki 2&quot;
-        title=&quot;&quot;
-        src=&quot;/static/78a042ddd4d0b8863f5c77a0fbbc56a8/6af66/issue_wiki_2.png&quot;
-        srcset=&quot;/static/78a042ddd4d0b8863f5c77a0fbbc56a8/3684f/issue_wiki_2.png 225w,
-/static/78a042ddd4d0b8863f5c77a0fbbc56a8/fc2a6/issue_wiki_2.png 450w,
-/static/78a042ddd4d0b8863f5c77a0fbbc56a8/6af66/issue_wiki_2.png 640w&quot;
-        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;github-project&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-project&quot; aria-label=&quot;github project permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Project&lt;/h2&gt;
-&lt;p&gt;프로젝트의 &lt;strong&gt;칸반보드&lt;/strong&gt; 기능을 이용하면, 이슈들을 좀 더 조직화할 수 있고, 우선순위에 따라 정렬하거나 보다 한 눈에 workflow를 볼 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99477B4E5C4D6BCF31&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99477B4E5C4D6BCF31&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;프로젝트의 이름과 템플릿을 설정한다. 여기서는
-&lt;strong&gt;“automated Kanban”&lt;/strong&gt;
-을 선택해, 기본 템플릿이 있고 이슈를 알아서 어느정도 관리해주는 템플릿을 선택한다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99956E4E5C4D6BCF0A&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99956E4E5C4D6BCF0A&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;프로젝트가 생성되면 아래와 같이 3개의 열로 구성된 기본 템플릿이 메인 창에 나타나며, 오른쪽 사이트 바엔 이전에 생성했던 열려있는(open) 이슈 카드 목록이 보인다. 3개의 열은 ” To do ”, ” In Progress ”, ” Done “으로 구성되어, 해야할 Task와 진행 중인 Task, 완료된 Task를 묶을 수 있다.(그냥 Trello 보드랑 똑같이 쓰면 된다.)&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/995FAF4E5C4D6BD00C&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/995FAF4E5C4D6BD00C&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;직접 issue 카드를 생성할 수 있으며, 설정의 “Convert to issue” 통해 실제 issue로도 변환할 수 있다.&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9949C24E5C4D6BD00D&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/9949C24E5C4D6BD00D&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;이전에는 Trello 보드를 이용해 이슈들을 관리했었는데, Github 내에서도 이 project 기능을 통해 별도의 트렐로와 같은 툴을 쓰지 않아도 프로젝트의 이슈들을 정리하고 관리할 수 있다.&lt;/p&gt;
-&lt;h2 id=&quot;github-wiki&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-wiki&quot; aria-label=&quot;github wiki permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Wiki&lt;/h2&gt;
-&lt;p&gt;위키는 HTML보다 간단한 마크업 언어(markup language)를 이용하여 문서를 공동으로 작성하고 관리할 수 있도록 해주는 방식이다. 별도의 위키 문법을 사용하여 문서를 편집하며 출력할 때에는 HTML로 변환되어 보여 지기 때문에 작성하는 사람과 보는 사람 모두에게 좋은 문서 환경을 제공한다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;현재 어디서나 가능하다.&lt;/li&gt;
-&lt;li&gt;한 문서 여러 사람이 편집할 수 있다.&lt;/li&gt;
-&lt;li&gt;최근 편집된 문서를 알 수 있다.&lt;/li&gt;
-&lt;li&gt;문서 편집 기록을 남길 수 있다.&lt;/li&gt;
-&lt;li&gt;문서를 검색할 수 있다.&lt;/li&gt;
-&lt;li&gt;footer, sidebar 등을 생성할 수 있다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;⇒ 마크다운 파일을 웹페이지로 확장한 개념으로 이해하면 될 것 같다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git과 Github]]></title><description><![CDATA[Git? GitHub? Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다. GitHub은 Git…]]></description><link>https://maeng2418.github.io/markdowns/git/git&amp;github/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/git/git&amp;github/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;git-github&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-github&quot; aria-label=&quot;git github permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git? GitHub?&lt;/h2&gt;
+&lt;h2 id=&quot;v8의-역할&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#v8%EC%9D%98-%EC%97%AD%ED%95%A0&quot; aria-label=&quot;v8의 역할 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;V8의 역할&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;JS, WASM 코드 컴파일 및 실행&lt;/li&gt;
+&lt;li&gt;콜 스택 처리 (함수 실행)&lt;/li&gt;
+&lt;li&gt;메모리 할당&lt;/li&gt;
+&lt;li&gt;가비지 컬렉션
+&lt;br/&gt;&lt;br/&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;참고자료&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@godori/JavaScript-engine-1&quot;&gt;JavaScript 엔진 톺아보기&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git과 Github]]></title><description><![CDATA[Git? GitHub? Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다. GitHub은 Git…]]></description><link>https://maeng2418.github.io/markdowns/git/git&amp;github/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/git/git&amp;github/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;git-github&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-github&quot; aria-label=&quot;git github permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git? GitHub?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다.&lt;/li&gt;
 &lt;li&gt;GitHub은 Git을 호스팅 해 주는 사이트로, ‘소셜 코딩’을 표방하며 가장 유명하고 널리 사용된다.&lt;/li&gt;
@@ -6858,4 +6816,116 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;chore&lt;/code&gt; : 환경설정 및 기타 변경사항에 사용하는 커밋입니다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item></channel></rss>
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Issue Wiki Milestone Project]]></title><description><![CDATA[Github Issue 프로젝트를 진행하면서 발생하는 모든 이슈 (버그 발생, 개발, 풀 리퀘스트 등등) 이슈 생성하기 https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E3…]]></description><link>https://maeng2418.github.io/markdowns/git/issue_wiki/</link><guid isPermaLink="false">https://maeng2418.github.io/markdowns/git/issue_wiki/</guid><pubDate>Sun, 23 May 2021 09:47:12 GMT</pubDate><content:encoded>&lt;h2 id=&quot;github-issue&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-issue&quot; aria-label=&quot;github issue permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Issue&lt;/h2&gt;
+&lt;p&gt;프로젝트를 진행하면서 발생하는 모든 이슈 (버그 발생, 개발, 풀 리퀘스트 등등)&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;이슈 생성하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E35&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/9929E0405C4D666E35&quot;&gt;&lt;/p&gt;
+&lt;p&gt;→ 참고로 이슈페이지에서 &lt;code class=&quot;language-text&quot;&gt;@이름&lt;/code&gt; 을 통해 다른 사용자를 언급할 수 있고, &lt;code class=&quot;language-text&quot;&gt;#num&lt;/code&gt; 을 통해 커밋, 이슈 들을 참조해 소통을 원활하게 할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Label 설정하기&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;각 이슈에 tag / label을 부여하여 이슈의 검색효율을 높인다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99EA75385C4D66722D&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99EA75385C4D66722D&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;해당 이슈에 대해 Assignees(책임자)를 부여&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99A223405C4D667231&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99A223405C4D667231&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/998B0C405C4D667133&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/998B0C405C4D667133&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Assignees와 Labels를 각 이슈들에 부여한 후 목록페이지로 돌아오면 다음과 같이 깔끔하게 정리되어 있다. 이 label과 assignee를 통해 Filters 란에서 필터링하여 이슈를 검색할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Issue 키워드&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;close&lt;/li&gt;
+&lt;li&gt;closes&lt;/li&gt;
+&lt;li&gt;closed&lt;/li&gt;
+&lt;li&gt;fix&lt;/li&gt;
+&lt;li&gt;fixes&lt;/li&gt;
+&lt;li&gt;fised&lt;/li&gt;
+&lt;li&gt;resolve&lt;/li&gt;
+&lt;li&gt;resolves&lt;/li&gt;
+&lt;li&gt;resolved&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;$ git commit -m &quot;css 문제 해결 close #20&quot;&lt;/code&gt; &lt;br/&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ git commit -m &quot;router 개발 close #20, #21, #23&quot;&lt;/code&gt; &lt;br/&gt;
+⇒ 커밋 제목이나 내용에 추가하면 됨.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;github-milestone&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-milestone&quot; aria-label=&quot;github milestone permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github MileStone&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;각 기능별 서로 유사한 이슈들이 존재하며, 이 관련된 이슈들을 찾거나 해당 기능들이 얼마나 구현되었는지 파악하기 위해선 일일히 추적해야하는 어려움을 해소시킨다.&lt;/strong&gt; &lt;br/&gt;
+⇒ 마일스톤은 말그대로 이정표 역할을 하며, 이슈들을 그룹화하고 진행상황을 표현.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99175D405C4D667101&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99A110385C4D66742F&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99A110385C4D66742F&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이전에 Label을 부여한 것과 같이 이슈 상세페이지에서 마일스톤을 부여할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;마일스톤으로 3개의 이슈를 모두 묶을 수 있고, 만약 아래와 같이 하나의 이슈가 완료(close)되면 마일스톤의 진행상황이 업데이트 된다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8klEQVR42n1Ty44TMRDM9/MVHLjwCRwQEickhMTjsJFAYbMLSSbxZGb8fk5R9oQQrQBLpbbTTnV1uWfVf/iIhxcvMfU9xmnCJCVKjkgpoa65FJR/YJ5Lu4OSUKJFjg6rdp5nTFo3sorNfmDUjTTl3PJPUZe2Hp+2A778tPj8w+LrwS6EmX+U1kEbDWuZfBxZwMJxH2OgzPmiZm6YsRAqF/B2PeDNWuH1ncL77wqrkAtsSJiMhaRKwxiDp8IJUvFMFdoY+BBRKTPJc5lbLFV99PizZqx2k8Zu1BDEiehH0+KgSOQL1A0MIV2CmCwFRIws9O24haGARGEhpqXllCIsk9c6F49+7/+Gumxw2Jy2CHzE6sJM5Y3QHU8Qm3t64mD04mP1M7OlKyluCC8e1rzWDv15gKpW8bzqlIWgV9EH+uVgnW9+eR9bC9b75mOF42/GVU8dFB8thIDzMODQdcSRnvNRJC/1ZD/2Z4hBYmRFaUODcsxJQ8/o8aRaru3pcTfw0ay/zG2ug9DUt5YNFR0OHSQH+9a//606iwOVGnZ2a8OVcGJSNhgoti7ZkqSX0thlpAjLbnzKiKmgfkj1zjicIaW6ClkehVX2px7H89har7GSKLZUyWt83J9wv9tDCIlXD+/w7O451mID0QnsRcdCoRH+AjZZojLl6s31AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;issue wiki 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/f6b5387e1a98a5972253df4fc926bfc4/6af66/issue_wiki_1.png&quot;
+        srcset=&quot;/static/f6b5387e1a98a5972253df4fc926bfc4/3684f/issue_wiki_1.png 225w,
+/static/f6b5387e1a98a5972253df4fc926bfc4/fc2a6/issue_wiki_1.png 450w,
+/static/f6b5387e1a98a5972253df4fc926bfc4/6af66/issue_wiki_1.png 640w&quot;
+        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이슈가 종료되면 아래 이미지와 같이 main page라는 마일스톤의 진행상황이 업데이트 되는 것을 볼 수 있다. 이 마일스톤 기능을 통해 연관된 이슈의 추적과 진행상황을 한 눈에 파악할 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 640px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR42nWPW07DMBBFvUKWwipYALACxDr44hfxARJCQnzQEpWqQJvUr/h5sENIKhBjHV1pZnztKy6u1xydPXF+taZWzvxb+deZB5nTx0uOb08Qn9uOvdJ0e0nvPH0/4g50JLhE8nnAu4hzYaLuKmURbdsipSSESIzpD7U/zEJiY7Ys5IoX9cbOSryP02Pfpg6xfF3SNA1aa7TRKK2KGow1WGtLmjna8/uCm+aeu9UDm+4DXZJVk5Ty9AFh6uVCNZRKDZpTiTZSDX+oMb0NROPKztw/rC8ivoIgO7mVWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;issue wiki 2&quot;
+        title=&quot;&quot;
+        src=&quot;/static/78a042ddd4d0b8863f5c77a0fbbc56a8/6af66/issue_wiki_2.png&quot;
+        srcset=&quot;/static/78a042ddd4d0b8863f5c77a0fbbc56a8/3684f/issue_wiki_2.png 225w,
+/static/78a042ddd4d0b8863f5c77a0fbbc56a8/fc2a6/issue_wiki_2.png 450w,
+/static/78a042ddd4d0b8863f5c77a0fbbc56a8/6af66/issue_wiki_2.png 640w&quot;
+        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;github-project&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-project&quot; aria-label=&quot;github project permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Project&lt;/h2&gt;
+&lt;p&gt;프로젝트의 &lt;strong&gt;칸반보드&lt;/strong&gt; 기능을 이용하면, 이슈들을 좀 더 조직화할 수 있고, 우선순위에 따라 정렬하거나 보다 한 눈에 workflow를 볼 수 있다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99477B4E5C4D6BCF31&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99477B4E5C4D6BCF31&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;프로젝트의 이름과 템플릿을 설정한다. 여기서는
+&lt;strong&gt;“automated Kanban”&lt;/strong&gt;
+을 선택해, 기본 템플릿이 있고 이슈를 알아서 어느정도 관리해주는 템플릿을 선택한다.&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/99956E4E5C4D6BCF0A&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/99956E4E5C4D6BCF0A&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;프로젝트가 생성되면 아래와 같이 3개의 열로 구성된 기본 템플릿이 메인 창에 나타나며, 오른쪽 사이트 바엔 이전에 생성했던 열려있는(open) 이슈 카드 목록이 보인다. 3개의 열은 ” To do ”, ” In Progress ”, ” Done “으로 구성되어, 해야할 Task와 진행 중인 Task, 완료된 Task를 묶을 수 있다.(그냥 Trello 보드랑 똑같이 쓰면 된다.)&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/995FAF4E5C4D6BD00C&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/995FAF4E5C4D6BD00C&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;직접 issue 카드를 생성할 수 있으며, 설정의 “Convert to issue” 통해 실제 issue로도 변환할 수 있다.&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://t1.daumcdn.net/cfile/tistory/9949C24E5C4D6BD00D&quot; alt=&quot;https://t1.daumcdn.net/cfile/tistory/9949C24E5C4D6BD00D&quot;&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이전에는 Trello 보드를 이용해 이슈들을 관리했었는데, Github 내에서도 이 project 기능을 통해 별도의 트렐로와 같은 툴을 쓰지 않아도 프로젝트의 이슈들을 정리하고 관리할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;github-wiki&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-wiki&quot; aria-label=&quot;github wiki permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Wiki&lt;/h2&gt;
+&lt;p&gt;위키는 HTML보다 간단한 마크업 언어(markup language)를 이용하여 문서를 공동으로 작성하고 관리할 수 있도록 해주는 방식이다. 별도의 위키 문법을 사용하여 문서를 편집하며 출력할 때에는 HTML로 변환되어 보여 지기 때문에 작성하는 사람과 보는 사람 모두에게 좋은 문서 환경을 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 어디서나 가능하다.&lt;/li&gt;
+&lt;li&gt;한 문서 여러 사람이 편집할 수 있다.&lt;/li&gt;
+&lt;li&gt;최근 편집된 문서를 알 수 있다.&lt;/li&gt;
+&lt;li&gt;문서 편집 기록을 남길 수 있다.&lt;/li&gt;
+&lt;li&gt;문서를 검색할 수 있다.&lt;/li&gt;
+&lt;li&gt;footer, sidebar 등을 생성할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;⇒ 마크다운 파일을 웹페이지로 확장한 개념으로 이해하면 될 것 같다.&lt;/p&gt;</content:encoded></item></channel></rss>
