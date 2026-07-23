@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+
+# 빌드타임에 content/images → public/content-images 로 복사되는 생성물 (scripts/sync-content-images.mjs)
+public/content-images/
+
+# design-tool installs (taste-skill/impeccable) — local only
+.agents/
+.claude/
