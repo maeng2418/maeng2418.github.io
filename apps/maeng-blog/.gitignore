@@ -10,3 +10,4 @@ public/content-images/
 # design-tool installs (taste-skill/impeccable) — local only
 .agents/
 .claude/
+.moai/
