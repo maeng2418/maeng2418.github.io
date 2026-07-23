@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+.next/
+out/
+
+# turbo
+.turbo/
+
+# typescript
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+yarn-error.log
