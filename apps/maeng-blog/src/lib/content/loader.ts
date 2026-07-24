@@ -11,7 +11,8 @@ import { sortByDateDesc } from './list'
 import { renderMarkdownToHtml } from './render'
 import type { Post, PostMeta, TilEntry } from './types'
 
-const CONTENT_DIR = path.join(process.cwd(), 'content')
+// 테스트 환경(vitest)에서만 MAENG_CONTENT_DIR 로 픽스처 디렉터리를 주입 — 프로덕션 빌드는 기존 process.cwd()/content 그대로 (REQ-MIG-005)
+const CONTENT_DIR = process.env.MAENG_CONTENT_DIR ?? path.join(process.cwd(), 'content')
 const MARKDOWNS_DIR = path.join(CONTENT_DIR, 'markdowns')
 const TIL_DIR = path.join(CONTENT_DIR, 'til')
 
