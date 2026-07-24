@@ -1,517 +1,740 @@
 'use client'
 
-// 포트폴리오 스크롤 장면 — REQ-BLOG-006/007, design.md §4 (A안: 자산 불요 모션 온리)
-// 승인 시안(.moai/reports/design/maeng-portfolio-preview.html)의 장면 구성을 이식:
-//   Scene 1 인트로 메가 타이틀(스크롤 scale/fade) → Scene 2 소개 가치 카드 stagger
-//   → Scene 3 스킬(테크/소프트/디자인 + 칩 stagger) → Scene 4 프로젝트 가로 레일 스크럽
-//   → Scene 5 타임라인/경력/학력 → Scene 6 컨택트(로케일별 PDF 다운로드)
-// 성능/접근성: transform/opacity 만 애니메이트, prefers-reduced-motion 시 전 모션 비활성
-// (globals.css .pf-* 폴백 — 정적 레이아웃으로 콘텐츠 완전 표시)
+// 포트폴리오 스크롤 장면 — REQ-BLOG-006/007, 승인 시안 LUMEN
+// (.moai/reports/design/maeng-portfolio-lumen.html — 라이트 에디토리얼 글래스)
+// 구조: 연속 캔버스(흐름 섹션) + 핀 4곳 — 장면 카운터 없는 video-scroll 문법
+//   인트로(핀: businessCard) → 소개(흐름: introduction 유리 슬랫 + 임팩트 지표 카운트업)
+//   → 프로젝트(핀: projects 레일 스크럽) → 경력(핀: experiences crossfade 스택)
+//   → 일하는 방식(흐름: tech/soft/designSkill) → 타임라인(흐름: timestamp 아래→위 게이지
+//   + educations) → 스킬(흐름: skillSets) → 컨택트(핀: 코발트 플러드)
+// 모션 엔진: motion/react (REQ-ENH-008 승계) — transform/opacity 만 애니메이트,
+// reduced-motion 시 useReducedMotion 분기 + globals.css .pf-* 정적 폴백
 import { useEffect, useRef, useState } from 'react'
 import {
-  DEFAULT_LOCALE,
-  readStoredLocale,
-  storeLocale,
-  toggleLocale,
-  type Locale,
-} from '@/lib/i18n/locale'
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+  useScroll,
+  useTransform,
+  type MotionValue,
+} from 'motion/react'
+import { useTranslations } from 'next-intl'
+import { useLocaleToggle } from '@/components/i18n/LocaleProvider'
+import type { Locale } from '@/lib/i18n/locale'
+import { toggleLocale } from '@/lib/i18n/locale'
 import { getPortfolioContent, getResumeHref } from '@/lib/portfolio/content'
 
 const STAGGER_STEP_MS = 70
 
-function Eyebrow({ children }: { children: React.ReactNode }) {
+const CHAPTER_IDS = ['pf-s0', 'pf-s1', 'pf-s2', 'pf-s3', 'pf-s4', 'pf-s5', 'pf-s6', 'pf-s7']
+const CHAPTER_LABELS = [
+  'Intro',
+  'About',
+  'Projects',
+  'Career',
+  'Creed',
+  'Timeline',
+  'Skills',
+  'Contact',
+]
+
+/** 기존 CSS 트랜지션(ease) 승계 — 타이밍/트리거 값 보존 (REQ-ENH-008) */
+const REVEAL_EASE = [0.25, 0.1, 0.25, 1] as const
+
+// 임팩트 지표 — 이력서 성과(놀유니버스 achievements) 기반 UI 크롬. 콘텐츠 카탈로그가 아닌
+// 디자인 요소라 컴포넌트 상수로 관리한다 (승인 시안 LUMEN §About figures)
+const FIGURES: Record<Locale, { value: number; dec: number; suffix: string; label: string }[]> = {
+  ko: [
+    { value: 99.3, dec: 1, suffix: '%', label: '빌드 시간 단축' },
+    { value: 40, dec: 0, suffix: '%', label: '버그 리포팅 감소' },
+    { value: 12, dec: 0, suffix: '+', label: '모노레포 패키지' },
+    { value: 4.8, dec: 1, suffix: 'y', label: 'FE 경력' },
+  ],
+  en: [
+    { value: 99.3, dec: 1, suffix: '%', label: 'Build time cut' },
+    { value: 40, dec: 0, suffix: '%', label: 'Bug reports down' },
+    { value: 12, dec: 0, suffix: '+', label: 'Monorepo packages' },
+    { value: 4.8, dec: 1, suffix: 'y', label: 'FE experience' },
+  ],
+}
+
+function DownloadIcon() {
   return (
-    <p className="mb-4 text-xs font-bold tracking-[0.16em] uppercase text-accent">{children}</p>
+    <svg
+      width="13"
+      height="13"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="-mb-px inline-block"
+    >
+      <path d="M12 3v13m0 0-5.5-5.5M12 16l5.5-5.5M5 21h14" />
+    </svg>
   )
 }
 
-function SceneHeadline({ children }: { children: React.ReactNode }) {
+/** 흐름 섹션 뒤 워터마크 타이포 — 스크롤 속도차 드리프트 (깊이 레이어) */
+function BgWord({ children, factor }: { children: string; factor: number }) {
+  const reduced = useReducedMotion()
+  const ref = useRef<HTMLSpanElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
+  const y = useTransform(scrollYProgress, [0, 1], [factor * 260, factor * -260])
   return (
-    <h2 className="text-[clamp(28px,4.5vw,52px)] font-extrabold leading-[1.08] tracking-[-0.03em] text-balance">
+    <motion.span
+      ref={ref}
+      className="pf-bg-word"
+      style={reduced ? undefined : { y }}
+      aria-hidden
+    >
       {children}
-    </h2>
+    </motion.span>
   )
 }
 
-export default function PortfolioScroll({ initialLocale = DEFAULT_LOCALE }: { initialLocale?: Locale }) {
-  const [locale, setLocale] = useState<Locale>(initialLocale)
+/** 임팩트 지표 카운트업 — 소개 섹션 진행도 스크럽 (되감기 가능, SSR 은 최종값 렌더) */
+function Figure({
+  progress,
+  value,
+  dec,
+  suffix,
+  label,
+}: {
+  progress: MotionValue<number>
+  value: number
+  dec: number
+  suffix: string
+  label: string
+}) {
+  const reduced = useReducedMotion()
+  const final = value.toFixed(dec)
+  const [text, setText] = useState(final)
+  const eased = useTransform(progress, [0.45, 0.8], [0, 1])
+  useMotionValueEvent(eased, 'change', (v) => {
+    if (!reduced) setText((value * v).toFixed(dec))
+  })
+  return (
+    <div>
+      <b>
+        {reduced ? final : text}
+        {suffix}
+      </b>
+      <span>{label}</span>
+    </div>
+  )
+}
+
+/** 경력 crossfade 카드 — 핀 진행도의 1/n 슬롯 구간에서 등장→퇴장 */
+function CareerCard({
+  index,
+  count,
+  progress,
+  children,
+}: {
+  index: number
+  count: number
+  progress: MotionValue<number>
+  children: React.ReactNode
+}) {
+  const reduced = useReducedMotion()
+  const slot = 1 / count
+  const a = index * slot
+  const enterEnd = a + slot * 0.25
+  const last = index === count - 1
+  const exitStart = last ? 2 : (index + 1) * slot - slot * 0.2
+  const exitEnd = last ? 3 : (index + 1) * slot
+  const opacity = useTransform(progress, [a, enterEnd, exitStart, exitEnd], [0, 1, 1, 0])
+  const y = useTransform(progress, [a, enterEnd, exitStart, exitEnd], [40, 0, 0, -30])
+  const pointerEvents = useTransform(opacity, (o) => (o > 0.5 ? 'auto' : 'none'))
+  return (
+    <motion.article
+      className="pf-glass pf-career-card"
+      style={reduced ? undefined : { opacity, y, pointerEvents }}
+    >
+      {children}
+    </motion.article>
+  )
+}
+
+/** 타임라인 항목 — 아래(과거)부터 점등 (REQ: 게이지 역방향) */
+function TimelineItem({
+  indexFromBottom,
+  count,
+  progress,
+  when,
+  children,
+}: {
+  indexFromBottom: number
+  count: number
+  progress: MotionValue<number>
+  when: string
+  children: React.ReactNode
+}) {
+  const reduced = useReducedMotion()
+  const k = indexFromBottom
+  const opacity = useTransform(progress, [Math.max(0, k / count - 0.05), (k + 0.9) / count], [0.3, 1])
+  const litOpacity = useTransform(progress, (v) => (v >= (k + 0.5) / count ? 1 : 0))
+  return (
+    <motion.div className="pf-tl-item" style={reduced ? undefined : { opacity }}>
+      <motion.i className="dotlit" style={reduced ? undefined : { opacity: litOpacity }} aria-hidden />
+      <span className="when font-mono">{when}</span>
+      <span>{children}</span>
+    </motion.div>
+  )
+}
+
+export default function PortfolioScroll() {
+  // 로케일 상태/토글/지속은 LocaleProvider 가 단일 관리한다 (REQ-ENH-002)
+  const { locale, toggle: onToggleLocale } = useLocaleToggle()
+  const t = useTranslations('portfolio')
+  const reduced = useReducedMotion()
 
   const rootRef = useRef<HTMLDivElement>(null)
   const introPinRef = useRef<HTMLDivElement>(null)
-  const introTitleRef = useRef<HTMLHeadingElement>(null)
+  const aboutRef = useRef<HTMLElement>(null)
   const projPinRef = useRef<HTMLDivElement>(null)
   const railWrapRef = useRef<HTMLDivElement>(null)
   const railRef = useRef<HTMLDivElement>(null)
+  const careerPinRef = useRef<HTMLDivElement>(null)
+  const tlRef = useRef<HTMLElement>(null)
   const contactPinRef = useRef<HTMLDivElement>(null)
-  const contactTitleRef = useRef<HTMLHeadingElement>(null)
 
-  // localStorage 하이드레이션 — 렌더 중 접근 금지 (SSR/정적 export 안전, REQ-BLOG-007)
-  useEffect(() => {
-    setLocale(readStoredLocale(window.localStorage))
-  }, [])
-
-  const onToggleLocale = () => {
-    setLocale((prev) => {
-      const next = toggleLocale(prev)
-      storeLocale(next, window.localStorage)
-      return next
-    })
+  // 흐름 섹션 등장 — motion variants (threshold 0.2 · step 70ms 승계)
+  const groupVariants = {
+    hidden: {},
+    show: { transition: { staggerChildren: reduced ? 0 : STAGGER_STEP_MS / 1000 } },
+  }
+  const itemVariants = reduced
+    ? { hidden: { opacity: 1, y: 0 }, show: { opacity: 1, y: 0 } }
+    : {
+        hidden: { opacity: 0, y: 28 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: REVEAL_EASE } },
+      }
+  const groupProps = {
+    initial: 'hidden' as const,
+    whileInView: 'show' as const,
+    viewport: { once: true, amount: 0.2 },
+    variants: groupVariants,
   }
 
-  // stagger 등장 (IntersectionObserver) — reduced-motion 시 지연 없이 즉시 표시
+  // 전역 재생 타임라인 (상단 헤어라인)
+  const { scrollYProgress: pageProgress } = useScroll()
+
+  // 인트로: 정착 유지 → 후반 물러남
+  const { scrollYProgress: introProgress } = useScroll({
+    target: introPinRef,
+    offset: ['start start', 'end end'],
+  })
+  const introY = useTransform(introProgress, [0, 0.58, 1], [0, 0, -50])
+  const introOpacity = useTransform(introProgress, [0, 0.58, 1], [1, 1, 0.1])
+  const hintOpacity = useTransform(introProgress, [0.02, 0.12], [1, 0])
+
+  // 소개 섹션 진행도 (카운트업 공급)
+  const { scrollYProgress: aboutProgress } = useScroll({
+    target: aboutRef,
+    offset: ['start 0.9', 'end 0.45'],
+  })
+
+  // 프로젝트 레일 스크럽
+  const { scrollYProgress: projProgress } = useScroll({
+    target: projPinRef,
+    offset: ['start start', 'end end'],
+  })
+  const railProgress = useTransform(projProgress, [0.14, 0.95], [0, 1], { clamp: true })
+  const railMaxRef = useRef(0)
+  useEffect(() => {
+    const measure = () => {
+      railMaxRef.current = Math.max(
+        0,
+        (railRef.current?.scrollWidth ?? 0) - (railWrapRef.current?.clientWidth ?? 0)
+      )
+    }
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [locale])
+  const railX = useTransform(railProgress, (progress) => -progress * railMaxRef.current)
+  const railBarWidth = useTransform(railProgress, (progress) => `${progress * 100}%`)
+  const [railIdx, setRailIdx] = useState(1)
+  useMotionValueEvent(railProgress, 'change', (v) => {
+    setRailIdx((prev) => {
+      const next = Math.min(4, 1 + Math.floor(v * 4))
+      return next === prev ? prev : next
+    })
+  })
+
+  // 경력 crossfade 진행도
+  const { scrollYProgress: careerRaw } = useScroll({
+    target: careerPinRef,
+    offset: ['start start', 'end end'],
+  })
+  const careerProgress = useTransform(careerRaw, [0.12, 0.94], [0, 1], { clamp: true })
+  const careerBarWidth = useTransform(careerProgress, (progress) => `${progress * 100}%`)
+  const [careerIdx, setCareerIdx] = useState(1)
+  useMotionValueEvent(careerProgress, 'change', (v) => {
+    setCareerIdx((prev) => {
+      const next = Math.min(3, 1 + Math.floor(v * 3))
+      return next === prev ? prev : next
+    })
+  })
+
+  // 타임라인: 아래→위 게이지
+  const { scrollYProgress: tlRaw } = useScroll({
+    target: tlRef,
+    offset: ['start 0.9', 'end 0.55'],
+  })
+  const tlProgress = useTransform(tlRaw, [0.12, 0.95], [0, 1], { clamp: true })
+  const tlFillHeight = useTransform(tlProgress, (progress) => `${progress * 100}%`)
+
+  // 컨택트 플러드
+  const { scrollYProgress: contactProgress } = useScroll({
+    target: contactPinRef,
+    offset: ['start start', 'end end'],
+  })
+  const floodOpacity = useTransform(contactProgress, [0.1, 0.5], [0, 1])
+  const contactY = useTransform(contactProgress, [0.25, 0.7], [60, 0])
+  const contactOpacity = useTransform(contactProgress, [0.25, 0.7], [0.15, 1])
+  const [flooded, setFlooded] = useState(false)
+  useMotionValueEvent(floodOpacity, 'change', (v) => setFlooded(v > 0.5))
+
+  // 챕터 내비 활성 추적
+  const [activeChapter, setActiveChapter] = useState(0)
   useEffect(() => {
     const root = rootRef.current
     if (!root) return
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const groups = root.querySelectorAll<HTMLElement>('[data-stagger-group]')
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (!entry.isIntersecting) continue
-          const items = entry.target.querySelectorAll<HTMLElement>('.pf-stagger:not(.in)')
-          items.forEach((el, i) => {
-            el.style.transitionDelay = reduced ? '0ms' : `${i * STAGGER_STEP_MS}ms`
-            el.classList.add('in')
-          })
-          observer.unobserve(entry.target)
-        }
-      },
-      { threshold: 0.2 }
-    )
-    groups.forEach((group) => observer.observe(group))
-    return () => observer.disconnect()
-  }, [locale])
-
-  // 스크롤 진행도 바인딩 — intro scale/fade · 프로젝트 레일 스크럽 · 컨택트 rise
-  useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
-    const clamp01 = (v: number) => Math.min(1, Math.max(0, v))
-    const pinProgress = (el: HTMLElement | null) => {
-      if (!el) return 0
-      const rect = el.getBoundingClientRect()
-      const scrollable = rect.height - window.innerHeight
-      return scrollable <= 0 ? 0 : clamp01(-rect.top / scrollable)
-    }
-
-    let raf = 0
-    const apply = () => {
-      raf = 0
-      const introTitle = introTitleRef.current
-      if (introTitle) {
-        const p = pinProgress(introPinRef.current)
-        introTitle.style.transform = `scale(${1 - p * 0.18}) translateY(${p * -40}px)`
-        introTitle.style.opacity = String(1 - p * 0.85)
-      }
-      const rail = railRef.current
-      const railWrap = railWrapRef.current
-      if (rail && railWrap) {
-        const p = pinProgress(projPinRef.current)
-        const max = Math.max(0, rail.scrollWidth - railWrap.clientWidth)
-        rail.style.transform = `translateX(${-p * max}px)`
-      }
-      const contactTitle = contactTitleRef.current
-      if (contactTitle) {
-        const p = pinProgress(contactPinRef.current)
-        contactTitle.style.transform = `translateY(${(1 - p) * 60}px)`
-        contactTitle.style.opacity = String(0.2 + p * 0.8)
-      }
-    }
     const onScroll = () => {
-      if (raf === 0) raf = window.requestAnimationFrame(apply)
+      const mid = window.innerHeight * 0.5
+      let active = 0
+      CHAPTER_IDS.forEach((id, i) => {
+        const el = document.getElementById(id)
+        if (!el) return
+        const r = el.getBoundingClientRect()
+        if (r.top <= mid && r.bottom >= mid) active = i
+      })
+      setActiveChapter((prev) => (prev === active ? prev : active))
     }
-
     window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll, { passive: true })
-    apply()
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
-      if (raf !== 0) window.cancelAnimationFrame(raf)
-    }
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const c = getPortfolioContent(locale)
   const resumeHref = getResumeHref(locale)
   const otherResumeHref = getResumeHref(toggleLocale(locale))
+  const figures = FIGURES[locale]
+  const tlCount = c.timestamp.items.length
+  const accent = (chunks: React.ReactNode) => <span className="pf-blue">{chunks}</span>
 
   return (
-    <div ref={rootRef}>
-      {/* 우상단 고정 액션 — 다운로드 + 번역 토글 (레거시 배치 패리티, design.md §3.4) */}
+    <div ref={rootRef} className="pf-lumen">
+      {/* 색 리본 — 유리 아래로 지나가는 채도 필드 */}
+      <div className="pf-ribbons" aria-hidden />
+
+      {/* 전역 재생 타임라인 헤어라인 */}
+      <motion.div
+        className="pf-progress"
+        style={reduced ? undefined : { scaleX: pageProgress }}
+        aria-hidden
+      />
+
+      {/* 챕터 내비 (데스크톱) */}
+      <nav className="pf-chapters" aria-label={locale === 'ko' ? '섹션 이동' : 'Sections'}>
+        {CHAPTER_IDS.map((id, i) => (
+          <a key={id} href={`#${id}`} className={i === activeChapter ? 'active' : ''}>
+            <span className="lbl">{CHAPTER_LABELS[i]}</span>
+            <span className="dot" />
+          </a>
+        ))}
+      </nav>
+
+      {/* 우상단 고정 액션 — 다운로드 + 번역 토글 (레거시 배치 패리티) */}
       <div className="fixed top-20 right-5 z-40 flex gap-2 md:right-8">
         <a
           data-section="downloadButton"
           href={resumeHref}
           download
-          className="rounded-full bg-accent px-4 py-2 text-[13px] font-semibold text-paper no-underline transition-opacity hover:opacity-90"
+          className="pf-btn-solid rounded-full px-4 py-2 text-[13px] font-semibold no-underline transition-opacity hover:opacity-90"
         >
-          ⬇ {c.actions.download}
+          <DownloadIcon /> {t('actions.download')}
         </a>
         <button
           data-section="translateButton"
           type="button"
           onClick={onToggleLocale}
-          aria-label={c.actions.translateAria}
-          className="rounded-full border border-line bg-card px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+          aria-label={t('actions.translateAria')}
+          className="pf-glass cursor-pointer rounded-full px-4 py-2 text-[13px] font-semibold text-ink transition-colors hover:text-accent"
         >
-          {c.actions.translate}
+          {t('actions.translate')}
         </button>
       </div>
 
-      {/* Scene 1 — 인트로 메가 타이틀 + 명함 (BusinessCard) */}
-      <div ref={introPinRef} className="pf-pin">
+      {/* ── 인트로 (핀) — businessCard ─────────────────────────────── */}
+      <div ref={introPinRef} id="pf-s0" className="pf-pin" style={{ height: '240vh' }}>
         <section data-section="businessCard" className="pf-frame" aria-label={c.businessCard.title}>
-          <div className="mx-auto max-w-[900px] text-center">
-            <Eyebrow>{c.title}</Eyebrow>
-            <h1
-              ref={introTitleRef}
-              className="pf-fx text-[clamp(40px,8vw,104px)] font-extrabold leading-[1.03] tracking-[-0.035em] text-balance"
+          <div className="pf-wrap">
+            <p className="pf-kicker">{c.title}</p>
+            <motion.h1
+              style={reduced ? undefined : { y: introY, opacity: introOpacity }}
+              className="pf-display pf-fx"
             >
-              {locale === 'ko' ? (
-                <>
-                  안녕하세요!
-                  <br />
-                  {c.businessCard.role},
-                  <br />
-                  <span className="text-accent">{c.businessCard.name}</span>입니다!
-                </>
-              ) : (
-                <>
-                  Hello!
-                  <br />
-                  I&apos;m <span className="text-accent">{c.businessCard.name}</span>,
-                  <br />
-                  {c.businessCard.role}!
-                </>
-              )}
-            </h1>
-            <p className="mx-auto mt-6 max-w-[62ch] text-[clamp(15px,2vw,19px)] text-ink-soft">
-              {c.businessCard.tagline}
-            </p>
-            <p className="mt-2 text-[13px] font-semibold tracking-[0.08em] uppercase text-ink-faint">
-              {c.businessCard.career}
-            </p>
-            <ul className="mt-7 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-              {c.businessCard.contacts.map((contact) => (
-                <li key={contact.label}>
-                  <a
-                    href={contact.href}
-                    className="font-semibold text-ink-soft no-underline hover:text-accent"
-                    {...(contact.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  >
-                    {contact.label} ↗
-                  </a>
-                </li>
-              ))}
-            </ul>
+              {t.rich('heroRich', {
+                name: c.businessCard.name,
+                role: c.businessCard.role,
+                br: () => <br />,
+                accent,
+              })}
+            </motion.h1>
+            <motion.div {...groupProps}>
+              <motion.p variants={itemVariants} className="pf-sub">
+                {c.businessCard.tagline}
+                <br />
+                <span className="text-[13px] font-semibold tracking-[0.08em] uppercase text-ink-faint">
+                  {c.businessCard.career}
+                </span>
+              </motion.p>
+              <motion.ul variants={itemVariants} className="pf-contacts">
+                {c.businessCard.contacts.map((contact) => (
+                  <li key={contact.label}>
+                    <a
+                      href={contact.href}
+                      {...(contact.external
+                        ? { target: '_blank', rel: 'noopener noreferrer' }
+                        : {})}
+                    >
+                      {contact.value} ↗
+                    </a>
+                  </li>
+                ))}
+              </motion.ul>
+            </motion.div>
           </div>
+          <motion.div
+            className="pf-scroll-hint"
+            style={reduced ? undefined : { opacity: hintOpacity }}
+          >
+            SCROLL
+          </motion.div>
         </section>
       </div>
 
-      {/* Scene 2 — 소개 (Introduction values stagger) */}
-      <section
+      {/* ── 소개 (흐름) — introduction + 임팩트 지표 ─────────────────── */}
+      <motion.section
+        ref={aboutRef}
+        id="pf-s1"
         data-section="introduction"
-        data-stagger-group
-        className="border-t border-line px-2 py-24 md:py-28"
+        {...groupProps}
+        className="pf-flow"
         aria-label={c.introduction.title}
       >
-        <div className="mx-auto max-w-[900px] text-center">
-          <Eyebrow>{c.introduction.title}</Eyebrow>
-          <SceneHeadline>{c.introduction.headline}</SceneHeadline>
-          <div className="mt-11 grid gap-4 text-left sm:grid-cols-2">
-            {c.introduction.values.map((value) => (
-              <div
-                key={value.title}
-                className="pf-stagger rounded-xl border border-line bg-card p-5"
-              >
-                <b className="mb-1.5 block text-[15px]">{value.title}</b>
-                <p className="text-[13px] text-ink-soft">{value.description}</p>
-              </div>
-            ))}
+        <BgWord factor={0.5}>About</BgWord>
+        <div className="pf-wrap">
+          <div className="pf-head">
+            <motion.h2 variants={itemVariants} className="pf-h2">
+              {c.introduction.headline}
+            </motion.h2>
           </div>
-          <p className="mx-auto mt-10 max-w-[62ch] text-left text-sm text-ink-soft">
-            {c.businessCard.summary.join(' ')}
-          </p>
-        </div>
-      </section>
-
-      {/* Scene 3 — 스킬 (Tech/Soft/Design + Skill Sets 칩 stagger) */}
-      <section
-        data-stagger-group
-        className="border-t border-line px-2 py-24 md:py-28"
-        aria-label={c.skillSets.title}
-      >
-        <div className="mx-auto max-w-[900px] text-center">
-          <Eyebrow>{c.skillSets.title}</Eyebrow>
-          <SceneHeadline>{c.skillSets.headline}</SceneHeadline>
-
-          <div className="mt-11 grid gap-4 text-left md:grid-cols-3">
-            <div data-section="techSkill" className="pf-stagger rounded-xl border border-line bg-card p-5">
-              <b className="mb-2 block text-[15px]">{c.techSkill.title}</b>
-              <ul className="list-disc space-y-1 pl-4 text-[13px] text-ink-soft">
-                {c.techSkill.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
-                ))}
-              </ul>
+          <div className="pf-content" style={{ maxWidth: 900 }}>
+            <div className="flex flex-col gap-3">
+              {c.introduction.values.map((value) => (
+                <motion.div key={value.title} variants={itemVariants} className="pf-glass pf-slat">
+                  <b>{value.title}</b>
+                  <p>{value.description}</p>
+                </motion.div>
+              ))}
             </div>
-            <div data-section="softSkill" className="pf-stagger rounded-xl border border-line bg-card p-5">
-              <b className="mb-2 block text-[15px]">{c.softSkill.title}</b>
-              <ul className="list-disc space-y-1 pl-4 text-[13px] text-ink-soft">
-                {c.softSkill.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-            <div data-section="designSkill" className="pf-stagger rounded-xl border border-line bg-card p-5">
-              <b className="mb-2 block text-[15px]">{c.designSkill.title}</b>
-              <ul className="list-disc space-y-1 pl-4 text-[13px] text-ink-soft">
-                {c.designSkill.details.map((detail) => (
-                  <li key={detail}>{detail}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div data-section="skillSets" className="mt-10">
-            {c.skillSets.groups.map((group) => (
-              <div key={group.label} className="mt-7">
-                <span className="text-xs font-bold tracking-[0.12em] uppercase text-ink-faint">
-                  {group.label}
-                </span>
-                <div className="mt-2.5 flex flex-wrap justify-center gap-2">
-                  {group.skills.map((skill) => {
-                    const hot = group.highlights?.includes(skill)
-                    return (
-                      <span
-                        key={skill}
-                        className={`pf-stagger rounded-full px-3.5 py-1.5 text-[13px] font-semibold ${
-                          hot
-                            ? 'bg-accent-soft text-accent'
-                            : 'border border-line bg-card text-ink'
-                        }`}
-                      >
-                        {skill}
-                      </span>
-                    )
-                  })}
-                </div>
-              </div>
-            ))}
+            <motion.div variants={itemVariants} className="pf-glass pf-figures">
+              {figures.map((figure) => (
+                <Figure key={figure.label} progress={aboutProgress} {...figure} />
+              ))}
+            </motion.div>
+            <motion.p variants={itemVariants} className="pf-summary">
+              {c.businessCard.summary.join(' ')}
+            </motion.p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Scene 4 — 프로젝트 가로 레일 (스크롤 진행도 스크럽) */}
-      <div ref={projPinRef} className="pf-pin">
+      {/* ── 프로젝트 (핀 레일) — projects ────────────────────────────── */}
+      <div ref={projPinRef} id="pf-s2" className="pf-pin" style={{ height: '300vh' }}>
         <section data-section="projects" className="pf-frame" aria-label={c.projects.title}>
-          <div className="mx-auto w-full max-w-[1000px] text-center">
-            <Eyebrow>{c.projects.title}</Eyebrow>
-            <SceneHeadline>{c.projects.headline}</SceneHeadline>
-            <div ref={railWrapRef} className="mt-10 w-full overflow-hidden">
-              <div ref={railRef} className="pf-rail flex gap-5">
+          <div className="pf-wrap">
+            <h2 className="pf-h2">
+              <span className="pf-kicker block">{c.projects.title}</span>
+              {c.projects.headline}
+            </h2>
+            <div ref={railWrapRef} className="mt-8 w-full overflow-hidden">
+              <motion.div
+                ref={railRef}
+                style={reduced ? undefined : { x: railX }}
+                className="pf-rail flex gap-[18px] px-1 py-2"
+              >
                 {c.projects.items.map((project) => (
-                  <article
-                    key={project.title}
-                    className="w-[320px] shrink-0 rounded-2xl border border-line bg-card p-6 text-left"
-                  >
-                    <p className="font-mono text-[11px] text-ink-faint">
+                  <article key={project.title} className="pf-glass pf-proj">
+                    <span className="term font-mono">
                       {project.term} · {project.kind}
-                    </p>
-                    <h3 className="mt-1.5 text-[17px] leading-[1.35] font-bold">
+                    </span>
+                    <h3>
                       {project.link ? (
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-ink no-underline hover:text-accent"
-                        >
+                        <a href={project.link} target="_blank" rel="noopener noreferrer">
                           {project.title} ↗
                         </a>
                       ) : (
                         project.title
                       )}
                     </h3>
-                    <p className="mt-2 line-clamp-4 text-[13px] text-ink-soft">
-                      {project.description}
-                    </p>
-                    <p className="mt-2 line-clamp-3 text-[12px] text-ink-faint">
-                      {project.attribution}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-1.5">
+                    <p className="line-clamp-4">{project.description}</p>
+                    <div className="pf-tags">
                       {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full bg-accent-soft px-2 py-0.5 text-[10px] font-bold text-accent"
-                        >
-                          {tag}
-                        </span>
+                        <span key={tag}>{tag}</span>
                       ))}
                     </div>
                     {project.github && (
                       <a
+                        className="mt-3 inline-block text-[12px] font-semibold text-accent no-underline hover:underline"
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3 inline-block text-[12px] font-semibold text-accent no-underline hover:underline"
                       >
                         GitHub ↗
                       </a>
                     )}
                   </article>
                 ))}
-              </div>
+              </motion.div>
+            </div>
+            <div className="pf-meta">
+              <span className="pf-count font-mono">
+                <b>{String(railIdx).padStart(2, '0')}</b> /{' '}
+                {String(c.projects.items.length).padStart(2, '0')}
+              </span>
+              <span className="pf-bar">
+                <motion.i style={reduced ? undefined : { width: railBarWidth }} />
+              </span>
             </div>
           </div>
         </section>
       </div>
 
-      {/* Scene 5 — 타임라인 (Timestamp) + 경력 (Experiences) + 학력 (Educations) */}
-      <section
-        data-section="timestamp"
-        data-stagger-group
-        className="border-t border-line px-2 py-24 md:py-28"
-        aria-label={c.timestamp.title}
-      >
-        <div className="mx-auto max-w-[720px] text-center">
-          <Eyebrow>{c.timestamp.title}</Eyebrow>
-          <SceneHeadline>{c.timestamp.headline}</SceneHeadline>
-          <ol className="mt-10 text-left">
-            {c.timestamp.items.map((item) => (
-              <li
-                key={`${item.when}-${item.title}`}
-                className="pf-stagger grid grid-cols-[112px_1fr] gap-4 border-b border-dashed border-line py-3.5 md:grid-cols-[150px_1fr]"
-              >
-                <span className="pt-0.5 font-mono text-[12px] text-ink-faint">{item.when}</span>
-                <span>
-                  <b className="text-[15px]">{item.title}</b>
-                  {item.current && (
-                    <span className="ml-2 inline-block rounded-full bg-accent px-2 py-0.5 align-[2px] text-[10px] font-bold text-paper">
-                      {c.timestamp.currentBadge}
-                    </span>
-                  )}
-                  <br />
-                  <span className="text-[12px] text-ink-soft">{item.organizer}</span>
+      {/* ── 경력 (핀 crossfade) — experiences ────────────────────────── */}
+      <div ref={careerPinRef} id="pf-s3" className="pf-pin" style={{ height: '330vh' }}>
+        <section data-section="experiences" className="pf-frame" aria-label={c.experiences.title}>
+          <div className="pf-wrap">
+            <div className="pf-head flex flex-wrap items-baseline gap-x-8 gap-y-3">
+              <h2 className="pf-h2 m-0">
+                <span className="pf-kicker block">{c.experiences.title}</span>
+                {c.experiences.headline}
+              </h2>
+              <div className="pf-meta !mt-0 mb-1.5">
+                <span className="pf-count font-mono">
+                  <b>{String(careerIdx).padStart(2, '0')}</b> /{' '}
+                  {String(c.experiences.items.length).padStart(2, '0')}
                 </span>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section
-        data-section="experiences"
-        data-stagger-group
-        className="border-t border-line px-2 py-24 md:py-28"
-        aria-label={c.experiences.title}
-      >
-        <div className="mx-auto max-w-[900px] text-center">
-          <Eyebrow>{c.experiences.title}</Eyebrow>
-          <SceneHeadline>{c.experiences.headline}</SceneHeadline>
-          <div className="mt-11 space-y-6 text-left">
-            {c.experiences.items.map((experience) => (
-              <article
-                key={experience.company}
-                className="pf-stagger rounded-2xl border border-line bg-card p-6 md:p-8"
-              >
-                <header className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="text-lg font-bold tracking-[-0.015em]">{experience.company}</h3>
-                  <span className="font-mono text-[12px] text-ink-faint">{experience.term}</span>
-                </header>
-                <p className="mt-3 text-sm text-ink-soft">{experience.description}</p>
-                <ul className="mt-4 list-disc space-y-1 pl-5 text-[13px] text-ink-soft">
-                  {experience.keyProjects.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <details className="mt-4 text-[13px] text-ink-soft">
-                  <summary className="cursor-pointer font-semibold text-accent">
-                    {c.experiences.viewAchievements}
-                  </summary>
-                  <ul className="mt-2 list-disc space-y-1 pl-5">
-                    {experience.achievements.map((item) => (
+                <span className="pf-bar">
+                  <motion.i style={reduced ? undefined : { width: careerBarWidth }} />
+                </span>
+              </div>
+            </div>
+            <div className="pf-career-stack pf-content">
+              {c.experiences.items.map((experience, i) => (
+                <CareerCard
+                  key={experience.company}
+                  index={i}
+                  count={c.experiences.items.length}
+                  progress={careerProgress}
+                >
+                  <header className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3>{experience.company}</h3>
+                    <span className="term font-mono">{experience.term}</span>
+                  </header>
+                  <p className="desc">{experience.description}</p>
+                  <ul>
+                    {experience.keyProjects.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                </details>
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {experience.techStack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="rounded-full bg-accent-soft px-2.5 py-0.5 text-[11px] font-bold text-accent"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </article>
+                  <details className="mt-3 text-[13px] text-ink-soft">
+                    <summary className="cursor-pointer font-semibold text-accent">
+                      {c.experiences.viewAchievements}
+                    </summary>
+                    <ul className="mt-2">
+                      {experience.achievements.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </details>
+                  <div className="pf-tags mt-4">
+                    {experience.techStack.map((tech) => (
+                      <span key={tech}>{tech}</span>
+                    ))}
+                  </div>
+                </CareerCard>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── 일하는 방식 (흐름) — techSkill / softSkill / designSkill ──── */}
+      <motion.section
+        id="pf-s4"
+        {...groupProps}
+        className="pf-flow"
+        aria-label={c.techSkill.title}
+      >
+        <BgWord factor={0.4}>Craft</BgWord>
+        <div className="pf-wrap">
+          <div className="pf-head pf-head-right">
+            <motion.h2 variants={itemVariants} className="pf-h2">
+              {locale === 'ko' ? '이렇게 일합니다' : 'How I work'}
+            </motion.h2>
+          </div>
+          <div className="pf-content pf-creed-wrap">
+            <div className="pf-creed">
+              {(
+                [
+                  ['techSkill', '01', c.techSkill],
+                  ['softSkill', '02', c.softSkill],
+                  ['designSkill', '03', c.designSkill],
+                ] as const
+              ).map(([id, no, skill]) => (
+                <motion.div
+                  key={id}
+                  variants={itemVariants}
+                  className="pf-creed-item"
+                  data-section={id}
+                >
+                  <b>
+                    <span className="no">{no}</span>
+                    {skill.title}
+                  </b>
+                  <ul>
+                    {skill.details.map((detail) => (
+                      <li key={detail}>{detail}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* ── 타임라인 (흐름, 아래→위) — timestamp + educations ─────────── */}
+      <section
+        ref={tlRef}
+        id="pf-s5"
+        data-section="timestamp"
+        className="pf-flow"
+        aria-label={c.timestamp.title}
+      >
+        <BgWord factor={0.6}>Path</BgWord>
+        <div className="pf-wrap">
+          <div className="pf-head pf-head-indent">
+            <h2 className="pf-h2">{c.timestamp.headline}</h2>
+          </div>
+          <div className="pf-glass pf-tl pf-content">
+            <div className="pf-tl-line">
+              <motion.i style={reduced ? undefined : { height: tlFillHeight }} />
+            </div>
+            {c.timestamp.items.map((item, i) => (
+              <TimelineItem
+                key={`${item.when}-${item.title}`}
+                indexFromBottom={tlCount - 1 - i}
+                count={tlCount}
+                progress={tlProgress}
+                when={item.when}
+              >
+                <b>{item.title}</b>
+                {item.current && <span className="now">{c.timestamp.currentBadge}</span>}
+                <br />
+                <span className="org">{item.organizer}</span>
+              </TimelineItem>
             ))}
+            <div className="pf-edu" data-section="educations" aria-label={c.educations.title}>
+              <span className="pf-kicker block">{c.educations.title}</span>
+              {c.educations.items.map((education) => (
+                <div key={education.title} className="pf-tl-item static">
+                  <span className="when font-mono">{education.term}</span>
+                  <span>
+                    <b>{education.title}</b>
+                    <br />
+                    <span className="org">{education.description}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section
-        data-section="educations"
-        data-stagger-group
-        className="border-t border-line px-2 py-24 md:py-28"
-        aria-label={c.educations.title}
+      {/* ── 스킬 (흐름) — skillSets ──────────────────────────────────── */}
+      <motion.section
+        id="pf-s6"
+        data-section="skillSets"
+        {...groupProps}
+        className="pf-flow"
+        aria-label={c.skillSets.title}
       >
-        <div className="mx-auto max-w-[720px] text-center">
-          <Eyebrow>{c.educations.title}</Eyebrow>
-          <ol className="mt-8 text-left">
-            {c.educations.items.map((education) => (
-              <li
-                key={education.title}
-                className="pf-stagger grid grid-cols-[112px_1fr] gap-4 border-b border-dashed border-line py-3.5 md:grid-cols-[150px_1fr]"
+        <BgWord factor={0.45}>Tools</BgWord>
+        <div className="pf-wrap">
+          <div className="pf-head">
+            <motion.h2 variants={itemVariants} className="pf-h2">
+              {c.skillSets.headline}
+            </motion.h2>
+          </div>
+          <div className="pf-content pf-skills-wrap">
+            {c.skillSets.groups.map((group) => (
+              <motion.div
+                key={group.label}
+                variants={itemVariants}
+                className="pf-glass pf-chip-group"
               >
-                <span className="pt-0.5 font-mono text-[12px] text-ink-faint">{education.term}</span>
-                <span>
-                  <b className="text-[15px]">{education.title}</b>
-                  <br />
-                  <span className="text-[12px] text-ink-soft">{education.description}</span>
-                </span>
-              </li>
+                <span className="label">{group.label}</span>
+                <div className="pf-chips">
+                  {group.skills.map((skill) => {
+                    const hot = group.highlights?.includes(skill)
+                    return (
+                      <span key={skill} className={`pf-chip ${hot ? 'hot' : ''}`}>
+                        {skill}
+                      </span>
+                    )
+                  })}
+                </div>
+              </motion.div>
             ))}
-          </ol>
+          </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Scene 6 — 컨택트 (로케일별 PDF 다운로드, 액센트 대형 등장) */}
-      <div ref={contactPinRef} className="pf-pin pf-pin-short">
-        <section className="pf-frame" aria-label={c.contact.title}>
-          <div className="mx-auto max-w-[900px] text-center">
-            <Eyebrow>{c.contact.title}</Eyebrow>
-            <h2
-              ref={contactTitleRef}
-              className="pf-fx text-[clamp(40px,7vw,88px)] font-extrabold leading-[1.05] tracking-[-0.035em]"
+      {/* ── 컨택트 (핀 플러드) ────────────────────────────────────────── */}
+      <div ref={contactPinRef} id="pf-s7" className="pf-pin" style={{ height: '220vh' }}>
+        <section
+          className={`pf-frame pf-contact-frame ${flooded ? 'flooded' : ''}`}
+          aria-label={c.contact.title}
+        >
+          <motion.div
+            className="pf-flood"
+            style={reduced ? undefined : { opacity: floodOpacity }}
+            aria-hidden
+          />
+          <div className="pf-wrap text-center">
+            <p className="pf-kicker">{c.contact.title}</p>
+            <motion.h2
+              className="pf-display"
+              style={reduced ? undefined : { y: contactY, opacity: contactOpacity }}
             >
-              {locale === 'ko' ? (
-                <>
-                  <span className="text-accent">함께</span> 일해요.
-                </>
-              ) : (
-                <>
-                  Let&apos;s work <span className="text-accent">together</span>.
-                </>
-              )}
-            </h2>
-            <p className="mx-auto mt-5 max-w-[62ch] text-[15px] text-ink-soft">
-              {c.contact.description}
-            </p>
+              {t.rich('contactHeadlineRich', { accent })}
+            </motion.h2>
+            <p className="pf-sub mx-auto">{c.contact.description}</p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
-              <a
-                href={resumeHref}
-                download
-                className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-[15px] font-bold text-paper no-underline transition-opacity hover:opacity-90"
-              >
-                ⬇ {c.actions.downloadPrimary}
+              <a href={resumeHref} download className="pf-btn-invert">
+                <DownloadIcon /> {t('actions.downloadPrimary')}
               </a>
-              <a
-                href={otherResumeHref}
-                download
-                className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-7 py-3.5 text-[15px] font-bold text-ink no-underline transition-colors hover:border-accent hover:text-accent"
-              >
-                ⬇ {c.actions.downloadOther}
+              <a href={otherResumeHref} download className="pf-btn-ghost">
+                <DownloadIcon /> {t('actions.downloadOther')}
               </a>
             </div>
           </div>
