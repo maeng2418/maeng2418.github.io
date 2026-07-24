@@ -28,7 +28,7 @@ yarn lint    # turbo run lint
 maeng-v2/
 ├── apps/
 │   ├── maeng-blog/            # SPEC ② — Next.js 15+ App Router 블로그 (구현 완료)
-│   └── maeng-editor/          # SPEC ③ — 에디터 (구 maeng-admin, 미착수)
+│   └── maeng-editor/          # SPEC ③ — 에디터 (구 maeng-admin 대체, 구현 완료)
 ├── packages/
 │   ├── tsconfig/              # 공유 TS 프리셋 (base.json / nextjs.json)
 │   ├── eslint-config-custom/  # ESLint 9 flat config (base / next)
@@ -56,10 +56,28 @@ yarn test    # vitest
 yarn build   # 정적 export 빌드 (../../ 에서 turbo run build --filter=maeng-blog 로도 실행 가능)
 ```
 
+## apps/maeng-editor (SPEC-MAENGV2-EDITOR-003, 구현 완료)
+
+Next.js 15+ App Router / React 19 기반 마크다운 저작 도구 재구축. 기존 `apps/maeng-admin`(Pages Router, Tiptap 2.x)은 손대지 않고 병행 유지하며, 로컬/개인 도구 전제(인증 없음)로 `yarn dev`만으로 실행한다.
+
+- 에디터: Milkdown 7 기반 마크다운 네이티브 저작 — GFM(테이블·태스크 리스트)·fenced code block·이미지 삽입·링크 편집 (legacy HTML→MD 역변환 파이프라인 폐기)
+- 블로그 콘텐츠 계약: gray-matter frontmatter 5-키(title/date/category/thumbnail/draft) — `maeng-blog` 로더가 무변환으로 읽는 라운드트립 보장
+- 포스트 영속: S3 마크다운 저장/목록/로드(`@aws-sdk/client-s3`), 키 레이아웃 `blog/markdowns/{category}/{fileName}.md`
+- 이미지 업로드: Route Handler(`/api/images`, 네이티브 FormData)가 `blog/images/{uuid}.{ext}`로 저장 후 CloudFront URL 응답
+- OpenAI 보조 글쓰기: Route Handler(`/api/assist`)가 `OPENAI_MODEL` env 모델로 스트리밍 응답 (모델명 하드코딩 없음)
+- 로컬 블로그 미리보기 동기화(capability gate): `BLOG_CONTENT_DIR` 설정 시에만 활성
+- 서버 경계·시크릿 규율: AWS/OpenAI SDK는 서버 코드 전용, 시크릿은 `NEXT_PUBLIC_` 미사용
+- zod/react-hook-form/ky/Intl 등 최신 라이브러리 채택 (자세한 내용은 CHANGELOG 참조)
+
+```bash
+cd maeng-v2/apps/maeng-editor
+yarn dev     # 로컬 전용 개발 서버 (인증 없음)
+yarn test    # vitest
+```
+
 ## 향후 SPEC 시리즈
 
-- **SPEC ③** — `apps/maeng-editor` 재구축 (구 maeng-admin CMS, 미착수)
 - **SPEC ④** — 기존 콘텐츠(마크다운/이미지) 마이그레이션 (미착수)
 
-UI 컴포넌트 공유 패키지는 실제 사용처가 생기는 SPEC ③에서 필요 시 생성한다 (YAGNI — plan.md §D.3, SPEC②는 앱 내부에 컴포넌트를 두었다).
+UI 컴포넌트 공유 패키지는 실제 사용처가 생기는 시점에 필요 시 생성한다 (YAGNI — plan.md §D.3, SPEC②/③ 모두 앱 내부에 컴포넌트를 두었다).
 콘텐츠 마이그레이션과 저장소 분리(`git subtree`)는 이 스캐폴드 범위 밖이다.
