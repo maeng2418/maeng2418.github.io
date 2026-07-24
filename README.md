@@ -38,7 +38,7 @@ maeng-v2/
 └── .nvmrc                     # Node 24
 ```
 
-## apps/maeng-blog (SPEC-MAENGV2-BLOG-002, 구현 완료)
+## apps/maeng-blog (SPEC-MAENGV2-BLOG-002, 구현 완료 · SPEC-MAENGV2-CONTENT-MIGRATE-004, 콘텐츠 이관 완료)
 
 Next.js 15+ App Router / React 19 기반 블로그 재구축. 기존 Gatsby 기반 `apps/maeng-blog`(루트)는 손대지 않고 병행 유지한다.
 
@@ -48,6 +48,7 @@ Next.js 15+ App Router / React 19 기반 블로그 재구축. 기존 Gatsby 기�
 - i18n(ko 기본 / en 토글, localStorage 지속)
 - 정적 export 호환(`output: 'export'`) + SEO 기본기(`sitemap.ts` / `robots.ts` / canonical metadata)
 - 레거시 워크스페이스 패키지(`maeng-daisyui` 등) 비의존, vitest 테스트 55건 PASS
+- **실 콘텐츠 서빙**: 레거시에서 무변환(copy-only) 이관된 실제 콘텐츠(28포스트 / 121이미지 / 5TIL, 총 154파일)로 서비스 중 — `content/` 하위 checksum 전수 일치, 빌드 산출물 28페이지 + sitemap 31 URL 검증 완료(SPEC ④)
 
 ```bash
 cd maeng-v2/apps/maeng-blog
@@ -77,7 +78,8 @@ yarn test    # vitest
 
 ## 향후 SPEC 시리즈
 
-- **SPEC ④** — 기존 콘텐츠(마크다운/이미지) 마이그레이션 (미착수)
+- **SPEC ④** — 기존 콘텐츠(마크다운/이미지) 마이그레이션 (구현 완료, SPEC-MAENGV2-CONTENT-MIGRATE-004)
+- **SPEC ⑤** — next-intl 기반 i18n 전환 + 라이브러리 8종 도입/전환 (미착수, SPEC-MAENGV2-ENHANCE-005 범위)
 
 UI 컴포넌트 공유 패키지는 실제 사용처가 생기는 시점에 필요 시 생성한다 (YAGNI — plan.md §D.3, SPEC②/③ 모두 앱 내부에 컴포넌트를 두었다).
 콘텐츠 마이그레이션과 저장소 분리(`git subtree`)는 이 스캐폴드 범위 밖이다.
