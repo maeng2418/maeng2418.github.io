@@ -2,9 +2,12 @@
 
 // 목록 카드 + 카테고리 필터 (REQ-BLOG-003)
 // - 카테고리 칩: 가로 스크롤, ALL 선두, 키보드 접근 가능(button + aria-pressed)
-// - 등장 모션: IntersectionObserver fade-up — reduced-motion 은 globals.css 에서 비활성
-import { useEffect, useRef, useState } from 'react'
+// - 등장 모션: motion whileInView fade-up (REQ-ENH-008 — 수제 IntersectionObserver 대체)
+//   타이밍/트리거는 기존 값 승계: 0.7s ease, y 24px, rootMargin '0px 0px -10% 0px', 1회 트리거.
+//   prefers-reduced-motion 은 useReducedMotion 분기 + globals.css 폴백으로 즉시 표시.
 import Link from 'next/link'
+import { motion, useReducedMotion } from 'motion/react'
+import { useState } from 'react'
 import { ALL_CATEGORY, filterByCategory } from '@/lib/content/list'
 
 export interface CardPost {
@@ -16,6 +19,11 @@ export interface CardPost {
   excerpt: string
 }
 
+const MotionLink = motion.create(Link)
+
+/** 기존 CSS `.reveal` 트랜지션(0.7s ease) 승계 — 시각 리디자인 금지 (spec §C) */
+const REVEAL_EASE = [0.25, 0.1, 0.25, 1] as const
+
 export default function PostList({
   posts,
   categories,
@@ -24,29 +32,8 @@ export default function PostList({
   categories: string[]
 }) {
   const [selected, setSelected] = useState<string>(ALL_CATEGORY)
-  const listRef = useRef<HTMLDivElement>(null)
+  const reduced = useReducedMotion()
   const filtered = filterByCategory(posts, selected)
-
-  useEffect(() => {
-    const root = listRef.current
-    if (!root) return
-    const targets = root.querySelectorAll<HTMLElement>('.reveal:not(.in)')
-    if (targets.length === 0) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in')
-            observer.unobserve(entry.target)
-          }
-        }
-      },
-      { rootMargin: '0px 0px -10% 0px' }
-    )
-    targets.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [selected])
 
   return (
     <section aria-label="블로그 포스트 목록">
@@ -80,12 +67,16 @@ export default function PostList({
           이 카테고리에는 아직 글이 없어요.
         </p>
       ) : (
-        <div ref={listRef} className="grid gap-5 py-10 md:grid-cols-2">
+        <div className="grid gap-5 py-10 md:grid-cols-2">
           {filtered.map((post) => (
-            <Link
+            <MotionLink
               key={post.slug}
               href={`/posts/${post.slug}/`}
-              className="reveal group overflow-hidden rounded-lg border border-line bg-card no-underline transition-colors hover:border-accent"
+              initial={reduced ? false : { opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+              transition={{ duration: 0.7, ease: REVEAL_EASE }}
+              className="group overflow-hidden rounded-lg border border-line bg-card no-underline transition-colors hover:border-accent"
             >
               {/* 썸네일(있을 때) — design.md §3.1 / REQ-BLOG-003. 없으면 텍스트 카드 (§D.2 placeholder 처리) */}
               {post.thumbnail && (
@@ -108,7 +99,7 @@ export default function PostList({
                   {post.dateFormatted}
                 </p>
               </div>
-            </Link>
+            </MotionLink>
           ))}
         </div>
       )}

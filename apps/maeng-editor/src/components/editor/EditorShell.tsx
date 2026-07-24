@@ -4,7 +4,9 @@
 // M4: 저장/목록/로드(Server Action) + 이미지 업로드 연동. M5: OpenAI 보조 패널.
 // M6: 로컬 블로그 미리보기 동기화 (capability gate — blogSyncEnabled prop).
 // 폼은 react-hook-form + zod resolver (Formik+Yup 대체 — plan §B.3), 클라이언트 HTTP 는 ky.
-import { useState } from 'react'
+// UI 크롬 문자열은 next-intl ko/en 카탈로그에서 공급한다 (REQ-ENH-004 — ENHANCE-005 M2).
+// ENHANCE-005 M4: setStatus 문자열 → sonner 토스트 (REQ-ENH-010), ⌘K cmdk 팔레트 (REQ-ENH-011).
+import { useEffect, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
@@ -15,10 +17,14 @@ import {
   useQueryClient,
 } from '@tanstack/react-query'
 import ky from 'ky'
+import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
+import { Toaster, toast } from 'sonner'
 import { z } from 'zod'
 import { listPostsAction, loadPostAction, savePostAction } from '@/app/actions/posts'
 import { syncBlogPreviewAction } from '@/app/actions/sync'
+import CommandPalette from '@/components/editor/CommandPalette'
+import LocaleProvider, { useLocaleToggle } from '@/components/i18n/LocaleProvider'
 import type { PostSummary } from '@/lib/server/posts'
 
 // Milkdown 은 클라이언트 전용(ProseMirror DOM) — SSR 제외
@@ -29,19 +35,22 @@ const INITIAL_DOC = `# 새 포스트
 본문을 입력하세요.
 `
 
-const PostMetaSchema = z.object({
-  title: z.string().trim().min(1, '제목을 입력하세요'),
-  category: z.string().trim().min(1, '카테고리를 입력하세요'),
-  fileName: z
-    .string()
-    .trim()
-    .min(1, '파일명을 입력하세요')
-    .regex(/^[^/\\]+$/, '파일명에 경로 구분자를 쓸 수 없습니다'),
-  thumbnail: z.string().trim(),
-  draft: z.boolean(),
-})
+/** 검증 메시지를 현재 로케일 카탈로그에서 공급하는 스키마 팩토리 (REQ-ENH-004) */
+function makePostMetaSchema(t: (key: string) => string) {
+  return z.object({
+    title: z.string().trim().min(1, t('validation.titleRequired')),
+    category: z.string().trim().min(1, t('validation.categoryRequired')),
+    fileName: z
+      .string()
+      .trim()
+      .min(1, t('validation.fileNameRequired'))
+      .regex(/^[^/\\]+$/, t('validation.fileNameNoSeparator')),
+    thumbnail: z.string().trim(),
+    draft: z.boolean(),
+  })
+}
 
-type PostMetaForm = z.infer<typeof PostMetaSchema>
+type PostMetaForm = z.infer<ReturnType<typeof makePostMetaSchema>>
 
 const EMPTY_META: PostMetaForm = {
   title: '',
@@ -51,21 +60,28 @@ const EMPTY_META: PostMetaForm = {
   draft: false,
 }
 
-/** 목록 표기용 날짜 — 네이티브 Intl (의존성 없음) */
-const listDateFormat = new Intl.DateTimeFormat('ko-KR', {
-  dateStyle: 'short',
-  timeStyle: 'short',
-})
-
 interface EditorShellProps {
   blogSyncEnabled: boolean
 }
 
 function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
   const queryClient = useQueryClient()
+  const t = useTranslations('editor')
+  const { locale, toggle: onToggleLocale } = useLocaleToggle()
 
+  /** 목록 표기용 날짜 — 네이티브 Intl, 현재 로케일 연동 */
+  const listDateFormat = useMemo(
+    () =>
+      new Intl.DateTimeFormat(locale === 'ko' ? 'ko-KR' : 'en-US', {
+        dateStyle: 'short',
+        timeStyle: 'short',
+      }),
+    [locale]
+  )
+
+  const schema = useMemo(() => makePostMetaSchema((key) => t(key)), [t])
   const form = useForm<PostMetaForm>({
-    resolver: zodResolver(PostMetaSchema),
+    resolver: zodResolver(schema),
     defaultValues: EMPTY_META,
   })
   const fieldErrors = form.formState.errors
@@ -76,7 +92,21 @@ function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
   const [initialDoc, setInitialDoc] = useState(INITIAL_DOC)
   const [docKey, setDocKey] = useState(0)
   const [showSource, setShowSource] = useState(false)
-  const [status, setStatus] = useState<string | null>(null)
+  const [paletteOpen, setPaletteOpen] = useState(false)
+
+  // ⌘K/Ctrl+K 전역 리스너 — capture 단계 등록으로 Milkdown(ProseMirror) 키바인딩보다
+  // 먼저 가로챈다 (plan §B R7: 에디터 포커스 중에도 팔레트 우선)
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault()
+        event.stopPropagation()
+        setPaletteOpen((v) => !v)
+      }
+    }
+    window.addEventListener('keydown', onKeyDown, { capture: true })
+    return () => window.removeEventListener('keydown', onKeyDown, { capture: true })
+  }, [])
 
   /** 에디터 문서를 통째로 교체한다 (Milkdown 은 defaultValue 1회 주입 → key 리마운트) */
   const replaceDocument = (nextDoc: string) => {
@@ -110,10 +140,10 @@ function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
     },
     onSuccess: (data) => {
       setPostDate(data.date)
-      setStatus(`저장됨 → ${data.key}`)
+      toast.success(t('status.saved', { key: data.key }))
       void queryClient.invalidateQueries({ queryKey: ['posts'] })
     },
-    onError: (error: Error) => setStatus(`저장 실패: ${error.message}`),
+    onError: (error: Error) => toast.error(t('status.saveFailed', { message: error.message })),
   })
 
   const loadMutation = useMutation({
@@ -135,9 +165,9 @@ function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
       })
       setPostDate(post.frontmatter.date)
       replaceDocument(post.body)
-      setStatus(`로드됨 ← ${post.key}`)
+      toast.success(t('status.loaded', { key: post.key }))
     },
-    onError: (error: Error) => setStatus(`로드 실패: ${error.message}`),
+    onError: (error: Error) => toast.error(t('status.loadFailed', { message: error.message })),
   })
 
   const syncMutation = useMutation({
@@ -147,40 +177,57 @@ function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
       return result.data
     },
     onSuccess: (data) =>
-      setStatus(`미리보기 동기화 완료: 마크다운 ${data.markdowns} · 이미지 ${data.images}`),
-    onError: (error: Error) => setStatus(`동기화 실패: ${error.message}`),
+      toast.success(t('status.syncDone', { markdowns: data.markdowns, images: data.images })),
+    onError: (error: Error) => toast.error(t('status.syncFailed', { message: error.message })),
   })
 
   const newPost = () => {
     form.reset(EMPTY_META)
     setPostDate(null)
     replaceDocument(INITIAL_DOC)
-    setStatus(null)
   }
+
+  const submitSave = form.handleSubmit((values) => saveMutation.mutate(values))
 
   return (
     <div className="mx-auto flex max-w-6xl gap-4 px-4 py-6">
+      {/* 토스트 서피스 — 저장/로드/동기화 성공·실패 알림 (REQ-ENH-010, GWT-4) */}
+      <Toaster position="bottom-right" />
+
+      {/* ⌘K 커맨드 팔레트 — 포스트 검색/전환 + 액션 (REQ-ENH-011, GWT-3) */}
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => setPaletteOpen(false)}
+        posts={postsQuery.data ?? []}
+        onSelectPost={(post) => loadMutation.mutate(post)}
+        onSave={() => void submitSave()}
+        onSync={blogSyncEnabled ? () => syncMutation.mutate() : undefined}
+        onToggleLocale={onToggleLocale}
+      />
+
       {/* 사이드바 — 포스트 목록 + 미리보기 동기화 */}
       <aside className="flex w-64 shrink-0 flex-col gap-2">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-semibold text-ink-soft">포스트</h2>
+          <h2 className="text-sm font-semibold text-ink-soft">{t('sidebar.posts')}</h2>
           <button
             type="button"
             onClick={newPost}
             className="rounded border border-line px-2 py-0.5 text-xs text-ink-soft hover:bg-accent-soft hover:text-accent"
           >
-            새 포스트
+            {t('sidebar.newPost')}
           </button>
         </div>
         <div className="max-h-[28rem] overflow-y-auto rounded-md border border-line bg-card">
-          {postsQuery.isLoading && <p className="p-3 text-xs text-ink-faint">목록 불러오는 중…</p>}
+          {postsQuery.isLoading && (
+            <p className="p-3 text-xs text-ink-faint">{t('sidebar.loading')}</p>
+          )}
           {postsQuery.isError && (
             <p className="p-3 text-xs text-red-500">
-              목록 실패: {(postsQuery.error as Error).message}
+              {t('sidebar.listError', { message: (postsQuery.error as Error).message })}
             </p>
           )}
           {postsQuery.data?.length === 0 && (
-            <p className="p-3 text-xs text-ink-faint">저장된 포스트 없음</p>
+            <p className="p-3 text-xs text-ink-faint">{t('sidebar.empty')}</p>
           )}
           <ul>
             {postsQuery.data?.map((post) => (
@@ -209,7 +256,7 @@ function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
             disabled={syncMutation.isPending}
             className="rounded border border-line px-2 py-1.5 text-xs text-ink-soft hover:bg-accent-soft hover:text-accent disabled:opacity-50"
           >
-            {syncMutation.isPending ? '동기화 중…' : '블로그 미리보기 동기화'}
+            {syncMutation.isPending ? t('sidebar.syncing') : t('sidebar.sync')}
           </button>
         )}
       </aside>
@@ -217,63 +264,69 @@ function EditorWorkspace({ blogSyncEnabled }: EditorShellProps) {
       {/* 메인 — 메타데이터 폼 + 에디터 + 보조 패널 */}
       <main className="flex min-w-0 flex-1 flex-col gap-3">
         <header className="flex items-center justify-between">
-          <h1 className="text-lg font-bold">maeng-editor</h1>
-          <button
-            type="button"
-            onClick={() => setShowSource((v) => !v)}
-            className="rounded border border-line px-2 py-1 text-xs text-ink-soft hover:bg-accent-soft hover:text-accent"
-          >
-            {showSource ? '마크다운 숨기기' : '마크다운 보기'}
-          </button>
+          <h1 className="text-lg font-bold">{t('appTitle')}</h1>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setShowSource((v) => !v)}
+              className="rounded border border-line px-2 py-1 text-xs text-ink-soft hover:bg-accent-soft hover:text-accent"
+            >
+              {showSource ? t('source.hide') : t('source.show')}
+            </button>
+            <button
+              type="button"
+              onClick={onToggleLocale}
+              aria-label={t('localeSwitch.aria')}
+              className="rounded border border-line px-2 py-1 text-xs font-semibold text-ink-soft hover:bg-accent-soft hover:text-accent"
+            >
+              {t('localeSwitch.label')}
+            </button>
+          </div>
         </header>
 
         <form
-          onSubmit={form.handleSubmit((values) => saveMutation.mutate(values))}
+          onSubmit={submitSave}
           className="grid grid-cols-2 gap-2 rounded-md border border-line bg-card p-3"
         >
-          <MetaField label="제목" error={fieldErrors.title?.message}>
+          <MetaField label={t('form.title')} error={fieldErrors.title?.message}>
             <input type="text" {...form.register('title')} className={inputClass} />
           </MetaField>
-          <MetaField label="카테고리" error={fieldErrors.category?.message}>
+          <MetaField label={t('form.category')} error={fieldErrors.category?.message}>
             <input
               type="text"
-              placeholder="development"
+              placeholder={t('form.categoryPlaceholder')}
               {...form.register('category')}
               className={inputClass}
             />
           </MetaField>
-          <MetaField label="파일명" error={fieldErrors.fileName?.message}>
+          <MetaField label={t('form.fileName')} error={fieldErrors.fileName?.message}>
             <input
               type="text"
-              placeholder="my_post (확장자 없이)"
+              placeholder={t('form.fileNamePlaceholder')}
               {...form.register('fileName')}
               className={inputClass}
             />
           </MetaField>
-          <MetaField label="썸네일 URL (선택)" error={fieldErrors.thumbnail?.message}>
+          <MetaField label={t('form.thumbnail')} error={fieldErrors.thumbnail?.message}>
             <input type="text" {...form.register('thumbnail')} className={inputClass} />
           </MetaField>
           <label className="flex items-center gap-2 text-xs text-ink-soft">
             <input type="checkbox" {...form.register('draft')} />
-            draft (블로그 비게시)
+            {t('form.draft')}
           </label>
           <div className="flex items-center justify-end gap-2">
-            {postDate && <span className="text-xs text-ink-faint">date: {postDate}</span>}
+            {postDate && (
+              <span className="text-xs text-ink-faint">{t('form.date', { date: postDate })}</span>
+            )}
             <button
               type="submit"
               disabled={saveMutation.isPending}
               className="rounded bg-accent px-3 py-1.5 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50"
             >
-              {saveMutation.isPending ? '저장 중…' : 'S3 저장'}
+              {saveMutation.isPending ? t('form.saving') : t('form.save')}
             </button>
           </div>
         </form>
-
-        {status && (
-          <p className="rounded border border-line bg-card px-3 py-1.5 text-xs text-ink-soft">
-            {status}
-          </p>
-        )}
 
         <MilkdownEditor key={docKey} defaultValue={initialDoc} onChange={setMarkdown} />
 
@@ -325,6 +378,7 @@ function AssistPanel({
   documentMarkdown: string
   onInsert: (suggestion: string) => void
 }) {
+  const t = useTranslations('editor')
   const [prompt, setPrompt] = useState('')
   const [output, setOutput] = useState('')
   const [busy, setBusy] = useState(false)
@@ -343,7 +397,7 @@ function AssistPanel({
       })
       if (!response.ok || !response.body) {
         const json = (await response.json().catch(() => null)) as { error?: string } | null
-        throw new Error(json?.error ?? `요청 실패 (HTTP ${response.status})`)
+        throw new Error(json?.error ?? t('assist.requestFailed', { status: response.status }))
       }
       const reader = response.body.getReader()
       const decoder = new TextDecoder()
@@ -361,7 +415,7 @@ function AssistPanel({
 
   return (
     <section className="flex flex-col gap-2 rounded-md border border-line bg-card p-3">
-      <h2 className="text-sm font-semibold text-ink-soft">AI 보조 글쓰기</h2>
+      <h2 className="text-sm font-semibold text-ink-soft">{t('assist.title')}</h2>
       <div className="flex gap-2">
         <input
           type="text"
@@ -370,7 +424,7 @@ function AssistPanel({
           onKeyDown={(event) => {
             if (event.key === 'Enter') void run()
           }}
-          placeholder="예: 이 글의 결론 문단을 초안으로 작성해줘"
+          placeholder={t('assist.placeholder')}
           className={`flex-1 ${inputClass}`}
         />
         <button
@@ -379,7 +433,7 @@ function AssistPanel({
           disabled={busy || !prompt.trim()}
           className="rounded border border-line px-3 py-1.5 text-sm text-ink-soft hover:bg-accent-soft hover:text-accent disabled:opacity-50"
         >
-          {busy ? '생성 중…' : '요청'}
+          {busy ? t('assist.running') : t('assist.run')}
         </button>
       </div>
       {error && <p className="text-xs text-red-500">{error}</p>}
@@ -398,14 +452,14 @@ function AssistPanel({
               disabled={busy}
               className="rounded border border-line px-2 py-1 text-xs text-ink-soft hover:bg-accent-soft hover:text-accent disabled:opacity-50"
             >
-              문서 끝에 삽입
+              {t('assist.insert')}
             </button>
             <button
               type="button"
               onClick={() => setOutput('')}
               className="rounded border border-line px-2 py-1 text-xs text-ink-faint hover:text-ink-soft"
             >
-              버리기
+              {t('assist.discard')}
             </button>
           </div>
         </>
@@ -418,7 +472,9 @@ export default function EditorShell(props: EditorShellProps) {
   const [queryClient] = useState(() => new QueryClient())
   return (
     <QueryClientProvider client={queryClient}>
-      <EditorWorkspace {...props} />
+      <LocaleProvider>
+        <EditorWorkspace {...props} />
+      </LocaleProvider>
     </QueryClientProvider>
   )
 }

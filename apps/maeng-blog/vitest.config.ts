@@ -11,7 +11,7 @@ export default defineConfig({
   },
   test: {
     environment: 'node',
-    include: ['src/**/*.test.{ts,tsx}'],
+    include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.{ts,tsx}'],
     // 픽스처 재배치(REQ-MIG-004/005): 테스트는 실콘텐츠 대신 테스트 소유 픽스처 디렉터리를 읽는다
     env: {
       MAENG_CONTENT_DIR: path.resolve(__dirname, 'src/lib/content/__tests__/fixtures/content'),

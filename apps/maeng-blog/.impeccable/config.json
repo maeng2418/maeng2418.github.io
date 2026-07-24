@@ -7,7 +7,9 @@
         "rule": "side-tab",
         "value": "*",
         "files": [
-          "maeng-v2/apps/maeng-blog/src/app/globals.css"
+          "src/app/globals.css",
+          "maeng-v2/apps/maeng-blog/src/app/globals.css",
+          "**/globals.css"
         ],
         "createdAt": "2026-07-23T14:52:48.621Z",
         "reason": "마크다운 blockquote 왼쪽 보더 — 표준 마크다운 렌더링 관례 (사용자 승인 오탐)"

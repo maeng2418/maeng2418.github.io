@@ -1,0 +1,447 @@
+{
+  "nav": {
+    "menuAria": "Main menu",
+    "blog": "Blog",
+    "til": "TIL",
+    "portfolio": "Portfolio"
+  },
+  "search": {
+    "open": "Search",
+    "openAria": "Open post search",
+    "title": "Search posts",
+    "placeholder": "Type to search…",
+    "empty": "No results found.",
+    "unavailable": "Search index not found. Search works only on the production build (out/).",
+    "close": "Close"
+  },
+  "comments": {
+    "title": "Comments"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "businessCard": {
+      "title": "About Me",
+      "name": "Myeongseong Kim",
+      "role": "Front-End Developer",
+      "tagline": "I'm Myeongseong Kim, a front-end developer who solves complex problems and creates intuitive experiences.",
+      "career": "4 years and 9 months of experience",
+      "summary": [
+        "Currently, at the NOL Universe STAY FE team, I am building a B2B platform for the complex accommodation domain using React and TypeScript.",
+        "I develop interfaces that make complex policies and data easy and intuitive for users to understand, contribute to team productivity through efficient architecture and improved development processes, and build sustainable codebases."
+      ],
+      "contacts": [
+        {
+          "label": "Email",
+          "value": "maeng2418@gmail.com",
+          "href": "mailto:maeng2418@gmail.com"
+        },
+        {
+          "label": "Github",
+          "value": "github.com/maeng2418",
+          "href": "https://github.com/maeng2418",
+          "external": true
+        },
+        {
+          "label": "Blog",
+          "value": "maeng2418.github.io",
+          "href": "https://maeng2418.github.io",
+          "external": true
+        },
+        {
+          "label": "LinkedIn",
+          "value": "linkedin.com/in/명성-김",
+          "href": "https://www.linkedin.com/in/명성-김-4988b61ba",
+          "external": true
+        }
+      ]
+    },
+    "introduction": {
+      "title": "Let me introduce myself",
+      "headline": "I am this kind of developer",
+      "lead": "I am,",
+      "values": [
+        {
+          "title": "Growing together",
+          "description": "I enjoy growing together by sharing experiences and knowledge through blogs or communities."
+        },
+        {
+          "title": "Constantly challenging new technologies and trends",
+          "description": "I'm not afraid to try new things when solving problems."
+        },
+        {
+          "title": "Providing better UX to users",
+          "description": "I harmoniously combine design and development to deliver convenient experiences to users."
+        },
+        {
+          "title": "Providing stable and reliable services",
+          "description": "I enhance stability through test code and provide reliable services to users."
+        }
+      ]
+    },
+    "techSkill": {
+      "title": "My Tech Skills are..",
+      "description": "I do frontend development using various technologies.",
+      "details": [
+        "I can develop SPAs using React and Vue.",
+        "I can develop SSR using Next and Nuxt.",
+        "I have experience developing Design Systems.",
+        "I'm familiar with Webpack, Babel, ES6, etc.",
+        "I have experience with UI component testing using Storybook.",
+        "I strive to improve productivity through test code and deployment automation (CI/CD).",
+        "I strive for performance and resource optimization."
+      ]
+    },
+    "softSkill": {
+      "title": "My Soft Skills are..",
+      "details": [
+        "I have various collaboration experiences through projects, enabling flexible communication with people from various fields.",
+        "I always try to solve problems with positive thinking. No matter what problem situation arises, I don't give up and strive to solve the problem.",
+        "No matter what requirements are given, I constantly strive to complete given tasks on time.",
+        "Through code reviews, I can share knowledge and experience with colleagues, give and receive feedback, and gradually improve services.",
+        "I can create meaningful value through new ideas.",
+        "I'm very interested in communities and open source. I enjoy communicating with various people."
+      ]
+    },
+    "designSkill": {
+      "title": "My Design Skills are..",
+      "details": [
+        "I'm very interested in UI/UX and continuously think and strive for perfect user experience.",
+        "I have experience creating design systems directly using Figma."
+      ]
+    },
+    "skillSets": {
+      "title": "Skill Sets",
+      "headline": "Skill Sets",
+      "groups": [
+        {
+          "label": "Frontend Skills",
+          "skills": [
+            "Javascript",
+            "Typescript",
+            "HTML/CSS",
+            "ReactJS",
+            "VueJS",
+            "NextJS",
+            "NuxtJS",
+            "Emotion",
+            "StyledComponent",
+            "Tailwindcss",
+            "Storybook"
+          ],
+          "highlights": [
+            "Typescript",
+            "ReactJS",
+            "NextJS"
+          ]
+        },
+        {
+          "label": "Backend Skills",
+          "skills": [
+            "NodeJS",
+            "NestJS",
+            "GraphQL",
+            "MySQL",
+            "MongoDB"
+          ]
+        },
+        {
+          "label": "Collaboration Skills",
+          "skills": [
+            "Git/Github",
+            "Bitbucket",
+            "Jira",
+            "Confluence",
+            "Notion",
+            "Slack"
+          ]
+        },
+        {
+          "label": "Deploy Skills",
+          "skills": [
+            "AWS/Pipeline",
+            "AWS/EC2",
+            "AWS/ECS",
+            "Docker",
+            "Nginx",
+            "PM2",
+            "Jenkins",
+            "Netlify",
+            "Github Action"
+          ]
+        },
+        {
+          "label": "Etc...",
+          "skills": [
+            "Figma",
+            "Firebase"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projects",
+      "headline": "Projects",
+      "items": [
+        {
+          "title": "Bookmark Pro",
+          "kind": "[Personal] Chrome Extension",
+          "term": "25.08 · v0.1.3",
+          "description": "A modern bookmark management solution for efficiently managing bookmarks on the web and in a browser extension. It offers features like integrated bookmark management, advanced search and filtering, and real-time synchronization.",
+          "attribution": "It is structured as a Turborepo monorepo to share code and provide a consistent user experience. The Chrome Extension was developed with React, and the dashboard was developed with Next.js. Following recent trends, it utilizes a Supabase-based backend and shadcn/ui to implement a cleaner and more consistent UI.",
+          "tags": [
+            "React",
+            "Typescript",
+            "Next",
+            "TailwindCSS",
+            "Supabase",
+            "Turborepo",
+            "shadcn/ui"
+          ],
+          "link": "https://boomark-pro.netlify.app/",
+          "github": "https://github.com/maeng2418/bookmark-pro"
+        },
+        {
+          "title": "Maeng Design",
+          "kind": "[Personal] Design System",
+          "term": "22.02 · v1.5.2",
+          "description": "Maeng Design is a design system created to standardize UI specifications for React projects, reduce unnecessary costs associated with design and implementation differences, and support design and front-end development resources.",
+          "attribution": "Various components were designed, developed, and distributed as open source. Docs for API reference and Storybook for UI verification were also deployed.",
+          "tags": [
+            "React",
+            "Typescript",
+            "Emotion",
+            "Storybook",
+            "Rollup",
+            "Gatsby",
+            "Netlify"
+          ],
+          "link": "https://maeng-design-docs.netlify.app",
+          "github": "https://github.com/maeng2418/Maeng-Design"
+        },
+        {
+          "title": "Seoul13",
+          "kind": "[Personal] Space Rental Website (Freelance)",
+          "term": "20.10 · v2.0.0",
+          "description": "Created a reservation website for meeting room rentals. I personally handled service planning and design, and built the overall infrastructure for business operations beyond development, including trademark registration for online sales, PG company registration, and mail-order business reporting.",
+          "attribution": "The service was renewed to improve it by replacing the existing React-only code with Next.js, switching from MongoDB to MySQL, implementing a custom calendar library, and applying TypeScript.",
+          "tags": [
+            "React",
+            "Typescript",
+            "NextJS",
+            "Express",
+            "AWS",
+            "JWT",
+            "OAuth",
+            "Passport",
+            "MongoDB",
+            "MySQL"
+          ],
+          "link": "https://seoul13.com",
+          "github": "https://github.com/maeng2418/SEOUL13_edition2"
+        },
+        {
+          "title": "B-Mart Mobile Web",
+          "kind": "[Team] Woowa Tech Camp",
+          "term": "20.08 · v1.0.0",
+          "description": "Implemented a B-Mart clone, one of the services of Baedal Minjok, using Next.js with fellow Woowa Tech Camp members.",
+          "attribution": "Development involved using functional components, state management with useState and Context API, styling with Styled-Components, implementing a carousel banner, and login functionality using Passport + OAuth + JWT.",
+          "tags": [
+            "React",
+            "Typescript",
+            "NextJS",
+            "Storybook",
+            "Express",
+            "JWT",
+            "OAuth",
+            "Passport",
+            "Github Action",
+            "MySQL"
+          ],
+          "link": "https://github.com/woowa-techcamp-2020/bmart-5",
+          "github": "https://github.com/woowa-techcamp-2020/bmart-5"
+        }
+      ]
+    },
+    "timestamp": {
+      "title": "Timestamp",
+      "headline": "Timeline",
+      "currentBadge": "NOW",
+      "items": [
+        {
+          "when": "22.09.26 - Present",
+          "title": "NOL Universe (Yanolja) FE Developer",
+          "organizer": "NOL Universe",
+          "current": true
+        },
+        {
+          "when": "21.07.19 - 22.09.23",
+          "title": "IGAWorks Adpopcorn FE Developer",
+          "organizer": "IGAWorks"
+        },
+        {
+          "when": "21.02.24",
+          "title": "Graduated from SEOULTECH, Computer Engineering",
+          "organizer": "Seoul National University of Science and Technology (SEOULTECH)"
+        },
+        {
+          "when": "20.12.01 - 21.07.08",
+          "title": "Zimssa FE Developer",
+          "organizer": "Zimssa"
+        },
+        {
+          "when": "20.07.01 - 20.08.28",
+          "title": "Woowa Tech Camp Batch 3",
+          "organizer": "Woowa Brothers"
+        },
+        {
+          "when": "19.10.01 - 20.06.30",
+          "title": "Transportation Demand Analysis at Railway Management Policy Research Institute",
+          "organizer": "Railway Management Policy Research Institute"
+        },
+        {
+          "when": "19.09.16 - 19.11.30",
+          "title": "DevelUp 1st Cohort",
+          "organizer": "Goorm"
+        },
+        {
+          "when": "19.08.12 - 19.09.11",
+          "title": "Blokee TF Team FE Intern",
+          "organizer": "Dable"
+        }
+      ]
+    },
+    "experiences": {
+      "title": "Experiences",
+      "headline": "Experience",
+      "viewAchievements": "View achievements",
+      "items": [
+        {
+          "company": "NOL Universe (Yanolja)",
+          "term": "2022.09.26 - Present",
+          "description": "At the NOL Universe STAY FE team, I am building a B2B platform for the complex accommodation domain using React and TypeScript.",
+          "keyProjects": [
+            "Developed and maintained a B2B platform for the accommodation industry (Partner Center for PC/Mobile, admin dashboards, and affiliate management tools).",
+            "Led a system integration project to consolidate multiple fragmented services into the Partner Center.",
+            "Transitioned the technology stack from Vue to React.",
+            "Implemented comprehensive service analysis by tracking errors with Sentry + Client Log and incorporating user feedback."
+          ],
+          "achievements": [
+            "Utilized Nginx Reverse Proxy for a gradual migration from Vue to React and configured S3/CloudFront-based versioned deployments, resulting in reduced server resources, a 40% decrease in bug reports, and improved development productivity.",
+            "Simplified the development of 3 applications and 12 shared packages by implementing a monorepo architecture.",
+            "Improved the development process by introducing Trunk-Based Development (TBD) and feature flags.",
+            "Introduced incremental builds: reduced build and type-checking time by up to 99.3% (150.15s → 1.03s), with an average reduction of 41.2% (150.15s → 88.29s).",
+            "Enhanced the code review system by automating code verification with GitHub Actions and implementing a checkbox-based system for mandatory review items.",
+            "Improved code quality and processes by introducing ESLint, Prettier, CSpell, and Storybook.",
+            "E2E domain testing using Playwright."
+          ],
+          "techStack": [
+            "Typescript",
+            "React",
+            "Vue",
+            "Emotion",
+            "Storybook",
+            "Vite",
+            "React-Query",
+            "MUI",
+            "Playwright",
+            "Jenkins",
+            "GitHub Actions",
+            "Beanstalk",
+            "CloudFront",
+            "S3"
+          ]
+        },
+        {
+          "company": "IGAWorks (Adpopcorn)",
+          "term": "2021.07.19 - 2022.09.23",
+          "description": "I worked as a frontend developer in the IGAWorks Adpopcorn development team, in charge of the SSP part, a monetization service including in-app bidding algorithms, DMP-based ad servers, and mediation functions.",
+          "keyProjects": [
+            "Developed and maintained the Adpopcorn SSP, a B2B advertising platform.",
+            "Revamped the Adpopcorn SSP Console, transitioning the tech stack from Next.js to React and overhauling the design.",
+            "Developed the Conpick news content platform, which included functionality for converting news content to HTML and inserting advertisements.",
+            "Built the Adpopcorn SSP homepage using Svelte."
+          ],
+          "achievements": [
+            "Transitioned from Next.js to ReactJS, moving from Server-Side Rendering (SSR) to a Single Page Application (SPA) to eliminate unnecessary over-engineering and revamp the design. This led to simplified state management and overall system performance improvements.",
+            "Improved state management by replacing Redux + Saga with React-Query and Recoil, which eliminated redundant API calls and streamlined complex state management.",
+            "Automated deployment using AWS ECS and CodePipeline for improved CI/CD.",
+            "Enhanced the chart library with Recharts and SVG to improve data accessibility and analysis efficiency.",
+            "Developed a high-performance, lightweight landing page with fast rendering by leveraging Svelte's compile-time framework structure."
+          ],
+          "techStack": [
+            "Typescript",
+            "React",
+            "NextJS",
+            "Svelte",
+            "Emotion",
+            "Ant Design",
+            "React-Query",
+            "Recoil",
+            "Github Action",
+            "ECS",
+            "EKS",
+            "Code Pipeline",
+            "Docker"
+          ]
+        },
+        {
+          "company": "ZIMSSA",
+          "term": "2020.12.01 - 2021.07.08",
+          "description": "In Zimssa's frontend team, I was responsible for developing and maintaining the ZIMSSA Partner App, a moving service matching platform.",
+          "keyProjects": [
+            "Developed and maintained the ZIMSSA Partner App, a moving service matching platform.",
+            "Applied Design 2.0, which included implementing dark mode and improving UI/UX.",
+            "Built a component-based design system to enhance UI consistency and development productivity."
+          ],
+          "achievements": [
+            "Modernized the tech stack and improved maintainability by migrating from JavaScript to TypeScript and updating dependencies.",
+            "Implemented a design system based on Atomic Design principles and introduced dark mode.",
+            "Introduced Storybook for UI verification and testing.",
+            "Improved rendering performance and UX through lazy loading.",
+            "Automated component creation with scripts.",
+            "Enhanced user permission settings using Cordova plugins.",
+            "Maintained code consistency and quality by applying ESLint, Prettier, Husky, and lint-staged."
+          ],
+          "techStack": [
+            "Javascript",
+            "Typescript",
+            "Cordova",
+            "SASS",
+            "Styled Component",
+            "Redux",
+            "Storybook"
+          ]
+        }
+      ]
+    },
+    "educations": {
+      "title": "Education",
+      "items": [
+        {
+          "term": "2015.03 - 2021.02",
+          "title": "Seoul National University of Science and Technology (SEOULTECH)",
+          "description": "Bachelor of Science in Computer Engineering"
+        },
+        {
+          "term": "2011.03 - 2014.02",
+          "title": "Gongju Hanil High School (HANIL HIGH SCHOOL)",
+          "description": "Science Track"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "headline": "Let's work together.",
+      "description": "The resume download button serves the PDF matching the current language (ko/en)."
+    },
+    "actions": {
+      "download": "Download Resume",
+      "downloadPrimary": "Resume (EN)",
+      "downloadOther": "이력서 다운로드 (KO)",
+      "translate": "KO",
+      "translateAria": "한국어로 보기"
+    },
+    "heroRich": "Hello!<br></br>I'm <accent>{name}</accent>,<br></br>{role}!",
+    "contactHeadlineRich": "Let's work <accent>together</accent>."
+  }
+}

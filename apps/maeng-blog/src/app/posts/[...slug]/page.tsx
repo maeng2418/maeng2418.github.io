@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import Comments from '@/components/Comments'
 import { getAllPosts, getPostBySlug } from '@/lib/content/loader'
 import 'katex/dist/katex.min.css'
 
@@ -59,6 +60,9 @@ export default async function PostDetailPage({ params }: PageProps) {
         className="prose mt-12 border-t border-line pt-10"
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+
+      {/* giscus 댓글 — env(NEXT_PUBLIC_GISCUS_*) 4값 존재 시에만 렌더 (REQ-ENH-006) */}
+      <Comments />
 
       <nav className="mt-16 border-t border-line pt-8">
         <Link href="/" className="font-semibold text-accent no-underline hover:underline">

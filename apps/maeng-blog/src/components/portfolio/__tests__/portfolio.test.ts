@@ -1,9 +1,21 @@
 // AC-BLOG-006 — 포트폴리오: 12종 섹션 인벤토리 렌더 + 로케일별 다운로드 href 분기
+// ENHANCE-005 M1: 로케일 상태는 LocaleProvider(next-intl) 가 공급 — 렌더는 프로바이더 래핑으로 갱신 (REQ-ENH-013)
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { describe, expect, it } from 'vitest'
+import LocaleProvider from '@/components/i18n/LocaleProvider'
 import PortfolioScroll from '@/components/portfolio/PortfolioScroll'
 import { PORTFOLIO_SECTION_IDS, getPortfolioContent, getResumeHref } from '@/lib/portfolio/content'
+import type { Locale } from '@/lib/i18n/locale'
+
+function renderPortfolio(initialLocale?: Locale) {
+  return renderToStaticMarkup(
+    createElement(LocaleProvider, {
+      initialLocale,
+      children: createElement(PortfolioScroll),
+    })
+  )
+}
 
 describe('섹션 인벤토리 (레거시 12종 — REQ-BLOG-006)', () => {
   it('12종 인벤토리를 정의한다 (콘텐츠 10종 + 다운로드/번역 버튼)', () => {
@@ -27,10 +39,17 @@ describe('섹션 인벤토리 (레거시 12종 — REQ-BLOG-006)', () => {
   })
 
   it('렌더 마크업에 12개 섹션이 모두 존재한다', () => {
-    const html = renderToStaticMarkup(createElement(PortfolioScroll))
+    const html = renderPortfolio()
     for (const id of PORTFOLIO_SECTION_IDS) {
       expect(html, `data-section="${id}" 누락`).toContain(`data-section="${id}"`)
     }
+  })
+})
+
+describe('모션 전환 (AC-ENH-008 — 수제 스태거 클래스 대체)', () => {
+  it('pf-stagger 클래스 기반 수제 스태거 대신 motion variants 가 담당한다', () => {
+    const html = renderPortfolio()
+    expect(html).not.toContain('pf-stagger')
   })
 })
 
@@ -41,13 +60,13 @@ describe('로케일별 다운로드 href 분기 (AC-BLOG-006)', () => {
   })
 
   it('기본(ko) 렌더 시 다운로드 앵커가 /portfolio_ko.pdf 를 가리킨다', () => {
-    const html = renderToStaticMarkup(createElement(PortfolioScroll))
+    const html = renderPortfolio()
     expect(html).toContain('href="/portfolio_ko.pdf"')
     expect(html).toContain('김명성')
   })
 
   it('en 렌더 시 다운로드 앵커가 /portfolio_en.pdf 를 가리키고 영문 콘텐츠를 노출한다', () => {
-    const html = renderToStaticMarkup(createElement(PortfolioScroll, { initialLocale: 'en' }))
+    const html = renderPortfolio('en')
     expect(html).toContain('href="/portfolio_en.pdf"')
     expect(html).toContain('Myeongseong Kim')
   })

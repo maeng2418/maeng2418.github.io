@@ -1,0 +1,67 @@
+{
+  "editor": {
+    "appTitle": "maeng-editor",
+    "localeSwitch": {
+      "label": "EN",
+      "aria": "Switch to English"
+    },
+    "sidebar": {
+      "posts": "포스트",
+      "newPost": "새 포스트",
+      "loading": "목록 불러오는 중…",
+      "listError": "목록 실패: {message}",
+      "empty": "저장된 포스트 없음",
+      "sync": "블로그 미리보기 동기화",
+      "syncing": "동기화 중…"
+    },
+    "form": {
+      "title": "제목",
+      "category": "카테고리",
+      "categoryPlaceholder": "development",
+      "fileName": "파일명",
+      "fileNamePlaceholder": "my_post (확장자 없이)",
+      "thumbnail": "썸네일 URL (선택)",
+      "draft": "draft (블로그 비게시)",
+      "date": "date: {date}",
+      "save": "S3 저장",
+      "saving": "저장 중…"
+    },
+    "validation": {
+      "titleRequired": "제목을 입력하세요",
+      "categoryRequired": "카테고리를 입력하세요",
+      "fileNameRequired": "파일명을 입력하세요",
+      "fileNameNoSeparator": "파일명에 경로 구분자를 쓸 수 없습니다"
+    },
+    "source": {
+      "show": "마크다운 보기",
+      "hide": "마크다운 숨기기"
+    },
+    "palette": {
+      "openAria": "커맨드 팔레트 열기 (⌘K)",
+      "placeholder": "포스트 검색 또는 명령 실행…",
+      "empty": "결과 없음",
+      "posts": "포스트",
+      "actions": "액션",
+      "save": "S3 저장",
+      "sync": "블로그 미리보기 동기화",
+      "toggleLocale": "English로 전환"
+    },
+    "status": {
+      "saved": "저장됨 → {key}",
+      "saveFailed": "저장 실패: {message}",
+      "loaded": "로드됨 ← {key}",
+      "loadFailed": "로드 실패: {message}",
+      "syncDone": "미리보기 동기화 완료: 마크다운 {markdowns} · 이미지 {images}",
+      "syncFailed": "동기화 실패: {message}"
+    },
+    "assist": {
+      "title": "AI 보조 글쓰기",
+      "placeholder": "예: 이 글의 결론 문단을 초안으로 작성해줘",
+      "run": "요청",
+      "running": "생성 중…",
+      "requestFailed": "요청 실패 (HTTP {status})",
+      "insert": "문서 끝에 삽입",
+      "discard": "버리기"
+    }
+  }
+}
