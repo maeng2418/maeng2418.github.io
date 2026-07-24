@@ -26,9 +26,9 @@ yarn lint    # turbo run lint
 
 ```
 maeng-v2/
-├── apps/                      # (비어 있음) SPEC ②③이 채운다
-│   ├── maeng-blog/            # ← SPEC ② Next.js 15+ App Router 블로그
-│   └── maeng-editor/          # ← SPEC ③ 에디터 (구 maeng-admin)
+├── apps/
+│   ├── maeng-blog/            # SPEC ② — Next.js 15+ App Router 블로그 (구현 완료)
+│   └── maeng-editor/          # SPEC ③ — 에디터 (구 maeng-admin, 미착수)
 ├── packages/
 │   ├── tsconfig/              # 공유 TS 프리셋 (base.json / nextjs.json)
 │   ├── eslint-config-custom/  # ESLint 9 flat config (base / next)
@@ -38,11 +38,28 @@ maeng-v2/
 └── .nvmrc                     # Node 24
 ```
 
+## apps/maeng-blog (SPEC-MAENGV2-BLOG-002, 구현 완료)
+
+Next.js 15+ App Router / React 19 기반 블로그 재구축. 기존 Gatsby 기반 `apps/maeng-blog`(루트)는 손대지 않고 병행 유지한다.
+
+- 블로그 목록(`/`) / 상세(`/posts/[slug]`) — 날짜 내림차순, 카테고리 필터, GFM·코드 하이라이트(shiki)·KaTeX
+- TIL(`/til`) — 세로 타임라인
+- 포트폴리오(`/portfolio`) — 12종 섹션 인벤토리, 스크롤 모션, 로케일별 PDF 다운로드
+- i18n(ko 기본 / en 토글, localStorage 지속)
+- 정적 export 호환(`output: 'export'`) + SEO 기본기(`sitemap.ts` / `robots.ts` / canonical metadata)
+- 레거시 워크스페이스 패키지(`maeng-daisyui` 등) 비의존, vitest 테스트 55건 PASS
+
+```bash
+cd maeng-v2/apps/maeng-blog
+yarn dev     # 개발 서버
+yarn test    # vitest
+yarn build   # 정적 export 빌드 (../../ 에서 turbo run build --filter=maeng-blog 로도 실행 가능)
+```
+
 ## 향후 SPEC 시리즈
 
-- **SPEC ②** — `apps/maeng-blog` 재구축 (Next.js 15+ App Router)
-- **SPEC ③** — `apps/maeng-editor` 재구축 (구 maeng-admin CMS)
-- **SPEC ④** — 기존 콘텐츠(마크다운/이미지) 마이그레이션
+- **SPEC ③** — `apps/maeng-editor` 재구축 (구 maeng-admin CMS, 미착수)
+- **SPEC ④** — 기존 콘텐츠(마크다운/이미지) 마이그레이션 (미착수)
 
-UI 컴포넌트 공유 패키지는 실제 사용처가 생기는 SPEC ②③에서 생성한다 (YAGNI — plan.md §D.3).
+UI 컴포넌트 공유 패키지는 실제 사용처가 생기는 SPEC ③에서 필요 시 생성한다 (YAGNI — plan.md §D.3, SPEC②는 앱 내부에 컴포넌트를 두었다).
 콘텐츠 마이그레이션과 저장소 분리(`git subtree`)는 이 스캐폴드 범위 밖이다.
