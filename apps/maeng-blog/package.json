@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/sync-content-images.mjs && next build && pagefind --site out && node scripts/generate-rss.mjs",
+    "build:server": "MAENG_BUILD_TARGET=server next build",
     "lint": "eslint .",
     "test": "vitest"
   },
