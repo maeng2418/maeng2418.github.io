@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import Comments from '@/components/Comments'
+import { PostEditEntry } from '@/components/PostEditEntry'
+import { IS_SERVER_TARGET } from '@/build-target'
 import { getAllPosts, getPostBySlug } from '@/lib/content/loader'
 import 'katex/dist/katex.min.css'
 
@@ -54,6 +56,8 @@ export default async function PostDetailPage({ params }: PageProps) {
         <p className="mt-4 text-[13px] font-semibold tracking-[0.08em] uppercase text-ink-faint">
           {post.dateFormatted}
         </p>
+        {/* 수정 진입점 — 서버 타깃 빌드에서만 렌더된다 (design.md §B D9, REQ-EDIT-001/002) */}
+        {IS_SERVER_TARGET && <PostEditEntry path={post.slug} />}
       </header>
 
       <div

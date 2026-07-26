@@ -17,6 +17,67 @@
   "comments": {
     "title": "Comments"
   },
+  "editor": {
+    "appTitle": "Post editor",
+    "localeSwitch": {
+      "label": "KO",
+      "aria": "한국어로 보기"
+    },
+    "editTarget": "Editing target: {path}",
+    "sidebar": {
+      "posts": "Posts",
+      "newPost": "New post",
+      "loading": "Loading posts…",
+      "listError": "Failed to load posts: {message}",
+      "empty": "No saved posts"
+    },
+    "form": {
+      "title": "Title",
+      "category": "Category",
+      "categoryPlaceholder": "development",
+      "fileName": "File name",
+      "fileNamePlaceholder": "my_post (without extension)",
+      "thumbnail": "Thumbnail URL (optional)",
+      "draft": "draft (unpublished on blog)",
+      "date": "date: {date}",
+      "save": "Save",
+      "saving": "Saving…"
+    },
+    "validation": {
+      "titleRequired": "Enter a title",
+      "categoryRequired": "Enter a category",
+      "fileNameRequired": "Enter a file name",
+      "fileNameNoSeparator": "File name cannot contain path separators"
+    },
+    "source": {
+      "show": "Show markdown",
+      "hide": "Hide markdown"
+    },
+    "palette": {
+      "openAria": "Open command palette (⌘K)",
+      "placeholder": "Search posts or run a command…",
+      "empty": "No results",
+      "posts": "Posts",
+      "actions": "Actions",
+      "save": "Save",
+      "toggleLocale": "한국어로 전환"
+    },
+    "status": {
+      "saved": "Saved → {key}",
+      "saveFailed": "Save failed: {message}",
+      "loaded": "Loaded ← {key}",
+      "loadFailed": "Load failed: {message}"
+    },
+    "assist": {
+      "title": "AI writing assistant",
+      "placeholder": "e.g. Draft a closing paragraph for this post",
+      "run": "Run",
+      "running": "Generating…",
+      "requestFailed": "Request failed (HTTP {status})",
+      "insert": "Insert at end",
+      "discard": "Discard"
+    }
+  },
   "portfolio": {
     "title": "Portfolio",
     "businessCard": {
