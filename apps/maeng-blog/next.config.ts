@@ -1,4 +1,11 @@
 import type { NextConfig } from 'next'
+import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare'
+
+// M4 — Cloudflare Workers 로컬 개발(next dev) 시 bindings(env/secrets)를 주입한다(공식 권장 패턴).
+// 서버 타깃이 아닐 때는 호출하지 않는다 — 정적 타깃 빌드에는 영향이 없다(design.md §B D7).
+if (process.env.MAENG_BUILD_TARGET === 'server') {
+  initOpenNextCloudflareForDev()
+}
 
 // 듀얼 빌드 타깃 분기 (SPEC-MAENGV2-EDITOR-MERGE-006 design.md §B D1).
 // MAENG_BUILD_TARGET 미지정 시 기본값은 'static' — 기존 gh-pages 정적 배포 계약(REQ-DEPLOY-004) 무변경 유지.
@@ -14,7 +21,9 @@ const nextConfig: NextConfig = {
   // design.md §B D9 — 컴파일 타임 리터럴 인라인. 정적 빌드에서 IS_SERVER_TARGET이 리터럴 false가 되어
   // 수정 진입점(PostEditEntry) import·마크업이 dead-code로 제거된다(REQ-EDIT-002).
   env: { MAENG_BUILD_TARGET: target },
-  trailingSlash: true,
+  // 정적 타깃(GitHub Pages)만 디렉터리 스타일 URL이 필요하다. 서버 타깃에서 trailingSlash를
+  // 강제하면 /api/* 요청이 308로 리다이렉트되어 인증 헤더 기반 curl 검증(AC-M4-*)이 깨진다.
+  trailingSlash: isStatic,
   images: {
     unoptimized: true,
   },

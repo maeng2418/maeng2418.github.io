@@ -1,0 +1,15 @@
+# SPEC-MAENGV2-EDITOR-MERGE-006 M4 — Cloudflare Workers 로컬 개발용 시크릿 목록(wrangler dev).
+# 값은 비워둔다. 실제 값은 `.dev.vars`(gitignore 대상)에 설정한다.
+# EDITOR_AUTH_DISABLED 는 여기에만 등장할 수 있다 — `wrangler secret put`(배포) 목록에는 절대 포함하지 않는다(AC-M4-015).
+
+EDITOR_STORAGE_DRIVER=
+EDITOR_AUTH_TOKEN=
+EDITOR_AUTH_DISABLED=
+
+GITHUB_TOKEN=
+GITHUB_REPO_OWNER=
+GITHUB_REPO_NAME=
+GITHUB_BRANCH=
+
+OPENAI_API_KEY=
+OPENAI_MODEL=

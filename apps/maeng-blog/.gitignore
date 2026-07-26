@@ -4,6 +4,11 @@ out/
 .turbo/
 *.tsbuildinfo
 
+# Cloudflare Workers 서버 타깃 빌드 산출물 (SPEC-MAENGV2-EDITOR-MERGE-006 M4)
+.open-next/
+.wrangler/
+.dev.vars
+
 # 빌드타임에 content/images → public/content-images 로 복사되는 생성물 (scripts/sync-content-images.mjs)
 public/content-images/
 

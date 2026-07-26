@@ -17,6 +17,9 @@ beforeEach(async () => {
   tmpRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'maeng-posts-route-'))
   process.env.EDITOR_STORAGE_DRIVER = 'fs'
   process.env.MAENG_CONTENT_DIR = tmpRoot
+  // M4 인증 게이트(requireEditorAuth) 우회 — 이 스위트는 딥링크 로드/저장 계약만 검증한다.
+  process.env.EDITOR_AUTH_TOKEN = 'x'.repeat(32)
+  process.env.EDITOR_AUTH_DISABLED = '1'
   await fs.mkdir(path.join(tmpRoot, 'markdowns', 'nodejs'), { recursive: true })
   await fs.writeFile(
     path.join(tmpRoot, 'markdowns', 'nodejs', 'existing.md'),
@@ -31,6 +34,8 @@ beforeEach(async () => {
 afterEach(async () => {
   delete process.env.EDITOR_STORAGE_DRIVER
   delete process.env.MAENG_CONTENT_DIR
+  delete process.env.EDITOR_AUTH_TOKEN
+  delete process.env.EDITOR_AUTH_DISABLED
   await fs.rm(tmpRoot, { recursive: true, force: true })
 })
 

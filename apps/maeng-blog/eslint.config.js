@@ -3,7 +3,7 @@ const next = require('eslint-config-custom/next')
 
 module.exports = [
   {
-    ignores: ['out/**', 'next-env.d.ts', 'public/**', '.turbo/**'],
+    ignores: ['out/**', 'next-env.d.ts', 'public/**', '.turbo/**', '.open-next/**', '.wrangler/**'],
   },
   ...next,
   {

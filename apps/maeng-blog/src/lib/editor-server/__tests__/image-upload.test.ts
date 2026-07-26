@@ -16,11 +16,16 @@ beforeEach(async () => {
   tmpRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'maeng-image-upload-'))
   process.env.EDITOR_STORAGE_DRIVER = 'fs'
   process.env.MAENG_CONTENT_DIR = tmpRoot
+  // M4 인증 게이트(requireEditorAuth) 우회 — 이 스위트는 저장소 계층만 검증한다.
+  process.env.EDITOR_AUTH_TOKEN = 'x'.repeat(32)
+  process.env.EDITOR_AUTH_DISABLED = '1'
 })
 
 afterEach(async () => {
   delete process.env.EDITOR_STORAGE_DRIVER
   delete process.env.MAENG_CONTENT_DIR
+  delete process.env.EDITOR_AUTH_TOKEN
+  delete process.env.EDITOR_AUTH_DISABLED
   await fs.rm(tmpRoot, { recursive: true, force: true })
 })
 

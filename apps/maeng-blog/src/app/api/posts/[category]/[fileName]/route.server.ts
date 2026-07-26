@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 import { formatFrontmatterDate } from '@/lib/content-contract/date'
 import type { PostFrontmatter } from '@/lib/content-contract/types'
+import { requireEditorAuth } from '@/lib/editor-server/auth'
 import { parseDeepLinkPath } from '@/lib/editor-server/deep-link'
 import { createPostStore, PostNotFoundError } from '@/lib/editor-server/store'
 
@@ -22,7 +23,10 @@ function validateSegments(category: string, fileName: string): { category: strin
   return parseDeepLinkPath(`${category}/${fileName}`)
 }
 
-export async function GET(_request: Request, { params }: RouteParams): Promise<Response> {
+export async function GET(request: Request, { params }: RouteParams): Promise<Response> {
+  const denied = await requireEditorAuth(request)
+  if (denied) return denied
+
   const { category, fileName } = await params
   let target: { category: string; fileName: string }
   try {
@@ -53,6 +57,9 @@ const SavePostBodySchema = z.object({
 })
 
 export async function PUT(request: Request, { params }: RouteParams): Promise<Response> {
+  const denied = await requireEditorAuth(request)
+  if (denied) return denied
+
   const { category, fileName } = await params
   let target: { category: string; fileName: string }
   try {

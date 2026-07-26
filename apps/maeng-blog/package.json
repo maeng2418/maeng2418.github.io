@@ -6,12 +6,15 @@
     "dev": "next dev",
     "build": "node scripts/sync-content-images.mjs && next build && pagefind --site out && node scripts/generate-rss.mjs",
     "build:server": "MAENG_BUILD_TARGET=server next build",
+    "preview:cf": "MAENG_BUILD_TARGET=server opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy:cf": "MAENG_BUILD_TARGET=server opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "lint": "eslint .",
     "test": "vitest"
   },
   "dependencies": {
     "@giscus/react": "3.1.0",
     "@hookform/resolvers": "^5.4.0",
+    "@opennextjs/cloudflare": "^1.20.2",
     "@milkdown/kit": "^7.21.0",
     "@milkdown/react": "^7.21.0",
     "@tanstack/react-query": "^5.101.4",
@@ -22,7 +25,6 @@
     "motion": "12.42.2",
     "next": "^15.3.0",
     "next-intl": "4.13.4",
-    "openai": "^6.49.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.82.0",
@@ -54,6 +56,7 @@
     "tailwindcss": "^4.1.0",
     "tsconfig": "*",
     "typescript": "^5.8.0",
-    "vitest": "^3.2.0"
+    "vitest": "^3.2.0",
+    "wrangler": "^4.114.0"
   }
 }

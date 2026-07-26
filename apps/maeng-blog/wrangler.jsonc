@@ -1,0 +1,16 @@
+{
+  // SPEC-MAENGV2-EDITOR-MERGE-006 M4 — 서버 타깃(관리 표면) Cloudflare Workers 배포 설정.
+  // design.md §B D7 — 공개 블로그(GitHub Pages)와 분리된 관리 표면. 커스텀 도메인 없음(*.workers.dev).
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "maeng-blog-editor",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

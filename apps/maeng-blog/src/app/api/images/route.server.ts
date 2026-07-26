@@ -1,6 +1,7 @@
 // POST /api/images — 이미지 업로드. 서버 타깃 전용 라우트(design.md §B D5).
 // 크기 상한 10 MiB(10,485,760 바이트), 지원 MIME 만 허용, randomUUID 고유 파일명(REQ-STORE-011).
 import { NextResponse } from 'next/server'
+import { requireEditorAuth } from '@/lib/editor-server/auth'
 import { createImageStore } from '@/lib/editor-server/store'
 
 // design.md §B D5 — 10 MiB = 10,485,760 바이트(원본 기준)
@@ -20,6 +21,9 @@ function resolveExtension(file: File): string | null {
 }
 
 export async function POST(request: Request): Promise<Response> {
+  const denied = await requireEditorAuth(request)
+  if (denied) return denied
+
   let file: FormDataEntryValue | null
   try {
     file = (await request.formData()).get('file')
