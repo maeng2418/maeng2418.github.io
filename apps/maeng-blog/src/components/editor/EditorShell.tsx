@@ -1,10 +1,10 @@
 'use client'
 
-// 에디터 셸 — quiet utilitarian 도구 UI. maeng-editor 에서 이관(SPEC-MAENGV2-EDITOR-MERGE-006 M2).
-// M2 목표: 화면이 서버 타깃 /editor 에서 렌더되고 딥링크(`?path=`)를 수용한다. 저장소 연동
-// (GET/PUT /api/posts/*, POST /api/images, POST /api/assist)은 M3/M4에서 구현되므로 이 단계에서는
-// 엔드포인트가 아직 없어 목록/저장 호출이 실패할 수 있다 — 데이터 계층 미연결은 M2 목표에 포함된다
-// (plan.md §E M2 "데이터 계층은 아직 미연결/스텁 허용").
+// 에디터 셸 — quiet utilitarian 도구 UI. maeng-editor 에서 이관(SPEC-MAENGV2-EDITOR-MERGE-006 M2/M3).
+// M3: `?path={category}/{fileName}` 딥링크가 GET /api/posts/{category}/{fileName} 로 로드되어
+// 제목·카테고리·본문을 프리필하고(REQ-EDIT-004), 저장은 폼에 채워진 동일 category/fileName 으로
+// PUT 되므로 원본과 같은 경로에 커밋된다. 2세그먼트가 아니거나 형식이 무효한 path 는 편집 상태를
+// 구성하지 않는다(REQ-EDIT-006) — 서버 400/404 판정은 GET 요청 자체가 담당한다.
 // 폼은 react-hook-form + zod resolver, 클라이언트 HTTP 는 ky. 상태 알림은 sonner 토스트,
 // 커맨드 팔레트는 cmdk(⌘K). UI 크롬 문자열은 next-intl ko/en 카탈로그에서 공급한다.
 import { useEffect, useMemo, useState } from 'react'
@@ -17,7 +17,7 @@ import {
   useQuery,
   useQueryClient,
 } from '@tanstack/react-query'
-import ky from 'ky'
+import ky, { HTTPError } from 'ky'
 import { useTranslations } from 'next-intl'
 import { useForm } from 'react-hook-form'
 import { Toaster, toast } from 'sonner'
@@ -50,6 +50,23 @@ function makePostMetaSchema(t: (key: string) => string) {
 }
 
 type PostMetaForm = z.infer<ReturnType<typeof makePostMetaSchema>>
+
+/**
+ * API 오류의 원인 문자열을 표면화한다(REQ-STORE-010, AC-M3-008). ky 는 비-2xx 응답에
+ * 일반화된 HTTPError 를 던지므로, 라우트 핸들러가 `{ error: string }` 로 응답한 본문을
+ * 우선 파싱하고 실패 시에만 error.message 로 폴백한다.
+ */
+async function describeError(error: unknown): Promise<string> {
+  if (error instanceof HTTPError) {
+    try {
+      const body = (await error.response.json()) as { error?: string }
+      if (body?.error) return body.error
+    } catch {
+      // 응답 본문이 JSON 이 아니면 일반 메시지로 폴백
+    }
+  }
+  return error instanceof Error ? error.message : String(error)
+}
 
 const EMPTY_META: PostMetaForm = {
   title: '',
@@ -142,7 +159,7 @@ function EditorWorkspace({ initialPath }: EditorShellProps) {
       toast.success(t('status.saved', { key: data.key }))
       void queryClient.invalidateQueries({ queryKey: ['posts'] })
     },
-    onError: (error: Error) => toast.error(t('status.saveFailed', { message: error.message })),
+    onError: async (error: Error) => toast.error(t('status.saveFailed', { message: await describeError(error) })),
   })
 
   const loadMutation = useMutation({
@@ -164,7 +181,7 @@ function EditorWorkspace({ initialPath }: EditorShellProps) {
       replaceDocument(post.body)
       toast.success(t('status.loaded', { key: post.key }))
     },
-    onError: (error: Error) => toast.error(t('status.loadFailed', { message: error.message })),
+    onError: async (error: Error) => toast.error(t('status.loadFailed', { message: await describeError(error) })),
   })
 
   const newPost = () => {
@@ -172,6 +189,43 @@ function EditorWorkspace({ initialPath }: EditorShellProps) {
     setPostDate(null)
     replaceDocument(INITIAL_DOC)
   }
+
+  const loadByPathMutation = useMutation({
+    mutationFn: async ({ category, fileName }: { category: string; fileName: string }) => {
+      const post = await ky
+        .get(`/api/posts/${encodeURIComponent(category)}/${encodeURIComponent(fileName)}`)
+        .json<LoadedPost>()
+      return { category, fileName, post }
+    },
+    onSuccess: ({ category, fileName, post }) => {
+      form.reset({
+        title: post.frontmatter.title,
+        category: post.frontmatter.category,
+        fileName,
+        thumbnail: post.frontmatter.thumbnail ?? '',
+        draft: post.frontmatter.draft ?? false,
+      })
+      setPostDate(post.frontmatter.date)
+      replaceDocument(post.body)
+      toast.success(t('status.loaded', { key: `${category}/${fileName}` }))
+    },
+    onError: async (error: Error) => toast.error(t('status.loadFailed', { message: await describeError(error) })),
+  })
+
+  // 딥링크(`?path={category}/{fileName}`) 진입 시 1회 로드 — design.md §B D9 딥링크 계약.
+  // 2세그먼트가 아니면 편집 상태를 구성하지 않고 에러만 표시한다(REQ-EDIT-006).
+  useEffect(() => {
+    if (!initialPath) return
+    const segments = initialPath.split('/')
+    if (segments.length !== 2 || segments.some((s) => s.length === 0)) {
+      toast.error(t('status.loadFailed', { message: initialPath }))
+      return
+    }
+    const [category, fileName] = segments
+    loadByPathMutation.mutate({ category, fileName })
+    // initialPath 는 마운트 시 1회만 소비한다 — loadByPathMutation 은 의도적으로 의존성에서 제외
+    // (deps 배열: initialPath 변경 시에만 재실행)
+  }, [initialPath])
 
   const submitSave = form.handleSubmit((values) => saveMutation.mutate(values))
 
