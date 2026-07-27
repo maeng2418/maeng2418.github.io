@@ -1,0 +1,74 @@
+# SPEC-MAENGV2-EDITOR-MERGE-006 M5 — GitHub Actions 자동 배포 (공개 정적 블로그 → GitHub Pages)
+#
+# 트리거: main으로의 push(블로그 소스/콘텐츠 변경 시) 또는 수동 실행.
+# 빌드 실패 시 deploy 잡은 실행되지 않는다(REQ-CI-004 — `needs: build`에 의한
+# 자연스러운 skip, 별도 조건문 불필요).
+#
+# 관리 표면(Cloudflare Workers, /editor, /api/*)은 이 워크플로의 대상이 아니다
+# — 공개 블로그(GitHub Pages)와 관리 표면(Cloudflare)은 배포 토폴로지가
+# 분리되어 있다(design.md §B D7). Cloudflare 배포는 `deploy:cf` 스크립트로
+# 사용자가 수동 수행한다(plan.md §D OPS-3..OPS-6).
+
+name: Deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/maeng-blog/**"
+      - "packages/**"
+      - "package.json"
+      - "yarn.lock"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build maeng-blog (static export)
+        run: yarn workspace maeng-blog build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/maeng-blog/out
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
