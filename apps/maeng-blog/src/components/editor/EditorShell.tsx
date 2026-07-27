@@ -1,6 +1,6 @@
 'use client'
 
-// 에디터 셸 — quiet utilitarian 도구 UI. maeng-editor 에서 이관(SPEC-MAENGV2-EDITOR-MERGE-006 M2/M3).
+// 에디터 셸 — quiet utilitarian 도구 UI. 구 저작 도구 앱에서 이관(SPEC-MAENGV2-EDITOR-MERGE-006 M2/M3).
 // M3: `?path={category}/{fileName}` 딥링크가 GET /api/posts/{category}/{fileName} 로 로드되어
 // 제목·카테고리·본문을 프리필하고(REQ-EDIT-004), 저장은 폼에 채워진 동일 category/fileName 으로
 // PUT 되므로 원본과 같은 경로에 커밋된다. 2세그먼트가 아니거나 형식이 무효한 path 는 편집 상태를

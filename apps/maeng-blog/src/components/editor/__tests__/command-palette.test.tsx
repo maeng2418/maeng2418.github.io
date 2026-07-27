@@ -1,4 +1,4 @@
-// 커맨드 팔레트(cmdk) — 포스트 검색/전환 + 액션(저장/로케일 전환). maeng-editor에서 이관.
+// 커맨드 팔레트(cmdk) — 포스트 검색/전환 + 액션(저장/로케일 전환). 구 저작 도구 앱에서 이관(SPEC-MAENGV2-EDITOR-MERGE-006).
 // EditorShell 소스 특성화 — sonner 토스트/캡처 리스너 계약이 이관 후에도 유지되는지 검증.
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'

@@ -1,4 +1,4 @@
-// POST /api/assist — AI 글쓰기 보조 스트리밍. apps/maeng-editor 로직 이관(plan.md M3).
+// POST /api/assist — AI 글쓰기 보조 스트리밍. 구 저작 도구 앱 로직 이관(plan.md M3).
 // 모델명은 OPENAI_MODEL env 에서만 읽는다(하드코딩 금지, REQ-ASSIST-002). 서버 경계 전용(REQ-ASSIST-003).
 // M4 — `openai` SDK 대신 `fetch` 직접 호출을 사용한다(Worker 번들 크기 폴백, plan.md §C C-3/R3, AC-M4-006).
 import { NextResponse } from 'next/server'

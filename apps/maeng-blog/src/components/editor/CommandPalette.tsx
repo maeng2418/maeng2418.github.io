@@ -1,6 +1,6 @@
 'use client'
 
-// 커맨드 팔레트 — ⌘K/Ctrl+K (REQ-ENH-011 계승, maeng-editor에서 이관)
+// 커맨드 팔레트 — ⌘K/Ctrl+K (REQ-ENH-011 계승, 구 저작 도구 앱에서 이관)
 // cmdk 의 Command 를 자체 오버레이에 인라인 배치한다 (Command.Dialog/portal 미사용 —
 // quiet utilitarian 스타일 일관 + 테스트 용이). 포스트 목록은 react-query postsQuery
 // 캐시를 소비하고(부모가 props 로 공급), 저장/로케일 전환 액션을 함께 노출한다.

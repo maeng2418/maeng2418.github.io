@@ -9,7 +9,7 @@ import { getAuthEnv, type AuthRuntimeEnv } from './env'
 export const SESSION_COOKIE_NAME = 'maeng_editor_session'
 export const SESSION_MAX_AGE_SECONDS = 60 * 60 * 24 * 7 // 7일 — design.md §B D3
 
-const HMAC_INFO = 'maeng-editor-session-v1'
+const HMAC_INFO = 'maeng-blog-editor-session-v1'
 
 interface HeaderGetter {
   get(name: string): string | null
