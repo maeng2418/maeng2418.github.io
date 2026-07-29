@@ -221,8 +221,11 @@ button:focus-visible {
 .pf-frame {
   position: sticky;
   top: 0;
+  /* 가변 단위(dvh)는 모바일 URL 바 축소·확장 시 스크롤 도중 핀 레이아웃을 재계산시킨다
+     (SPEC-007 D3 / REQ-VP-001). 스크롤 중 불변인 100svh 로 고정 — 데스크톱에서는
+     svh == vh 라 렌더 무회귀 (REQ-VP-002) */
   height: 100vh;
-  height: 100dvh;
+  height: 100svh;
   overflow: hidden;
   display: flex;
   /* 콘텐츠가 프레임보다 커지면(disclosure 열림 등) 중앙 정렬 대신 상단 기준으로

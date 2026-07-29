@@ -23,6 +23,7 @@ import { useLocaleToggle } from '@/components/i18n/LocaleProvider'
 import type { Locale } from '@/lib/i18n/locale'
 import { toggleLocale } from '@/lib/i18n/locale'
 import { getPortfolioContent, getResumeHref } from '@/lib/portfolio/content'
+import { pinHeight } from '@/components/portfolio/pin-config'
 
 const STAGGER_STEP_MS = 70
 
@@ -372,7 +373,7 @@ export default function PortfolioScroll() {
       </div>
 
       {/* ── 인트로 (핀) — businessCard ─────────────────────────────── */}
-      <div ref={introPinRef} id="pf-s0" className="pf-pin" style={{ height: '240vh' }}>
+      <div ref={introPinRef} id="pf-s0" className="pf-pin" style={{ height: pinHeight('intro') }}>
         <section data-section="businessCard" className="pf-frame" aria-label={c.businessCard.title}>
           <div className="pf-wrap">
             <p className="pf-kicker">{c.title}</p>
@@ -458,7 +459,7 @@ export default function PortfolioScroll() {
       </motion.section>
 
       {/* ── 프로젝트 (핀 레일) — projects ────────────────────────────── */}
-      <div ref={projPinRef} id="pf-s2" className="pf-pin" style={{ height: '300vh' }}>
+      <div ref={projPinRef} id="pf-s2" className="pf-pin" style={{ height: pinHeight('projects') }}>
         <section data-section="projects" className="pf-frame" aria-label={c.projects.title}>
           <div className="pf-wrap">
             <h2 className="pf-h2">
@@ -519,7 +520,7 @@ export default function PortfolioScroll() {
       </div>
 
       {/* ── 경력 (핀 crossfade) — experiences ────────────────────────── */}
-      <div ref={careerPinRef} id="pf-s3" className="pf-pin" style={{ height: '330vh' }}>
+      <div ref={careerPinRef} id="pf-s3" className="pf-pin" style={{ height: pinHeight('career') }}>
         <section data-section="experiences" className="pf-frame" aria-label={c.experiences.title}>
           <div className="pf-wrap">
             <div className="pf-head flex flex-wrap items-baseline gap-x-8 gap-y-3">
@@ -710,7 +711,7 @@ export default function PortfolioScroll() {
       </motion.section>
 
       {/* ── 컨택트 (핀 플러드) ────────────────────────────────────────── */}
-      <div ref={contactPinRef} id="pf-s7" className="pf-pin" style={{ height: '220vh' }}>
+      <div ref={contactPinRef} id="pf-s7" className="pf-pin" style={{ height: pinHeight('contact') }}>
         <section
           className={`pf-frame pf-contact-frame ${flooded ? 'flooded' : ''}`}
           aria-label={c.contact.title}
