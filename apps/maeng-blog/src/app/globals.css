@@ -440,6 +440,13 @@ button:focus-visible {
 }
 
 /* 프로젝트 레일 — will-change 상시 선언 제거 (REQ-PAINT-002, motion 이 관리) */
+/* M6 fix 2: 후행 스페이서 — 마지막 카드가 언핀 전에 좌측 읽기 위치까지 이동하도록
+   railMax(scrollWidth − clientWidth)에 (래퍼 폭 − 카드 폭 − gap)을 더한다.
+   %는 레일의 주축(=래퍼 폭) 기준, 카드 폭 min(360px, 80vw)과 동기 (반응형) */
+.pf-rail::after {
+  content: '';
+  flex: 0 0 max(0px, calc(100% - min(360px, 80vw) - 18px));
+}
 .pf-proj {
   flex: 0 0 min(360px, 80vw);
   padding: 26px 28px;
@@ -732,7 +739,20 @@ button:focus-visible {
   font-weight: 500;
   background: rgba(255, 255, 255, 0.5);
   border: 1px solid var(--pf-gline);
-  color: var(--ink-soft);
+  /* M6 fix 6: 기본 칩 대비 상향 — 스크롤 리빌과 무관하게 항상 가독 (--ink-soft → --ink) */
+  color: var(--ink);
+}
+/* M6 fix 6: 다크 배경에서 반투명 화이트(0.5) 칩 배경은 라이트 텍스트와 충돌 —
+   어두운 유리 배경 + 밝은 보더로 교체해 비강조 칩 가독성을 확보 (강조 .hot 구분 유지) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .pf-chip:not(.hot) {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+:root[data-theme='dark'] .pf-chip:not(.hot) {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 .pf-chip.hot {
   background: var(--accent-soft);
@@ -773,6 +793,13 @@ button:focus-visible {
 }
 
 /* 컨택트 — 코발트 플러드 피날레 */
+/* M6 fix 7: 전역 main(max-width 1080px) breakout — 플러드가 뷰포트 전폭을 덮는다.
+   html/body overflow-x hidden 은 sticky 를 깨므로 금지 — 폭 100vw + 중앙 보정 마진만 사용.
+   (.pf-frame overflow:hidden 이 플러드를 클리핑하므로 breakout 은 핀 래퍼 레이어에 적용) */
+.pf-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
 .pf-contact-frame {
   justify-content: center;
   text-align: center;
@@ -816,6 +843,10 @@ button:focus-visible {
   .pf-rail {
     transform: none !important;
     flex-wrap: wrap;
+  }
+  /* M6: 정적 랩 레이아웃에서는 후행 스페이서(fix 2)가 빈 행을 만들므로 제거 */
+  .pf-rail::after {
+    content: none;
   }
   .pf-career-stack {
     min-height: 0;

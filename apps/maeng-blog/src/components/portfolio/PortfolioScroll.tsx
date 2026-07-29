@@ -2,11 +2,11 @@
 
 // 포트폴리오 스크롤 장면 — REQ-BLOG-006/007, 승인 시안 LUMEN
 // (.moai/reports/design/maeng-portfolio-lumen.html — 라이트 에디토리얼 글래스)
-// 구조: 연속 캔버스(흐름 섹션) + 핀 4곳 — 장면 카운터 없는 video-scroll 문법
+// 구조: 연속 캔버스(흐름 섹션) + 핀 6곳 — 장면 카운터 없는 video-scroll 문법 (M6 수동 검증 반영)
 //   인트로(핀: businessCard) → 소개(흐름: introduction 유리 슬랫 + 임팩트 지표 카운트업)
 //   → 프로젝트(핀: projects 레일 스크럽) → 경력(핀: experiences crossfade 스택)
-//   → 일하는 방식(흐름: tech/soft/designSkill) → 타임라인(흐름: timestamp 아래→위 게이지
-//   + educations) → 스킬(흐름: skillSets) → 컨택트(핀: 코발트 플러드)
+//   → 일하는 방식(짧은 핀: tech/soft/designSkill) → 타임라인(흐름: timestamp 아래→위 게이지
+//   + educations) → 스킬(짧은 핀: skillSets) → 컨택트(핀: 코발트 플러드, 전폭 breakout)
 // 모션 엔진: motion/react (REQ-ENH-008 승계) — transform/opacity 만 애니메이트,
 // reduced-motion 시 useReducedMotion 분기 + globals.css .pf-* 정적 폴백
 import { useEffect, useRef, useState } from 'react'
@@ -115,7 +115,8 @@ function Figure({
   const reduced = useReducedMotion()
   const final = value.toFixed(dec)
   const [text, setText] = useState(final)
-  const eased = useTransform(progress, [0.45, 0.8], [0, 1])
+  // M6 fix 1: 지표가 섹션 중앙 통과 무렵(진행도 ~0.5)에 최종값 도달 — 퇴장 시점 완료 금지
+  const eased = useTransform(progress, [0.15, 0.5], [0, 1])
   useMotionValueEvent(eased, 'change', (v) => {
     if (!reduced) setText((value * v).toFixed(dec))
   })
@@ -145,12 +146,16 @@ function CareerCard({
   const reduced = useReducedMotion()
   const slot = 1 / count
   const a = index * slot
-  const enterEnd = a + slot * 0.25
+  // M6 fix 3: 첫 카드는 핀 진입 즉시 완전 표시(밴드가 진행도 0 이전에 완료 — 빈 프레임 금지),
+  // 전이 폭을 슬롯의 12% 로 줄여 카드별 정지(hold) 구간을 대폭 연장한다
+  const first = index === 0
+  const enterStart = first ? -0.2 : a
+  const enterEnd = first ? -0.1 : a + slot * 0.12
   const last = index === count - 1
-  const exitStart = last ? 2 : (index + 1) * slot - slot * 0.2
+  const exitStart = last ? 2 : (index + 1) * slot - slot * 0.12
   const exitEnd = last ? 3 : (index + 1) * slot
-  const opacity = useTransform(progress, [a, enterEnd, exitStart, exitEnd], [0, 1, 1, 0])
-  const y = useTransform(progress, [a, enterEnd, exitStart, exitEnd], [40, 0, 0, -30])
+  const opacity = useTransform(progress, [enterStart, enterEnd, exitStart, exitEnd], [0, 1, 1, 0])
+  const y = useTransform(progress, [enterStart, enterEnd, exitStart, exitEnd], [40, 0, 0, -30])
   const pointerEvents = useTransform(opacity, (o) => (o > 0.5 ? 'auto' : 'none'))
   return (
     <motion.article
@@ -189,6 +194,36 @@ function TimelineItem({
   )
 }
 
+/** 짧은 핀 섹션 콘텐츠 리빌 — 핀 진행도 밴드에서 스태거 등장, 언핀 훨씬 전(~0.5)에 완독 가능
+ *  (M6 fix 4/6: creed·skills 핀 전환용. reduced-motion 시 정적 완전 표시) */
+function PinReveal({
+  index,
+  progress,
+  className,
+  dataSection,
+  children,
+}: {
+  index: number
+  progress: MotionValue<number>
+  className?: string
+  dataSection?: string
+  children: React.ReactNode
+}) {
+  const reduced = useReducedMotion()
+  const start = Math.min(0.05 + index * 0.08, 0.35)
+  const opacity = useTransform(progress, [start, start + 0.16], [0, 1])
+  const y = useTransform(progress, [start, start + 0.16], [34, 0])
+  return (
+    <motion.div
+      className={className}
+      data-section={dataSection}
+      style={reduced ? undefined : { opacity, y }}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 export default function PortfolioScroll() {
   // 로케일 상태/토글/지속은 LocaleProvider 가 단일 관리한다 (REQ-ENH-002)
   const { locale, toggle: onToggleLocale } = useLocaleToggle()
@@ -202,7 +237,9 @@ export default function PortfolioScroll() {
   const railWrapRef = useRef<HTMLDivElement>(null)
   const railRef = useRef<HTMLDivElement>(null)
   const careerPinRef = useRef<HTMLDivElement>(null)
+  const creedPinRef = useRef<HTMLDivElement>(null)
   const tlRef = useRef<HTMLElement>(null)
+  const skillsPinRef = useRef<HTMLDivElement>(null)
   const contactPinRef = useRef<HTMLDivElement>(null)
 
   // 흐름 섹션 등장 — motion variants (threshold 0.2 · step 70ms 승계)
@@ -246,7 +283,9 @@ export default function PortfolioScroll() {
     target: projPinRef,
     offset: ['start start', 'end end'],
   })
-  const railProgress = useTransform(projProgress, [0.14, 0.95], [0, 1], { clamp: true })
+  // M6 fix 2: 스크럽을 0.85 에서 완료 — 언핀 전 정착(settle) 여백 확보. 마지막 카드의
+  // 좌측 도달은 globals.css .pf-rail::after 후행 스페이서(래퍼 폭 − 카드 폭)가 담당한다
+  const railProgress = useTransform(projProgress, [0.14, 0.85], [0, 1], { clamp: true })
   // railMax 는 MotionValue — ResizeObserver 재측정이 이후 스크럽에 즉시 반영된다
   // (REQ-RAIL-001..002: 리사이즈·폰트 로드·로케일 전환에 의한 콘텐츠 폭 변동 대응,
   //  스크롤 이벤트마다의 재측정 금지)
@@ -289,7 +328,8 @@ export default function PortfolioScroll() {
     target: careerPinRef,
     offset: ['start start', 'end end'],
   })
-  const careerProgress = useTransform(careerRaw, [0.12, 0.94], [0, 1], { clamp: true })
+  // M6 fix 3: 진입 데드존(0.12) 제거 — 핀 진입 순간 첫 카드 완전 표시, 330vh 예산 전체 사용
+  const careerProgress = useTransform(careerRaw, [0, 0.96], [0, 1], { clamp: true })
   const careerBarWidth = useTransform(careerProgress, (progress) => `${progress * 100}%`)
   const [careerIdx, setCareerIdx] = useState(1)
   useMotionValueEvent(careerProgress, 'change', (v) => {
@@ -299,12 +339,24 @@ export default function PortfolioScroll() {
     })
   })
 
+  // M6 fix 4/6: creed·skills 짧은 핀 진행도 (PinReveal 스태거 공급)
+  const { scrollYProgress: creedProgress } = useScroll({
+    target: creedPinRef,
+    offset: ['start start', 'end end'],
+  })
+  const { scrollYProgress: skillsProgress } = useScroll({
+    target: skillsPinRef,
+    offset: ['start start', 'end end'],
+  })
+
   // 타임라인: 아래→위 게이지
+  // M6 fix 5: 게이지가 섹션이 화면에 남아 있는 동안 100% 도달하도록 종점을 당긴다
+  // (end 0.8 = 섹션 하단이 뷰포트 80% 선 통과 시 진행도 1 — 최상단 항목까지 점등 보장)
   const { scrollYProgress: tlRaw } = useScroll({
     target: tlRef,
-    offset: ['start 0.9', 'end 0.55'],
+    offset: ['start 0.9', 'end 0.8'],
   })
-  const tlProgress = useTransform(tlRaw, [0.12, 0.95], [0, 1], { clamp: true })
+  const tlProgress = useTransform(tlRaw, [0.08, 0.85], [0, 1], { clamp: true })
   const tlFillHeight = useTransform(tlProgress, (progress) => `${progress * 100}%`)
 
   // 컨택트 플러드
@@ -312,7 +364,8 @@ export default function PortfolioScroll() {
     target: contactPinRef,
     offset: ['start start', 'end end'],
   })
-  const floodOpacity = useTransform(contactProgress, [0.1, 0.5], [0, 1])
+  // M6 fix 7: 플러드 페이드 범위 확장 — 급격한 색 반전 대신 점진 상승
+  const floodOpacity = useTransform(contactProgress, [0.05, 0.6], [0, 1])
   const contactY = useTransform(contactProgress, [0.25, 0.7], [60, 0])
   const contactOpacity = useTransform(contactProgress, [0.25, 0.7], [0.15, 1])
   const [flooded, setFlooded] = useState(false)
@@ -612,50 +665,48 @@ export default function PortfolioScroll() {
         </section>
       </div>
 
-      {/* ── 일하는 방식 (흐름) — techSkill / softSkill / designSkill ──── */}
-      <motion.section
-        id="pf-s4"
-        {...groupProps}
-        className="pf-flow"
-        aria-label={c.techSkill.title}
-      >
-        <BgWord factor={0.4}>Craft</BgWord>
-        <div className="pf-wrap">
-          <div className="pf-head pf-head-right">
-            <motion.h2 variants={itemVariants} className="pf-h2">
-              {locale === 'ko' ? '이렇게 일합니다' : 'How I work'}
-            </motion.h2>
-          </div>
-          <div className="pf-content pf-creed-wrap">
-            <div className="pf-creed">
-              {(
-                [
-                  ['techSkill', '01', c.techSkill],
-                  ['softSkill', '02', c.softSkill],
-                  ['designSkill', '03', c.designSkill],
-                ] as const
-              ).map(([id, no, skill]) => (
-                <motion.div
-                  key={id}
-                  variants={itemVariants}
-                  className="pf-creed-item"
-                  data-section={id}
-                >
-                  <b>
-                    <span className="no">{no}</span>
-                    {skill.title}
-                  </b>
-                  <ul>
-                    {skill.details.map((detail) => (
-                      <li key={detail}>{detail}</li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
+      {/* ── 일하는 방식 (핀, M6 fix 4) — techSkill / softSkill / designSkill ──── */}
+      <div ref={creedPinRef} id="pf-s4" className="pf-pin" style={{ height: pinHeight('creed') }}>
+        <section className="pf-frame" aria-label={c.techSkill.title}>
+          <span className="pf-bg-word" aria-hidden>
+            Craft
+          </span>
+          <div className="pf-wrap">
+            <div className="pf-head pf-head-right">
+              <h2 className="pf-h2">{locale === 'ko' ? '이렇게 일합니다' : 'How I work'}</h2>
+            </div>
+            <div className="pf-content pf-creed-wrap">
+              <div className="pf-creed">
+                {(
+                  [
+                    ['techSkill', '01', c.techSkill],
+                    ['softSkill', '02', c.softSkill],
+                    ['designSkill', '03', c.designSkill],
+                  ] as const
+                ).map(([id, no, skill], i) => (
+                  <PinReveal
+                    key={id}
+                    index={i}
+                    progress={creedProgress}
+                    className="pf-creed-item"
+                    dataSection={id}
+                  >
+                    <b>
+                      <span className="no">{no}</span>
+                      {skill.title}
+                    </b>
+                    <ul>
+                      {skill.details.map((detail) => (
+                        <li key={detail}>{detail}</li>
+                      ))}
+                    </ul>
+                  </PinReveal>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </motion.section>
+        </section>
+      </div>
 
       {/* ── 타임라인 (흐름, 아래→위) — timestamp + educations ─────────── */}
       <section
@@ -705,47 +756,50 @@ export default function PortfolioScroll() {
         </div>
       </section>
 
-      {/* ── 스킬 (흐름) — skillSets ──────────────────────────────────── */}
-      <motion.section
-        id="pf-s6"
-        data-section="skillSets"
-        {...groupProps}
-        className="pf-flow"
-        aria-label={c.skillSets.title}
-      >
-        <BgWord factor={0.45}>Tools</BgWord>
-        <div className="pf-wrap">
-          <div className="pf-head">
-            <motion.h2 variants={itemVariants} className="pf-h2">
-              {c.skillSets.headline}
-            </motion.h2>
+      {/* ── 스킬 (핀, M6 fix 6) — skillSets ──────────────────────────── */}
+      <div ref={skillsPinRef} id="pf-s6" className="pf-pin" style={{ height: pinHeight('skills') }}>
+        <section data-section="skillSets" className="pf-frame" aria-label={c.skillSets.title}>
+          <span className="pf-bg-word" aria-hidden>
+            Tools
+          </span>
+          <div className="pf-wrap">
+            <div className="pf-head">
+              <h2 className="pf-h2">{c.skillSets.headline}</h2>
+            </div>
+            <div className="pf-content pf-skills-wrap">
+              {c.skillSets.groups.map((group, i) => (
+                <PinReveal
+                  key={group.label}
+                  index={i}
+                  progress={skillsProgress}
+                  className="pf-glass pf-chip-group"
+                >
+                  <span className="label">{group.label}</span>
+                  <div className="pf-chips">
+                    {group.skills.map((skill) => {
+                      const hot = group.highlights?.includes(skill)
+                      return (
+                        <span key={skill} className={`pf-chip ${hot ? 'hot' : ''}`}>
+                          {skill}
+                        </span>
+                      )
+                    })}
+                  </div>
+                </PinReveal>
+              ))}
+            </div>
           </div>
-          <div className="pf-content pf-skills-wrap">
-            {c.skillSets.groups.map((group) => (
-              <motion.div
-                key={group.label}
-                variants={itemVariants}
-                className="pf-glass pf-chip-group"
-              >
-                <span className="label">{group.label}</span>
-                <div className="pf-chips">
-                  {group.skills.map((skill) => {
-                    const hot = group.highlights?.includes(skill)
-                    return (
-                      <span key={skill} className={`pf-chip ${hot ? 'hot' : ''}`}>
-                        {skill}
-                      </span>
-                    )
-                  })}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+        </section>
+      </div>
 
       {/* ── 컨택트 (핀 플러드) ────────────────────────────────────────── */}
-      <div ref={contactPinRef} id="pf-s7" className="pf-pin" style={{ height: pinHeight('contact') }}>
+      {/* M6 fix 7: .pf-bleed — 전역 1080px main 을 벗어나 뷰포트 전폭 플러드 (breakout) */}
+      <div
+        ref={contactPinRef}
+        id="pf-s7"
+        className="pf-pin pf-bleed"
+        style={{ height: pinHeight('contact') }}
+      >
         <section
           className={`pf-frame pf-contact-frame ${flooded ? 'flooded' : ''}`}
           aria-label={c.contact.title}
