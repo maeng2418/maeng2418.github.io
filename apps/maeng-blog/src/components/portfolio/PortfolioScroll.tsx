@@ -12,6 +12,7 @@
 import { useEffect, useRef, useState } from 'react'
 import {
   motion,
+  useMotionValue,
   useMotionValueEvent,
   useReducedMotion,
   useScroll,
@@ -24,6 +25,7 @@ import type { Locale } from '@/lib/i18n/locale'
 import { toggleLocale } from '@/lib/i18n/locale'
 import { getPortfolioContent, getResumeHref } from '@/lib/portfolio/content'
 import { pinHeight } from '@/components/portfolio/pin-config'
+import { computeRailMax, pickActiveChapter } from '@/components/portfolio/scroll-logic'
 
 const STAGGER_STEP_MS = 70
 
@@ -245,19 +247,34 @@ export default function PortfolioScroll() {
     offset: ['start start', 'end end'],
   })
   const railProgress = useTransform(projProgress, [0.14, 0.95], [0, 1], { clamp: true })
-  const railMaxRef = useRef(0)
+  // railMax 는 MotionValue — ResizeObserver 재측정이 이후 스크럽에 즉시 반영된다
+  // (REQ-RAIL-001..002: 리사이즈·폰트 로드·로케일 전환에 의한 콘텐츠 폭 변동 대응,
+  //  스크롤 이벤트마다의 재측정 금지)
+  const railMax = useMotionValue(0)
   useEffect(() => {
     const measure = () => {
-      railMaxRef.current = Math.max(
-        0,
-        (railRef.current?.scrollWidth ?? 0) - (railWrapRef.current?.clientWidth ?? 0)
+      railMax.set(
+        computeRailMax(railRef.current?.scrollWidth ?? 0, railWrapRef.current?.clientWidth ?? 0)
       )
     }
     measure()
-    window.addEventListener('resize', measure)
-    return () => window.removeEventListener('resize', measure)
-  }, [locale])
-  const railX = useTransform(railProgress, (progress) => -progress * railMaxRef.current)
+    // jsdom 등 ResizeObserver 부재 환경 가드 (acceptance E-7) — resize 폴백
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', measure)
+      return () => window.removeEventListener('resize', measure)
+    }
+    const observer = new ResizeObserver(measure)
+    if (railWrapRef.current) observer.observe(railWrapRef.current)
+    // 레일 콘텐츠 폭 변동(폰트 정착·로케일 텍스트 폭)은 카드 자식 요소에서 관측된다
+    if (railRef.current) {
+      for (const child of Array.from(railRef.current.children)) observer.observe(child)
+    }
+    return () => observer.disconnect()
+  }, [locale, railMax])
+  const railX = useTransform(
+    [railProgress, railMax] as const,
+    ([progress, max]: number[]) => -progress * max
+  )
   const railBarWidth = useTransform(railProgress, (progress) => `${progress * 100}%`)
   const [railIdx, setRailIdx] = useState(1)
   useMotionValueEvent(railProgress, 'change', (v) => {
@@ -301,25 +318,31 @@ export default function PortfolioScroll() {
   const [flooded, setFlooded] = useState(false)
   useMotionValueEvent(floodOpacity, 'change', (v) => setFlooded(v > 0.5))
 
-  // 챕터 내비 활성 추적
+  // 챕터 내비 활성 추적 — IntersectionObserver (REQ-SCROLL-001..002)
+  // rootMargin -50%/-50% 로 관측 루트를 뷰포트 중앙선으로 좁혀, 기존
+  // "top<=mid && bottom>=mid" gBCR 판정과 동등한 결과를 스크롤 이벤트·강제
+  // 레이아웃 없이 얻는다. jsdom 등 Observer 부재 환경에서는 조용히 건너뛴다 (E-7).
   const [activeChapter, setActiveChapter] = useState(0)
   useEffect(() => {
-    const root = rootRef.current
-    if (!root) return
-    const onScroll = () => {
-      const mid = window.innerHeight * 0.5
-      let active = 0
-      CHAPTER_IDS.forEach((id, i) => {
-        const el = document.getElementById(id)
-        if (!el) return
-        const r = el.getBoundingClientRect()
-        if (r.top <= mid && r.bottom >= mid) active = i
-      })
-      setActiveChapter((prev) => (prev === active ? prev : active))
+    if (typeof IntersectionObserver === 'undefined') return
+    const indexById = new Map(CHAPTER_IDS.map((id, i) => [id, i]))
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const updates = entries
+          .map((entry) => ({
+            index: indexById.get(entry.target.id) ?? -1,
+            isIntersecting: entry.isIntersecting,
+          }))
+          .filter((update) => update.index >= 0)
+        setActiveChapter((prev) => pickActiveChapter(prev, updates))
+      },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
+    )
+    for (const id of CHAPTER_IDS) {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
     }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => observer.disconnect()
   }, [])
 
   const c = getPortfolioContent(locale)
