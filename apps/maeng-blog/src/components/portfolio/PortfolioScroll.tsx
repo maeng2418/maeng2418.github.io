@@ -365,7 +365,6 @@ export default function PortfolioScroll() {
     offset: ['start start', 'end end'],
   })
   const contactY = useTransform(contactProgress, [0.25, 0.7], [60, 0])
-  const contactOpacity = useTransform(contactProgress, [0.25, 0.7], [0.15, 1])
 
   // 챕터 내비 활성 추적 — IntersectionObserver (REQ-SCROLL-001..002)
   // rootMargin -50%/-50% 로 관측 루트를 뷰포트 중앙선으로 좁혀, 기존
@@ -800,7 +799,7 @@ export default function PortfolioScroll() {
             <p className="pf-kicker">{c.contact.title}</p>
             <motion.h2
               className="pf-display"
-              style={reduced ? undefined : { y: contactY, opacity: contactOpacity }}
+              style={reduced ? undefined : { y: contactY }}
             >
               {t.rich('contactHeadlineRich', { accent })}
             </motion.h2>
