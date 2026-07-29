@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+### Fixed (SPEC-MAENGV2-PORTFOLIO-SCROLL-007)
+
+- **커리어 카드 휠 트랩 제거**: `.pf-career-card`의 `position:absolute; overflow-y:auto` 내부 스크롤 컨테이너를 제거하고 grid 자연 높이 스택으로 교체 — 휠 입력이 카드 내부에 갇히지 않고 페이지 스크럽으로 일관되게 소비됨 (`apps/maeng-blog/src/app/globals.css`)
+- **핀 높이 단일 정의 지점 도입**: 4개 핀 섹션의 인라인 하드코딩(240/300/330/220vh)을 `apps/maeng-blog/src/components/portfolio/pin-config.ts`(`PIN_HEIGHTS_VH`, `pinHeight()`)로 이동 — 핀 높이와 스크럽 offset 매핑이 단일 소스에서 파생되도록 정리 (`PortfolioScroll.tsx`)
+- **모바일 뷰포트 안정화**: `.pf-frame` 높이를 스크롤 중 재계산되는 `100dvh`에서 안정 단위(`100svh`, `100vh` 폴백)로 교체 — 모바일 URL 바 축소/확장에 따른 핀 프레임 레이아웃 출렁임 제거
+- **페인트 비용 절감**: `.pf-ribbons`의 `blur(70px)` 전역 블러를 사전 계산된 radial-gradient 소프트 필드로 대체, 정적 표면의 `will-change` 선언 전량 제거, `pointer: coarse`/모바일 폭 미디어 쿼리로 `.pf-glass` blur·saturate 하향 분기 추가
+- **스크롤 측정 경로 IntersectionObserver 교체**: 이벤트당 다중 `getBoundingClientRect` 판독 방식의 scroll 핸들러를 제거하고 IntersectionObserver(중앙선 rootMargin -50%/-50%) 기반 활성 챕터 판정으로 교체, 수평 레일 `railMax`는 ResizeObserver로 재측정 — 판정·측정 순수 로직을 `apps/maeng-blog/src/components/portfolio/scroll-logic.ts`(`pickActiveChapter`, `computeRailMax`)로 분리해 단위 테스트 보강
+- **챕터 내비 즉시 이동**: 포트폴리오 내부 챕터 내비게이션 이동을 전역 `scroll-behavior: smooth`를 우회하는 instant 프로그램 이동으로 교체 — 300vh+ 핀 구간을 가로지르는 어색한 smooth 재생 제거, 전역 스코프·타 페이지 앵커 동작 무변경
+- 검증: `acceptance.md` 총 30개 AC 중 기계 검증만으로 PASS 17건, 기계 검증 PASS + 수동 확인 병행 필요 3건, 순수 수동 검증 대기(MANUAL-PENDING) 10건 — FAIL 0건, 스크롤 체감·육안 확인이 필요한 항목(13건)은 사용자 수동 검증 대기 — `yarn workspace maeng-blog test` 26 files/164 pass(신규 7건), `lint`/`build` 각 exit 0
+
 ### Added (SPEC-MAENGV2-EDITOR-MERGE-006)
 
 - **에디터 앱 병합**: 별도 저작 도구 앱(`apps/maeng-editor`)의 전체 기능(Milkdown WYSIWYG 에디터, 커맨드 팔레트, AI 글쓰기 보조, 콘텐츠 계약 모듈)을 `apps/maeng-blog`로 흡수 — `/editor` 경로 아래 배치, `MAENG_BUILD_TARGET` 환경 변수 하나로 정적 export(공개 블로그) / 서버 런타임(관리 표면) 두 산출물을 분기하는 단일 코드베이스로 통합
