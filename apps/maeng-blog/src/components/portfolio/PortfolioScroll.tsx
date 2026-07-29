@@ -3,7 +3,7 @@
 // 포트폴리오 스크롤 장면 — REQ-BLOG-006/007, 승인 시안 LUMEN
 // (.moai/reports/design/maeng-portfolio-lumen.html — 라이트 에디토리얼 글래스)
 // 구조: 연속 캔버스(흐름 섹션) + 핀 7곳 — 장면 카운터 없는 video-scroll 문법 (M6 수동 검증 반영)
-//   인트로(핀: businessCard) → 소개(짧은 핀: introduction 유리 슬랫 + 임팩트 지표 카운트업)
+//   인트로(핀: businessCard) → 소개(짧은 핀: introduction 유리 슬랫 + 임팩트 지표 — 수치 정적)
 //   → 프로젝트(핀: projects 레일 스크럽) → 경력(핀: experiences crossfade 스택)
 //   → 일하는 방식(짧은 핀: tech/soft/designSkill) → 타임라인(흐름: timestamp 아래→위 게이지
 //   + educations) → 스킬(짧은 핀: skillSets) → 컨택트(핀: 코발트 플러드, 전폭 breakout)
@@ -98,33 +98,23 @@ function BgWord({ children, factor }: { children: string; factor: number }) {
   )
 }
 
-/** 임팩트 지표 카운트업 — 소개 섹션 진행도 스크럽 (되감기 가능, SSR 은 최종값 렌더) */
+/** 임팩트 지표 — 수치는 스크롤과 무관하게 상시 최종값 고정 (M6 보충: 카운트업 제거,
+ *  사용자 결정). pill 전체의 등장(PinReveal 스태거)만 모션에 참여한다 */
 function Figure({
-  progress,
   value,
   dec,
   suffix,
   label,
 }: {
-  progress: MotionValue<number>
   value: number
   dec: number
   suffix: string
   label: string
 }) {
-  const reduced = useReducedMotion()
-  const final = value.toFixed(dec)
-  const [text, setText] = useState(final)
-  // M6 fix 1 승계(핀 도메인 재조율): 지표 pill 리빌(~0.29 시작)과 함께 카운트가 돌기
-  // 시작해 핀 중반(0.55)에 최종값 도달 — 언핀 직전 완료 금지, 정착 상태로 충분히 노출
-  const eased = useTransform(progress, [0.25, 0.55], [0, 1])
-  useMotionValueEvent(eased, 'change', (v) => {
-    if (!reduced) setText((value * v).toFixed(dec))
-  })
   return (
     <div>
       <b>
-        {reduced ? final : text}
+        {value.toFixed(dec)}
         {suffix}
       </b>
       <span>{label}</span>
@@ -273,7 +263,7 @@ export default function PortfolioScroll() {
   const introOpacity = useTransform(introProgress, [0, 0.58, 1], [1, 1, 0.1])
   const hintOpacity = useTransform(introProgress, [0.02, 0.12], [1, 0])
 
-  // M6 보충: 소개 짧은 핀 진행도 — PinReveal 스태거 + 카운트업 공급
+  // M6 보충: 소개 짧은 핀 진행도 — PinReveal 스태거 공급 (지표 수치는 정적)
   // (핀 전환으로 진행도 도메인이 'start start'→'end end' 스크럽으로 변경)
   const { scrollYProgress: aboutProgress } = useScroll({
     target: aboutPinRef,
@@ -539,10 +529,10 @@ export default function PortfolioScroll() {
                 ))}
               </div>
               {/* 지표 pill 은 마지막 카드와 같은 밴드(index 3)로 등장 — 핀 전반(~0.45)
-                  내 완독 가능, 카운트업(eased 0.25→0.55)은 등장 직후부터 돈다 */}
+                  내 완독 가능. 수치는 상시 최종값 고정 (카운트업 제거, M6 보충) */}
               <PinReveal index={3} progress={aboutProgress} className="pf-glass pf-figures">
                 {figures.map((figure) => (
-                  <Figure key={figure.label} progress={aboutProgress} {...figure} />
+                  <Figure key={figure.label} {...figure} />
                 ))}
               </PinReveal>
               <PinReveal index={4} progress={aboutProgress}>
