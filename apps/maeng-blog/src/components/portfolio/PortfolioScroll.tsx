@@ -201,9 +201,11 @@ function PinReveal({
   children: React.ReactNode
 }) {
   const reduced = useReducedMotion()
-  const start = Math.min(0.05 + index * 0.08, 0.35)
-  const opacity = useTransform(progress, [start, start + 0.16], [0, 1])
-  const y = useTransform(progress, [start, start + 0.16], [34, 0])
+  // M6 보충 2 (전역 dwell 튜닝): 스태거 창 압축 — 마지막 항목(index 4, cap 0.2)도
+  // 진행도 ~0.32 에 완료 → 핀의 나머지 ~68% 가 완전 노출 hold 구간이 된다
+  const start = Math.min(0.04 + index * 0.05, 0.2)
+  const opacity = useTransform(progress, [start, start + 0.12], [0, 1])
+  const y = useTransform(progress, [start, start + 0.12], [34, 0])
   return (
     <motion.div
       className={className}
@@ -348,7 +350,8 @@ export default function PortfolioScroll() {
     target: tlRef,
     offset: ['start 0.9', 'end 0.8'],
   })
-  const tlProgress = useTransform(tlRaw, [0.08, 0.85], [0, 1], { clamp: true })
+  // M6 보충 2: 종점 0.85→0.75 — 섹션이 화면에 충분히 남아 있을 때 전 항목 점등 완료
+  const tlProgress = useTransform(tlRaw, [0.08, 0.75], [0, 1], { clamp: true })
   const tlFillHeight = useTransform(tlProgress, (progress) => `${progress * 100}%`)
 
   // 컨택트 — 콘텐츠 리빌 (코발트 플러드 색반전은 사용자 결정으로 제거)
@@ -356,7 +359,8 @@ export default function PortfolioScroll() {
     target: contactPinRef,
     offset: ['start start', 'end end'],
   })
-  const contactY = useTransform(contactProgress, [0.25, 0.7], [60, 0])
+  // M6 보충 2: 리빌을 핀 초반(0.35)에 완료 — 이후 전 구간 완전 노출 hold
+  const contactY = useTransform(contactProgress, [0.1, 0.35], [60, 0])
 
   // 챕터 내비 활성 추적 — IntersectionObserver (REQ-SCROLL-001..002)
   // rootMargin -50%/-50% 로 관측 루트를 뷰포트 중앙선으로 좁혀, 기존
@@ -528,7 +532,7 @@ export default function PortfolioScroll() {
                   </PinReveal>
                 ))}
               </div>
-              {/* 지표 pill 은 마지막 카드와 같은 밴드(index 3)로 등장 — 핀 전반(~0.45)
+              {/* 지표 pill 은 마지막 카드와 같은 밴드(index 3)로 등장 — 핀 초반(~0.31)
                   내 완독 가능. 수치는 상시 최종값 고정 (카운트업 제거, M6 보충) */}
               <PinReveal index={3} progress={aboutProgress} className="pf-glass pf-figures">
                 {figures.map((figure) => (

@@ -4,16 +4,18 @@
 // 반드시 이 모듈에서만 수행한다 (높이·매핑 이원화 금지).
 
 /** 핀 섹션별 스크롤 구간 높이 (vh — 스크롤 중 불변인 페이지 레이아웃 단위)
- *  M6: creed(이렇게 일합니다)·skills(기술 스택) 를 짧은 핀(~170vh)으로 전환 — 사용자 확정
- *  M6 보충: about(저는, 이런 developers 소개) 를 짧은 핀(180vh)으로 전환 — 4 밸류 카드
- *  + 지표 pill + 요약 문단이라 creed/skills(170) 보다 소폭 길게 잡는다 */
+ *  M6: creed(이렇게 일합니다)·skills(기술 스택) 를 짧은 핀으로 전환 — 사용자 확정
+ *  M6 보충: about(소개) 를 짧은 핀으로 전환 (creed/skills 패턴 준용)
+ *  M6 보충 2 (전역 dwell 튜닝): 짧은 핀 3곳을 210-220vh 로 상향 — 리빌은 핀 초반
+ *  (~0.32)에 완료(PinReveal 압축)되므로 나머지 구간 전체가 완전 노출 hold 가 된다.
+ *  about 은 콘텐츠(4 카드 + 지표 pill + 요약)가 많아 creed/skills 보다 소폭 길게 */
 export const PIN_HEIGHTS_VH = {
   intro: 240,
-  about: 180,
+  about: 220,
   projects: 300,
   career: 330,
-  creed: 170,
-  skills: 170,
+  creed: 210,
+  skills: 210,
   contact: 220,
 } as const
 
