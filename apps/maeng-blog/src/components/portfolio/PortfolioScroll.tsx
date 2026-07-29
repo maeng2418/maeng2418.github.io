@@ -367,7 +367,18 @@ export default function PortfolioScroll() {
       {/* 챕터 내비 (데스크톱) */}
       <nav className="pf-chapters" aria-label={locale === 'ko' ? '섹션 이동' : 'Sections'}>
         {CHAPTER_IDS.map((id, i) => (
-          <a key={id} href={`#${id}`} className={i === activeChapter ? 'active' : ''}>
+          <a
+            key={id}
+            href={`#${id}`}
+            className={i === activeChapter ? 'active' : ''}
+            onClick={(event) => {
+              // 전역 smooth 스크롤로 300vh+ 핀 구간을 가로지르면 스크럽 애니메이션이
+              // 길게 재생된다 (REQ-NAV-001). 포트폴리오 내부 앵커만 즉시 이동으로
+              // 제어하고 전역 html { scroll-behavior } 는 유지한다 (REQ-NAV-002)
+              event.preventDefault()
+              document.getElementById(id)?.scrollIntoView({ behavior: 'instant' })
+            }}
+          >
             <span className="lbl">{CHAPTER_LABELS[i]}</span>
             <span className="dot" />
           </a>
