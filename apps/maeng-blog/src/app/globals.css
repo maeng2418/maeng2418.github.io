@@ -792,36 +792,10 @@ button:focus-visible {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* 컨택트 — 코발트 플러드 피날레 */
-/* M6 fix 7: 전역 main(max-width 1080px) breakout — 플러드가 뷰포트 전폭을 덮는다.
-   html/body overflow-x hidden 은 sticky 를 깨므로 금지 — 폭 100vw + 중앙 보정 마진만 사용.
-   (.pf-frame overflow:hidden 이 플러드를 클리핑하므로 breakout 은 핀 래퍼 레이어에 적용) */
-.pf-bleed {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-}
+/* 컨택트 — 코발트 플러드(색반전)는 사용자 결정으로 제거, 다크 톤 유지 */
 .pf-contact-frame {
   justify-content: center;
   text-align: center;
-}
-.pf-flood {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  z-index: -1;
-  background: radial-gradient(80vw circle at 42% 30%, #2e5bff, #1238c2 70%);
-}
-.pf-contact-frame.flooded {
-  color: #fff;
-}
-.pf-contact-frame.flooded .pf-kicker {
-  color: rgba(255, 255, 255, 0.8);
-}
-.pf-contact-frame.flooded .pf-sub {
-  color: rgba(255, 255, 255, 0.84);
-}
-.pf-contact-frame.flooded .pf-blue {
-  color: #fff;
 }
 
 /* reduced-motion — 정적 폴백 (콘텐츠 완전 표시) */
@@ -866,18 +840,6 @@ button:focus-visible {
   }
   .pf-tl-item .dotlit {
     opacity: 1 !important;
-  }
-  .pf-flood {
-    opacity: 1 !important;
-  }
-  .pf-contact-frame {
-    color: #fff;
-  }
-  .pf-contact-frame .pf-kicker {
-    color: rgba(255, 255, 255, 0.8);
-  }
-  .pf-contact-frame .pf-sub {
-    color: rgba(255, 255, 255, 0.84);
   }
   .pf-scroll-hint,
   .pf-progress,

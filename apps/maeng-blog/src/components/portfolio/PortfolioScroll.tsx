@@ -359,17 +359,13 @@ export default function PortfolioScroll() {
   const tlProgress = useTransform(tlRaw, [0.08, 0.85], [0, 1], { clamp: true })
   const tlFillHeight = useTransform(tlProgress, (progress) => `${progress * 100}%`)
 
-  // 컨택트 플러드
+  // 컨택트 — 콘텐츠 리빌 (코발트 플러드 색반전은 사용자 결정으로 제거)
   const { scrollYProgress: contactProgress } = useScroll({
     target: contactPinRef,
     offset: ['start start', 'end end'],
   })
-  // M6 fix 7: 플러드 페이드 범위 확장 — 급격한 색 반전 대신 점진 상승
-  const floodOpacity = useTransform(contactProgress, [0.05, 0.6], [0, 1])
   const contactY = useTransform(contactProgress, [0.25, 0.7], [60, 0])
   const contactOpacity = useTransform(contactProgress, [0.25, 0.7], [0.15, 1])
-  const [flooded, setFlooded] = useState(false)
-  useMotionValueEvent(floodOpacity, 'change', (v) => setFlooded(v > 0.5))
 
   // 챕터 내비 활성 추적 — IntersectionObserver (REQ-SCROLL-001..002)
   // rootMargin -50%/-50% 로 관측 루트를 뷰포트 중앙선으로 좁혀, 기존
@@ -792,23 +788,14 @@ export default function PortfolioScroll() {
         </section>
       </div>
 
-      {/* ── 컨택트 (핀 플러드) ────────────────────────────────────────── */}
-      {/* M6 fix 7: .pf-bleed — 전역 1080px main 을 벗어나 뷰포트 전폭 플러드 (breakout) */}
+      {/* ── 컨택트 ────────────────────────────────────────────────────── */}
       <div
         ref={contactPinRef}
         id="pf-s7"
-        className="pf-pin pf-bleed"
+        className="pf-pin"
         style={{ height: pinHeight('contact') }}
       >
-        <section
-          className={`pf-frame pf-contact-frame ${flooded ? 'flooded' : ''}`}
-          aria-label={c.contact.title}
-        >
-          <motion.div
-            className="pf-flood"
-            style={reduced ? undefined : { opacity: floodOpacity }}
-            aria-hidden
-          />
+        <section className="pf-frame pf-contact-frame" aria-label={c.contact.title}>
           <div className="pf-wrap text-center">
             <p className="pf-kicker">{c.contact.title}</p>
             <motion.h2
