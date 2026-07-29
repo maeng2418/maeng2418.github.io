@@ -225,7 +225,9 @@ button:focus-visible {
   height: 100dvh;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  /* 콘텐츠가 프레임보다 커지면(disclosure 열림 등) 중앙 정렬 대신 상단 기준으로
+     정렬해 상단 잘림을 방지한다 (SPEC-007 E-1) */
+  align-items: safe center;
   padding: 0 clamp(20px, 6vw, 96px);
 }
 .pf-flow {
@@ -498,9 +500,13 @@ button:focus-visible {
   background: var(--accent);
 }
 
-/* 경력 crossfade 스택 */
+/* 경력 crossfade 스택 — grid 셀 겹침(1/1)으로 crossfade 유지.
+   내부 스크롤 컨테이너(absolute + overflow-y:auto)는 휠 트랩 원인이라 폐기 —
+   카드가 자연 높이로 스택 높이를 결정하고, 휠 입력은 항상 페이지 스크럽으로 소비된다
+   (SPEC-007 D1 / REQ-WHEEL-001..003) */
 .pf-career-stack {
   position: relative;
+  display: grid;
   min-height: 460px;
   max-width: 840px;
   margin-left: clamp(0px, 11vw, 190px);
@@ -511,12 +517,10 @@ button:focus-visible {
   }
 }
 .pf-career-card {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
+  align-self: center;
   padding: 30px 34px;
   opacity: 0;
-  overflow-y: auto;
-  will-change: transform, opacity;
 }
 .pf-career-card h3 {
   margin: 0;
@@ -805,13 +809,13 @@ button:focus-visible {
   }
   .pf-career-stack {
     min-height: 0;
+    /* grid 셀 겹침(crossfade)을 해제해 카드가 문서 흐름으로 쌓이게 한다 */
+    display: block;
   }
   .pf-career-card {
-    position: static;
     opacity: 1 !important;
     transform: none !important;
     margin-top: 14px;
-    overflow-y: visible;
   }
   .pf-tl-line i {
     height: 100% !important;
