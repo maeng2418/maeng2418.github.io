@@ -2,8 +2,8 @@
 
 // 포트폴리오 스크롤 장면 — REQ-BLOG-006/007, 승인 시안 LUMEN
 // (.moai/reports/design/maeng-portfolio-lumen.html — 라이트 에디토리얼 글래스)
-// 구조: 연속 캔버스(흐름 섹션) + 핀 6곳 — 장면 카운터 없는 video-scroll 문법 (M6 수동 검증 반영)
-//   인트로(핀: businessCard) → 소개(흐름: introduction 유리 슬랫 + 임팩트 지표 카운트업)
+// 구조: 연속 캔버스(흐름 섹션) + 핀 7곳 — 장면 카운터 없는 video-scroll 문법 (M6 수동 검증 반영)
+//   인트로(핀: businessCard) → 소개(짧은 핀: introduction 유리 슬랫 + 임팩트 지표 카운트업)
 //   → 프로젝트(핀: projects 레일 스크럽) → 경력(핀: experiences crossfade 스택)
 //   → 일하는 방식(짧은 핀: tech/soft/designSkill) → 타임라인(흐름: timestamp 아래→위 게이지
 //   + educations) → 스킬(짧은 핀: skillSets) → 컨택트(핀: 코발트 플러드, 전폭 breakout)
@@ -115,8 +115,9 @@ function Figure({
   const reduced = useReducedMotion()
   const final = value.toFixed(dec)
   const [text, setText] = useState(final)
-  // M6 fix 1: 지표가 섹션 중앙 통과 무렵(진행도 ~0.5)에 최종값 도달 — 퇴장 시점 완료 금지
-  const eased = useTransform(progress, [0.15, 0.5], [0, 1])
+  // M6 fix 1 승계(핀 도메인 재조율): 지표 pill 리빌(~0.29 시작)과 함께 카운트가 돌기
+  // 시작해 핀 중반(0.55)에 최종값 도달 — 언핀 직전 완료 금지, 정착 상태로 충분히 노출
+  const eased = useTransform(progress, [0.25, 0.55], [0, 1])
   useMotionValueEvent(eased, 'change', (v) => {
     if (!reduced) setText((value * v).toFixed(dec))
   })
@@ -195,7 +196,7 @@ function TimelineItem({
 }
 
 /** 짧은 핀 섹션 콘텐츠 리빌 — 핀 진행도 밴드에서 스태거 등장, 언핀 훨씬 전(~0.5)에 완독 가능
- *  (M6 fix 4/6: creed·skills 핀 전환용. reduced-motion 시 정적 완전 표시) */
+ *  (M6 fix 4/6: creed·skills 핀 전환용 → M6 보충: about 핀에도 공용. reduced-motion 시 정적 완전 표시) */
 function PinReveal({
   index,
   progress,
@@ -232,7 +233,7 @@ export default function PortfolioScroll() {
 
   const rootRef = useRef<HTMLDivElement>(null)
   const introPinRef = useRef<HTMLDivElement>(null)
-  const aboutRef = useRef<HTMLElement>(null)
+  const aboutPinRef = useRef<HTMLDivElement>(null)
   const projPinRef = useRef<HTMLDivElement>(null)
   const railWrapRef = useRef<HTMLDivElement>(null)
   const railRef = useRef<HTMLDivElement>(null)
@@ -272,10 +273,11 @@ export default function PortfolioScroll() {
   const introOpacity = useTransform(introProgress, [0, 0.58, 1], [1, 1, 0.1])
   const hintOpacity = useTransform(introProgress, [0.02, 0.12], [1, 0])
 
-  // 소개 섹션 진행도 (카운트업 공급)
+  // M6 보충: 소개 짧은 핀 진행도 — PinReveal 스태거 + 카운트업 공급
+  // (핀 전환으로 진행도 도메인이 'start start'→'end end' 스크럽으로 변경)
   const { scrollYProgress: aboutProgress } = useScroll({
-    target: aboutRef,
-    offset: ['start 0.9', 'end 0.45'],
+    target: aboutPinRef,
+    offset: ['start start', 'end end'],
   })
 
   // 프로젝트 레일 스크럽
@@ -503,42 +505,53 @@ export default function PortfolioScroll() {
         </section>
       </div>
 
-      {/* ── 소개 (흐름) — introduction + 임팩트 지표 ─────────────────── */}
-      <motion.section
-        ref={aboutRef}
+      {/* ── 소개 (핀, M6 보충) — introduction + 임팩트 지표 ─────────────── */}
+      <div
+        ref={aboutPinRef}
         id="pf-s1"
-        data-section="introduction"
-        {...groupProps}
-        className="pf-flow"
-        aria-label={c.introduction.title}
+        className="pf-pin"
+        style={{ height: pinHeight('about') }}
       >
-        <BgWord factor={0.5}>About</BgWord>
-        <div className="pf-wrap">
-          <div className="pf-head">
-            <motion.h2 variants={itemVariants} className="pf-h2">
-              {c.introduction.headline}
-            </motion.h2>
-          </div>
-          <div className="pf-content" style={{ maxWidth: 900 }}>
-            <div className="flex flex-col gap-3">
-              {c.introduction.values.map((value) => (
-                <motion.div key={value.title} variants={itemVariants} className="pf-glass pf-slat">
-                  <b>{value.title}</b>
-                  <p>{value.description}</p>
-                </motion.div>
-              ))}
+        <section
+          data-section="introduction"
+          className="pf-frame pf-about-frame"
+          aria-label={c.introduction.title}
+        >
+          <span className="pf-bg-word" aria-hidden>
+            About
+          </span>
+          <div className="pf-wrap">
+            <div className="pf-head">
+              <h2 className="pf-h2">{c.introduction.headline}</h2>
             </div>
-            <motion.div variants={itemVariants} className="pf-glass pf-figures">
-              {figures.map((figure) => (
-                <Figure key={figure.label} progress={aboutProgress} {...figure} />
-              ))}
-            </motion.div>
-            <motion.p variants={itemVariants} className="pf-summary">
-              {c.businessCard.summary.join(' ')}
-            </motion.p>
+            <div className="pf-content" style={{ maxWidth: 900 }}>
+              <div className="flex flex-col gap-3">
+                {c.introduction.values.map((value, i) => (
+                  <PinReveal
+                    key={value.title}
+                    index={i}
+                    progress={aboutProgress}
+                    className="pf-glass pf-slat"
+                  >
+                    <b>{value.title}</b>
+                    <p>{value.description}</p>
+                  </PinReveal>
+                ))}
+              </div>
+              {/* 지표 pill 은 마지막 카드와 같은 밴드(index 3)로 등장 — 핀 전반(~0.45)
+                  내 완독 가능, 카운트업(eased 0.25→0.55)은 등장 직후부터 돈다 */}
+              <PinReveal index={3} progress={aboutProgress} className="pf-glass pf-figures">
+                {figures.map((figure) => (
+                  <Figure key={figure.label} progress={aboutProgress} {...figure} />
+                ))}
+              </PinReveal>
+              <PinReveal index={4} progress={aboutProgress}>
+                <p className="pf-summary">{c.businessCard.summary.join(' ')}</p>
+              </PinReveal>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </section>
+      </div>
 
       {/* ── 프로젝트 (핀 레일) — projects ────────────────────────────── */}
       <div ref={projPinRef} id="pf-s2" className="pf-pin" style={{ height: pinHeight('projects') }}>
