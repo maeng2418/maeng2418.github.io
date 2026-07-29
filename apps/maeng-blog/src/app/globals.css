@@ -122,19 +122,21 @@ button:focus-visible {
   --pf-word-stroke: rgba(255, 255, 255, 0.06);
 }
 
-/* 색 리본 — 채도 높은 코발트/스카이 필드 (유리의 saturate 가 증폭) */
+/* 색 리본 — 채도 높은 코발트/스카이 필드 (유리의 saturate 가 증폭).
+   전체 뷰포트 고정 70px 광역 blur 필터는 스크롤 잔렉의 1차 비용이라 제거하고
+   (SPEC-007 D3 / REQ-PAINT-001), 넓은 반경 + 완만한 소멸 스톱의 radial-gradient
+   로 사전 계산된 소프트 필드를 재현한다 — 시각 콘셉트(부유하는 색 리본) 동등 */
 .pf-ribbons {
   position: fixed;
   inset: -10%;
   z-index: -1;
   pointer-events: none;
-  filter: blur(70px);
   opacity: var(--pf-ribbon-opacity);
   background:
-    radial-gradient(38vw circle at 74% 14%, #2e5bff, transparent 58%),
-    radial-gradient(28vw circle at 88% 32%, #7fd4ff, transparent 60%),
-    radial-gradient(30vw circle at 8% 64%, #bfd0ff, transparent 62%),
-    radial-gradient(26vw circle at 46% 96%, #2e5bff, transparent 60%);
+    radial-gradient(46vw circle at 74% 14%, rgba(46, 91, 255, 0.85), rgba(46, 91, 255, 0.3) 42%, transparent 72%),
+    radial-gradient(36vw circle at 88% 32%, rgba(127, 212, 255, 0.8), rgba(127, 212, 255, 0.28) 44%, transparent 74%),
+    radial-gradient(38vw circle at 8% 64%, rgba(191, 208, 255, 0.85), rgba(191, 208, 255, 0.3) 45%, transparent 76%),
+    radial-gradient(34vw circle at 46% 96%, rgba(46, 91, 255, 0.8), rgba(46, 91, 255, 0.28) 44%, transparent 74%);
 }
 
 /* 유리 재질 — 화이트 + blur + saturate + 상단 하이라이트 */
@@ -145,6 +147,15 @@ button:focus-visible {
   backdrop-filter: blur(18px) saturate(1.8);
   -webkit-backdrop-filter: blur(18px) saturate(1.8);
   box-shadow: var(--pf-shadow);
+}
+/* 저성능·모바일 환경 하향 분기 — 정적 CSS 미디어 특성만으로 성립
+   (SPEC-007 REQ-PAINT-003): 터치 기기/좁은 뷰포트에서 backdrop blur 강도를 낮춰
+   스크롤 중 합성 비용을 절감한다. 유리 콘셉트(반투명 + 채도 증폭)는 유지 */
+@media (pointer: coarse), (max-width: 760px) {
+  .pf-glass {
+    backdrop-filter: blur(8px) saturate(1.4);
+    -webkit-backdrop-filter: blur(8px) saturate(1.4);
+  }
 }
 
 /* 전역 재생 타임라인 헤어라인 */
@@ -243,9 +254,9 @@ button:focus-visible {
   max-width: 1200px;
   margin: 0 auto;
 }
-.pf-fx {
-  will-change: transform, opacity;
-}
+/* will-change 상시 선언은 제거 (SPEC-007 REQ-PAINT-002) — transform/opacity 는
+   motion 이 애니메이션 중에만 합성 레이어로 승격하므로 정적 선언이 불필요하다.
+   .pf-fx 는 감축 모션 폴백 셀렉터로만 유지된다. */
 .pf-bg-word {
   position: absolute;
   top: -0.35em;
@@ -260,7 +271,6 @@ button:focus-visible {
   color: transparent;
   -webkit-text-stroke: 1px var(--pf-word-stroke);
   white-space: nowrap;
-  will-change: transform;
 }
 
 /* 타이포 */
@@ -429,10 +439,7 @@ button:focus-visible {
   color: var(--ink-soft);
 }
 
-/* 프로젝트 레일 */
-.pf-rail {
-  will-change: transform;
-}
+/* 프로젝트 레일 — will-change 상시 선언 제거 (REQ-PAINT-002, motion 이 관리) */
 .pf-proj {
   flex: 0 0 min(360px, 80vw);
   padding: 26px 28px;
