@@ -794,17 +794,21 @@ button:focus-visible {
   cursor: pointer;
   text-decoration: none;
 }
+/* 플러드(파란 배경) 제거 후 흰색 고정 팔레트는 라이트 배경에서 비가시 —
+   테마 토큰 기반으로 교체해 라이트/다크 모두 가독 확보 */
 .pf-btn-invert {
-  background: #fff;
-  color: #1238c2;
-  border: 1px solid #fff;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
 }
 .pf-btn-ghost {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink-faint);
+}
+.pf-btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* 컨택트 — 코발트 플러드(색반전)는 사용자 결정으로 제거, 다크 톤 유지 */
