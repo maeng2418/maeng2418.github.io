@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- accent(#2b3fea)→보랏빛 그라데이션 배경 + 흰색 M + 기록 점(#ffd166) — 폰트 의존 없이 path로 직접 그려 소형에서도 동일 렌더 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b3fea" />
+      <stop offset="1" stop-color="#7b3fea" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)" />
+  <polyline
+    points="16,46 16,20 32,37 48,20 48,34"
+    fill="none"
+    stroke="#ffffff"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="48" cy="46" r="4.5" fill="#ffd166" />
+</svg>
