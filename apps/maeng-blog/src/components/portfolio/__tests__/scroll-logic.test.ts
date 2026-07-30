@@ -5,29 +5,30 @@ import { PIN_HEIGHTS_VH, pinHeight } from '@/components/portfolio/pin-config'
 import { computeRailMax, pickActiveChapter } from '@/components/portfolio/scroll-logic'
 
 describe('pin-config — 핀 구간 높이 단일 정의 (REQ-PIN-002, M6 보충 핀 7곳)', () => {
-  it('7개 핀 섹션의 높이가 정의값(240/220/300/330/210/210/220vh)과 동일하다', () => {
+  it('7개 핀 섹션의 높이가 정의값(300/280/380/420/270/270/280vh)과 동일하다', () => {
     // M6: creed(이렇게 일합니다)·skills(기술 스택) 를 짧은 핀 섹션으로 전환 (사용자 확정)
     // M6 보충: about(소개) 를 짧은 핀으로 전환 — creed/skills 패턴 준용
-    // M6 보충 2: 전역 dwell 튜닝 — 짧은 핀 3곳 210-220vh 상향 (완전 노출 hold 확대)
+    // M6 보충 2: 전역 dwell 튜닝 — 리빌 조기 완료로 완전 노출 hold 확대
+    // M6 보충 3: 전 핀 높이 ~30% 추가 상향 — 섹션별 머무름 확대 (사용자 요청)
     expect(PIN_HEIGHTS_VH).toEqual({
-      intro: 240,
-      about: 220,
-      projects: 300,
-      career: 330,
-      creed: 210,
-      skills: 210,
-      contact: 220,
+      intro: 300,
+      about: 280,
+      projects: 380,
+      career: 420,
+      creed: 270,
+      skills: 270,
+      contact: 280,
     })
   })
 
   it('pinHeight 가 CSS 길이 문자열을 파생한다', () => {
-    expect(pinHeight('intro')).toBe('240vh')
-    expect(pinHeight('about')).toBe('220vh')
-    expect(pinHeight('projects')).toBe('300vh')
-    expect(pinHeight('career')).toBe('330vh')
-    expect(pinHeight('creed')).toBe('210vh')
-    expect(pinHeight('skills')).toBe('210vh')
-    expect(pinHeight('contact')).toBe('220vh')
+    expect(pinHeight('intro')).toBe('300vh')
+    expect(pinHeight('about')).toBe('280vh')
+    expect(pinHeight('projects')).toBe('380vh')
+    expect(pinHeight('career')).toBe('420vh')
+    expect(pinHeight('creed')).toBe('270vh')
+    expect(pinHeight('skills')).toBe('270vh')
+    expect(pinHeight('contact')).toBe('280vh')
   })
 
   it('모든 핀 높이는 양수 vh — 스크럽 구간이 성립한다 (완전성)', () => {
