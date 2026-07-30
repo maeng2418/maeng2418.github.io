@@ -14,6 +14,18 @@
 - **챕터 내비 즉시 이동**: 포트폴리오 내부 챕터 내비게이션 이동을 전역 `scroll-behavior: smooth`를 우회하는 instant 프로그램 이동으로 교체 — 300vh+ 핀 구간을 가로지르는 어색한 smooth 재생 제거, 전역 스코프·타 페이지 앵커 동작 무변경
 - 검증: `acceptance.md` 총 30개 AC 중 기계 검증만으로 PASS 17건, 기계 검증 PASS + 수동 확인 병행 필요 3건, 순수 수동 검증 대기(MANUAL-PENDING) 10건 — FAIL 0건, 스크롤 체감·육안 확인이 필요한 항목(13건)은 사용자 수동 검증 대기 — `yarn workspace maeng-blog test` 26 files/164 pass(신규 7건), `lint`/`build` 각 exit 0
 
+#### M6 amendment — 사용자 수동 검증 피드백 반영 (`f36deab..015bcaa`)
+
+사용자가 위 sync 이후 수동 검증 시나리오를 직접 수행하며 발견한 UX 이슈 7건 + 보충 요청 5건을 반영한 재종결 라운드.
+
+- **핀 전환 3곳 추가**: About(`pf-s1`)·Creed(`pf-s4`)·Skills(`pf-s6`) 섹션을 일반 흐름에서 짧은 핀(180~270vh)으로 전환 — 정지 없이 흘러가던 증상 제거, `pin-config.ts`의 `PIN_HEIGHTS_VH` 단일 정의 지점에서 파생
+- **About 지표 카운트업 제거**: `Figure` 컴포넌트의 수치 상승 애니메이션(eased/useMotionValueEvent)을 삭제하고 항상 `value.toFixed(dec)` 최종값을 정적 렌더 — 등장 스태거만 유지
+- **컨택트 시각 효과 제거**: 코발트 색반전 플러드(`.pf-flood`/`.flooded`)와 헤드라인 페이드 오버라이드를 삭제 — `.pf-bleed` 100vw breakout 제거로 Windows 가로 오버플로 잔여 위험도 함께 해소, 버튼은 테마 CSS 변수로 토큰화(EN 로케일 비가시 버그 해결)
+- **레일·게이지·칩 정합 보정**: 수평 레일 후행 스페이서로 마지막 카드 도달 불가 문제 해결, 경력 핀 진입 시 빈 프레임 노출 제거, 타임라인 게이지 최상단 항목 미점등 수정, 다크 모드 비강조 칩 저대비 개선
+- **전 섹션 리빌 조기 완료 + 머무름 확대**: `PinReveal` 스태거를 압축(폭 0.16→0.12, 시작 지연 축소)해 각 핀 구간 초반(~30%)에 콘텐츠 노출을 완료시키고, 나머지 구간을 순수 머무름(hold)으로 확보
+- **전 핀 높이 ~30% 상향**: intro 300 / about 280 / projects 380 / career 420 / creed·skills 270 / contact 280(vh) — 스크럽 여유 확대로 체감 속도 완화
+- 검증: `yarn workspace maeng-blog lint` exit 0 / `tsc --noEmit` exit 0 / `yarn workspace maeng-blog test` 26 files·165 pass(신규 1건 = pin-config 완전성) / `yarn workspace maeng-blog build` exit 0 — 매 보충 커밋마다 전체 배치 재실행. 스크롤 체감 검증은 사용자가 반복 라운드로 직접 수행(잔여 미검증: 모바일 실기기, reduced-motion 실기기, Windows 스크롤바 환경)
+
 ### Added (SPEC-MAENGV2-EDITOR-MERGE-006)
 
 - **에디터 앱 병합**: 별도 저작 도구 앱(`apps/maeng-editor`)의 전체 기능(Milkdown WYSIWYG 에디터, 커맨드 팔레트, AI 글쓰기 보조, 콘텐츠 계약 모듈)을 `apps/maeng-blog`로 흡수 — `/editor` 경로 아래 배치, `MAENG_BUILD_TARGET` 환경 변수 하나로 정적 export(공개 블로그) / 서버 런타임(관리 표면) 두 산출물을 분기하는 단일 코드베이스로 통합
