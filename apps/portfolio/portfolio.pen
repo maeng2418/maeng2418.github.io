@@ -1,5 +1,5 @@
 {
-  "version": "2.14",
+  "version": "2.17",
   "children": [
     {
       "type": "frame",
@@ -13292,7 +13292,7 @@
       "id": "q5AYcJ",
       "x": 4605,
       "y": -621,
-      "name": "20260730",
+      "name": "20260730 KO",
       "width": 6390,
       "height": 1844,
       "fill": "#ffffff",
@@ -14374,6 +14374,178 @@
                                   "textGrowth": "fixed-width",
                                   "width": "fill_container",
                                   "content": "초기 로드 3.4MB → 1.5MB(55.9% 감소), DOMContentLoaded 346ms → 121ms, Load 487ms → 349ms. 근거 범위는 모바일 앱 1개의 클라이언트 측정입니다.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "drlQG",
+                          "name": "P-클라이언트 로그 계측 DevTools",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dRcD5",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "클라이언트 로그 계측 DevTools 구축 — 확인 비용을 코드에서 화면 위로",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "vDl7F",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "놀유니버스 · 파트너 콘솔 로그 정의 304건 · domestic(MUI)·outbound(NDSP) 4개 앱 배선 · 신규 의존성 0",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Tj2K0",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "n1kf4i",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "문제",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "qiOYw",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "로그 정의 304건이 앱별 생성 코드 1만 줄에 흩어져, 무엇이 심겼고 실제 쌓이는지 코드 밖에서 확인할 방법이 없었습니다. 죽은 정의, 센더와 정의의 drift(호출 파일 174개), StrictMode 이중 발화가 누적됐습니다.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "DTV6D",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "JKo7L",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "판단",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "h4CbN",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "확인 비용을 화면 위로 옮기기로 했습니다. 인스펙터는 앱 디자인시스템에 의존하지 않는 vanilla DOM으로 구현해 MUI·NDSP 양쪽 앱군에 동일하게 넣고, 수집 동작 변경은 파일럿 1화면으로 한정해 적재 데이터 영향을 차단했습니다.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lVF1W",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "yrSHp",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "실행",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "mikIM",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "생성 센더 코드를 역파싱해 카탈로그 5종(사람용 md·상세 json·적재 대조 SQL·런타임 메타·ref 타입)을 결정적 산출물로 자동 생성했습니다. 실시간 발화 피드·30일 실수집량 오버레이·txtpb 생성 모드를 갖춘 dev 전용 인스펙터와, 태깅 한 줄이 곧 수집이 되는 자동 발화 런타임을 구축했습니다.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lvAYK",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "IKaic",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "결과",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "WH6k8",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "자동 발화가 기존 센더와 페이로드 바이트 동일함을 실측 대조했고, 프로덕션 번들 추가분은 슬림 메타 96KB뿐입니다. Databricks PAT는 로컬 dev 프록시로 격리해 신규 의존성 0으로 구현했으며, 채택·마이그레이션 논의는 컨벤션 RFC로 분리했습니다.",
                                   "lineHeight": 1.55,
                                   "fontFamily": "Pretendard",
                                   "fontSize": "$font-size-small",
@@ -16012,6 +16184,2922 @@
                 {
                   "type": "text",
                   "id": "RzfIN",
+                  "x": 1098,
+                  "y": 1600,
+                  "name": "PageNum",
+                  "fill": "$color-secondary",
+                  "content": "5",
+                  "fontFamily": "Pretendard",
+                  "fontSize": "$font-size-small",
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "vwskG",
+      "x": 11195,
+      "y": -621,
+      "name": "20260730 EN",
+      "width": 6390,
+      "height": 1844,
+      "fill": "#ffffff",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "LaSIl",
+          "x": 80,
+          "y": 80,
+          "name": "Pages",
+          "gap": 40,
+          "children": [
+            {
+              "type": "frame",
+              "id": "kzcrQ",
+              "name": "Page 1",
+              "clip": true,
+              "width": 1190,
+              "height": 1684,
+              "fill": "#ffffff",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "p49jNF",
+                  "x": 92,
+                  "y": 92,
+                  "name": "Page 1 Content",
+                  "width": 1007,
+                  "layout": "vertical",
+                  "gap": "$spacing-2xl",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KMgKK",
+                      "name": "Header",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XIir2",
+                          "name": "NameRow",
+                          "width": "fill_container",
+                          "gap": "$spacing-md",
+                          "alignItems": "end",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "GJUc8",
+                              "name": "Name",
+                              "fill": "$color-primary",
+                              "content": "Myeongseong Kim",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-title",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "GJ9c5",
+                              "name": "Role",
+                              "fill": "$color-secondary",
+                              "content": "Frontend Engineer  ·  5 yrs 7 mos experience",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "OYGvU",
+                          "name": "Identity",
+                          "fill": "$color-sub-text",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "A frontend engineer who migrates legacy systems with zero downtime and turns decision rationale into team standards through RFCs.",
+                          "lineHeight": 1.55,
+                          "fontFamily": "Pretendard",
+                          "fontSize": "$font-size-body",
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "mfhwb",
+                          "name": "Contact",
+                          "width": "fill_container",
+                          "gap": "$spacing-lg",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BEzfK",
+                              "name": "010 8663 2663",
+                              "fill": "$color-secondary",
+                              "content": "010 8663 2663",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "x49s8",
+                              "name": "maeng2418@gmail.com",
+                              "fill": "$color-secondary",
+                              "content": "maeng2418@gmail.com",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "SOCyV",
+                              "name": "github.com/maeng2418",
+                              "fill": "$color-secondary",
+                              "content": "github.com/maeng2418",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "text",
+                              "id": "NkC7X",
+                              "name": "maeng2418.github.io",
+                              "fill": "$color-secondary",
+                              "content": "maeng2418.github.io",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GfcFI",
+                      "name": "Sec-핵심 성과",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "QqF0p",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CY0WU",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Key Achievements",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "BUYTh",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bWWY7",
+                          "name": "Row",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "oLbSz",
+                              "name": "H",
+                              "fill": "$color-accent",
+                              "content": "4-year legacy migration completed",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "J5zMby",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Led the incremental Vue/Nuxt → React migration through RFC consensus. Legacy code share driven from 100% (2022) to 1.1% (2026) with zero downtime",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ydSul",
+                          "name": "Row",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uFWhS",
+                              "name": "H",
+                              "fill": "$color-primary",
+                              "content": "Build 589.24s → 1.10s on cache hit",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "N2Ei0",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Adopted Turborepo and cleaned up build configuration. Raw measurement logs recorded in internal docs",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "baxr1",
+                          "name": "Row",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "v4BJz",
+                              "name": "H",
+                              "fill": "$color-primary",
+                              "content": "Initial load 3.4MB → 1.5MB (55.9% reduction)",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Clsm0",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "DOMContentLoaded 346ms → 121ms. Achieved by disproving an AI-suggested conclusion with instrumentation and redefining the root cause",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "zNAXN",
+                          "name": "Row",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "aTwf9",
+                              "name": "H",
+                              "fill": "$color-primary",
+                              "content": "Introduced E2E testing to a test-less monorepo",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "UntIo",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Built Playwright-based regression verification from zero and integrated it into CI",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "jZ5SE",
+                          "name": "Row",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "JTKUw",
+                              "name": "H",
+                              "fill": "$color-primary",
+                              "content": "Enforced conventions through tooling, not documents",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "gd8lf",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Promoted ADRs to AI skills, recurring review comments to lint rules, and verification to CI gates",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FVBQB",
+                      "name": "Sec-경력사항",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Jpjiz",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IaWRC",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Work Experience",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "UfaSD",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "r96jpO",
+                          "name": "Job",
+                          "width": "fill_container",
+                          "gap": "$spacing-md",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 8,
+                              "id": "hHJqV",
+                              "name": "Logo",
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "images/놀유니버스.jpg",
+                                "mode": "fill"
+                              },
+                              "width": 56,
+                              "height": 56
+                            },
+                            {
+                              "type": "text",
+                              "id": "z7btWf",
+                              "name": "Org",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": 200,
+                              "content": "NOL Universe (Yanolja)",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "igAJk",
+                              "name": "Col",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "H78zd",
+                                  "name": "P",
+                                  "fill": "$color-accent",
+                                  "content": "2022.09.26 – Present (3 yrs 10 mos)",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "np8Sr",
+                                  "name": "D",
+                                  "fill": "$color-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Global B2B console where accommodation partners manage rates and inventory directly · PC/Mobile/Admin",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Ojcsh",
+                          "name": "Job",
+                          "width": "fill_container",
+                          "gap": "$spacing-md",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 8,
+                              "id": "QhSff",
+                              "name": "Logo",
+                              "fill": [
+                                "#ffffff",
+                                {
+                                  "type": "image",
+                                  "enabled": true,
+                                  "url": "images/igaworks.png",
+                                  "mode": "fit"
+                                }
+                              ],
+                              "width": 56,
+                              "height": 56,
+                              "stroke": "#d4d4d4",
+                              "strokeWidth": 1,
+                              "strokeAlignment": "inner",
+                              "effect": {
+                                "type": "shadow",
+                                "shadowType": "outer",
+                                "color": "#0000001f",
+                                "offset": {
+                                  "x": 0,
+                                  "y": 1
+                                },
+                                "blur": 4
+                              }
+                            },
+                            {
+                              "type": "text",
+                              "id": "r7M9Qm",
+                              "name": "Org",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": 200,
+                              "content": "IGAWorks (Adpopcorn)",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "A80Hnx",
+                              "name": "Col",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "LZdkI",
+                                  "name": "P",
+                                  "fill": "$color-accent",
+                                  "content": "2021.07 – 2022.09",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "zFl5d",
+                                  "name": "D",
+                                  "fill": "$color-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Ad-tech data platform · SSP console renewal (NextJS→React), ad performance dashboards, Svelte landing pages",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZXvn0",
+                          "name": "Job",
+                          "width": "fill_container",
+                          "gap": "$spacing-md",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 8,
+                              "id": "wKWbT",
+                              "name": "Logo",
+                              "fill": {
+                                "type": "image",
+                                "enabled": true,
+                                "url": "images/짐싸.png",
+                                "mode": "fill"
+                              },
+                              "width": 56,
+                              "height": 56
+                            },
+                            {
+                              "type": "text",
+                              "id": "Fuv7v",
+                              "name": "Org",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": 200,
+                              "content": "Zimssa (Partner App)",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-body",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "BrZk0",
+                              "name": "Col",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "X59iwp",
+                                  "name": "P",
+                                  "fill": "$color-accent",
+                                  "content": "2020.12 – 2021.07",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "msE80",
+                                  "name": "D",
+                                  "fill": "$color-secondary",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Moving-service O2O hybrid app (Cordova) · JS→TS migration, Atomic Design system, component CLI",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O67HaA",
+                      "name": "Sec-보유 스킬",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fSl55",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "nGjFt",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Skills",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "BTe3E",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "P4rwp",
+                          "name": "Core",
+                          "fill": "$color-body",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "Core — TypeScript · React · Next.js",
+                          "lineHeight": 1.55,
+                          "fontFamily": "Pretendard",
+                          "fontSize": "$font-size-body",
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "tQHiP",
+                          "name": "Rest",
+                          "fill": "$color-secondary",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "State & Forms   TanStack Query · React Hook Form · Zod\nBuild & Test   Vite · Turborepo · pnpm · Playwright · Vitest · Storybook\nStyling & Architecture   MUI · Tailwind CSS · Emotion · FSD\nInfra   GitHub Actions · Docker/EKS",
+                          "lineHeight": 1.8,
+                          "fontFamily": "Pretendard",
+                          "fontSize": "$font-size-small",
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "gFyMA",
+                  "x": 1098,
+                  "y": 1600,
+                  "name": "PageNum",
+                  "fill": "$color-secondary",
+                  "content": "1",
+                  "fontFamily": "Pretendard",
+                  "fontSize": "$font-size-small",
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "n5rxdy",
+              "name": "Page 2",
+              "clip": true,
+              "width": 1190,
+              "height": 1684,
+              "fill": "#ffffff",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Ijjme",
+                  "x": 92,
+                  "y": 92,
+                  "name": "Page 2 Content",
+                  "width": 1007,
+                  "layout": "vertical",
+                  "gap": "$spacing-2xl",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "zcFA3",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "t1xt4t",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Zhj1m",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Key Projects",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "a8ShYt",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nyoUe",
+                          "name": "P-Vue/Nuxt → React 점진 전환 (전환 리드)",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "qLB33",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Incremental Vue/Nuxt → React Migration — Architecture Design & Lead",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "kpGYT",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "NOL Universe · Partner B2B console · 543 legacy pages in 7 repos + 10 new repos · 3 FE engineers",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "W7vWG8",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "KUiLQ",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Problem",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "C9lYe",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "The legacy codebase and new React apps had to coexist while migrating without any service interruption. The Vue/Nuxt stack was the very weakness I had flagged myself when joining in 2022.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xoV8A",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "WsikM",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision — Migration Architecture",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "uaDlU",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I first documented the migration strategy as an RFC and secured team consensus. Rather than migrating all at once, we chose to build the shared infra, auth, and routing foundation in Phase 0, then migrate domain by domain.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "XWYYa",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "BwiJt",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "LJJIG",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Secured old/new app coexistence with nginx path routing and Istio VirtualService splitting. Large migrations were split into Parts 1–4, pairing new implementation with legacy removal; even the final Nuxt teardown was designed upfront.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "NKVHz",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "C6cgr",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "p2sbz",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Legacy PR share: 100% (2022) → 69.4% (2023) → 22.3% (2024) → 6.5% (2025) → 1.1% (2026). Completed a 4-year journey through the very stack I had once listed as a weakness.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "KCFHZ",
+                          "name": "P",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "lC5wP",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Performance Improvement — Verifying and Rejecting an AI Draft",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "z6v04s",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Mobile web · Bundling strategy redefined",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Ue6rd",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "jmr5M",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Problem",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "CMGP6",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "A specific page was loading a massive 3.44MB chunk. When I handed the analysis to an LLM, it concluded that React.lazy code splitting had dramatically reduced it.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "No7l1",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "CmITA",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "WQSxj",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I found the caveat the draft itself had noted — DOMContentLoaded and Load were identical before and after, and the draft admitted the numbers were \"likely measured with cache applied.\" I re-compared keeping code splitting vs. a single bundle.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "a6T3u",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "D3ZqPF",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "k4MgT",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I rejected the AI's conclusion and redefined the problem: the real issue was the root cause of the excessive payload, not splitting vs. monolith.\n\nAfter removing the giant chunk I re-measured directly and chose a single bundle — accepting that every page loads 1.71MB as more predictable than the previous per-page variance.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "K2buC",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "WpthO",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "LaYRx",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Initial load 3.4MB → 1.5MB (55.9% reduction), DOMContentLoaded 346ms → 121ms, Load 487ms → 349ms. Evidence scope: client-side measurements from one mobile app.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MkxLF",
+                          "name": "P-클라이언트 로그 계측 DevTools",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "M1G34R",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Client Log Instrumentation DevTools — Moving Verification Cost from Code to Screen",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "AHups",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "NOL Universe · 304 partner-console log definitions · 4 apps wired (MUI/NDSP) · 0 new dependencies",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "Wckno",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "PRjbP",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Problem",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "apsrj",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "304 log definitions sat scattered in 10K lines of generated code, with no way outside the code to see what was instrumented or actually landed. Dead definitions, sender–definition drift (174 files), and StrictMode double-firing accumulated.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "J4EdJ5",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "wSa0x",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "VfZpm",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I moved the verification cost onto the screen. The inspector was built in vanilla DOM, free of any app design system, so it drops identically into MUI and NDSP apps; collection changes were limited to one pilot screen to protect stored data.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "DfO1g",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "L0msr",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "C3dRw",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Reverse-parsed the generated sender code into 5 deterministic catalog artifacts (human md, detailed json, warehouse-diff SQL, runtime meta, ref types). Built a dev-only inspector — live firing feed, 30-day volume overlay, txtpb generation — plus an auto-firing runtime where one tagging line becomes collection.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "sl0RS",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "b4W3E9",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "b1G7M",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Verified byte-identical payloads between auto-firing and existing senders; production bundles grew by only 96KB of slim metadata. The Databricks PAT was isolated behind a local dev proxy (0 new dependencies), and adoption/migration moved to a convention RFC.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "hMEi9",
+                  "x": 1098,
+                  "y": 1600,
+                  "name": "PageNum",
+                  "fill": "$color-secondary",
+                  "content": "2",
+                  "fontFamily": "Pretendard",
+                  "fontSize": "$font-size-small",
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "F9Kz5n",
+              "name": "Page 3",
+              "clip": true,
+              "width": 1190,
+              "height": 1684,
+              "fill": "#ffffff",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GiOtt",
+                  "x": 92,
+                  "y": 92,
+                  "name": "Page 3 Content",
+                  "width": 1007,
+                  "layout": "vertical",
+                  "gap": "$spacing-2xl",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "INtta",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dk8lV",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "tIN3q",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Key Projects (continued)",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "AhfxP",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "P6hIjZ",
+                          "name": "P",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "P2P2q6",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Standardizing the Team's AI Development Infrastructure",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "B3lY1",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Established an internal Claude plugin marketplace · 5 consuming repos",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "wMIeS",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "BJ0TA",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Problem",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "I777A",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Development tooling was locked into the monorepo, and the boundary between personal and team assets was unclear. Leaving installation to individuals also risked required rules being omitted.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "i4p4m",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "z6sX9L",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "Zfq6c",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I compared 9 alternatives — 4 repo-bound and 5 shared. Each option's trade-offs and rationale were recorded in a document. Since one bad change to shared team tooling can block everyone's work, I chose to lay down CI, permission, and convention safety nets first, then add features.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "UDYw2",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "dcIun",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "nan25",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Adopted a two-axis structure: repo-bound assets via .claude/project-plugin with a gitignore whitelist, and shared assets in a separate marketplace repo.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "KYBxt",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "UbNsL",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "FXR70",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Launched the internal marketplace, shipped 8 plugins, rolled them out to 5 consuming repos, and folded them into onboarding docs.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FUeRS",
+                          "name": "P",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "K1Anm",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Knowledge System Redesign — LLM-Wiki Migration",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Z4Ex7",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Knowledge build pipeline for a large monorepo",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "AYQww",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "DcpOC",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Problem",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "i2Y2ln",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "With one skill per domain, working the same domain across 10 sessions fragmented into 10 separate drafts.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "lNkUG",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "W0OP6i",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "T0gxRh",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I recorded 3 rejected alternatives with reasons — vector DB/embeddings (markdown plus grep was sufficient), hook auto-injection (false positives and complexity), and draft-PR conversion (to keep automatic reviewer assignment).",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "TEfqD",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "yPrfQ",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "eg4Bj",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Designed a three-way ADD/UPDATE/NOOP verdict structure and a two-layer guard against self-proliferation.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "kfdFa",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "k4CXWe",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "ppKPo",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Independent audit score from 0.52 FAIL to 0.87 PASS, evaluators at 93/85/90/92, 129 tests green.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "cFijV",
+                          "name": "P",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "t5tj7",
+                              "name": "Ttl",
+                              "fill": "$color-primary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Global Partner Central — Sales Calendar Architecture & Data Transformation Standards",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-heading",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Qb9yj",
+                              "name": "Meta",
+                              "fill": "$color-accent",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "PC·Admin for global accommodation partners · Multi-language/multi-currency · 2 FE + 2 PM·BE, PPD, QA collaboration",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "UEskg",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "ZuLeM",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Problem",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "yhna1",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "We had to build a new set of screens for global accommodation partners to manage rate plans, inventory, and sales status. If shared policies like currency decimal places and multilingual rate-plan labels were implemented per screen, every policy change would require hunting down and fixing every screen.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "fe52q",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Uj9zv",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision — Architecture",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "BRTE0",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "I pushed shared policies (currency decimals, rate-plan i18n) down into lower layers and split FSD layers so screens only compose. The guiding rule was \"keep the blast radius of policy changes narrow.\"\n\nThe same principle governed form/request transforms via a 3-axis rule — role (validation hook / pure transform), location (co-located under features), and shape — and we codified that passthrough requests get no wrappers, preventing forced abstraction.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "vbb5i",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "w4vPBu",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "FpCB6",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Where no dedicated designer was available, I produced multiple mockups, shared them with teammates, and adopted the option chosen through feedback.\n\nThe full convention rollout was split into 6 stacked PRs, each passing type checks and lint. Since request objects are components of query cache keys, their shape and values were preserved byte-for-byte so cache behavior never changed.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "xIJ1D",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "x1JHIh",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "F6G8Ch",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Aligned the calendar, base pricing, and Daily Rate List to show identical occupancy rates and Cap values, and shipped new features behind feature flags without breaking operations. Convention compliance was fully normalized from the initial 75–80%.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "L2Saxc",
+                  "x": 1098,
+                  "y": 1600,
+                  "name": "PageNum",
+                  "fill": "$color-secondary",
+                  "content": "3",
+                  "fontFamily": "Pretendard",
+                  "fontSize": "$font-size-small",
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "RzBGi",
+              "name": "Page 4",
+              "clip": true,
+              "width": 1190,
+              "height": 1684,
+              "fill": "#ffffff",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "R9QRyv",
+                  "x": 92,
+                  "y": 92,
+                  "name": "Page 4 Content",
+                  "width": 1007,
+                  "layout": "vertical",
+                  "gap": "$spacing-xl",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u7zCd",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "slFlQ",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "TSEuK",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Previous Experience in Detail",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "jZSwp",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XLYCM",
+                          "name": "Prev",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "mYrgE",
+                              "name": "Hd",
+                              "width": "fill_container",
+                              "gap": "$spacing-md",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 8,
+                                  "id": "chU6C",
+                                  "name": "Logo",
+                                  "fill": [
+                                    "#ffffff",
+                                    {
+                                      "type": "image",
+                                      "enabled": true,
+                                      "url": "images/igaworks.png",
+                                      "mode": "fit"
+                                    }
+                                  ],
+                                  "width": 48,
+                                  "height": 48,
+                                  "stroke": "#d4d4d4",
+                                  "strokeWidth": 1,
+                                  "strokeAlignment": "inner"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "u9YJB3",
+                                  "name": "Tc",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "W0rG8y",
+                                      "name": "T",
+                                      "fill": "$color-primary",
+                                      "content": "IGAWorks (Adpopcorn)",
+                                      "lineHeight": 1.55,
+                                      "fontFamily": "Pretendard",
+                                      "fontSize": "$font-size-heading",
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "xqYFN",
+                                      "name": "M",
+                                      "fill": "$color-accent",
+                                      "content": "2021.07 – 2022.09 · Ad-tech data platform · Frontend Engineer",
+                                      "lineHeight": 1.55,
+                                      "fontFamily": "Pretendard",
+                                      "fontSize": "$font-size-small",
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "y9yTL",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "qpHlz",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Role",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "a6WVs",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Full renewal of the mobile ad SSP platform (Adpopcorn) console, development of a news ad platform (Conpick), and ad performance analytics dashboards.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "VOxmB",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "tbvZI",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision & Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "TLN6u",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "The existing NextJS SSR architecture did not fit a console product, so I migrated it to an SPA, removing unnecessary server-rendering overhead. Redesigned state management with React-Query and Recoil, eliminating duplicate API calls and optimizing bundles.\n\nFor landing pages, I chose Svelte — whose framework disappears at compile time — to secure load performance.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "kzRjF",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "riz63",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "c6towp",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Delivered dashboards visualizing per-campaign revenue, clicks, and impressions in real time with Recharts + SVG, and operated a zero-downtime deployment pipeline with AWS CodePipeline CI/CD and ECS/EKS container environments.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XHGVS",
+                          "name": "Prev",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-sm",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Jrrca",
+                              "name": "Hd",
+                              "width": "fill_container",
+                              "gap": "$spacing-md",
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "rectangle",
+                                  "cornerRadius": 8,
+                                  "id": "ZoFb0",
+                                  "name": "Logo",
+                                  "fill": [
+                                    "#ffffff",
+                                    {
+                                      "type": "image",
+                                      "enabled": true,
+                                      "url": "images/짐싸.png",
+                                      "mode": "fit"
+                                    }
+                                  ],
+                                  "width": 48,
+                                  "height": 48,
+                                  "stroke": "#d4d4d4",
+                                  "strokeWidth": 1,
+                                  "strokeAlignment": "inner"
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "p14T8",
+                                  "name": "Tc",
+                                  "width": "fill_container",
+                                  "layout": "vertical",
+                                  "gap": 2,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "yHX7u",
+                                      "name": "T",
+                                      "fill": "$color-primary",
+                                      "content": "Zimssa (Partner App)",
+                                      "lineHeight": 1.55,
+                                      "fontFamily": "Pretendard",
+                                      "fontSize": "$font-size-heading",
+                                      "fontWeight": "700"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "id": "y0iLG",
+                                      "name": "M",
+                                      "fill": "$color-accent",
+                                      "content": "2020.12 – 2021.07 · Moving-service O2O platform · Frontend Developer",
+                                      "lineHeight": 1.55,
+                                      "fontFamily": "Pretendard",
+                                      "fontSize": "$font-size-small",
+                                      "fontWeight": "normal"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "cJfDY",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "q0PjjB",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Role",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "ykAUm",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Developed the moving-match hybrid app (Zimssa Partner) as a Cordova-based iOS/Android cross-platform app. Led the Design 2.0 renewal.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "X0mcte",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "C8jo8p",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Decision & Execution",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "o6eUv",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Migrated the JavaScript codebase to TypeScript and applied lazy loading to improve initial load. Built an Atomic Design component system for UI consistency, attached a Storybook-based verification workflow, and added dark mode support.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "i472IF",
+                              "name": "It",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "l5oA1Z",
+                                  "name": "K",
+                                  "fill": "$color-accent",
+                                  "content": "Result",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "H56YK",
+                                  "name": "V",
+                                  "fill": "$color-body",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Established code quality tooling with ESLint, Prettier, and Husky, and built a component CLI that auto-generates Atomic Design boilerplate to cut repetitive work.",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "a2DMn",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "pUJtN",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "X9UM5",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Standards Established",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "c47hI",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "sgXab",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "rdCqS",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Enforcing conventions through tooling, not documents",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "R2mcEC",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Believing that documents which merely hope to be read never get followed, I pushed rules down into the execution layer. ADRs were migrated to AI skills that apply automatically at work time, recurring review comments became lint rules, and build/type verification was promoted to CI gates.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "dXn49",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cdboa",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Conventions as skills — type derivation rules · empty-value notation · table cell navigation · frontmatter policy",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "s5iIj",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Each convention was built as a skill instead of a document and applied across the whole team at once. When a rule changes, only the skill needs updating.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "imQ8U",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "eMFLF",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Porting collaboration standards to new repos",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "VxneZ",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Set up CODEOWNERS, PR templates, 3 GitHub Actions workflows, 3 husky hooks, and commitlint as the first PR of every new repo, so standards are enforced from the very first commit.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "RT9Ia",
+                  "x": 1098,
+                  "y": 1600,
+                  "name": "PageNum",
+                  "fill": "$color-secondary",
+                  "content": "4",
+                  "fontFamily": "Pretendard",
+                  "fontSize": "$font-size-small",
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "XzPUY",
+              "name": "Page 5",
+              "clip": true,
+              "width": 1190,
+              "height": 1684,
+              "fill": "#ffffff",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "V5sBs8",
+                  "x": 92,
+                  "y": 92,
+                  "name": "Page 5 Content",
+                  "width": 1007,
+                  "layout": "vertical",
+                  "gap": "$spacing-2xl",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nEQIk",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "n6R2C",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "DWvFc",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Structural Improvements & Safety Nets",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "WV2Xi",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gerfA",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Vyyv2",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "From code to declarations — structural design reduced change points from 11 files to 1",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "G74LA",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Sales-lock criteria were scattered across 11 files, so changing one policy meant finding and editing every usage — any omission became a bug behaving differently per screen. I separated per-channel rules into policy declarations rather than code branches, consolidating them into a single point; rule changes now end with editing one declaration, leaving call sites untouched.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "d4UXk",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "w65mrC",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Removing triple-duplicated locale types — ~20 existing call sites untouched",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "MaL9h",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Multilingual text types were defined in three separate places, so fixing one broke alignment with the others. I unified them into a single definition via a module-augmentation slot pattern, designed so that ~20 existing consumers kept compiling as-is — a case of making large-scale cleanup incrementally adoptable instead of one big cutover.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "H48QeK",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ibLI2",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Building E2E regression verification from a zero-test state",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "l2YTGX",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "The monorepo had no test code at all. Introducing Playwright, I went beyond just attaching the tool — login sessions and data preparation were standardized as fixtures so each test never rebuilds preconditions (2,833 new lines). Core-flow regression checks were folded into CI, running automatically before every deploy.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "CdWcG",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dVfl3",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Removing an auth token exposed in deployed bundles",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "erJH2",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "A Sentry auth token was being shipped inside client bundle artifacts — a build-time-only value leaking into runtime output. I separated the injection path and removed it from the bundle.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "oSuMv",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "crddk",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ZJp5v",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Activities & Documentation",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "dzHTc",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "J8Dmk",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "z8zWK",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Internal technical writing",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "iTVAb",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Authored Confluence docs on Playwright E2E adoption, Turborepo rollout, chart library replacement, shared component consolidation, and rate-plan domain specs. 4 release launch plans; 60+ Partner Center product/operations guides.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bXFlu",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "cteAC",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "RFCs & Tech Specs",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "noJpj",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "React migration strategy for the partner onboarding admin (11 alternatives compared), NDSP component API consistency, and infra path-splitting design.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "k37RJ",
+                          "name": "B",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 2,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VInhB",
+                              "name": "H",
+                              "fill": "$color-body",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Woowahan Tech Camp 3rd cohort · 2020.07 – 2020.08",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "text",
+                              "id": "P6daG",
+                              "name": "D",
+                              "fill": "$color-secondary",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "8-week web development program run by Woowa Brothers. Practiced code review and pair programming.",
+                              "lineHeight": 1.55,
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-small",
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "iII5r",
+                      "name": "Sec",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": "$spacing-md",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rvH3B",
+                          "name": "HdrRow",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": "$spacing-xs",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "BjSd5",
+                              "name": "T",
+                              "fill": "$color-primary",
+                              "content": "Education",
+                              "fontFamily": "Pretendard",
+                              "fontSize": "$font-size-section",
+                              "fontWeight": "700"
+                            },
+                            {
+                              "type": "rectangle",
+                              "id": "N96BEl",
+                              "name": "Rule",
+                              "fill": "$color-divider",
+                              "width": "fill_container",
+                              "height": 2
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "bVMr9",
+                          "name": "EduRow",
+                          "width": "fill_container",
+                          "gap": "$spacing-md",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "rectangle",
+                              "cornerRadius": 8,
+                              "id": "LbH6R",
+                              "name": "Logo",
+                              "fill": [
+                                "#ffffff",
+                                {
+                                  "type": "image",
+                                  "enabled": true,
+                                  "url": "images/서울과학기술대학교.png",
+                                  "mode": "fit"
+                                }
+                              ],
+                              "width": 48,
+                              "height": 48,
+                              "stroke": "#d4d4d4",
+                              "strokeWidth": 1,
+                              "strokeAlignment": "inner"
+                            },
+                            {
+                              "type": "frame",
+                              "id": "TVASg",
+                              "name": "Col",
+                              "width": "fill_container",
+                              "layout": "vertical",
+                              "gap": 2,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "JGcKR",
+                                  "name": "H",
+                                  "fill": "$color-body",
+                                  "content": "B.S. in Computer Engineering, Seoul National University of Science and Technology",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "700"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "JrL9C",
+                                  "name": "D",
+                                  "fill": "$color-secondary",
+                                  "content": "2015.03 – 2021.02",
+                                  "lineHeight": 1.55,
+                                  "fontFamily": "Pretendard",
+                                  "fontSize": "$font-size-small",
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "mAWtc",
                   "x": 1098,
                   "y": 1600,
                   "name": "PageNum",
