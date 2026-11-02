@@ -10,7 +10,7 @@ export default function SiteFooter() {
   return (
     <footer className="mt-24 border-t border-line">
       <div className="mx-auto flex max-w-[1080px] flex-wrap justify-between gap-4 px-6 py-12 text-[13px] text-ink-faint">
-        <span>© {new Date().getFullYear()} Myeongseong Kim. 기록은 미래의 나를 돕는다.</span>
+        <span>© {new Date().getFullYear()} Myeongseong Kim. {t('tagline')}</span>
         <span className="flex gap-4">
           <a href="/rss.xml">{tp('rss')}</a>
           <a href="https://github.com/maeng2418">GitHub</a>

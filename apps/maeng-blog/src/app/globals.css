@@ -501,27 +501,21 @@ body:has(.pf-root) {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 13px;
-  letter-spacing: -0.02em;
-  color: #fff;
-  background: var(--accent);
+  overflow: hidden;
+  /* 로고 대부분이 흰 배경이라 다크 테마에서도 흰 바탕을 유지한다 */
+  background: #fff;
   flex: none;
 }
-.pf-badge.is-b2 {
-  background: #2f2f36;
-}
-.pf-badge.is-b3 {
-  background: #1f5fd6;
+.pf-badge img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .pf-badge.is-sm {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  font-size: 11px;
 }
 .pf-role-body {
   display: flex;

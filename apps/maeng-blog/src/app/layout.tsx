@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: 'MAENG — 기록은 미래의 나를 돕는다',
     template: '%s | MAENG',
   },
-  description: '김명성의 개발 블로그 — 프런트엔드, 자바스크립트, 웹 기술 기록.',
+  description: '김명성의 개발 블로그 — 프론트엔드, 자바스크립트, 웹 기술 기록.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

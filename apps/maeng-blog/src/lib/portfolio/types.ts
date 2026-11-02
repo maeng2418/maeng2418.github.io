@@ -14,8 +14,8 @@ export interface PortfolioItem {
 }
 
 export interface PortfolioRole {
-  /** 타임라인 배지 약어 (NOL / IGA / 짐싸) */
-  badge: string
+  /** 타임라인 배지 로고 경로 (public 기준) */
+  logo: string
   company: string
   term: string
   current?: boolean
@@ -63,7 +63,7 @@ export interface PortfolioContent {
   standards: PortfolioSection & { items: PortfolioItem[] }
   improvements: PortfolioSection & { items: PortfolioItem[] }
   activities: PortfolioSection & { items: PortfolioItem[] }
-  education: PortfolioSection & { badge: string; degree: string; term: string }
+  education: PortfolioSection & { logo: string; degree: string; term: string }
   pdf: { title: string; description: string; ko: string; en: string }
   contact: { headline: string; email: string; top: string }
   rail: { aria: string } & Record<

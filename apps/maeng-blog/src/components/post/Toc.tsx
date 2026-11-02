@@ -45,7 +45,7 @@ export default function Toc({ headings }: { headings: Heading[] }) {
         </nav>
       )}
       <div className="post-me">
-        <span className="font-semibold">김명성</span>
+        <span className="font-semibold">{t('authorName')}</span>
         <span className="leading-[1.5] text-ink-soft">{t('author')}</span>
         <Link href="/portfolio/" className="text-accent">
           {t('portfolio')}

@@ -5,7 +5,8 @@
     "portfolio": "Portfolio",
     "theme": "Toggle theme",
     "locale": "한국어로 전환",
-    "mail": "Email"
+    "mail": "Email",
+    "tagline": "Writing things down helps future me."
   },
   "search": {
     "open": "Search",
@@ -50,13 +51,14 @@
     "next": "Next →",
     "newest": "This is the latest post",
     "oldest": "This is the oldest post",
-    "relatedSame": "More in",
+    "relatedSame": "Same category",
     "relatedMore": "Keep reading",
     "backToList": "← Back to all posts",
     "backToTop": "Back to top",
     "progressAria": "Reading progress",
-    "author": "Front-end engineer at NOL Universe, STAY FE team.",
-    "portfolio": "Portfolio →"
+    "author": "Frontend engineer at NOL Universe, STAY FE team.",
+    "portfolio": "Portfolio →",
+    "authorName": "Myeongseong Kim"
   },
   "editor": {
     "appTitle": "Post editor",
@@ -64,7 +66,7 @@
       "label": "KO",
       "aria": "한국어로 보기"
     },
-    "editTarget": "Editing target: {path}",
+    "editTarget": "Editing: {path}",
     "sidebar": {
       "posts": "Posts",
       "newPost": "New post",
@@ -123,7 +125,7 @@
     "hero": {
       "name": "Myeongseong Kim",
       "role": "Frontend Engineer",
-      "career": "5 yrs 7 mos of experience",
+      "career": "5 yrs 11 mos of experience",
       "words": [
         "A",
         "frontend",
@@ -170,7 +172,7 @@
       "eyebrow": "Key results",
       "headline": "Five results,\nin numbers",
       "note": "Every figure is recorded in raw logs and internal documents.",
-      "hint": "Scroll to fill them in one by one",
+      "hint": "Scroll to reveal them one by one",
       "items": [
         {
           "title": "Four-year legacy migration completed",
@@ -200,20 +202,20 @@
       "note": "I have owned migrations and standardization. Internship and research periods are excluded.",
       "roles": [
         {
-          "badge": "NOL",
+          "logo": "/logos/nol.jpg",
           "company": "NOL Universe (Yanolja) · FE Engineer",
-          "term": "2022.09 – Present (3 yrs 10 mos)",
+          "term": "2022.09 – Present (4 yrs 2 mos)",
           "current": true,
           "summary": "Global B2B console where lodging partners manage rates and inventory directly · PC/Mobile/Admin. Led the Vue/Nuxt → React migration architecture, designed the overseas Partner Central sales calendar, built log-instrumentation DevTools, and established E2E and convention standards."
         },
         {
-          "badge": "IGA",
+          "logo": "/logos/igaworks.png",
           "company": "IGAWorks (Adpopcorn) · Frontend Engineer",
           "term": "2021.07 – 2022.09",
           "summary": "Ad-tech data platform. Full renewal of the mobile ad SSP console (Next.js → React SPA), news ad platform (Conpick), Recharts + SVG ad-performance dashboard, Svelte landing pages. Operated zero-downtime deployment pipelines on AWS CodePipeline CI/CD with ECS/EKS containers."
         },
         {
-          "badge": "ZIM",
+          "logo": "/logos/zimssa.png",
           "company": "Zimssa (Partner app) · Frontend Developer",
           "term": "2020.12 – 2021.07",
           "summary": "Moving O2O platform. Built the Cordova-based iOS/Android hybrid app and the Design 2.0 renewal. JavaScript → TypeScript migration, lazy loading, Atomic Design component system + Storybook, dark mode. Established ESLint/Prettier/Husky and built a boilerplate component generator CLI."
@@ -236,10 +238,10 @@
           "title": "Vue/Nuxt → React incremental migration — architecture design and lead",
           "meta": "NOL Universe · Lodging partner B2B console · 7 legacy repos (543 items) + 10 new repos coexisting · 3 FE engineers",
           "steps": [
-            "The legacy codebase and the new React app had to coexist while we migrated without any service interruption. When I joined in 2022, this Vue/Nuxt stack was the very thing I had named as my own weakness.",
+            "The legacy codebase and the new React app had to coexist while we migrated without any service interruption. When I joined in 2022, this Vue/Nuxt stack was the very thing I had named as my weakness.",
             "I wrote the migration strategy as an RFC first and reached team agreement. Instead of moving everything at once, Phase 0 laid the shared infra, auth and routing foundation, then domains were migrated one stage at a time.",
             "nginx path routing and Istio VirtualService path splits gave the old and new apps a coexistence zone. Large migrations were split into Parts 1–4, pairing each new implementation with its legacy removal. The final Nuxt teardown was part of the upfront design.",
-            "Legacy PR share: 100% in 2022 → 69.4% in 2023 → 22.3% in 2024 → 6.5% in 2025 → 1.1% in 2026. The stack I had listed as a weakness was completed over four years."
+            "Legacy PR share: 100% in 2022 → 69.4% in 2023 → 22.3% in 2024 → 6.5% in 2025 → 1.1% in 2026. Over four years, I saw through the migration off the stack I had named as my weakness."
           ]
         },
         {
@@ -249,18 +251,18 @@
           "steps": [
             "A 3.44MB giant chunk was loading on certain pages. When I handed the analysis to an LLM, it concluded that React.lazy code splitting had cut the size dramatically.",
             "I found the measurement limits the draft itself had noted: DOMContentLoaded and Load were identical before and after, and the draft admitted the results were \"most likely cached\". I re-compared keeping code splitting against a single bundle.",
-            "I rejected the AI's conclusion and redefined the problem. The real issue was not splitting versus monolith but the root cause of the excessive size. After removing the giant chunk I re-measured myself, accepted the trade-off of every page loading 1.71MB, and chose a single bundle because it was predictable.",
+            "I rejected the AI's conclusion and redefined the problem. Instead of treating it as splitting versus monolith, I focused on the root cause of the excessive size. After removing the giant chunk I re-measured myself, accepted the trade-off of every page loading 1.71MB, and chose a single bundle because it was predictable.",
             "Initial load 3.4MB → 1.5MB (55.9% reduction), DOMContentLoaded 346ms → 121ms, Load 487ms → 349ms. Evidence scope: client-side measurement on one mobile app."
           ]
         },
         {
           "short": "Client log instrumentation DevTools",
-          "title": "Client log instrumentation DevTools — moving the cost of checking from code to the screen",
+          "title": "Client log instrumentation DevTools · moving the cost of checking from code to the screen",
           "meta": "NOL Universe · 304 partner-console log definitions · wired into 4 domestic (MUI) and outbound (NDSP) apps · 0 new dependencies",
           "steps": [
-            "304 log definitions were scattered across 10,000 lines of per-app generated code, with no way outside the code to see what was instrumented or what actually landed. Dead definitions, drift between senders and definitions (174 call sites) and StrictMode double-firing piled up.",
+            "304 log definitions were scattered across 10,000 lines of per-app generated code, with no way outside the code to see what was instrumented or what actually landed. Dead definitions, drift between senders and definitions (174 calling files) and StrictMode double-firing piled up.",
             "I decided to move the cost of checking onto the screen. The inspector was built in vanilla DOM, independent of any app design system, so it dropped into both the MUI and NDSP app families, and collection changes were limited to one pilot screen to protect stored data.",
-            "By reverse-parsing the generated sender code I auto-generated five deterministic catalogs (human-readable md, detailed json, ingestion-check SQL, runtime meta, ref types). I built a dev-only inspector with a live firing feed, a 30-day real-volume overlay and a txtpb generation mode, plus an auto-firing runtime where one tag line is the collection.",
+            "By reverse-parsing the generated sender code I auto-generated five deterministic catalogs (human-readable md, detailed json, ingestion-check SQL, runtime meta, ref types). I built a dev-only inspector with a live firing feed, a 30-day real-volume overlay and a txtpb generation mode, plus an auto-firing runtime where a single tag line is all it takes to collect an event.",
             "Auto-firing was verified byte-identical to the existing senders' payloads, and the production bundle grew only by a 96KB slim meta. The Databricks PAT was isolated behind a local dev proxy with 0 new dependencies, and the adoption and migration discussion was split into a convention RFC."
           ]
         },
@@ -270,7 +272,7 @@
           "meta": "New in-house Claude plugin marketplace · 5 consuming repos",
           "steps": [
             "Dev tooling was tied to the monorepo and the line between personal and team assets was blurry. Leaving installation to individuals risked dropping required rules.",
-            "I compared nine alternatives — four repo-bound, five shared — and documented each one's trade-offs and rationale. Because one bad change to a shared tool can block everyone, I laid the CI, permission and convention safety net first and added features after.",
+            "I compared nine alternatives, four repo-bound and five shared, and documented each one's trade-offs and rationale. Because one bad change to a shared tool can block everyone, I laid the CI, permission and convention safety net first and added features after.",
             "Adopted a two-axis structure: repo-bound assets under .claude/project-plugin with a gitignore whitelist, shared assets in a separate marketplace repo.",
             "Launched the in-house marketplace with 8 plugins, applied it to 5 consuming repos and folded it into the onboarding docs."
           ]
@@ -283,7 +285,7 @@
             "With one skill per domain, ten sessions on the same domain produced ten fragmented drafts.",
             "I recorded three rejected alternatives with reasons: vector DB/embeddings (markdown plus grep was enough), hook auto-injection (false positives and complexity), and draft PRs (to keep automatic reviewer assignment).",
             "Designed a three-way ADD/UPDATE/NOOP decision structure and a two-layer guard against self-replication.",
-            "Independent audit score from 0.52 FAIL to 0.87 PASS, evaluator 93/85/90/92, 129 tests green."
+            "Independent audit score rose from 0.52 (FAIL) to 0.87 (PASS), with evaluator scores of 93/85/90/92 and all 129 tests passing."
           ]
         },
         {
@@ -351,11 +353,11 @@
     },
     "standards": {
       "eyebrow": "Standards",
-      "headline": "Rules into the execution layer",
+      "headline": "Moving rules into the execution layer",
       "items": [
         {
           "title": "Conventions enforced by tools, not documents",
-          "description": "Assuming that documents expecting to be read will not be followed, I pushed rules into the execution layer: ADRs moved into AI skills applied automatically at work time, repeated review comments became lint rules, and build and type checks became CI gates."
+          "description": "Documents that rely on being read don't get followed, so I pushed rules into the execution layer: ADRs moved into AI skills that apply automatically during work, repeated review comments became lint rules, and build and type checks became CI gates."
         },
         {
           "title": "Conventions as skills — type-derivation rules · empty-value notation · table-cell navigation · frontmatter policy",
@@ -372,7 +374,7 @@
       "headline": "One place to change",
       "items": [
         {
-          "title": "Policy from code to declaration — change points 11 files → 1",
+          "title": "Policy split out of code into declarations · change points 11 files → 1",
           "description": "Sales-lock criteria were spread across 11 files, so changing one policy meant finding and editing every usage. I separated per-channel rules into policy declarations instead of code branches and gathered them in a single place; a rule change now ends with one declaration edit."
         },
         {
@@ -380,7 +382,7 @@
           "description": "The multilingual text type was defined in three places, so fixing one left the others out of sync. I unified them into a single definition with a module-augmentation slot pattern, designed so the ~20 existing consumers still compile unchanged."
         },
         {
-          "title": "E2E regression testing built from no tests at all",
+          "title": "E2E regression testing built where no tests existed",
           "description": "Beyond adopting Playwright, I standardized login sessions and data setup as fixtures so tests never rebuild preconditions (2,833 new lines). Core-flow regression checks run in CI before every deploy."
         },
         {
@@ -410,7 +412,7 @@
     "education": {
       "eyebrow": "Education",
       "headline": "Seoul National University of Science and Technology",
-      "badge": "ST",
+      "logo": "/logos/seoultech.png",
       "degree": "B.S. in Computer Engineering",
       "term": "2015.03 – 2021.02"
     },

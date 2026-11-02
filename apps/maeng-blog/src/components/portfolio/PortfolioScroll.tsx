@@ -327,7 +327,9 @@ export default function PortfolioScroll() {
               {c.career.roles.map((role, i) => (
                 <div key={role.company} className="pf-role" style={{ '--i': i } as React.CSSProperties}>
                   <span className="pf-role-dot" />
-                  <span className={`pf-badge is-b${i + 1}`}>{role.badge}</span>
+                  <span className="pf-badge">
+                    <img src={role.logo} alt="" loading="lazy" />
+                  </span>
                   <div className="pf-role-body">
                     <div className="pf-role-head">
                       <span className="pf-role-co">{role.company}</span>
@@ -477,7 +479,9 @@ export default function PortfolioScroll() {
             </div>
             <div className="pf-lis">
               <div className="pf-li pf-reveal is-row">
-                <span className="pf-badge is-b2 is-sm">{c.education.badge}</span>
+                <span className="pf-badge is-sm">
+                  <img src={c.education.logo} alt="" loading="lazy" />
+                </span>
                 <div className="pf-li-body">
                   <span className="pf-li-t">{c.education.degree}</span>
                   <span className="pf-mono pf-faint">{c.education.term}</span>
