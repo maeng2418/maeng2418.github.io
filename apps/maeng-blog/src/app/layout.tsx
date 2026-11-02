@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <head>
         {/* 저장 테마를 첫 페인트 전에 반영 — 깜빡임 방지 (lib/theme.ts 계약) */}
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
