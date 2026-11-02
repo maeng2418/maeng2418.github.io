@@ -1,20 +1,20 @@
 // 파일시스템 빌드타임 콘텐츠 로더 — REQ-BLOG-002
 // 디렉터리 계약(plan.md §B.1): content/{markdowns/{category}/,images/,til/}
-// — 레거시 maeng-bucket 미러 + TIL 통합. SPEC ④ 는 파일 복사만으로 콘텐츠를 채운다.
+// — 레거시 maeng-bucket 미러. TIL 라우트는 제거됐고 content/til 은 읽지 않는다.
 import fs from 'node:fs'
 import path from 'node:path'
 import matter from 'gray-matter'
 import { formatDate, parseLenientDate } from './date'
 import { buildExcerpt } from './excerpt'
+import { countCharacters, estimateReadingMinutes } from './reading-time'
 import { resolveThumbnail, rewriteLegacyImagePaths } from './images'
-import { sortByDateDesc } from './list'
-import { renderMarkdownToHtml } from './render'
-import type { Post, PostMeta, TilEntry } from './types'
+import { pickRelated, sortByDateDesc } from './list'
+import { renderMarkdown } from './render'
+import type { AdjacentPosts, Post, PostMeta } from './types'
 
 // 테스트 환경(vitest)에서만 MAENG_CONTENT_DIR 로 픽스처 디렉터리를 주입 — 프로덕션 빌드는 기존 process.cwd()/content 그대로 (REQ-MIG-005)
 const CONTENT_DIR = process.env.MAENG_CONTENT_DIR ?? path.join(process.cwd(), 'content')
 const MARKDOWNS_DIR = path.join(CONTENT_DIR, 'markdowns')
-const TIL_DIR = path.join(CONTENT_DIR, 'til')
 
 interface RawPost {
   meta: PostMeta
@@ -47,6 +47,8 @@ function readRawPost(filePath: string): RawPost {
     thumbnail: resolveThumbnail(data.thumbnail),
     draft: data.draft === true,
     excerpt: buildExcerpt(content),
+    readingMinutes: estimateReadingMinutes(content),
+    charCount: countCharacters(content),
   }
   return { meta, body: content }
 }
@@ -80,40 +82,23 @@ export async function getPostBySlug(slugParts: string[]): Promise<Post | null> {
   const raw = readAllRawPosts().find((p) => p.meta.slug === slug)
   if (!raw || raw.meta.draft) return null
 
-  const html = await renderMarkdownToHtml(rewriteLegacyImagePaths(raw.body))
-  return { ...raw.meta, html }
+  const { html, headings } = await renderMarkdown(rewriteLegacyImagePaths(raw.body))
+  return { ...raw.meta, html, headings }
 }
 
-/** TIL 엔트리 — content/til/*.md, date 내림차순 (REQ-BLOG-005 소스) */
-export async function getTilEntriesWithHtml(): Promise<TilEntry[]> {
-  const entries = await Promise.all(
-    listMarkdownFiles(TIL_DIR).map(async (filePath) => {
-      const { data, content } = matter(fs.readFileSync(filePath, 'utf8'))
-      const date = parseLenientDate(data.date as string | Date)
-      return {
-        slug: path.basename(filePath, '.md'),
-        title: String(data.title ?? '').trim(),
-        date,
-        dateFormatted: formatDate(date),
-        html: await renderMarkdownToHtml(rewriteLegacyImagePaths(content)),
-      }
-    })
-  )
-  return entries.sort((a, b) => b.date.getTime() - a.date.getTime())
+/** 상세 하단 내비 — date 내림차순 목록 기준 prev=더 오래된 글, next=더 최신 글 (draft 제외) */
+export function getAdjacentPosts(slug: string): AdjacentPosts {
+  const posts = getAllPosts()
+  const index = posts.findIndex((p) => p.slug === slug)
+  if (index < 0) return { prev: null, next: null }
+  return { prev: posts[index + 1] ?? null, next: posts[index - 1] ?? null }
 }
 
-/** TIL 메타 동기 로드 (본문 렌더 없이) */
-export function getTilEntries(): Omit<TilEntry, 'html'>[] {
-  return listMarkdownFiles(TIL_DIR)
-    .map((filePath) => {
-      const { data } = matter(fs.readFileSync(filePath, 'utf8'))
-      const date = parseLenientDate(data.date as string | Date)
-      return {
-        slug: path.basename(filePath, '.md'),
-        title: String(data.title ?? '').trim(),
-        date,
-        dateFormatted: formatDate(date),
-      }
-    })
-    .sort((a, b) => b.date.getTime() - a.date.getTime())
+/** 이어서 읽을 글 — 같은 카테고리 최신순 우선, 부족하면 다른 글 (draft 제외) */
+export function getRelatedPosts(slug: string, limit = 2, exclude: readonly string[] = []): PostMeta[] {
+  const posts = getAllPosts()
+  const current = posts.find((p) => p.slug === slug)
+  if (!current) return []
+  return pickRelated(posts, current, limit, exclude)
 }
+

@@ -2,8 +2,10 @@
   "nav": {
     "menuAria": "Main menu",
     "blog": "Blog",
-    "til": "TIL",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "theme": "Toggle theme",
+    "locale": "한국어로 전환",
+    "mail": "Email"
   },
   "search": {
     "open": "Search",
@@ -16,6 +18,45 @@
   },
   "comments": {
     "title": "Comments"
+  },
+  "blog": {
+    "eyebrow": "Dev Blog",
+    "intro": "Notes on what I learn working as a frontend engineer.",
+    "postCount": "{count} posts",
+    "categoryCount": "{count} categories",
+    "all": "All",
+    "filterAria": "Category filter",
+    "listAria": "Blog posts",
+    "sorted": "{count} posts · newest first",
+    "empty": "No posts in this category yet.",
+    "minutes": "{count} min",
+    "readMinutes": "{count} min read",
+    "chars": "{count} chars",
+    "headline1": "Myeongseong's",
+    "headline2": "dev notes",
+    "status": "Frontend · latest {month}"
+  },
+  "post": {
+    "home": "Blog",
+    "toc": "On this page",
+    "copy": "Copy",
+    "copied": "Copied ✓",
+    "sharePrompt": "Found this useful? Share it.",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied ✓",
+    "shareX": "Share on X",
+    "rss": "Subscribe via RSS",
+    "prev": "← Previous",
+    "next": "Next →",
+    "newest": "This is the latest post",
+    "oldest": "This is the oldest post",
+    "relatedSame": "More in",
+    "relatedMore": "Keep reading",
+    "backToList": "← Back to all posts",
+    "backToTop": "Back to top",
+    "progressAria": "Reading progress",
+    "author": "Front-end engineer at NOL Universe, STAY FE team.",
+    "portfolio": "Portfolio →"
   },
   "editor": {
     "appTitle": "Post editor",
@@ -79,430 +120,320 @@
     }
   },
   "portfolio": {
-    "title": "Portfolio",
-    "businessCard": {
-      "title": "About Me",
+    "hero": {
       "name": "Myeongseong Kim",
-      "role": "Front-End Developer",
-      "tagline": "I'm Myeongseong Kim, a front-end developer who solves complex problems and creates intuitive experiences.",
-      "career": "4 years and 9 months of experience",
-      "summary": [
-        "Currently, at the NOL Universe STAY FE team, I am building a B2B platform for the complex accommodation domain using React and TypeScript.",
-        "I develop interfaces that make complex policies and data easy and intuitive for users to understand, contribute to team productivity through efficient architecture and improved development processes, and build sustainable codebases."
+      "role": "Frontend Engineer",
+      "career": "5 yrs 7 mos of experience",
+      "words": [
+        "A",
+        "frontend",
+        "engineer",
+        "who",
+        "migrates",
+        "legacy",
+        "systems",
+        "with",
+        "zero",
+        "downtime,",
+        "records",
+        "decisions",
+        "as",
+        "RFCs,",
+        "and",
+        "turns",
+        "them",
+        "into",
+        "team",
+        "standards."
       ],
-      "contacts": [
+      "accentWord": 13,
+      "pdf": "Download résumé (PDF)",
+      "hint": "Scroll down",
+      "links": [
         {
-          "label": "Email",
-          "value": "maeng2418@gmail.com",
+          "label": "maeng2418@gmail.com",
           "href": "mailto:maeng2418@gmail.com"
         },
         {
-          "label": "Github",
-          "value": "github.com/maeng2418",
+          "label": "github.com/maeng2418",
           "href": "https://github.com/maeng2418",
           "external": true
         },
         {
-          "label": "Blog",
-          "value": "maeng2418.github.io",
+          "label": "maeng2418.github.io",
           "href": "https://maeng2418.github.io",
           "external": true
-        },
-        {
-          "label": "LinkedIn",
-          "value": "linkedin.com/in/명성-김",
-          "href": "https://www.linkedin.com/in/명성-김-4988b61ba",
-          "external": true
         }
       ]
     },
-    "introduction": {
-      "title": "Let me introduce myself",
-      "headline": "I am this kind of developer",
-      "lead": "I am,",
-      "values": [
+    "kpi": {
+      "eyebrow": "Key results",
+      "headline": "Five results,\nin numbers",
+      "note": "Every figure is recorded in raw logs and internal documents.",
+      "hint": "Scroll to fill them in one by one",
+      "items": [
         {
-          "title": "Growing together",
-          "description": "I enjoy growing together by sharing experiences and knowledge through blogs or communities."
+          "title": "Four-year legacy migration completed",
+          "description": "Led the incremental Vue/Nuxt → React migration through RFC consensus. Legacy code share went from 100% in 2022 to 1.1% in 2026 with zero downtime."
         },
         {
-          "title": "Constantly challenging new technologies and trends",
-          "description": "I'm not afraid to try new things when solving problems."
+          "title": "Build 589.24s → 1.10s on cache hit",
+          "description": "Introduced Turborepo and cleaned up the build config. Raw measurement logs recorded in internal docs."
         },
         {
-          "title": "Providing better UX to users",
-          "description": "I harmoniously combine design and development to deliver convenient experiences to users."
+          "title": "Initial load 3.4MB → 1.5MB (55.9% less)",
+          "description": "DOMContentLoaded 346ms → 121ms. The result of disproving an AI's conclusion with measurement and redefining the cause."
         },
         {
-          "title": "Providing stable and reliable services",
-          "description": "I enhance stability through test code and provide reliable services to users."
+          "title": "E2E testing introduced to a monorepo with no tests",
+          "description": "Built Playwright regression checks from zero and folded them into CI."
+        },
+        {
+          "title": "Conventions enforced by tools, not documents",
+          "description": "Promoted ADRs to AI skills, repeated review comments to lint rules, and checks to CI gates."
         }
       ]
     },
-    "techSkill": {
-      "title": "My Tech Skills are..",
-      "description": "I do frontend development using various technologies.",
-      "details": [
-        "I can develop SPAs using React and Vue.",
-        "I can develop SSR using Next and Nuxt.",
-        "I have experience developing Design Systems.",
-        "I'm familiar with Webpack, Babel, ES6, etc.",
-        "I have experience with UI component testing using Storybook.",
-        "I strive to improve productivity through test code and deployment automation (CI/CD).",
-        "I strive for performance and resource optimization."
+    "career": {
+      "eyebrow": "Experience",
+      "headline": "Three B2B platforms",
+      "note": "I have owned migrations and standardization. Internship and research periods are excluded.",
+      "roles": [
+        {
+          "badge": "NOL",
+          "company": "NOL Universe (Yanolja) · FE Engineer",
+          "term": "2022.09 – Present (3 yrs 10 mos)",
+          "current": true,
+          "summary": "Global B2B console where lodging partners manage rates and inventory directly · PC/Mobile/Admin. Led the Vue/Nuxt → React migration architecture, designed the overseas Partner Central sales calendar, built log-instrumentation DevTools, and established E2E and convention standards."
+        },
+        {
+          "badge": "IGA",
+          "company": "IGAWorks (Adpopcorn) · Frontend Engineer",
+          "term": "2021.07 – 2022.09",
+          "summary": "Ad-tech data platform. Full renewal of the mobile ad SSP console (Next.js → React SPA), news ad platform (Conpick), Recharts + SVG ad-performance dashboard, Svelte landing pages. Operated zero-downtime deployment pipelines on AWS CodePipeline CI/CD with ECS/EKS containers."
+        },
+        {
+          "badge": "ZIM",
+          "company": "Zimssa (Partner app) · Frontend Developer",
+          "term": "2020.12 – 2021.07",
+          "summary": "Moving O2O platform. Built the Cordova-based iOS/Android hybrid app and the Design 2.0 renewal. JavaScript → TypeScript migration, lazy loading, Atomic Design component system + Storybook, dark mode. Established ESLint/Prettier/Husky and built a boilerplate component generator CLI."
+        }
       ]
     },
-    "softSkill": {
-      "title": "My Soft Skills are..",
-      "details": [
-        "I have various collaboration experiences through projects, enabling flexible communication with people from various fields.",
-        "I always try to solve problems with positive thinking. No matter what problem situation arises, I don't give up and strive to solve the problem.",
-        "No matter what requirements are given, I constantly strive to complete given tasks on time.",
-        "Through code reviews, I can share knowledge and experience with colleagues, give and receive feedback, and gradually improve services.",
-        "I can create meaningful value through new ideas.",
-        "I'm very interested in communities and open source. I enjoy communicating with various people."
+    "work": {
+      "eyebrow": "Key projects",
+      "headline": "Problem → Decision →\nAction → Result",
+      "hint": "Scroll to play the steps · click the list to jump",
+      "stepLabels": [
+        "Problem",
+        "Decision",
+        "Action",
+        "Result"
+      ],
+      "items": [
+        {
+          "short": "Vue/Nuxt → React incremental migration",
+          "title": "Vue/Nuxt → React incremental migration — architecture design and lead",
+          "meta": "NOL Universe · Lodging partner B2B console · 7 legacy repos (543 items) + 10 new repos coexisting · 3 FE engineers",
+          "steps": [
+            "The legacy codebase and the new React app had to coexist while we migrated without any service interruption. When I joined in 2022, this Vue/Nuxt stack was the very thing I had named as my own weakness.",
+            "I wrote the migration strategy as an RFC first and reached team agreement. Instead of moving everything at once, Phase 0 laid the shared infra, auth and routing foundation, then domains were migrated one stage at a time.",
+            "nginx path routing and Istio VirtualService path splits gave the old and new apps a coexistence zone. Large migrations were split into Parts 1–4, pairing each new implementation with its legacy removal. The final Nuxt teardown was part of the upfront design.",
+            "Legacy PR share: 100% in 2022 → 69.4% in 2023 → 22.3% in 2024 → 6.5% in 2025 → 1.1% in 2026. The stack I had listed as a weakness was completed over four years."
+          ]
+        },
+        {
+          "short": "Performance — verifying and rejecting an AI draft",
+          "title": "Performance — verifying and rejecting an AI draft",
+          "meta": "Mobile web · Redefining the bundling strategy",
+          "steps": [
+            "A 3.44MB giant chunk was loading on certain pages. When I handed the analysis to an LLM, it concluded that React.lazy code splitting had cut the size dramatically.",
+            "I found the measurement limits the draft itself had noted: DOMContentLoaded and Load were identical before and after, and the draft admitted the results were \"most likely cached\". I re-compared keeping code splitting against a single bundle.",
+            "I rejected the AI's conclusion and redefined the problem. The real issue was not splitting versus monolith but the root cause of the excessive size. After removing the giant chunk I re-measured myself, accepted the trade-off of every page loading 1.71MB, and chose a single bundle because it was predictable.",
+            "Initial load 3.4MB → 1.5MB (55.9% reduction), DOMContentLoaded 346ms → 121ms, Load 487ms → 349ms. Evidence scope: client-side measurement on one mobile app."
+          ]
+        },
+        {
+          "short": "Client log instrumentation DevTools",
+          "title": "Client log instrumentation DevTools — moving the cost of checking from code to the screen",
+          "meta": "NOL Universe · 304 partner-console log definitions · wired into 4 domestic (MUI) and outbound (NDSP) apps · 0 new dependencies",
+          "steps": [
+            "304 log definitions were scattered across 10,000 lines of per-app generated code, with no way outside the code to see what was instrumented or what actually landed. Dead definitions, drift between senders and definitions (174 call sites) and StrictMode double-firing piled up.",
+            "I decided to move the cost of checking onto the screen. The inspector was built in vanilla DOM, independent of any app design system, so it dropped into both the MUI and NDSP app families, and collection changes were limited to one pilot screen to protect stored data.",
+            "By reverse-parsing the generated sender code I auto-generated five deterministic catalogs (human-readable md, detailed json, ingestion-check SQL, runtime meta, ref types). I built a dev-only inspector with a live firing feed, a 30-day real-volume overlay and a txtpb generation mode, plus an auto-firing runtime where one tag line is the collection.",
+            "Auto-firing was verified byte-identical to the existing senders' payloads, and the production bundle grew only by a 96KB slim meta. The Databricks PAT was isolated behind a local dev proxy with 0 new dependencies, and the adoption and migration discussion was split into a convention RFC."
+          ]
+        },
+        {
+          "short": "Standardizing the team's AI dev infrastructure",
+          "title": "Standardizing the team's AI development infrastructure",
+          "meta": "New in-house Claude plugin marketplace · 5 consuming repos",
+          "steps": [
+            "Dev tooling was tied to the monorepo and the line between personal and team assets was blurry. Leaving installation to individuals risked dropping required rules.",
+            "I compared nine alternatives — four repo-bound, five shared — and documented each one's trade-offs and rationale. Because one bad change to a shared tool can block everyone, I laid the CI, permission and convention safety net first and added features after.",
+            "Adopted a two-axis structure: repo-bound assets under .claude/project-plugin with a gitignore whitelist, shared assets in a separate marketplace repo.",
+            "Launched the in-house marketplace with 8 plugins, applied it to 5 consuming repos and folded it into the onboarding docs."
+          ]
+        },
+        {
+          "short": "Knowledge system redesign — LLM wiki",
+          "title": "Knowledge system redesign — moving to an LLM wiki",
+          "meta": "Knowledge build pipeline for a large monorepo",
+          "steps": [
+            "With one skill per domain, ten sessions on the same domain produced ten fragmented drafts.",
+            "I recorded three rejected alternatives with reasons: vector DB/embeddings (markdown plus grep was enough), hook auto-injection (false positives and complexity), and draft PRs (to keep automatic reviewer assignment).",
+            "Designed a three-way ADD/UPDATE/NOOP decision structure and a two-layer guard against self-replication.",
+            "Independent audit score from 0.52 FAIL to 0.87 PASS, evaluator 93/85/90/92, 129 tests green."
+          ]
+        },
+        {
+          "short": "Overseas Partner Central — sales calendar architecture",
+          "title": "Overseas Partner Central — sales calendar architecture · data transformation standard",
+          "meta": "PC·Admin for overseas lodging partners · multi-language/multi-currency · 2 FE + PM, 2 BE, PPD, QA",
+          "steps": [
+            "We had to build a new set of screens where overseas lodging partners manage rate plans, inventory and sales status. If shared policies such as currency decimal places and multilingual rate-plan labels were implemented per screen, every policy change would mean hunting through every screen.",
+            "I pushed shared policies down into lower FSD layers so screens only compose. The criterion was \"keep the blast radius of a policy change narrow\". The same principle applied to form and request transforms: a three-axis rule (role, location, shape), with an explicit boundary that passthrough requests get no wrapper.",
+            "Where no dedicated designer was assigned, I made several mockups, shared them with colleagues and adopted one from the feedback. The convention rollout was split into a 6-stage stacked PR, each stage passing type-check and lint. Since request objects are part of query cache keys, shape and values were preserved byte for byte so cache behavior never changed.",
+            "Calendar, base price and Daily Rate List now show identical occupancy pricing and cap values, and new features shipped behind feature flags without breaking existing operations. Convention compliance, 75–80% at the time of the survey, was normalized across the board."
+          ]
+        }
       ]
     },
-    "designSkill": {
-      "title": "My Design Skills are..",
-      "details": [
-        "I'm very interested in UI/UX and continuously think and strive for perfect user experience.",
-        "I have experience creating design systems directly using Figma."
-      ]
-    },
-    "skillSets": {
-      "title": "Skill Sets",
-      "headline": "Skill Sets",
+    "skills": {
+      "eyebrow": "Skills",
+      "headline": "Core stack: TypeScript · React · Next.js",
       "groups": [
         {
-          "label": "Frontend Skills",
-          "skills": [
-            "Javascript",
-            "Typescript",
-            "HTML/CSS",
-            "ReactJS",
-            "VueJS",
-            "NextJS",
-            "NuxtJS",
-            "Emotion",
-            "StyledComponent",
-            "Tailwindcss",
-            "Storybook"
+          "label": "Core",
+          "items": [
+            "TypeScript",
+            "React",
+            "Next.js"
           ],
-          "highlights": [
-            "Typescript",
-            "ReactJS",
-            "NextJS"
+          "hot": true
+        },
+        {
+          "label": "State & forms",
+          "items": [
+            "TanStack Query",
+            "React Hook Form",
+            "Zod"
           ]
         },
         {
-          "label": "Backend Skills",
-          "skills": [
-            "NodeJS",
-            "NestJS",
-            "GraphQL",
-            "MySQL",
-            "MongoDB"
-          ]
-        },
-        {
-          "label": "Collaboration Skills",
-          "skills": [
-            "Git/Github",
-            "Bitbucket",
-            "Jira",
-            "Confluence",
-            "Notion",
-            "Slack"
-          ]
-        },
-        {
-          "label": "Deploy Skills",
-          "skills": [
-            "AWS/Pipeline",
-            "AWS/EC2",
-            "AWS/ECS",
-            "Docker",
-            "Nginx",
-            "PM2",
-            "Jenkins",
-            "Netlify",
-            "Github Action"
-          ]
-        },
-        {
-          "label": "Etc...",
-          "skills": [
-            "Figma",
-            "Firebase"
-          ]
-        }
-      ]
-    },
-    "projects": {
-      "title": "Projects",
-      "headline": "Projects",
-      "items": [
-        {
-          "title": "Bookmark Pro",
-          "kind": "[Personal] Chrome Extension",
-          "term": "25.08 · v0.1.3",
-          "description": "A modern bookmark management solution for efficiently managing bookmarks on the web and in a browser extension. It offers features like integrated bookmark management, advanced search and filtering, and real-time synchronization.",
-          "attribution": "It is structured as a Turborepo monorepo to share code and provide a consistent user experience. The Chrome Extension was developed with React, and the dashboard was developed with Next.js. Following recent trends, it utilizes a Supabase-based backend and shadcn/ui to implement a cleaner and more consistent UI.",
-          "tags": [
-            "React",
-            "Typescript",
-            "Next",
-            "TailwindCSS",
-            "Supabase",
-            "Turborepo",
-            "shadcn/ui"
-          ],
-          "link": "https://boomark-pro.netlify.app/",
-          "github": "https://github.com/maeng2418/bookmark-pro"
-        },
-        {
-          "title": "Maeng Design",
-          "kind": "[Personal] Design System",
-          "term": "22.02 · v1.5.2",
-          "description": "Maeng Design is a design system created to standardize UI specifications for React projects, reduce unnecessary costs associated with design and implementation differences, and support design and front-end development resources.",
-          "attribution": "Various components were designed, developed, and distributed as open source. Docs for API reference and Storybook for UI verification were also deployed.",
-          "tags": [
-            "React",
-            "Typescript",
-            "Emotion",
-            "Storybook",
-            "Rollup",
-            "Gatsby",
-            "Netlify"
-          ],
-          "link": "https://maeng-design-docs.netlify.app",
-          "github": "https://github.com/maeng2418/Maeng-Design"
-        },
-        {
-          "title": "Seoul13",
-          "kind": "[Personal] Space Rental Website (Freelance)",
-          "term": "20.10 · v2.0.0",
-          "description": "Created a reservation website for meeting room rentals. I personally handled service planning and design, and built the overall infrastructure for business operations beyond development, including trademark registration for online sales, PG company registration, and mail-order business reporting.",
-          "attribution": "The service was renewed to improve it by replacing the existing React-only code with Next.js, switching from MongoDB to MySQL, implementing a custom calendar library, and applying TypeScript.",
-          "tags": [
-            "React",
-            "Typescript",
-            "NextJS",
-            "Express",
-            "AWS",
-            "JWT",
-            "OAuth",
-            "Passport",
-            "MongoDB",
-            "MySQL"
-          ],
-          "link": "https://seoul13.com",
-          "github": "https://github.com/maeng2418/SEOUL13_edition2"
-        },
-        {
-          "title": "B-Mart Mobile Web",
-          "kind": "[Team] Woowa Tech Camp",
-          "term": "20.08 · v1.0.0",
-          "description": "Implemented a B-Mart clone, one of the services of Baedal Minjok, using Next.js with fellow Woowa Tech Camp members.",
-          "attribution": "Development involved using functional components, state management with useState and Context API, styling with Styled-Components, implementing a carousel banner, and login functionality using Passport + OAuth + JWT.",
-          "tags": [
-            "React",
-            "Typescript",
-            "NextJS",
-            "Storybook",
-            "Express",
-            "JWT",
-            "OAuth",
-            "Passport",
-            "Github Action",
-            "MySQL"
-          ],
-          "link": "https://github.com/woowa-techcamp-2020/bmart-5",
-          "github": "https://github.com/woowa-techcamp-2020/bmart-5"
-        }
-      ]
-    },
-    "timestamp": {
-      "title": "Timestamp",
-      "headline": "Timeline",
-      "currentBadge": "NOW",
-      "items": [
-        {
-          "when": "22.09.26 - Present",
-          "title": "NOL Universe (Yanolja) FE Developer",
-          "organizer": "NOL Universe",
-          "current": true
-        },
-        {
-          "when": "21.07.19 - 22.09.23",
-          "title": "IGAWorks Adpopcorn FE Developer",
-          "organizer": "IGAWorks"
-        },
-        {
-          "when": "21.02.24",
-          "title": "Graduated from SEOULTECH, Computer Engineering",
-          "organizer": "Seoul National University of Science and Technology (SEOULTECH)"
-        },
-        {
-          "when": "20.12.01 - 21.07.08",
-          "title": "Zimssa FE Developer",
-          "organizer": "Zimssa"
-        },
-        {
-          "when": "20.07.01 - 20.08.28",
-          "title": "Woowa Tech Camp Batch 3",
-          "organizer": "Woowa Brothers"
-        },
-        {
-          "when": "19.10.01 - 20.06.30",
-          "title": "Transportation Demand Analysis at Railway Management Policy Research Institute",
-          "organizer": "Railway Management Policy Research Institute"
-        },
-        {
-          "when": "19.09.16 - 19.11.30",
-          "title": "DevelUp 1st Cohort",
-          "organizer": "Goorm"
-        },
-        {
-          "when": "19.08.12 - 19.09.11",
-          "title": "Blokee TF Team FE Intern",
-          "organizer": "Dable"
-        }
-      ]
-    },
-    "experiences": {
-      "title": "Experiences",
-      "headline": "Experience",
-      "viewAchievements": "View achievements",
-      "items": [
-        {
-          "company": "NOL Universe (Yanolja)",
-          "term": "2022.09.26 - Present",
-          "description": "At the NOL Universe STAY FE team, I am building a B2B platform for the complex accommodation domain using React and TypeScript.",
-          "keyProjects": [
-            "Developed and maintained a B2B platform for the accommodation industry (Partner Center for PC/Mobile, admin dashboards, and affiliate management tools).",
-            "Led a system integration project to consolidate multiple fragmented services into the Partner Center.",
-            "Transitioned the technology stack from Vue to React.",
-            "Implemented comprehensive service analysis by tracking errors with Sentry + Client Log and incorporating user feedback."
-          ],
-          "achievements": [
-            "Utilized Nginx Reverse Proxy for a gradual migration from Vue to React and configured S3/CloudFront-based versioned deployments, resulting in reduced server resources, a 40% decrease in bug reports, and improved development productivity.",
-            "Simplified the development of 3 applications and 12 shared packages by implementing a monorepo architecture.",
-            "Improved the development process by introducing Trunk-Based Development (TBD) and feature flags.",
-            "Introduced incremental builds: reduced build and type-checking time by up to 99.3% (150.15s → 1.03s), with an average reduction of 41.2% (150.15s → 88.29s).",
-            "Enhanced the code review system by automating code verification with GitHub Actions and implementing a checkbox-based system for mandatory review items.",
-            "Improved code quality and processes by introducing ESLint, Prettier, CSpell, and Storybook.",
-            "E2E domain testing using Playwright."
-          ],
-          "techStack": [
-            "Typescript",
-            "React",
-            "Vue",
-            "Emotion",
-            "Storybook",
+          "label": "Build & test",
+          "items": [
             "Vite",
-            "React-Query",
-            "MUI",
+            "Turborepo",
+            "pnpm",
             "Playwright",
-            "Jenkins",
-            "GitHub Actions",
-            "Beanstalk",
-            "CloudFront",
-            "S3"
-          ]
-        },
-        {
-          "company": "IGAWorks (Adpopcorn)",
-          "term": "2021.07.19 - 2022.09.23",
-          "description": "I worked as a frontend developer in the IGAWorks Adpopcorn development team, in charge of the SSP part, a monetization service including in-app bidding algorithms, DMP-based ad servers, and mediation functions.",
-          "keyProjects": [
-            "Developed and maintained the Adpopcorn SSP, a B2B advertising platform.",
-            "Revamped the Adpopcorn SSP Console, transitioning the tech stack from Next.js to React and overhauling the design.",
-            "Developed the Conpick news content platform, which included functionality for converting news content to HTML and inserting advertisements.",
-            "Built the Adpopcorn SSP homepage using Svelte."
-          ],
-          "achievements": [
-            "Transitioned from Next.js to ReactJS, moving from Server-Side Rendering (SSR) to a Single Page Application (SPA) to eliminate unnecessary over-engineering and revamp the design. This led to simplified state management and overall system performance improvements.",
-            "Improved state management by replacing Redux + Saga with React-Query and Recoil, which eliminated redundant API calls and streamlined complex state management.",
-            "Automated deployment using AWS ECS and CodePipeline for improved CI/CD.",
-            "Enhanced the chart library with Recharts and SVG to improve data accessibility and analysis efficiency.",
-            "Developed a high-performance, lightweight landing page with fast rendering by leveraging Svelte's compile-time framework structure."
-          ],
-          "techStack": [
-            "Typescript",
-            "React",
-            "NextJS",
-            "Svelte",
-            "Emotion",
-            "Ant Design",
-            "React-Query",
-            "Recoil",
-            "Github Action",
-            "ECS",
-            "EKS",
-            "Code Pipeline",
-            "Docker"
-          ]
-        },
-        {
-          "company": "ZIMSSA",
-          "term": "2020.12.01 - 2021.07.08",
-          "description": "In Zimssa's frontend team, I was responsible for developing and maintaining the ZIMSSA Partner App, a moving service matching platform.",
-          "keyProjects": [
-            "Developed and maintained the ZIMSSA Partner App, a moving service matching platform.",
-            "Applied Design 2.0, which included implementing dark mode and improving UI/UX.",
-            "Built a component-based design system to enhance UI consistency and development productivity."
-          ],
-          "achievements": [
-            "Modernized the tech stack and improved maintainability by migrating from JavaScript to TypeScript and updating dependencies.",
-            "Implemented a design system based on Atomic Design principles and introduced dark mode.",
-            "Introduced Storybook for UI verification and testing.",
-            "Improved rendering performance and UX through lazy loading.",
-            "Automated component creation with scripts.",
-            "Enhanced user permission settings using Cordova plugins.",
-            "Maintained code consistency and quality by applying ESLint, Prettier, Husky, and lint-staged."
-          ],
-          "techStack": [
-            "Javascript",
-            "Typescript",
-            "Cordova",
-            "SASS",
-            "Styled Component",
-            "Redux",
+            "Vitest",
             "Storybook"
+          ]
+        },
+        {
+          "label": "Styling & structure",
+          "items": [
+            "MUI",
+            "Tailwind CSS",
+            "Emotion",
+            "FSD"
+          ]
+        },
+        {
+          "label": "Infra",
+          "items": [
+            "GitHub Actions",
+            "Docker/EKS"
           ]
         }
       ]
     },
-    "educations": {
-      "title": "Education",
+    "standards": {
+      "eyebrow": "Standards",
+      "headline": "Rules into the execution layer",
       "items": [
         {
-          "term": "2015.03 - 2021.02",
-          "title": "Seoul National University of Science and Technology (SEOULTECH)",
-          "description": "Bachelor of Science in Computer Engineering"
+          "title": "Conventions enforced by tools, not documents",
+          "description": "Assuming that documents expecting to be read will not be followed, I pushed rules into the execution layer: ADRs moved into AI skills applied automatically at work time, repeated review comments became lint rules, and build and type checks became CI gates."
         },
         {
-          "term": "2011.03 - 2014.02",
-          "title": "Gongju Hanil High School (HANIL HIGH SCHOOL)",
-          "description": "Science Track"
+          "title": "Conventions as skills — type-derivation rules · empty-value notation · table-cell navigation · frontmatter policy",
+          "description": "Each convention became a skill instead of a document and was applied across the whole team at once. When a rule changes, only the skill changes."
+        },
+        {
+          "title": "Porting collaboration rules to new repos",
+          "description": "CODEOWNERS, a PR template, 3 GitHub Actions workflows, 3 husky hooks and commitlint are set up in each new repo's first PR, so the rules are enforced from the first commit."
         }
       ]
+    },
+    "improvements": {
+      "eyebrow": "Structure & safety nets",
+      "headline": "One place to change",
+      "items": [
+        {
+          "title": "Policy from code to declaration — change points 11 files → 1",
+          "description": "Sales-lock criteria were spread across 11 files, so changing one policy meant finding and editing every usage. I separated per-channel rules into policy declarations instead of code branches and gathered them in a single place; a rule change now ends with one declaration edit."
+        },
+        {
+          "title": "Removing triple-duplicated locale types — ~20 existing call sites untouched",
+          "description": "The multilingual text type was defined in three places, so fixing one left the others out of sync. I unified them into a single definition with a module-augmentation slot pattern, designed so the ~20 existing consumers still compile unchanged."
+        },
+        {
+          "title": "E2E regression testing built from no tests at all",
+          "description": "Beyond adopting Playwright, I standardized login sessions and data setup as fixtures so tests never rebuild preconditions (2,833 new lines). Core-flow regression checks run in CI before every deploy."
+        },
+        {
+          "title": "Removing an auth token exposed in the deployed bundle",
+          "description": "A Sentry auth token was shipping inside the client bundle. A build-time-only value had leaked into the runtime artifact, so I separated the injection path and removed it from the bundle."
+        }
+      ]
+    },
+    "activities": {
+      "eyebrow": "Activities · Writing",
+      "headline": "Writing decisions down",
+      "items": [
+        {
+          "title": "Internal technical documentation",
+          "description": "Wrote Confluence docs on Playwright E2E adoption, Turborepo adoption, chart library replacement, shared component consolidation and the rate-plan domain spec. 4 release launch plans and 60+ Partner Center product and operations guides."
+        },
+        {
+          "title": "RFCs · Tech specs",
+          "description": "React migration strategy for the affiliate admin (11 alternatives compared), NDSP component API consistency, infrastructure path-split design."
+        },
+        {
+          "title": "Woowa Tech Camp, 3rd cohort · 2020.07 – 2020.08",
+          "description": "8-week web development program run by Woowa Brothers. Code review and pair programming."
+        }
+      ]
+    },
+    "education": {
+      "eyebrow": "Education",
+      "headline": "Seoul National University of Science and Technology",
+      "badge": "ST",
+      "degree": "B.S. in Computer Engineering",
+      "term": "2015.03 – 2021.02"
+    },
+    "pdf": {
+      "title": "The full résumé as a PDF",
+      "description": "This page is the web edition of my résumé. The same content is available as a PDF in Korean or English.",
+      "ko": "Korean PDF",
+      "en": "English PDF"
     },
     "contact": {
-      "title": "Contact",
-      "headline": "Let's work together.",
-      "description": "The resume download button serves the PDF matching the current language (ko/en)."
+      "headline": "If you'd like to work together, or just talk",
+      "email": "maeng2418@gmail.com",
+      "top": "Back to top ↑"
     },
-    "actions": {
-      "download": "Download Resume",
-      "downloadPrimary": "Resume (EN)",
-      "downloadOther": "이력서 다운로드 (KO)",
-      "translate": "KO",
-      "translateAria": "한국어로 보기"
-    },
-    "heroRich": "Hello!<br></br>I'm <accent>{name}</accent>,<br></br>{role}!",
-    "contactHeadlineRich": "Let's work <accent>together</accent>."
+    "rail": {
+      "aria": "Jump to section",
+      "top": "About",
+      "kpi": "Key results",
+      "career": "Experience",
+      "work": "Projects",
+      "skills": "Skills",
+      "standards": "Standards",
+      "more": "More"
+    }
   }
 }

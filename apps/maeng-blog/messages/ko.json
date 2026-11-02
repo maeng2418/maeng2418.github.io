@@ -2,8 +2,10 @@
   "nav": {
     "menuAria": "주 메뉴",
     "blog": "블로그",
-    "til": "TIL",
-    "portfolio": "포트폴리오"
+    "portfolio": "포트폴리오",
+    "theme": "테마 전환",
+    "locale": "Switch to English",
+    "mail": "메일"
   },
   "search": {
     "open": "검색",
@@ -16,6 +18,45 @@
   },
   "comments": {
     "title": "댓글"
+  },
+  "blog": {
+    "eyebrow": "Dev Blog",
+    "intro": "프런트엔드 엔지니어로 일하며 알게 된 것을 기록합니다.",
+    "postCount": "글 {count}편",
+    "categoryCount": "카테고리 {count}",
+    "all": "전체",
+    "filterAria": "카테고리 필터",
+    "listAria": "블로그 포스트 목록",
+    "sorted": "{count}편 · 최신순",
+    "empty": "이 카테고리에는 아직 글이 없어요.",
+    "minutes": "{count}분",
+    "readMinutes": "읽기 {count}분",
+    "chars": "{count}자",
+    "headline1": "김명성의",
+    "headline2": "개발 노트",
+    "status": "프런트엔드 · 최근 글 {month}"
+  },
+  "post": {
+    "home": "블로그",
+    "toc": "목차",
+    "copy": "복사",
+    "copied": "복사됨 ✓",
+    "sharePrompt": "도움이 됐다면 공유해 주세요.",
+    "copyLink": "링크 복사",
+    "linkCopied": "링크 복사됨 ✓",
+    "shareX": "X에 공유",
+    "rss": "RSS 구독",
+    "prev": "← 이전 글",
+    "next": "다음 글 →",
+    "newest": "가장 최신 글입니다",
+    "oldest": "가장 오래된 글입니다",
+    "relatedSame": "같은 카테고리의 글",
+    "relatedMore": "이어서 읽기",
+    "backToList": "← 목록으로 돌아가기",
+    "backToTop": "맨 위로",
+    "progressAria": "읽기 진행률",
+    "author": "프론트엔드 개발자. 놀유니버스 STAY FE팀.",
+    "portfolio": "포트폴리오 →"
   },
   "editor": {
     "appTitle": "포스트 편집기",
@@ -79,430 +120,312 @@
     }
   },
   "portfolio": {
-    "title": "Portfolio",
-    "businessCard": {
-      "title": "About Me",
+    "hero": {
       "name": "김명성",
-      "role": "프론트엔드 개발자",
-      "tagline": "복잡한 문제를 해결하고 직관적인 경험을 만드는 프론트엔드 개발자, 김명성입니다.",
-      "career": "경력 4년 8개월",
-      "summary": [
-        "현재 놀유니버스 STAY FE팀에서, React와 Typescript를 사용해 복잡한 숙박업 도메인의 B2B 플랫폼을 만들고 있습니다.",
-        "복잡한 정책과 데이터를 사용자가 쉽고 직관적으로 이해할 수 있는 인터페이스로 설계하고, 효율적인 아키텍처와 개발 프로세스 개선을 통해 팀의 생산성에 기여하며, 지속 가능한 코드 베이스를 구축하고 있습니다."
+      "role": "Frontend Engineer",
+      "career": "경력 5년 7개월",
+      "words": [
+        "레거시를",
+        "무중단으로",
+        "전환하고,",
+        "판단의",
+        "근거를",
+        "RFC로",
+        "남겨",
+        "팀의",
+        "표준으로",
+        "정착시키는",
+        "프론트엔드",
+        "엔지니어입니다."
       ],
-      "contacts": [
+      "accentWord": 5,
+      "pdf": "이력서 PDF 다운로드",
+      "hint": "아래로 스크롤",
+      "links": [
         {
-          "label": "Email",
-          "value": "maeng2418@gmail.com",
+          "label": "maeng2418@gmail.com",
           "href": "mailto:maeng2418@gmail.com"
         },
         {
-          "label": "Github",
-          "value": "github.com/maeng2418",
+          "label": "github.com/maeng2418",
           "href": "https://github.com/maeng2418",
           "external": true
         },
         {
-          "label": "Blog",
-          "value": "maeng2418.github.io",
+          "label": "maeng2418.github.io",
           "href": "https://maeng2418.github.io",
           "external": true
-        },
-        {
-          "label": "LinkedIn",
-          "value": "linkedin.com/in/명성-김",
-          "href": "https://www.linkedin.com/in/명성-김-4988b61ba",
-          "external": true
         }
       ]
     },
-    "introduction": {
-      "title": "Let me introduce myself",
-      "headline": "저는, 이런 개발자입니다",
-      "lead": "저는,",
-      "values": [
+    "kpi": {
+      "eyebrow": "핵심 성과",
+      "headline": "숫자로 남긴\n다섯 가지",
+      "note": "측정값은 모두 원시 로그와 사내 문서에 기록한 수치입니다.",
+      "hint": "스크롤하면 하나씩 채워집니다",
+      "items": [
         {
-          "title": "함께 성장하는",
-          "description": "블로그 또는 커뮤니티 등을 통해 경험과 지식을 공유하며 함께 성장하는 것을 즐깁니다."
+          "title": "레거시 전환 4년 완주",
+          "description": "Vue/Nuxt → React 점진 전환을 RFC 합의로 주도. 레거시 코드 비중 2022년 100% → 2026년 1.1%까지 무중단 완주"
         },
         {
-          "title": "새로운 기술과 트렌드에 도전하는",
-          "description": "문제를 해결함에 있어 새로운 것을 도전하는 것을 두려워하지 않습니다."
+          "title": "빌드 589.24s → 캐시 적중 1.10s",
+          "description": "Turborepo 도입과 빌드 설정 정리. 원시 측정 로그를 사내 문서에 기록"
         },
         {
-          "title": "더 나은 UX를 선사하는",
-          "description": "디자인과 개발을 조화롭게 결합하여, 유저에게 편리한 경험을 전달합니다."
+          "title": "초기 로드 3.4MB → 1.5MB (55.9% 감소)",
+          "description": "DOMContentLoaded 346ms → 121ms. AI가 제시한 결론을 계측으로 반증하고 원인을 재정의한 결과"
         },
         {
-          "title": "안정성과 신뢰를 주는",
-          "description": "테스트 코드를 통해 안정성을 높이고, 사용자에게 신뢰를 주는 서비스를 제공합니다."
+          "title": "테스트 부재 모노레포에 E2E 체계 도입",
+          "description": "Playwright 기반 회귀 검증을 0에서 구축해 CI에 편입"
+        },
+        {
+          "title": "컨벤션을 문서가 아닌 도구로 강제",
+          "description": "ADR을 AI 스킬로, 반복 지적을 린트 규칙으로, 검증을 CI 게이트로 승격"
         }
       ]
     },
-    "techSkill": {
-      "title": "My Tech Skills are..",
-      "description": "다양한 기술을 활용해 프론트엔드 개발을 하고 있습니다.",
-      "details": [
-        "React와 Vue 를 통해 SPA를 개발할 수 있습니다.",
-        "Next와 Nuxt 를 통해 SSR을 개발할 수 있습니다.",
-        "디자인시스템을 개발한 경험이 있습니다.",
-        "Webpack, Babel, ES6 등에 익숙합니다.",
-        "Storybook 을 활용한 UI 컴포넌트 테스트 경험이 있습니다.",
-        "테스트 코드 및 배포 자동화(CI/CD)를 통해 생산성을 향상하고자 노력합니다.",
-        "성능 및 리소스 최적화를 위해 노력합니다."
+    "career": {
+      "eyebrow": "경력사항",
+      "headline": "B2B 플랫폼 세 곳",
+      "note": "전환과 표준화를 맡아 왔습니다. 인턴·연구원 기간은 제외한 경력입니다.",
+      "roles": [
+        {
+          "badge": "NOL",
+          "company": "놀유니버스(야놀자) · FE Engineer",
+          "term": "2022.09 – 재직중 (3년 10개월)",
+          "current": true,
+          "summary": "숙박 파트너가 요금·재고를 직접 관리하는 글로벌 B2B 콘솔 · PC/Mobile/Admin. Vue/Nuxt → React 전환 아키텍처 리드, 해외 파트너센트럴 판매 캘린더 설계, 로그 계측 DevTools, E2E·컨벤션 표준 수립."
+        },
+        {
+          "badge": "IGA",
+          "company": "IGAWorks (Adpopcorn) · Frontend Engineer",
+          "term": "2021.07 – 2022.09",
+          "summary": "애드테크 데이터 플랫폼. 모바일 광고 SSP 콘솔 전면 리뉴얼(NextJS → React SPA), 뉴스 광고 플랫폼(콘픽), Recharts + SVG 광고 성과 대시보드, Svelte 랜딩. AWS CodePipeline CI/CD와 ECS/EKS 컨테이너 배포 환경으로 무중단 배포 파이프라인 운영."
+        },
+        {
+          "badge": "짐싸",
+          "company": "짐싸 (파트너 앱) · Frontend Developer",
+          "term": "2020.12 – 2021.07",
+          "summary": "이사 O2O 플랫폼. Cordova 기반 iOS/Android 하이브리드 앱 개발과 디자인 2.0 리뉴얼. JavaScript → TypeScript 전환, Lazy-Loading, Atomic Design 컴포넌트 시스템 + Storybook, 다크모드. ESLint·Prettier·Husky 정착과 보일러플레이트 생성 컴포넌트 CLI 개발."
+        }
       ]
     },
-    "softSkill": {
-      "title": "My Soft Skills are..",
-      "details": [
-        "프로젝트를 통한 다양한 협업 경험이 있어 다양한 분야의 사람들과 유연한 커뮤니케이션이 가능합니다.",
-        "항상 긍정적인 생각을 가지고 문제를 해결하려고 노력합니다. 어떤 문제상황이 닥친다 하더라도 포기하지 않고 문제를 해결하기 위해 노력합니다.",
-        "어떤 요구사항이 주어지더라도, 주어진 Task를 시간 내에 완성하기 위해 끊임없이 노력합니다.",
-        "코드 리뷰를 통해 동료들과 함께 지식과 경험을 공유하고 피드백을 주고받으며 서비스를 점진적으로 발전시킬 수 있습니다.",
-        "새로운 아이디어를 통해 의미있는 가치를 창출할 수 있습니다.",
-        "커뮤니티와 오픈소스에 관심이 많습니다. 다양한 사람들과 소통하는 것을 즐깁니다."
+    "work": {
+      "eyebrow": "주요 프로젝트",
+      "headline": "문제 → 판단 →\n실행 → 결과",
+      "hint": "스크롤하면 단계가 재생됩니다 · 왼쪽 목록을 눌러 이동",
+      "stepLabels": [
+        "문제",
+        "판단",
+        "실행",
+        "결과"
+      ],
+      "items": [
+        {
+          "short": "Vue/Nuxt → React 점진 전환",
+          "title": "Vue/Nuxt → React 점진 전환 — 전환 아키텍처 설계 및 리드",
+          "meta": "놀유니버스 · 숙박 파트너 B2B 콘솔 · 레거시 7레포 543건 + 신규 10레포 병존 · FE 3명 협업",
+          "steps": [
+            "레거시 코드베이스와 신규 React 앱이 병존하는 상태에서 서비스 중단 없이 전환해야 했습니다. 2022년 입사 당시 제가 스스로 약점으로 지목했던 것이 바로 이 Vue/Nuxt 스택이었습니다.",
+            "전환 전략을 RFC로 먼저 정리해 팀 합의를 거쳤습니다. 한 번에 옮기지 않고 Phase 0에서 인프라·인증·라우팅 공통 기반을 선행한 뒤 도메인을 단계별로 전환하는 순서를 택했습니다.",
+            "nginx 경로 라우팅과 Istio VirtualService 경로 분기로 구·신 앱 공존 구간을 확보했습니다. 대형 전환은 Part1~4로 분할했고, 신규 구현과 레거시 제거를 짝으로 실행했습니다. 마지막 Nuxt 앱 철거 단계까지 사전 설계에 포함했습니다.",
+            "레거시 PR 비중 2022년 100% → 2023년 69.4% → 2024년 22.3% → 2025년 6.5% → 2026년 1.1%. 약점으로 적었던 스택을 4년에 걸쳐 완주했습니다."
+          ]
+        },
+        {
+          "short": "성능 개선 — AI 초안을 검증하고 기각",
+          "title": "성능 개선 — AI 초안을 검증하고 기각",
+          "meta": "모바일 웹 · 번들링 전략 재정의",
+          "steps": [
+            "특정 페이지에서 3.44MB 거대 청크가 로드되고 있었습니다. LLM에 분석을 맡겼더니 React.lazy 코드 스플리팅으로 대폭 감소했다는 결론을 제시했습니다.",
+            "초안이 스스로 적어 둔 측정 한계를 발견했습니다. 개선 전후의 DOMContentLoaded와 Load 값이 동일하게 측정됐고, 초안 자신이 \"캐시가 적용된 상태일 가능성이 높다\"고 인정하고 있었습니다. 코드 스플리팅 유지와 단일 번들 두 안을 놓고 다시 비교했습니다.",
+            "AI의 결론을 기각하고 문제를 재정의했습니다. 쟁점은 스플리팅 대 모노리식이 아니라 과도한 용량을 유발한 근본 원인이었습니다. 거대 청크를 제거한 뒤 직접 재측정했고, 모든 페이지가 1.71MB를 로드하는 트레이드오프를 인정하되 예측 가능하다는 근거로 단일 번들을 택했습니다.",
+            "초기 로드 3.4MB → 1.5MB(55.9% 감소), DOMContentLoaded 346ms → 121ms, Load 487ms → 349ms. 근거 범위는 모바일 앱 1개의 클라이언트 측정입니다."
+          ]
+        },
+        {
+          "short": "클라이언트 로그 계측 DevTools 구축",
+          "title": "클라이언트 로그 계측 DevTools 구축 — 확인 비용을 코드에서 화면 위로",
+          "meta": "놀유니버스 · 파트너 콘솔 로그 정의 304건 · domestic(MUI)·outbound(NDSP) 4개 앱 배선 · 신규 의존성 0",
+          "steps": [
+            "로그 정의 304건이 앱별 생성 코드 1만 줄에 흩어져, 무엇이 심겼고 실제 쌓이는지 코드 밖에서 확인할 방법이 없었습니다. 죽은 정의, 센더와 정의의 drift(호출 파일 174개), StrictMode 이중 발화가 누적됐습니다.",
+            "확인 비용을 화면 위로 옮기기로 했습니다. 인스펙터는 앱 디자인시스템에 의존하지 않는 vanilla DOM으로 구현해 MUI·NDSP 양쪽 앱군에 동일하게 넣고, 수집 동작 변경은 파일럿 1화면으로 한정해 적재 데이터 영향을 차단했습니다.",
+            "생성 센더 코드를 역파싱해 카탈로그 5종(사람용 md·상세 json·적재 대조 SQL·런타임 메타·ref 타입)을 결정적 산출물로 자동 생성했습니다. 실시간 발화 피드·30일 실수집량 오버레이·txtpb 생성 모드를 갖춘 dev 전용 인스펙터와, 태깅 한 줄이 곧 수집이 되는 자동 발화 런타임을 구축했습니다.",
+            "자동 발화가 기존 센더와 페이로드 바이트 동일함을 실측 대조했고, 프로덕션 번들 추가분은 슬림 메타 96KB뿐입니다. Databricks PAT는 로컬 dev 프록시로 격리해 신규 의존성 0으로 구현했으며, 채택·마이그레이션 논의는 컨벤션 RFC로 분리했습니다."
+          ]
+        },
+        {
+          "short": "AI 개발 인프라 팀 표준화",
+          "title": "AI 개발 인프라 팀 표준화",
+          "meta": "사내 Claude 플러그인 마켓플레이스 신설 · 소비 레포 5개",
+          "steps": [
+            "개발 도구가 모노레포에 종속돼 있었고, 개인 자산과 팀 자산의 경계가 불분명했습니다. 자율 설치에 맡기면 필수 규칙이 누락될 위험도 있었습니다.",
+            "대안 9개를 대조했습니다 — 레포 종속축 4개와 공용축 5개. 각 안의 장단점과 제안 사유를 문서에 별기했습니다. 팀 공용 도구는 잘못된 변경 하나가 전체 작업을 막을 수 있어, CI·권한·컨벤션 안전망을 먼저 깐 뒤 기능을 추가하는 순서를 택했습니다.",
+            ".claude/project-plugin과 gitignore 화이트리스트로 레포 종속 자산을, 별도 레포 마켓플레이스로 공용 자산을 분리하는 2축 구조를 채택했습니다.",
+            "사내 마켓플레이스를 신설해 플러그인 8종을 배포했고, 소비 레포 5개에 적용하며 온보딩 문서에 편입했습니다."
+          ]
+        },
+        {
+          "short": "지식 시스템 재설계 — LLM-Wiki 전환",
+          "title": "지식 시스템 재설계 — LLM-Wiki 전환",
+          "meta": "대형 모노레포 지식 빌드 파이프라인",
+          "steps": [
+            "도메인당 스킬 1개 구조여서 같은 도메인을 10세션 작업하면 draft가 10개로 파편화됐습니다.",
+            "대안 3종을 기각 근거와 함께 남겼습니다 — 벡터DB/임베딩은 마크다운과 grep으로 충분해서, 훅 자동주입은 오탐과 복잡도 때문에, draft PR 전환은 리뷰어 자동지정을 유지하기 위해 각각 채택하지 않았습니다.",
+            "ADD/UPDATE/NOOP 3분기 판정 구조와 자기증식 방지 2계층 가드를 설계했습니다.",
+            "독립 감사 점수 0.52 FAIL에서 0.87 PASS로, evaluator 93/85/90/92, 테스트 129건 green."
+          ]
+        },
+        {
+          "short": "해외 파트너센트럴 — 판매 캘린더 아키텍처",
+          "title": "해외 파트너센트럴 — 판매 캘린더 아키텍처 설계 · 데이터 변환 표준",
+          "meta": "해외 숙박 파트너 대상 PC·Admin · 다국어/다통화 · FE 2명 + PM·BE 2명·PPD·QA 협업",
+          "steps": [
+            "해외 숙소 파트너가 요금제·재고·판매 상태를 관리하는 화면군을 신규 구축해야 했습니다. 통화 소수점 자리와 요금제 다국어 표기 같은 공통 정책이 화면마다 제각각 구현되면, 정책이 바뀔 때마다 모든 화면을 찾아 고쳐야 하는 구조가 됩니다.",
+            "공통 정책을 화면이 아니라 하위 레이어로 내리고 화면은 조합만 하도록 FSD 레이어를 분리했습니다. 기준은 \"정책 변경의 영향 범위를 좁게 유지\"였습니다. 폼·요청 변환에도 같은 원칙을 적용해 역할·위치·형태 3축 규칙을 정했고, passthrough 요청은 래퍼를 만들지 않는다는 경계까지 명문화했습니다.",
+            "전담 디자이너가 없는 구간에서는 시안을 여러 개 만들어 동료들과 공유하고 피드백을 받아 안을 채택했습니다. 컨벤션 전면 적용은 Stacked PR 6단계로 나눠 각 단계마다 타입체크와 린트를 통과시켰습니다. 요청 객체는 쿼리 캐시 키의 구성요소이므로 shape과 값을 바이트 단위로 보존해 캐시 동작이 바뀌지 않도록 했습니다.",
+            "캘린더·기본가격·Daily Rate List가 동일한 인원요금·Cap 값을 일관되게 표시하도록 정렬했고, 신규 기능은 피처플래그로 단계 적용해 기존 운영을 깨지 않으면서 노출했습니다. 정찰 시점 컨벤션 준수율 75~80%를 전수 정규화했습니다."
+          ]
+        }
       ]
     },
-    "designSkill": {
-      "title": "My Design Skills are..",
-      "details": [
-        "UI/UX에 관심이 많으며, 완벽한 사용자 경험을 위해 지속적으로 고민하고 또 노력합니다.",
-        "Figma를 활용해 디자인시스템을 직접 만들어본 경험이 있습니다."
-      ]
-    },
-    "skillSets": {
-      "title": "Skill Sets",
-      "headline": "기술 스택",
+    "skills": {
+      "eyebrow": "보유 스킬",
+      "headline": "주력은 TypeScript · React · Next.js",
       "groups": [
         {
-          "label": "Frontend Skills",
-          "skills": [
-            "Javascript",
-            "Typescript",
-            "HTML/CSS",
-            "ReactJS",
-            "VueJS",
-            "NextJS",
-            "NuxtJS",
-            "Emotion",
-            "StyledComponent",
-            "Tailwindcss",
-            "Storybook"
+          "label": "주력",
+          "items": [
+            "TypeScript",
+            "React",
+            "Next.js"
           ],
-          "highlights": [
-            "Typescript",
-            "ReactJS",
-            "NextJS"
+          "hot": true
+        },
+        {
+          "label": "상태·폼",
+          "items": [
+            "TanStack Query",
+            "React Hook Form",
+            "Zod"
           ]
         },
         {
-          "label": "Backend Skills",
-          "skills": [
-            "NodeJS",
-            "NestJS",
-            "GraphQL",
-            "MySQL",
-            "MongoDB"
-          ]
-        },
-        {
-          "label": "Collaboration Skills",
-          "skills": [
-            "Git/Github",
-            "Bitbucket",
-            "Jira",
-            "Confluence",
-            "Notion",
-            "Slack"
-          ]
-        },
-        {
-          "label": "Deploy Skills",
-          "skills": [
-            "AWS/Pipeline",
-            "AWS/EC2",
-            "AWS/ECS",
-            "Docker",
-            "Nginx",
-            "PM2",
-            "Jenkins",
-            "Netlify",
-            "Github Action"
-          ]
-        },
-        {
-          "label": "Etc...",
-          "skills": [
-            "Figma",
-            "Firebase"
-          ]
-        }
-      ]
-    },
-    "projects": {
-      "title": "Projects",
-      "headline": "프로젝트",
-      "items": [
-        {
-          "title": "Bookmark Pro",
-          "kind": "[개인] 크롬 확장프로그램",
-          "term": "25.08 · v0.1.3",
-          "description": "웹과 브라우저 확장프로그램에서 북마크를 효율적으로 관리할 수 있는 모던 북마크 관리 솔루션입니다. 통합 북마크 관리, 고급 검색 및 필터링, 실시간 동기화 등 다양한 기능을 제공합니다.",
-          "attribution": "Turborepo 모노레포 구조로 구성되어 코드를 공유하며 일관된 사용자 경험을 제공하고, React를 통해 Chrome Extension을 개발하고, Next.js을 통해 대시보드를 개발하여 배포하였습니다. 또한 최근 트렌드에 맞춰 Supabase 기반 백엔드와 shadcn/ui를 활용하여 더 간결하고 일관된 UI를 구현하였습니다.",
-          "tags": [
-            "React",
-            "Typescript",
-            "Next",
-            "TailwindCSS",
-            "Supabase",
-            "Turborepo",
-            "shadcn/ui"
-          ],
-          "link": "https://boomark-pro.netlify.app/",
-          "github": "https://github.com/maeng2418/bookmark-pro"
-        },
-        {
-          "title": "Maeng Design",
-          "kind": "[개인] 디자인 시스템",
-          "term": "22.02 · v1.5.2",
-          "description": "디자인 시스템 Maeng Design은 React 프로젝트를 위한 사용자 인터페이스 사양을 통일하고, 설계 차이와 구현에 필요한 불필요한 비용을 낮추며, 설계 및 프론트엔드 개발 자원을 지원하기 위해 만들어졌습니다.",
-          "attribution": "다양한 컴포넌트를 디자인하고 개발하여 오픈 소스로 배포하였습니다. API 참고를 위한 Docs와 UI 검증을 위한 Storybook도 함께 배포하였습니다.",
-          "tags": [
-            "React",
-            "Typescript",
-            "Emotion",
-            "Storybook",
-            "Rollup",
-            "Gatsby",
-            "Netlify"
-          ],
-          "link": "https://maeng-design-docs.netlify.app",
-          "github": "https://github.com/maeng2418/Maeng-Design"
-        },
-        {
-          "title": "서울일삼",
-          "kind": "[개인] 공간대여 웹사이트 (외주)",
-          "term": "20.10 · v2.0.0",
-          "description": "회의실 대여 예약사이트를 제작하였습니다. 직접 서비스를 기획하고 디자인하였으며 온라인 판매 서비스를 위한 상표등록, PG사 가입, 통신판매업신고 등 개발 외의 사업 운영을 위한 전반적인 인프라를 구축하였습니다.",
-          "attribution": "기존 React만으로 짜여진 코드를 Next.js로 변경, MongoDB를 MySQL로 교체, 달력 라이브러리 직접 구현, 타입스크립트 적용 등 서비스 개선을 위한 리뉴얼을 하였습니다.",
-          "tags": [
-            "React",
-            "Typescript",
-            "NextJS",
-            "Express",
-            "AWS",
-            "JWT",
-            "OAuth",
-            "Passport",
-            "MongoDB",
-            "MySQL"
-          ],
-          "link": "https://seoul13.com",
-          "github": "https://github.com/maeng2418/SEOUL13_edition2"
-        },
-        {
-          "title": "B마트 모바일 웹",
-          "kind": "[팀] 우아한 테크 캠프",
-          "term": "20.08 · v1.0.0",
-          "description": "우아한 테크 캠프 멤버들과 배달의 민족 내부 서비스 중 하나인 B마트를 NextJS를 활용하여 구현하였습니다.",
-          "attribution": "함수형 컴포넌트 형태 개발, 상태(State) 관리를 위한 useState와 Context API 활용, Styled Component를 이용한 스타일링, 케로셀 배너 구현, Passport + Oauth + JWT를 이용한 로그인 구현을 담당하였습니다.",
-          "tags": [
-            "React",
-            "Typescript",
-            "NextJS",
-            "Storybook",
-            "Express",
-            "JWT",
-            "OAuth",
-            "Passport",
-            "Github Action",
-            "MySQL"
-          ],
-          "link": "https://github.com/woowa-techcamp-2020/bmart-5",
-          "github": "https://github.com/woowa-techcamp-2020/bmart-5"
-        }
-      ]
-    },
-    "timestamp": {
-      "title": "Timestamp",
-      "headline": "걸어온 길",
-      "currentBadge": "재직중",
-      "items": [
-        {
-          "when": "22.09.26 - 현재",
-          "title": "놀유니버스(야놀자) FE 개발자",
-          "organizer": "놀유니버스 (NOL Universe)",
-          "current": true
-        },
-        {
-          "when": "21.07.19 - 22.09.23",
-          "title": "IGAWorks Adpopcorn FE 개발자",
-          "organizer": "IGAWorks"
-        },
-        {
-          "when": "21.02.24",
-          "title": "서울과학기술대학교 컴퓨터공학과 졸업",
-          "organizer": "서울과학기술대학교 (SEOULTECH)"
-        },
-        {
-          "when": "20.12.01 - 21.07.08",
-          "title": "짐싸 FE 개발자",
-          "organizer": "짐싸 (Zimssa)"
-        },
-        {
-          "when": "20.07.01 - 20.08.28",
-          "title": "우아한 테크 캠프 3기",
-          "organizer": "우아한 형제들 (woowahan)"
-        },
-        {
-          "when": "19.10.01 - 20.06.30",
-          "title": "철도경영정책연구소 교통 수요 분석",
-          "organizer": "철도경영정책 연구소"
-        },
-        {
-          "when": "19.09.16 - 19.11.30",
-          "title": "데벨업(DevelUp) 1기",
-          "organizer": "구름 (Goorm)"
-        },
-        {
-          "when": "19.08.12 - 19.09.11",
-          "title": "블로키TF팀 FE 인턴",
-          "organizer": "데이블 (Dable)"
-        }
-      ]
-    },
-    "experiences": {
-      "title": "Experiences",
-      "headline": "경력",
-      "viewAchievements": "성과 자세히 보기",
-      "items": [
-        {
-          "company": "놀유니버스(야놀자)",
-          "term": "2022.09.26 - 재직중",
-          "description": "놀유니버스 STAY FE팀에서 React와 Typescript를 사용해 복잡한 숙박업 도메인의 B2B 플랫폼을 만들고 있습니다.",
-          "keyProjects": [
-            "숙박업 B2B 플랫폼(파트너센터 PC/Mobile, 관리자 대시보드, 제휴입점 관리자 등) 개발 및 유지보수",
-            "시스템 통합 이주 프로젝트: 여러 분할된 서비스를 파트너센터에 통합하여 운영",
-            "Vue → React로의 기술 스택 전환",
-            "Sentry + Client Log를 통한 에러 추적 및 사용자 피드백을 통한 종합적 서비스 분석"
-          ],
-          "achievements": [
-            "Vue에서 React로 점진적 전환을 위해 Nginx Reverse Proxy를 활용하고, S3/CloudFront 기반 버전 관리 배포 구성으로 서버 리소스를 절감하며 버그 리포팅 40% 감소 및 개발 생산성 향상",
-            "모노레포 아키텍처 구현으로 3개 애플리케이션과 12개 공유 패키지의 개발을 간소화",
-            "Trunk-Based Development(TBD) 및 feature-flag 도입으로 개발 프로세스 개선",
-            "증분 빌드 도입: 빌드 및 타입 검사 시간 최대 99.3% 단축(150.15s → 1.03s), 평균 41.2% 단축(150.15s → 88.29s)",
-            "GitHub Actions를 활용해 코드 검증 자동화 및 체크박스 기반 필수 리뷰 항목 시스템 구현하여 코드 리뷰 시스템 개선",
-            "ESLint, Prettier, CSpell, Storybook 도입으로 코드 품질 및 프로세스 개선",
-            "E2E 테스트 도입: Playwright를 이용한 E2E 도메인 테스트 도입"
-          ],
-          "techStack": [
-            "Typescript",
-            "React",
-            "Vue",
-            "Emotion",
-            "Storybook",
+          "label": "빌드·테스트",
+          "items": [
             "Vite",
-            "React-Query",
-            "MUI",
+            "Turborepo",
+            "pnpm",
             "Playwright",
-            "Jenkins",
-            "GitHub Actions",
-            "Beanstalk",
-            "CloudFront",
-            "S3"
-          ]
-        },
-        {
-          "company": "IGAWorks (Adpopcorn)",
-          "term": "2021.07.19 - 2022.09.23",
-          "description": "IGAWorks 애드팝콘 개발팀에서 프론트엔드 개발자로 근무하며, 인앱비딩 알고리즘과 DMP 기반 애드서버, 미디에이션 기능 등 수익화를 위한 서비스인 SSP 파트를 담당하였습니다.",
-          "keyProjects": [
-            "광고 B2B 플랫폼(Adpopcorn SSP) 개발 및 유지보수",
-            "Adpopcorn SSP Console 리뉴얼: NextJS → React로 기술 스택 전환 및 디자인 개편",
-            "콘픽 뉴스 콘텐츠 플랫폼 개발: 뉴스 콘텐츠를 HTML로 변환하고 광고 삽입 기능을 포함한 플랫폼 구축",
-            "Adpopcorn SSP 홈 페이지 개발: Svelte를 활용한 랜딩 페이지 개발"
-          ],
-          "achievements": [
-            "NextJS → ReactJS로 전환: SSR에서 SPA로 변경하면서 불필요한 오버스펙 제거 및 디자인 개편, 복잡한 상태관리 간소화 등 전반적인 시스템 성능 개선",
-            "상태관리 개선: Redux + Saga를 통한 상태관리를 React-Query 및 Recoil을 활용하여 중복 API 호출 제거 및 복잡한 상태 관리를 개선하여 개발 리소스 간소화",
-            "CodePipeline을 통한 배포 자동화: AWS ECS와 CodePipeline을 통한 CI/CD 개선",
-            "차트 라이브러리 개선: Recharts와 SVG를 활용해 데이터 접근성 및 분석 효율성 강화",
-            "Svelte의 컴파일 기반 구조를 활용해 빠른 렌더링과 경량화된 고성능 랜딩 페이지 개발"
-          ],
-          "techStack": [
-            "Typescript",
-            "React",
-            "NextJS",
-            "Svelte",
-            "Emotion",
-            "Ant Design",
-            "React-Query",
-            "Recoil",
-            "Github Action",
-            "ECS",
-            "EKS",
-            "Code Pipeline",
-            "Docker"
-          ]
-        },
-        {
-          "company": "짐싸 (Zimssa)",
-          "term": "2020.12.01 - 2021.07.08",
-          "description": "짐싸 프론트엔드팀에서 이사 서비스 매칭 플랫폼인 짐싸 파트너앱 개발 및 유지보수를 담당하였습니다.",
-          "keyProjects": [
-            "이사 서비스 매칭 플랫폼(짐싸 파트너 앱) 개발 및 유지보수",
-            "디자인 2.0 적용: 다크모드 적용 및 UI/UX 개선",
-            "디자인시스템 구축: 컴포넌트 기반 디자인 시스템을 구축해 UI 일관성과 개발 생산성을 향상"
-          ],
-          "achievements": [
-            "Javascript → TypeScript 도입 및 의존성 업데이트를 통해 기술 스택 현대화 및 유지 보수성 향상",
-            "Atomic Design 원칙을 사용한 디자인 시스템 구현 및 다크 모드 도입",
-            "Storybook 도입을 통해 UI 검증 및 테스트",
-            "Lazy-Loading을 통한 렌더링 성능 및 UX 개선",
-            "컴포넌트 생성 스크립트를 이용한 자동화",
-            "Cordova 플러그인 이용한 사용자 권한 설정 개선",
-            "ESLint, Prettier, Husky, lint-staged 적용을 통한 코드 일관성과 품질 유지"
-          ],
-          "techStack": [
-            "Javascript",
-            "Typescript",
-            "Cordova",
-            "SASS",
-            "Styled Component",
-            "Redux",
+            "Vitest",
             "Storybook"
+          ]
+        },
+        {
+          "label": "스타일·구조",
+          "items": [
+            "MUI",
+            "Tailwind CSS",
+            "Emotion",
+            "FSD"
+          ]
+        },
+        {
+          "label": "인프라",
+          "items": [
+            "GitHub Actions",
+            "Docker/EKS"
           ]
         }
       ]
     },
-    "educations": {
-      "title": "Education",
+    "standards": {
+      "eyebrow": "표준 수립",
+      "headline": "규칙을 실행 계층으로",
       "items": [
         {
-          "term": "2015.03 - 2021.02",
-          "title": "서울과학기술대학교 (SEOULTECH)",
-          "description": "컴퓨터공학과 학사"
+          "title": "컨벤션을 문서가 아닌 도구로 강제",
+          "description": "읽히길 기대하는 문서는 지켜지지 않는다고 보고, 규칙을 실행 계층으로 내렸습니다. ADR을 AI 스킬로 이관해 작업 시점에 자동 적용되게 하고, 반복 지적 사항은 린트 규칙으로, 빌드·타입 검증은 CI 게이트로 승격했습니다."
         },
         {
-          "term": "2011.03 - 2014.02",
-          "title": "공주한일고등학교 (HANIL HIGH SCHOOL)",
-          "description": "인문계(이과)"
+          "title": "컨벤션 스킬화 — 타입 파생 규칙 · 빈 값 표기 · 테이블 셀 이동 · frontmatter 정책",
+          "description": "각 컨벤션을 문서 대신 스킬로 만들어 팀 전체에 일괄 적용했습니다. 규칙이 바뀌면 스킬 한 곳만 고치면 됩니다."
+        },
+        {
+          "title": "신규 레포 협업 규약 이식",
+          "description": "CODEOWNERS · PR 템플릿 · GitHub Actions 워크플로 3종 · husky 훅 3종 · commitlint를 신규 레포 첫 PR로 세팅해, 첫 커밋부터 규약이 강제되도록 했습니다."
         }
       ]
+    },
+    "improvements": {
+      "eyebrow": "구조 개선 · 안전망 구축",
+      "headline": "변경 지점을 한 곳으로",
+      "items": [
+        {
+          "title": "정책을 코드에서 선언으로 — 변경 지점 11개 파일 → 1곳",
+          "description": "판매 잠금 기준이 11개 파일에 흩어져 있어, 정책 하나를 바꾸려면 모든 사용처를 찾아 개별 수정해야 했습니다. 채널별 규칙을 코드 분기가 아닌 정책 선언으로 분리해 단일 지점으로 모았고, 이후 규칙 변경은 선언 한 곳 수정으로 끝납니다."
+        },
+        {
+          "title": "locale 타입 3중 중복 제거 — 기존 호출부 20여 곳 무수정",
+          "description": "다국어 텍스트 타입이 세 곳에 각각 정의돼 있어 한 곳만 고치면 나머지와 어긋났습니다. 모듈 확장 슬롯 패턴으로 단일 정의에 통합하되, 기존 소비처 20여 곳이 그대로 컴파일되도록 설계했습니다."
+        },
+        {
+          "title": "테스트 부재 상태에서 E2E 회귀 검증 체계 구축",
+          "description": "Playwright를 도입하며 도구만 붙이지 않고, 로그인 세션과 데이터 준비를 픽스처로 표준화해 테스트마다 사전 조건을 다시 만들지 않도록 했습니다(신규 2,833라인). 핵심 플로우 회귀 검증을 CI에 편입해 배포 전 자동 실행됩니다."
+        },
+        {
+          "title": "배포 번들에 노출되던 인증 토큰 제거",
+          "description": "클라이언트 번들 산출물에 Sentry auth token이 포함되어 배포되고 있었습니다. 빌드 시점에만 필요한 값이 런타임 산출물로 새어 나간 경우로, 주입 경로를 분리해 번들에서 제거했습니다."
+        }
+      ]
+    },
+    "activities": {
+      "eyebrow": "활동 · 문서화",
+      "headline": "판단을 글로 남기기",
+      "items": [
+        {
+          "title": "사내 기술 문서 작성",
+          "description": "Playwright E2E 도입, Turborepo 적용, 차트 라이브러리 교체, 공통 컴포넌트 통합, 요금제 도메인 명세 등을 Confluence에 작성. 릴리즈 Launch Plan 4회, 파트너센터 제품·운영 가이드 60건 이상."
+        },
+        {
+          "title": "RFC · Tech Spec 작성",
+          "description": "제휴입점 관리자 React 전환 전략(대안 11개 대조), NDSP 컴포넌트 API 일관성, 인프라 경로 분기 설계."
+        },
+        {
+          "title": "우아한 테크 캠프 3기 수료 · 2020.07 – 2020.08",
+          "description": "우아한형제들 주관 8주 웹 개발 교육. 코드 리뷰와 페어 프로그래밍 수행."
+        }
+      ]
+    },
+    "education": {
+      "eyebrow": "학력",
+      "headline": "서울과학기술대학교",
+      "badge": "ST",
+      "degree": "컴퓨터공학과 학사 졸업",
+      "term": "2015.03 – 2021.02"
+    },
+    "pdf": {
+      "title": "이력서 전문은 PDF로",
+      "description": "이 페이지는 이력서의 웹 판입니다. 같은 내용을 PDF(국문 / 영문)로 내려받을 수 있습니다.",
+      "ko": "국문 PDF",
+      "en": "English PDF"
     },
     "contact": {
-      "title": "Contact",
-      "headline": "함께 일해요.",
-      "description": "이력서 다운로드 버튼은 언어 설정(ko/en)에 따라 해당 PDF를 내려받습니다."
+      "headline": "함께 일하거나, 이야기 나누고 싶다면",
+      "email": "maeng2418@gmail.com",
+      "top": "맨 위로 ↑"
     },
-    "actions": {
-      "download": "이력서 다운로드",
-      "downloadPrimary": "이력서 다운로드 (KO)",
-      "downloadOther": "Resume (EN)",
-      "translate": "EN",
-      "translateAria": "Switch to English"
-    },
-    "heroRich": "안녕하세요!<br></br>{role},<br></br><accent>{name}</accent>입니다!",
-    "contactHeadlineRich": "<accent>함께</accent> 일해요."
+    "rail": {
+      "aria": "섹션 이동",
+      "top": "소개",
+      "kpi": "핵심 성과",
+      "career": "경력",
+      "work": "주요 프로젝트",
+      "skills": "보유 스킬",
+      "standards": "표준 수립",
+      "more": "활동·학력"
+    }
   }
 }

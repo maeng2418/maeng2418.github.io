@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import LocaleProvider from '@/components/i18n/LocaleProvider'
+import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
+import { THEME_INIT_SCRIPT } from '@/lib/theme'
 import { SITE_URL } from '@/lib/site'
 import './globals.css'
 
@@ -18,6 +20,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head>
+        {/* 저장 테마를 첫 페인트 전에 반영 — 깜빡임 방지 (lib/theme.ts 계약) */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
@@ -27,11 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LocaleProvider>
           <SiteHeader />
           <main className="mx-auto max-w-[1080px] px-6">{children}</main>
-          <footer className="mt-24 border-t border-line">
-            <div className="mx-auto max-w-[1080px] px-6 py-14 text-[13px] text-ink-faint">
-              © {new Date().getFullYear()} Myeongseong Kim. 기록은 미래의 나를 돕는다.
-            </div>
-          </footer>
+          <SiteFooter />
         </LocaleProvider>
       </body>
     </html>

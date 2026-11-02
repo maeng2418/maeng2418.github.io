@@ -1,7 +1,7 @@
 // AC-BLOG-002a — 콘텐츠 계층: frontmatter/draft/날짜 파싱
 import { describe, expect, it } from 'vitest'
 import { parseLenientDate } from '@/lib/content/date'
-import { getAllPosts, getAllCategories, getTilEntries } from '@/lib/content/loader'
+import { getAllPosts, getAllCategories } from '@/lib/content/loader'
 
 describe('parseLenientDate (관대한 날짜 파싱)', () => {
   it('레거시 비표준 포맷(월/일 한 자리)을 파싱한다 — 2021-5-23 09:47:12', () => {
@@ -77,11 +77,3 @@ describe('getAllCategories', () => {
   })
 })
 
-describe('getTilEntries (til/ 하위 디렉터리)', () => {
-  it('til 픽스처를 date 내림차순으로 파싱한다', () => {
-    const entries = getTilEntries()
-    expect(entries.length).toBeGreaterThanOrEqual(1)
-    expect(entries[0].title).toBeTruthy()
-    expect(entries[0].date).toBeInstanceOf(Date)
-  })
-})

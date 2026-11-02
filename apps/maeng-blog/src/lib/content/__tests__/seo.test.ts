@@ -9,9 +9,9 @@ describe('sitemap (REQ-BLOG-011)', () => {
   const entries = sitemap()
   const urls = entries.map((e) => e.url)
 
-  it('공개 라우트(홈/TIL/포트폴리오)를 SITE_URL 기준 절대 URL 로 포함한다', () => {
+  it('공개 라우트(홈/포트폴리오)를 SITE_URL 기준 절대 URL 로 포함한다', () => {
     expect(urls).toContain(`${SITE_URL}/`)
-    expect(urls).toContain(`${SITE_URL}/til/`)
+    expect(urls).not.toContain(`${SITE_URL}/til/`) // TIL 메뉴·라우트 제거
     expect(urls).toContain(`${SITE_URL}/portfolio/`)
   })
 
@@ -24,7 +24,7 @@ describe('sitemap (REQ-BLOG-011)', () => {
   it('draft 포스트는 어디에도 노출되지 않는다 (§D.2 엣지 케이스)', () => {
     // 픽스처의 draft 포스트 slug 가 sitemap 에 없어야 한다 — getAllPosts() draft 제외 계약 소비
     expect(urls.some((url) => url.includes('draft'))).toBe(false)
-    expect(entries).toHaveLength(3 + getAllPosts().length)
+    expect(entries).toHaveLength(2 + getAllPosts().length) // 홈 + 포트폴리오 (TIL 제거)
   })
 })
 

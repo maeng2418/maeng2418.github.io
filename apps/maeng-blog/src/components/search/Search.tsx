@@ -55,6 +55,18 @@ export default function Search({
     if (open) inputRef.current?.focus()
   }, [open])
 
+  // ⌘K / Ctrl+K 단축키로 열기
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
+        event.preventDefault()
+        setOpen(true)
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   // 검색 실행 — pagefind.debouncedSearch 가 스테일 질의를 null 로 반환한다
   useEffect(() => {
     if (!open || !query.trim()) {
@@ -99,9 +111,9 @@ export default function Search({
         type="button"
         onClick={() => setOpen(true)}
         aria-label={t('openAria')}
-        className="text-ink-soft hover:text-accent"
+        className="site-ib"
       >
-        {t('open')}
+        {t('open')} <kbd className="site-kbd">⌘K</kbd>
       </button>
 
       {open && (

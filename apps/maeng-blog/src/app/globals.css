@@ -16,6 +16,7 @@
   --accent-soft: #edeffe;
   --card: #ffffff;
   --code-bg: #f1f1ec;
+  --glow: rgba(43, 63, 234, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +30,7 @@
     --accent-soft: #1b2040;
     --card: #17171d;
     --code-bg: #1c1c24;
+    --glow: rgba(107, 124, 255, 0.22);
   }
 }
 
@@ -42,6 +44,7 @@
   --accent-soft: #1b2040;
   --card: #17171d;
   --code-bg: #1c1c24;
+  --glow: rgba(107, 124, 255, 0.22);
 }
 
 @theme inline {
@@ -88,782 +91,858 @@ button:focus-visible {
 }
 
 /* ---------------------------------------------------------------- *
- * 포트폴리오 — 승인 시안 LUMEN (.moai/reports/design/maeng-portfolio-lumen.html)
- * 라이트 에디토리얼 글래스: 색 리본이 유리 아래로만 비침, 코발트 단일 액센트.
- * 블로그 토큰(--paper/--ink/--accent) 위에 유리 레이어만 pf 스코프로 추가 —
- * 다크 모드는 토큰 상속 + pf 유리 변수 오버라이드로 대응.
- * transform/opacity 만 애니메이트, reduced-motion 시 정적 레이아웃으로 완전 표시.
+ * 포트폴리오 — 시안 v18 (D안 v2 스크럽 문법 + portfolio_02 이력서)
+ * 핀 4곳(히어로·핵심 성과·경력·프로젝트)은 .pf-pin 높이만큼 스크롤되는 동안 .pf-stage 가
+ * sticky 로 고정되고, PortfolioScroll 이 쓰는 --p(0→1)·--sp 를 CSS calc 가 소비한다.
+ * 토큰은 블로그와 공유(--paper/--ink/--accent). 패널 배경만 pf 스코프로 추가.
+ * reduced-motion 시 핀을 풀고 전부를 정적으로 펼친다.
  * ---------------------------------------------------------------- */
-.pf-lumen {
-  --pf-glass: rgba(255, 255, 255, 0.34);
-  --pf-gline: rgba(255, 255, 255, 0.9);
-  --pf-shadow:
-    0 12px 40px rgba(20, 40, 120, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  --pf-ribbon-opacity: 0.55;
-  --pf-word-stroke: rgba(12, 14, 20, 0.05);
+.pf-root {
+  --pf-panel: #f3f3ee;
+  --sp: 0;
   position: relative;
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .pf-lumen {
-    --pf-glass: rgba(255, 255, 255, 0.06);
-    --pf-gline: rgba(255, 255, 255, 0.14);
-    --pf-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.16);
-    --pf-ribbon-opacity: 0.22;
-    --pf-word-stroke: rgba(255, 255, 255, 0.06);
+  :root:not([data-theme='light']) .pf-root {
+    --pf-panel: #15151b;
   }
 }
-:root[data-theme='dark'] .pf-lumen {
-  --pf-glass: rgba(255, 255, 255, 0.06);
-  --pf-gline: rgba(255, 255, 255, 0.14);
-  --pf-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.16);
-  --pf-ribbon-opacity: 0.22;
-  --pf-word-stroke: rgba(255, 255, 255, 0.06);
+:root[data-theme='dark'] .pf-root {
+  --pf-panel: #15151b;
+}
+/* 전폭 패널 배경이 100vw 를 쓰므로 가로 스크롤바를 막는다 */
+body:has(.pf-root) {
+  overflow-x: clip;
+}
+.pf-mono {
+  font-family: var(--font-mono);
+}
+.pf-faint {
+  color: var(--ink-faint);
+}
+.pf-accent {
+  color: var(--accent);
+}
+.pf-note {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.pf-eyebrow {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+.pf-h2 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  white-space: pre-line;
+}
+.pf-h2.is-sm {
+  font-size: 28px;
+}
+.pf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.18s,
+    color 0.18s,
+    background 0.18s;
+}
+.pf-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+.pf-btn.is-primary {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.pf-btn.is-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
 }
 
-/* 색 리본 — 채도 높은 코발트/스카이 필드 (유리의 saturate 가 증폭).
-   전체 뷰포트 고정 70px 광역 blur 필터는 스크롤 잔렉의 1차 비용이라 제거하고
-   (SPEC-007 D3 / REQ-PAINT-001), 넓은 반경 + 완만한 소멸 스톱의 radial-gradient
-   로 사전 계산된 소프트 필드를 재현한다 — 시각 콘셉트(부유하는 색 리본) 동등 */
-.pf-ribbons {
-  position: fixed;
-  inset: -10%;
-  z-index: -1;
-  pointer-events: none;
-  opacity: var(--pf-ribbon-opacity);
-  background:
-    radial-gradient(46vw circle at 74% 14%, rgba(46, 91, 255, 0.85), rgba(46, 91, 255, 0.3) 42%, transparent 72%),
-    radial-gradient(36vw circle at 88% 32%, rgba(127, 212, 255, 0.8), rgba(127, 212, 255, 0.28) 44%, transparent 74%),
-    radial-gradient(38vw circle at 8% 64%, rgba(191, 208, 255, 0.85), rgba(191, 208, 255, 0.3) 45%, transparent 76%),
-    radial-gradient(34vw circle at 46% 96%, rgba(46, 91, 255, 0.8), rgba(46, 91, 255, 0.28) 44%, transparent 74%);
-}
-
-/* 유리 재질 — 화이트 + blur + saturate + 상단 하이라이트 */
-.pf-glass {
-  background: var(--pf-glass);
-  border: 1px solid var(--pf-gline);
-  border-radius: 22px;
-  backdrop-filter: blur(18px) saturate(1.8);
-  -webkit-backdrop-filter: blur(18px) saturate(1.8);
-  box-shadow: var(--pf-shadow);
-}
-/* 저성능·모바일 환경 하향 분기 — 정적 CSS 미디어 특성만으로 성립
-   (SPEC-007 REQ-PAINT-003): 터치 기기/좁은 뷰포트에서 backdrop blur 강도를 낮춰
-   스크롤 중 합성 비용을 절감한다. 유리 콘셉트(반투명 + 채도 증폭)는 유지 */
-@media (pointer: coarse), (max-width: 760px) {
-  .pf-glass {
-    backdrop-filter: blur(8px) saturate(1.4);
-    -webkit-backdrop-filter: blur(8px) saturate(1.4);
-  }
-}
-
-/* 전역 재생 타임라인 헤어라인 */
+/* 상단 진행바 + 우측 레일 */
 .pf-progress {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 2px;
-  z-index: 60;
   background: var(--accent);
   transform-origin: left;
-  transform: scaleX(0);
+  transform: scaleX(var(--sp));
+  z-index: 50;
+  pointer-events: none;
 }
-
-/* 챕터 내비 */
-.pf-chapters {
+.pf-rail {
   position: fixed;
-  right: 24px;
+  right: 22px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 45;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  z-index: 40;
 }
-.pf-chapters a {
+.pf-rail a {
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  justify-content: flex-end;
-  text-decoration: none;
-  color: var(--ink-faint);
+  justify-content: center;
+  border-radius: 999px;
 }
-.pf-chapters .dot {
+.pf-rail a span {
   width: 7px;
   height: 7px;
   border-radius: 999px;
   background: var(--line);
   transition:
-    background 0.3s,
-    transform 0.3s;
+    transform 0.2s,
+    background 0.2s;
 }
-.pf-chapters .lbl {
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  opacity: 0;
-  transform: translateX(6px);
-  transition:
-    opacity 0.25s,
-    transform 0.25s;
-}
-.pf-chapters a.active .dot {
+.pf-rail a.is-on span {
   background: var(--accent);
-  transform: scale(1.55);
+  transform: scale(1.5);
 }
-.pf-chapters a.active .lbl,
-.pf-chapters a:hover .lbl {
-  opacity: 1;
-  transform: none;
-  color: var(--accent);
-}
-@media (max-width: 760px) {
-  .pf-chapters {
-    display: none;
-  }
+.pf-rail a:hover span {
+  background: var(--accent);
 }
 
-/* 핀 프레임 / 흐름 섹션 — 연속 캔버스 (핀 4곳 + 흐름) */
+/* 핀 + 무대 */
 .pf-pin {
-  position: relative;
-}
-.pf-frame {
-  position: sticky;
-  top: 0;
-  /* 가변 단위(dvh)는 모바일 URL 바 축소·확장 시 스크롤 도중 핀 레이아웃을 재계산시킨다
-     (SPEC-007 D3 / REQ-VP-001). 스크롤 중 불변인 100svh 로 고정 — 데스크톱에서는
-     svh == vh 라 렌더 무회귀 (REQ-VP-002) */
-  height: 100vh;
-  height: 100svh;
-  overflow: hidden;
-  display: flex;
-  /* 콘텐츠가 프레임보다 커지면(disclosure 열림 등) 중앙 정렬 대신 상단 기준으로
-     정렬해 상단 잘림을 방지한다 (SPEC-007 E-1) */
-  align-items: safe center;
-  padding: 0 clamp(20px, 6vw, 96px);
-}
-.pf-flow {
-  position: relative;
-  padding: clamp(110px, 18vh, 220px) clamp(20px, 6vw, 96px);
-}
-.pf-wrap {
+  --p: 0;
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  isolation: isolate;
 }
-/* will-change 상시 선언은 제거 (SPEC-007 REQ-PAINT-002) — transform/opacity 는
-   motion 이 애니메이션 중에만 합성 레이어로 승격하므로 정적 선언이 불필요하다.
-   .pf-fx 는 감축 모션 폴백 셀렉터로만 유지된다. */
-.pf-bg-word {
+.pf-pin.is-panel::before {
+  content: '';
   position: absolute;
-  top: -0.35em;
-  right: -4%;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: var(--pf-panel);
   z-index: -1;
-  pointer-events: none;
-  user-select: none;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  font-size: clamp(120px, 22vw, 320px);
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--pf-word-stroke);
-  white-space: nowrap;
 }
-
-/* 타이포 */
-.pf-kicker {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  color: var(--accent);
-  font-weight: 700;
-  margin: 0 0 18px;
-  text-transform: uppercase;
-}
-.pf-display {
-  font-size: clamp(40px, 7vw, 96px);
-  font-weight: 800;
-  letter-spacing: -0.045em;
-  line-height: 1;
-  margin: 0;
-  text-wrap: balance;
-}
-.pf-blue {
-  color: var(--accent);
-}
-.pf-h2 {
-  font-size: clamp(34px, 5.2vw, 68px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1.02;
-  margin: 0;
-  text-wrap: balance;
-}
-.pf-sub {
-  color: var(--ink-soft);
-  font-size: clamp(15px, 1.7vw, 18px);
-  margin: 20px 0 0;
-  max-width: 56ch;
-}
-.pf-head {
-  margin: 0 0 clamp(26px, 5vh, 52px);
-}
-.pf-head-right {
-  text-align: right;
-}
-.pf-head-indent {
-  margin-left: clamp(0px, 6vw, 90px);
-}
-/* 섹션별 콘텐츠 x-오프셋 — 시선 축 지그재그 */
-.pf-creed-wrap {
-  max-width: 860px;
-  margin-left: clamp(0px, 15vw, 260px);
-}
-.pf-skills-wrap {
-  max-width: 1020px;
-  margin-left: clamp(0px, 6vw, 110px);
-}
-.pf-tl.pf-content {
-  max-width: 780px;
-  margin-left: auto;
-}
-@media (max-width: 860px) {
-  .pf-creed-wrap,
-  .pf-skills-wrap,
-  .pf-tl.pf-content {
-    margin-left: 0;
-  }
-}
-
-/* 인트로 */
-.pf-contacts {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 0;
-  padding: 0;
-  margin: 30px 0 0;
-}
-.pf-contacts li {
+.pf-stage {
+  position: sticky;
+  top: max(0px, calc(50vh - 360px));
+  height: 720px;
+  box-sizing: border-box;
+  overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.pf-contacts li + li::before {
-  content: '';
-  width: 1px;
-  height: 12px;
-  background: var(--line);
-  margin: 0 16px;
+.pf-stage.is-work {
+  align-items: flex-start;
+  padding-top: 56px;
 }
-.pf-contacts a {
-  color: var(--ink-soft);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-}
-.pf-contacts a:hover {
-  color: var(--accent);
-}
-.pf-scroll-hint {
+.pf-hint {
   position: absolute;
-  bottom: 36px;
-  right: clamp(20px, 6vw, 96px);
-  font-size: 11px;
-  letter-spacing: 0.28em;
+  left: 0;
+  right: 0;
+  bottom: 28px;
+  text-align: center;
+  font-size: 12px;
   color: var(--ink-faint);
-  writing-mode: vertical-rl;
+  opacity: calc(1 - var(--p) * 4);
 }
-.pf-scroll-hint::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 40px;
-  margin: 12px auto 0;
-  background: linear-gradient(var(--ink-faint), transparent);
-}
-
-/* 소개 — 유리 슬랫 + 임팩트 지표 */
-.pf-slat {
-  display: grid;
-  grid-template-columns: minmax(170px, 250px) 1fr;
-  gap: 20px;
-  align-items: baseline;
-  padding: 22px 26px;
-}
-.pf-slat b {
-  font-size: clamp(16px, 1.7vw, 19px);
-  letter-spacing: -0.015em;
-}
-.pf-slat b::before {
-  content: '— ';
-  color: var(--accent);
-}
-.pf-slat p {
-  margin: 0;
-  font-size: 13.5px;
-  color: var(--ink-soft);
-}
-@media (max-width: 640px) {
-  .pf-slat {
-    grid-template-columns: 1fr;
-    gap: 4px;
-  }
-}
-.pf-figures {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 12px 40px;
-  margin-top: 24px;
-  padding: 18px 30px;
-  border-radius: 999px;
-}
-.pf-figures b {
-  font-size: clamp(22px, 2.4vw, 30px);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--accent);
-  font-variant-numeric: tabular-nums;
-}
-.pf-figures span {
-  display: block;
-  font-size: 11px;
-  color: var(--ink-faint);
-  margin-top: -3px;
-}
-.pf-summary {
-  margin: 26px 0 0;
-  max-width: 62ch;
-  font-size: 14px;
-  color: var(--ink-soft);
-}
-/* M6 보충: About 핀 전환 — 4 슬랫 + 지표 pill + 요약 문단을 100svh 프레임에 수납
-   (클리핑 대신 콤팩트 간격으로 대응, .pf-frame 은 overflow: hidden) */
-.pf-about-frame .pf-head {
-  margin-bottom: clamp(16px, 3vh, 34px);
-}
-.pf-about-frame .pf-slat {
-  padding: 14px 24px;
-}
-.pf-about-frame .pf-figures {
-  margin-top: 16px;
-  padding: 14px 26px;
-}
-.pf-about-frame .pf-summary {
-  margin-top: 16px;
-}
-
-/* 프로젝트 레일 — will-change 상시 선언 제거 (REQ-PAINT-002, motion 이 관리) */
-/* M6 fix 2: 후행 스페이서 — 마지막 카드가 언핀 전에 좌측 읽기 위치까지 이동하도록
-   railMax(scrollWidth − clientWidth)에 (래퍼 폭 − 카드 폭 − gap)을 더한다.
-   %는 레일의 주축(=래퍼 폭) 기준, 카드 폭 min(360px, 80vw)과 동기 (반응형) */
-.pf-rail::after {
-  content: '';
-  flex: 0 0 max(0px, calc(100% - min(360px, 80vw) - 18px));
-}
-.pf-proj {
-  flex: 0 0 min(360px, 80vw);
-  padding: 26px 28px;
-  text-align: left;
-}
-.pf-proj .term {
-  font-size: 11px;
-  color: var(--ink-faint);
-  letter-spacing: 0.06em;
-}
-.pf-proj h3 {
-  margin: 10px 0 6px;
-  font-size: 20px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-}
-.pf-proj h3 a {
-  color: var(--ink);
-  text-decoration: none;
-}
-.pf-proj h3 a:hover {
-  color: var(--accent);
-}
-.pf-proj p {
-  font-size: 13.5px;
-  color: var(--ink-soft);
-  margin: 0 0 14px;
-}
-.pf-tags {
+.pf-split {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+.pf-split.is-top {
+  align-items: flex-start;
+  gap: 48px;
+}
+.pf-split-head {
+  flex: 0 0 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.pf-split-head.is-wide {
+  flex-basis: 260px;
+  gap: 16px;
+}
+
+/* 1. 히어로 — 단어 리빌 */
+.pf-hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.pf-hero-id {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 16px;
+}
+.pf-name {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.pf-hero-role {
+  font-size: 17px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.pf-hero-id .pf-mono {
+  font-size: 13px;
+}
+.pf-words {
+  margin: 0;
+  max-width: 20em;
+  font-size: 44px;
+  line-height: 1.38;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.28em;
+}
+.pf-w {
+  opacity: clamp(0.14, calc(var(--p) * var(--n) - var(--i)), 1);
+  transition: opacity 0.15s linear;
+}
+.pf-w.is-accent {
+  color: var(--accent);
+}
+.pf-now {
+  --q: clamp(0, calc((var(--p) - 0.8) / 0.15), 1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+  font-size: 15px;
+  opacity: var(--q);
+  transform: translateY(calc((1 - var(--q)) * 10px));
+}
+.pf-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 13px;
+}
+
+/* 2. 핵심 성과 */
+.pf-kpis {
+  flex: 1 1 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pf-kpi {
+  --q: clamp(0, calc((var(--p) - var(--i) * 0.19) / 0.14), 1);
+  opacity: calc(0.08 + var(--q) * 0.92);
+  transform: translateY(calc((1 - var(--q)) * 18px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  gap: 18px;
+  align-items: center;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+.pf-kpi-t {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+}
+.pf-kpi-d {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-top: 4px;
+}
+.pf-kpi-vis {
+  display: flex;
+  flex-direction: column;
   gap: 6px;
 }
-.pf-tags span {
-  font-size: 11px;
-  padding: 3px 10px;
+.pf-kpi-big {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.pf-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 44px;
+}
+.pf-bars i {
+  flex: 1;
+  display: block;
+  background: var(--accent);
+  border-radius: 3px 3px 0 0;
+  height: var(--h);
+  transform-origin: bottom;
+  transform: scaleY(clamp(0, calc(var(--q) * 5 - var(--j)), 1));
+}
+.pf-bars-lbl {
+  display: flex;
+  gap: 6px;
+}
+.pf-bars-lbl span {
+  flex: 1;
+  font-size: 9px;
+  color: var(--ink-faint);
+  text-align: center;
+  font-family: var(--font-mono);
+}
+.pf-gauge {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--line);
+  overflow: hidden;
+}
+.pf-gauge b {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+}
+.pf-ok {
+  width: 28px;
+  height: 28px;
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent);
-  font-weight: 600;
-}
-.pf-meta {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 22px;
-}
-.pf-count {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: var(--ink-faint);
-}
-.pf-count b {
-  color: var(--accent);
-  font-weight: 700;
-}
-.pf-bar {
-  width: 160px;
-  height: 2px;
-  background: var(--line);
-  overflow: hidden;
-  border-radius: 2px;
-}
-.pf-bar i {
-  display: block;
-  height: 100%;
-  width: 0;
-  background: var(--accent);
-}
-
-/* 경력 crossfade 스택 — grid 셀 겹침(1/1)으로 crossfade 유지.
-   내부 스크롤 컨테이너(absolute + overflow-y:auto)는 휠 트랩 원인이라 폐기 —
-   카드가 자연 높이로 스택 높이를 결정하고, 휠 입력은 항상 페이지 스크럽으로 소비된다
-   (SPEC-007 D1 / REQ-WHEEL-001..003) */
-.pf-career-stack {
-  position: relative;
-  display: grid;
-  min-height: 460px;
-  max-width: 840px;
-  margin-left: clamp(0px, 11vw, 190px);
-}
-@media (max-width: 860px) {
-  .pf-career-stack {
-    margin-left: 0;
-  }
-}
-.pf-career-card {
-  grid-area: 1 / 1;
-  align-self: center;
-  padding: 30px 34px;
-  opacity: 0;
-}
-.pf-career-card h3 {
-  margin: 0;
-  font-size: 21px;
-  letter-spacing: -0.02em;
-  font-weight: 700;
-}
-.pf-career-card .term {
-  font-size: 12px;
-  color: var(--ink-faint);
-}
-.pf-career-card .desc {
+  justify-content: center;
   font-size: 14px;
-  color: var(--ink-soft);
-  margin: 10px 0 0;
-}
-.pf-career-card ul {
-  margin: 12px 0 0;
-  padding-left: 17px;
-  font-size: 13px;
-  color: var(--ink-soft);
-  list-style: disc;
-}
-.pf-career-card li {
-  margin: 4px 0;
-}
-.pf-career-card li::marker {
-  color: var(--accent);
-}
-@media (max-width: 560px) {
-  .pf-career-stack {
-    min-height: 560px;
-  }
-  .pf-career-card {
-    padding: 20px;
-  }
+  font-weight: 700;
+  margin-left: auto;
 }
 
-/* 일하는 방식 — 괘선 리스트 (유리 대비 호흡) + 교차 오프셋 */
-.pf-creed {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 52px;
-}
-.pf-creed > :nth-child(even) {
+/* 3. 경력 — 선이 그려지며 등장 */
+.pf-roles {
+  flex: 1 1 520px;
+  min-width: 0;
   position: relative;
-  top: clamp(24px, 6vh, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  padding-left: 36px;
 }
-@media (max-width: 700px) {
-  .pf-creed {
-    grid-template-columns: 1fr;
-  }
-  .pf-creed > :nth-child(even) {
-    top: 0;
-  }
-}
-.pf-creed-item {
-  border-top: 1px solid var(--line);
-  padding: 20px 2px 18px;
-}
-.pf-creed-item b {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.pf-creed-item b .no {
-  color: var(--accent);
-  font-weight: 800;
-  margin-right: 10px;
-  font-variant-numeric: tabular-nums;
-}
-.pf-creed-item ul {
-  margin: 0;
-  padding-left: 17px;
-  font-size: 12.5px;
-  color: var(--ink-soft);
-  list-style: disc;
-}
-.pf-creed-item li {
-  margin: 3px 0;
-}
-
-/* 타임라인 — 아래→위 게이지 */
-.pf-tl {
-  position: relative;
-  padding: 24px 30px 24px 48px;
-}
-.pf-tl-line {
+.pf-wire-svg {
   position: absolute;
-  left: 27px;
-  top: 26px;
-  bottom: 26px;
+  left: 8px;
+  top: 8px;
   width: 2px;
-  background: var(--line);
+  height: calc(100% - 16px);
 }
-.pf-tl-line i {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0;
-  background: var(--accent);
-  display: block;
+.pf-wire {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - clamp(0, calc(var(--p) * 1.3), 1));
 }
-.pf-tl-item {
+.pf-role {
+  --q: clamp(0, calc((var(--p) - var(--i) * 0.26) / 0.22), 1);
+  opacity: var(--q);
+  transform: translateX(calc((1 - var(--q)) * 24px));
   position: relative;
   display: grid;
-  grid-template-columns: 122px 1fr;
-  gap: 16px;
-  padding: 12px 0;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 18px;
 }
-.pf-tl-item::before {
-  content: '';
+.pf-role-dot {
   position: absolute;
-  left: -25px;
-  top: 20px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--line);
-}
-.pf-tl-item .dotlit {
-  position: absolute;
-  left: -25px;
-  top: 20px;
-  width: 8px;
-  height: 8px;
+  left: -31px;
+  top: 22px;
+  width: 10px;
+  height: 10px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 4px var(--accent-soft);
-  opacity: 0;
 }
-.pf-tl-item .when {
-  font-size: 11.5px;
-  color: var(--ink-faint);
-  padding-top: 4px;
-}
-.pf-tl-item b {
-  font-size: 15px;
-}
-.pf-tl-item .org {
-  font-size: 12px;
-  color: var(--ink-soft);
-}
-.pf-tl-item .now {
-  display: inline-block;
-  margin-left: 8px;
-  font-size: 10px;
-  padding: 2px 9px;
-  border-radius: 999px;
+.pf-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  color: #fff;
   background: var(--accent);
-  color: var(--paper);
+  flex: none;
+}
+.pf-badge.is-b2 {
+  background: #2f2f36;
+}
+.pf-badge.is-b3 {
+  background: #1f5fd6;
+}
+.pf-badge.is-sm {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+.pf-role-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pf-role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+.pf-role-head .pf-mono {
+  font-size: 13px;
+}
+.pf-role-co {
+  font-size: 20px;
   font-weight: 700;
-  vertical-align: 1.5px;
-}
-@media (max-width: 560px) {
-  .pf-tl-item {
-    grid-template-columns: 1fr;
-    gap: 2px;
-  }
-}
-.pf-edu {
-  margin-top: 26px;
-  border-top: 1px dashed var(--line);
-  padding-top: 20px;
-}
-.pf-edu .pf-kicker {
-  margin-bottom: 6px;
-}
-.pf-edu .pf-tl-item::before,
-.pf-edu .pf-tl-item .dotlit {
-  display: none;
+  letter-spacing: -0.02em;
 }
 
-/* 스킬 그룹 */
-.pf-chip-group {
-  padding: 18px 24px 20px;
+/* 4. 주요 프로젝트 — 단계 재생 */
+.pf-plist {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
 }
-.pf-chip-group + .pf-chip-group {
-  margin-top: 12px;
+.pf-plist button {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--line);
+  padding: 9px 0 9px 14px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink-faint);
+  cursor: pointer;
+  line-height: 1.35;
 }
-.pf-chip-group .label {
+.pf-plist button:hover {
+  color: var(--ink);
+}
+.pf-plist button.is-on {
+  color: var(--ink);
+  border-left-color: var(--accent);
+  font-weight: 600;
+}
+.pf-plist-n {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  flex: 0 0 22px;
+}
+.pf-projs {
+  flex: 1 1 560px;
+  min-width: 0;
+  position: relative;
+  height: 620px;
+}
+.pf-proj {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.pf-proj.is-on {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.pf-proj-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pf-proj-head h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+.pf-proj-head .pf-mono {
+  font-size: 12.5px;
+}
+.pf-segs {
+  display: flex;
+  gap: 6px;
+}
+.pf-seg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   font-size: 12px;
-  letter-spacing: 0.16em;
+  color: var(--ink-faint);
+}
+.pf-seg i {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+}
+.pf-seg.is-on {
   color: var(--accent);
+  font-weight: 600;
+}
+.pf-seg.is-on i {
+  background: var(--accent);
+}
+.pf-step {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 14px;
+  opacity: 0.1;
+  transform: translateY(8px);
+  transition:
+    opacity 0.35s,
+    transform 0.35s;
+}
+.pf-step.is-on {
+  opacity: 1;
+  transform: none;
+}
+.pf-step-k {
+  font-size: 13px;
   font-weight: 700;
-  text-transform: uppercase;
+  color: var(--accent);
+  padding-top: 2px;
+}
+.pf-step-v {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+}
+.pf-step.is-last .pf-step-v {
+  font-weight: 600;
+}
+
+/* 5~7. 흐름 섹션 */
+.pf-flow {
+  padding-top: 112px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.pf-sec-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pf-sgs {
+  display: flex;
+  flex-direction: column;
+}
+.pf-sg {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.pf-sg:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.pf-sg-l {
+  font-size: 13px;
+  color: var(--ink-faint);
 }
 .pf-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 12px;
+  gap: 8px;
 }
 .pf-chip {
-  padding: 5px 14px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid var(--pf-gline);
-  /* M6 fix 6: 기본 칩 대비 상향 — 스크롤 리빌과 무관하게 항상 가독 (--ink-soft → --ink) */
+  border: 1px solid var(--line);
+  background: var(--card);
   color: var(--ink);
-}
-/* M6 fix 6: 다크 배경에서 반투명 화이트(0.5) 칩 배경은 라이트 텍스트와 충돌 —
-   어두운 유리 배경 + 밝은 보더로 교체해 비강조 칩 가독성을 확보 (강조 .hot 구분 유지) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .pf-chip:not(.hot) {
-    background: rgba(255, 255, 255, 0.09);
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-}
-:root[data-theme='dark'] .pf-chip:not(.hot) {
-  background: rgba(255, 255, 255, 0.09);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-.pf-chip.hot {
-  background: var(--accent-soft);
-  border-color: transparent;
-  color: var(--accent);
-  font-weight: 700;
-}
-
-/* 버튼 */
-.pf-btn-solid {
-  background: var(--ink);
-  color: var(--paper);
-  border: 1px solid var(--ink);
-}
-.pf-btn-invert,
-.pf-btn-ghost {
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 14px 30px;
-  border-radius: 999px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
+  transition:
+    transform 0.18s,
+    border-color 0.18s,
+    color 0.18s,
+    box-shadow 0.18s;
 }
-/* 플러드(파란 배경) 제거 후 흰색 고정 팔레트는 라이트 배경에서 비가시 —
-   테마 토큰 기반으로 교체해 라이트/다크 모두 가독 확보 */
-.pf-btn-invert {
-  background: var(--accent);
-  color: #fff;
-  border: 1px solid var(--accent);
-}
-.pf-btn-ghost {
-  background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--ink-faint);
-}
-.pf-btn-ghost:hover {
+.pf-chip:hover {
+  transform: translateY(-3px);
   border-color: var(--accent);
   color: var(--accent);
+  box-shadow: 0 10px 24px var(--glow);
+}
+.pf-chip.is-hot {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.pf-chip.is-hot:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pf-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 56px;
+}
+.pf-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.pf-lis {
+  display: flex;
+  flex-direction: column;
+}
+.pf-li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+}
+.pf-li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.pf-li.is-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.pf-li-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.pf-li-body .pf-mono {
+  font-size: 13px;
+}
+.pf-li-t {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+}
+.pf-li-d {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.pf-card {
+  margin-top: 18px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pf-card-t {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.pf-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pf-contact {
+  margin-top: 96px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+.pf-contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pf-contact-h {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.pf-contact-mail {
+  font-size: 18px;
 }
 
-/* 컨택트 — 코발트 플러드(색반전)는 사용자 결정으로 제거, 다크 톤 유지 */
-.pf-contact-frame {
-  justify-content: center;
-  text-align: center;
+/* 흐름 섹션 등장 — JS 가 .pf-js 를 붙인 뒤에만 숨겼다가 교차 시 .is-in */
+.pf-reveal {
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.pf-js .pf-reveal:not(.is-in) {
+  opacity: 0;
+  transform: translateY(16px);
 }
 
-/* reduced-motion — 정적 폴백 (콘텐츠 완전 표시) */
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 860px) {
+  .pf-stage {
+    height: 640px;
+  }
+  .pf-rail {
+    display: none;
+  }
+  .pf-cols {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 48px;
+  }
+  .pf-kpi {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pf-kpi-big {
+    text-align: left;
+  }
+  .pf-plist {
+    display: none;
+  }
+  .pf-sg {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pf-name {
+    font-size: 32px;
+  }
+  .pf-words {
+    font-size: 28px;
+  }
+  .pf-h2 {
+    font-size: 28px;
+  }
+  .pf-proj-head h3 {
+    font-size: 20px;
+  }
+  .pf-step-v {
+    font-size: 14px;
+  }
+  .pf-split-head,
+  .pf-split-head.is-wide {
+    flex-basis: 100%;
+  }
+}
+
+/* 정적 폴백 — reduced-motion 또는 좁은 화면(≤860px): 핀을 풀고 전부를 펼친다.
+   PortfolioScroll 도 같은 조건에서 카운터를 최종값으로 고정한다 (STATIC_MQ). */
+@media (prefers-reduced-motion: reduce), (max-width: 860px) {
   .pf-pin {
     height: auto !important;
   }
-  .pf-frame {
+  .pf-stage,
+  .pf-stage.is-work {
     position: static;
     height: auto;
     overflow: visible;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
-  .pf-fx {
-    transform: none !important;
-    opacity: 1 !important;
-  }
-  .pf-rail {
-    transform: none !important;
-    flex-wrap: wrap;
-  }
-  /* M6: 정적 랩 레이아웃에서는 후행 스페이서(fix 2)가 빈 행을 만들므로 제거 */
-  .pf-rail::after {
-    content: none;
-  }
-  .pf-career-stack {
-    min-height: 0;
-    /* grid 셀 겹침(crossfade)을 해제해 카드가 문서 흐름으로 쌓이게 한다 */
-    display: block;
-  }
-  .pf-career-card {
-    opacity: 1 !important;
-    transform: none !important;
-    margin-top: 14px;
-  }
-  .pf-tl-line i {
-    height: 100% !important;
-  }
-  .pf-tl-item {
-    opacity: 1 !important;
-  }
-  .pf-tl-item .dotlit {
-    opacity: 1 !important;
-  }
-  .pf-scroll-hint,
+  .pf-hint,
   .pf-progress,
-  .pf-bg-word {
+  .pf-pidx {
     display: none;
+  }
+  .pf-w,
+  .pf-now,
+  .pf-kpi,
+  .pf-role,
+  .pf-step,
+  .pf-proj {
+    opacity: 1;
+    transform: none;
+  }
+  .pf-seg {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .pf-seg i {
+    background: var(--accent);
+  }
+  .pf-kpi {
+    --q: 1;
+  }
+  .pf-wire {
+    stroke-dashoffset: 0;
+  }
+  .pf-projs {
+    height: auto;
+  }
+  .pf-proj {
+    position: static;
+    pointer-events: auto;
+    margin-bottom: 56px;
+  }
+  .pf-reveal {
+    transition: none;
+  }
+  .pf-js .pf-reveal:not(.is-in) {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -871,18 +950,22 @@ button:focus-visible {
  * 포스트 본문 prose 스타일 — 62ch 폭, 조용한 서피스 (design.md §3.2)
  * ---------------------------------------------------------------- */
 .prose {
-  max-width: 62ch;
-  font-size: 16px;
+  font-size: 17px;
+  line-height: 1.8;
 }
 .prose h1,
 .prose h2,
 .prose h3,
 .prose h4 {
-  line-height: 1.2;
+  line-height: 1.3;
   letter-spacing: -0.02em;
   font-weight: 700;
   margin: 2em 0 0.6em;
   text-wrap: balance;
+  scroll-margin-top: 96px;
+}
+.prose > :first-child {
+  margin-top: 0;
 }
 .prose h1 {
   font-size: 1.75rem;
@@ -986,4 +1069,642 @@ button:focus-visible {
 :root[data-theme='dark'] .prose figure[data-rehype-pretty-code-figure] code,
 :root[data-theme='dark'] .prose figure[data-rehype-pretty-code-figure] code span {
   color: var(--shiki-dark);
+}
+
+/* ---------------------------------------------------------------- *
+ * 블로그 리뉴얼 크롬 — 헤더 / 버튼 / 목록 / 상세 (시안: BlogHome · BlogPost)
+ * ---------------------------------------------------------------- */
+.site-header {
+  background: var(--paper);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.site-nl {
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 0;
+  border-bottom: 1.5px solid transparent;
+  text-decoration: none;
+}
+.site-nl:hover {
+  color: var(--accent);
+}
+.site-nl.is-on {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+.site-ib {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.3;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    border-color 0.15s,
+    color 0.15s;
+}
+.site-ib:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+.site-kbd {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+
+/* 목록 — 시안 M1 스포트라이트 그리드 */
+.spot-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse 70% 45% at 50% 0%, #000 20%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 45% at 50% 0%, #000 20%, transparent 100%);
+}
+.spot-glow {
+  position: absolute;
+  left: var(--gx, 50%);
+  top: var(--gy, 160px);
+  width: 720px;
+  height: 720px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--glow), transparent 60%);
+  pointer-events: none;
+  transition:
+    left 0.3s cubic-bezier(0.2, 0.7, 0.2, 1),
+    top 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.spot-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px 6px 8px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  background: var(--card);
+}
+.spot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+  animation: spot-pulse 2s infinite;
+}
+@keyframes spot-pulse {
+  50% {
+    box-shadow: 0 0 0 7px rgba(34, 197, 94, 0.08);
+  }
+}
+.spot-h1 {
+  font-weight: 900;
+  background: linear-gradient(100deg, var(--ink) 30%, var(--accent) 70%, var(--ink) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: spot-sheen 6s ease-in-out infinite alternate;
+}
+@keyframes spot-sheen {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+.spot-seg {
+  position: relative;
+  display: inline-flex;
+  gap: 2px;
+  max-width: 100%;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  overflow-x: auto;
+}
+.spot-seg::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: var(--sx, 4px);
+  width: var(--sw, 0px);
+  border-radius: 10px;
+  background: var(--ink);
+  transition:
+    left 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    width 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.spot-seg button {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  gap: 6px;
+  align-items: baseline;
+  border: 0;
+  border-radius: 10px;
+  padding: 7px 12px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+.spot-seg button b {
+  font-weight: 500;
+  font-size: 11px;
+  opacity: 0.6;
+}
+.spot-seg button.is-on {
+  color: var(--paper);
+}
+.spot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+.spot-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.spot-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: 2;
+  border-radius: 19px;
+  padding: 1px;
+  background: radial-gradient(320px circle at var(--x, -200px) var(--y, -200px), var(--accent), transparent 60%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.spot-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: radial-gradient(420px circle at var(--x, -200px) var(--y, -200px), var(--glow), transparent 60%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.spot-card:hover {
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+.spot-card:hover::before,
+.spot-card:hover::after {
+  opacity: 1;
+}
+.spot-cover {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--c1);
+  background-image: linear-gradient(135deg, var(--c1), var(--c2));
+  color: #fff;
+}
+.spot-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.35), transparent 45%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+.spot-cover img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.spot-mark {
+  position: absolute;
+  right: -6%;
+  bottom: -18%;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 96px;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  opacity: 0.22;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.spot-card:hover .spot-mark {
+  transform: translate(-6px, -6px) scale(1.06);
+}
+.spot-card:hover .spot-cover img {
+  transform: scale(1.04);
+}
+.spot-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px 20px;
+}
+.spot-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+.spot-tag i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--c1);
+}
+.spot-title {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.spot-excerpt {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.spot-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+.spot-card.is-feat {
+  grid-column: span 2;
+  grid-row: span 2;
+  flex-direction: row;
+}
+.spot-card.is-feat .spot-cover {
+  aspect-ratio: auto;
+  flex: 1 1 55%;
+}
+.spot-card.is-feat .spot-mark {
+  font-size: 220px;
+}
+/* 최신 글 커버는 세로로 길어 로고형 썸네일이 잘린다 — 그라디언트 위에 contain 으로 올린다 */
+.spot-card.is-feat .spot-cover img {
+  inset: 12%;
+  width: 76%;
+  height: 76%;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.25));
+}
+.spot-card.is-feat .spot-body {
+  flex: 1 1 45%;
+  justify-content: center;
+  gap: 14px;
+  padding: 30px;
+}
+.spot-card.is-feat .spot-title {
+  font-size: 34px;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+.spot-card.is-feat .spot-excerpt {
+  font-size: 15px;
+  -webkit-line-clamp: 4;
+}
+@media (max-width: 860px) {
+  .spot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .spot-card.is-feat {
+    flex-direction: column;
+  }
+  .spot-card.is-feat .spot-cover {
+    aspect-ratio: 16 / 9;
+  }
+  .spot-card.is-feat .spot-body {
+    padding: 20px;
+  }
+  .spot-card.is-feat .spot-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 560px) {
+  .spot-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .spot-card.is-feat {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+@media (hover: none) {
+  .spot-glow {
+    display: none;
+  }
+}
+
+/* 상세 */
+.post-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 50;
+  background: var(--accent);
+  transform-origin: left;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+/* 상세 — 시안 M1 */
+.post-hero {
+  aspect-ratio: 16 / 7;
+  border-radius: 22px;
+}
+.post-hero .spot-mark {
+  font-size: 260px;
+  bottom: -22%;
+}
+.post-hero img {
+  position: absolute;
+  inset: 14%;
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.25));
+}
+.post-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: var(--card);
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.post-pill i {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.post-layout {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+}
+.post-art {
+  flex: 999 1 560px;
+  min-width: 0;
+  max-width: 720px;
+}
+.post-side {
+  position: sticky;
+  top: 92px;
+  flex: 1 1 240px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.post-toc {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  padding: 14px 10px;
+}
+.post-toc-title {
+  padding: 2px 10px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
+.post-toc-link {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 9px;
+  color: var(--ink-faint);
+  font-size: 13px;
+  line-height: 1.45;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.post-toc-link.is-h3 {
+  padding-left: 24px;
+  font-size: 12.5px;
+}
+.post-toc-link:hover {
+  color: var(--ink);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+.post-toc-link.is-on {
+  color: var(--accent);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+.post-me {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  padding: 16px;
+  font-size: 13px;
+}
+@media (max-width: 900px) {
+  .post-side {
+    position: static;
+    max-width: none;
+    width: 100%;
+  }
+  .post-toc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .post-toc-title {
+    width: 100%;
+  }
+  .post-toc-link,
+  .post-toc-link.is-h3 {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 10px;
+  }
+}
+/* 네비/이어서 읽기 카드 — 스포트라이트 카드의 소형 변형(상단 카테고리 색 스트립) */
+.spot-card.is-sm .spot-cover {
+  aspect-ratio: auto;
+  height: 8px;
+}
+.spot-card.is-sm .spot-body {
+  padding: 18px;
+  gap: 8px;
+}
+.spot-card.is-sm .spot-title {
+  font-size: 16px;
+}
+.spot-label {
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+.spot-card.is-empty {
+  opacity: 0.6;
+  --c1: var(--ink-faint);
+  --c2: var(--ink-faint);
+}
+.spot-card.is-empty:hover {
+  transform: none;
+}
+.spot-card.is-empty::before,
+.spot-card.is-empty::after {
+  display: none;
+}
+.post-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity 0.2s,
+    transform 0.2s,
+    border-color 0.15s,
+    color 0.15s;
+}
+.post-top.is-on {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.post-top:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* 코드 블록 — rehype-pretty-code figure 에 다크 서피스(github-dark-dimmed) + 바(언어 · 복사) */
+.prose figure[data-rehype-pretty-code-figure] {
+  margin: 22px 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #22272e;
+}
+.prose figure[data-rehype-pretty-code-figure] pre {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 16px 18px;
+  background: transparent;
+  color: #adbac7;
+}
+.prose figure[data-rehype-pretty-code-figure] figcaption,
+.prose .code-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 14px;
+  background: #2d333b;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #8b949e;
+}
+.prose .code-bar button {
+  border: 0;
+  border-radius: 4px;
+  padding: 2px 6px;
+  background: transparent;
+  color: #adbac7;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.prose .code-bar button:hover {
+  background: #444c56;
+}
+@media (prefers-reduced-motion: reduce) {
+  .post-top,
+  .post-progress,
+  .spot-glow,
+  .spot-seg::before,
+  .spot-card {
+    transition: none;
+  }
+  .spot-h1,
+  .spot-dot {
+    animation: none;
+  }
 }

@@ -29,6 +29,7 @@ import remarkMath from 'remark-math'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import { unified } from 'unified'
+import { rehypeCollectHeadings, type Heading } from './headings'
 
 import cssLang from '@shikijs/langs/css'
 import htmlLang from '@shikijs/langs/html'
@@ -68,11 +69,24 @@ const processor = unified()
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeRaw)
   .use(rehypeSlug)
+  .use(rehypeCollectHeadings)
   .use(rehypeKatex)
   .use(rehypePrettyCode, rehypePrettyCodeOptions)
   .use(rehypeStringify)
 
-export async function renderMarkdownToHtml(markdown: string): Promise<string> {
+export interface RenderedMarkdown {
+  html: string
+  /** 본문 h2/h3 목차 — rehypeCollectHeadings 수집 결과 */
+  headings: Heading[]
+}
+
+/** 본문 HTML + 목차. 상세 페이지(getPostBySlug)가 소비한다 */
+export async function renderMarkdown(markdown: string): Promise<RenderedMarkdown> {
   const file = await processor.process(markdown)
-  return String(file)
+  const headings = (file.data.headings as Heading[] | undefined) ?? []
+  return { html: String(file), headings }
+}
+
+export async function renderMarkdownToHtml(markdown: string): Promise<string> {
+  return (await renderMarkdown(markdown)).html
 }

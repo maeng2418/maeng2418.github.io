@@ -14,6 +14,8 @@ function stub(partial: Partial<PostMeta> & { title: string }): PostMeta {
     thumbnail: null,
     draft: false,
     excerpt: '',
+    readingMinutes: 1,
+    charCount: 0,
     ...partial,
   }
 }
