@@ -82,9 +82,7 @@ draft: false
 }
 ```
 
-이렇게 되면 `include`에 `@types`를 포함시키지 않아도 `node_modules/@types/node.d.ts` 와, `@types/utils.d.ts` 정의 파일을 읽을 수 있음.
-
-> 단, `types`를 지정하지 않았을 때 default 값이 모두 가져오는거라, `node_modules` 에 있는 `@types` 내 모든 타입 정의 파일을 가져오지 못함.
+이렇게 되면 `include`에 `@types`를 포함시키지 않아도 `node_modules/@types/node.d.ts`와 `@types/utils.d.ts` 정의 파일을 읽을 수 있습니다.
 
 ## 해결 방법 2
 
@@ -102,7 +100,7 @@ draft: false
 
 이 설정을 사용하면 `src` 하위 파일뿐만 아니라 `@types` 하위 파일도 TypeScript 컴파일러가 인식하게 됩니다. 이 방법으로 `@types`에 있는 모든 타입 정의 파일들을 `include` 경로에 명시적으로 포함시켜 문제가 해결됩니다.
 
-**이럴 경우, typeRoots 생략 가능!**
+**이럴 경우 typeRoots를 생략할 수 있습니다.**
 `include` 옵션을 사용하면 TypeScript는 해당 경로에 있는 모든 파일을 타입 검사 및 컴파일 대상으로 포함하므로, `typeRoots`를 명시적으로 설정하지 않아도 됩니다.
 
 ```json
@@ -114,4 +112,4 @@ draft: false
 }
 ```
 
-**`include`** 옵션을 통해 `src`, `@types` 디렉터리 내의 모든 파일을 컴파일러가 포함할 파일로 지정하고, `typeRoots` 옵션과 `types` 을 생략하여 기본적으로 `node_modules/@types` 내의 모든 타입이 자동으로 포함됩니다.
+**`include`** 옵션을 통해 `src`, `@types` 디렉터리 내의 모든 파일을 컴파일러가 포함할 파일로 지정하고, `typeRoots` 옵션과 `types`를 생략하면 기본적으로 `node_modules/@types` 내의 모든 타입이 자동으로 포함됩니다.

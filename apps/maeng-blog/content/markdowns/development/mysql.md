@@ -8,14 +8,14 @@ draft: false
 
 ## MySQL
 
-- MySQL은 오픈소스 RDMBS 중 가장 점유율이 높다.
-- Linux OS와 그 위에서 돌아가는 MysQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있다.
+- MySQL은 오픈소스 RDBMS 중 가장 점유율이 높습니다.
+- Linux OS와 그 위에서 돌아가는 MySQL을 설치하고 관리할 수 있는 능력은 백엔드 개발자의 기본 소양이라고 할 수 있습니다.
 
 ## Install - MacOS
 
 `$ brew update`
 
-`$ brew install mysql` ← MySQL 최신버젼 설치
+`$ brew install mysql` ← MySQL 최신 버전 설치
 
 `$ brew list` ← brew로 설치한 목록 확인
 
@@ -76,9 +76,9 @@ draft: false
 **"Reload privilege tables now? (Press y|Y for Yes, any other key for No)"**
 ```
 
-**Yes - 적용시킨다.**
+**Yes - 적용합니다.**
 
-**No - 적용시키지 않는다.**
+**No - 적용하지 않습니다.**
 <br/><br/>
 
 `$ mysql -uroot -p` ← 로그인<br/><br/>

@@ -8,8 +8,8 @@ draft: false
 
 ## Git? GitHub?
 
-- Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)이다.
-- GitHub은 Git을 호스팅 해 주는 사이트로, '소셜 코딩'을 표방하며 가장 유명하고 널리 사용된다.
+- Git은 소스 코드 버전 관리 및 협업을 위해 가장 많이 사용되는 VCS (Version Control System)입니다.
+- GitHub은 Git을 호스팅해 주는 사이트로, '소셜 코딩'을 표방하며 가장 유명하고 널리 사용됩니다.
 
 ## Git 설치하기
 
@@ -23,7 +23,7 @@ draft: false
 
 ![](../../images/git&github_2.png)
 
-## 로컬에 클론만들기
+## 로컬에 클론 만들기
 
 `$ git clone https://github.com/maeng2418/Exercise.git`
 
@@ -33,13 +33,13 @@ draft: false
 
 ![](../../images/git&github_4.png)
 
-## 버젼 **작성자 설정**
+## 버전 **작성자 설정**
 
 `$ git config --global user.name "자신의 닉네임"`
 
 `$ git config --global user.email "자신의 이메일"`
 
-버전에 포함될 버전을 만든 사람에 대한 정보를 설정합니다. 이 설정은 ~/.gitconfig 파일에 저장되고 1번만 해주면 됩니다.
+버전에 포함될 커밋을 만든 사람에 대한 정보를 설정합니다. 이 설정은 ~/.gitconfig 파일에 저장되고 한 번만 해주면 됩니다.
 
 ## Git commit 에디터 설정
 
@@ -47,18 +47,18 @@ draft: false
 
 ## 작업 시나리오
 
-1. 로컬에 클론을 받는다. (default 브랜치로 받아짐.)
-2. feature 브랜치를 만든다.
+1. 로컬에 클론을 받습니다. (default 브랜치로 받아집니다.)
+2. feature 브랜치를 만듭니다.
 
    `$ git checkout -b feature/readme`
 
-   옵션 b : 브랜치를 생성하고 바로 전환.
+   옵션 b : 브랜치를 생성하고 바로 전환합니다.
 
-3. 작업을 하고 커밋을 하고 `push`를 한다.
-4. github으로 가서 `pull-request`를 날린다.
-5. dev에 `merge`를 시킨다.
-6. 로컬에서 dev 브랜치로 전환하고 `pull`을 해서 업데이트를 한다.
-7. 로컬과 원격 feature 브랜치를 삭제한다.
+3. 작업을 하고 커밋을 하고 `push`를 합니다.
+4. GitHub으로 가서 `pull-request`를 보냅니다.
+5. dev에 `merge`를 시킵니다.
+6. 로컬에서 dev 브랜치로 전환하고 `pull`을 해서 업데이트합니다.
+7. 로컬과 원격 feature 브랜치를 삭제합니다.
 
    `$ git branch -d B(브랜치명)`
 
@@ -103,11 +103,11 @@ draft: false
 7. 어떻게 보다는 무엇과 왜를 설명한다
 
 - **자주 사용하는 타입명**
-  - `docs` : 문서와 관련된 커밋입니다.
-  - `feat` : 기능 개발과 관련된 커밋입니다.
+  - `docs` : 문서와 관련된 커밋입니다.
+  - `feat` : 기능 개발과 관련된 커밋입니다.
   - `style` : 스타일링과 관련된 커밋입니다.
-  - `refactor` : 코드 리팩토링과 관련된 커밋입니다.
-  - `fix` : 버그 해결과 관련된 커밋입니다.
-  - `hotfix` : 급한 버그 해결과 관련된 커밋입니다.
-  - `test` : 테스트 코드와 관련된 커밋입니다.
-  - `chore` : 환경설정 및 기타 변경사항에 사용하는 커밋입니다.
+  - `refactor` : 코드 리팩토링과 관련된 커밋입니다.
+  - `fix` : 버그 해결과 관련된 커밋입니다.
+  - `hotfix` : 급한 버그 해결과 관련된 커밋입니다.
+  - `test` : 테스트 코드와 관련된 커밋입니다.
+  - `chore` : 환경설정 및 기타 변경사항에 사용하는 커밋입니다.

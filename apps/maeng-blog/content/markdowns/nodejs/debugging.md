@@ -8,25 +8,25 @@ draft: false
 
 ## **VSCODE-NodeJS 디버깅**
 
-1. **vscode의 디버깅 탭에서 create a launch.json file을 클릭한다.**
+1. **vscode의 디버깅 탭에서 create a launch.json file을 클릭합니다.**
 
    .vscode 폴더에 launch.json 파일이 생성된다.<br/><br/>
 
    ![](../../images/debugging_1.png)<br/><br/>
 
-2. **break 포인트를 건다.**
+2. **break 포인트를 걸어줍니다.**
 
    ![](../../images/debugging_2.png)<br/><br/>
 
 3. **디버깅 시작**
 
-   F5 버튼을 누르면 디버깅을 시작한다.<br/><br/>
+   F5 버튼을 누르면 디버깅이 시작됩니다.<br/><br/>
 
 4. **VARIABLES와 WATCH, CALL STACK을 확인할 수 있다.**
 
    ![](../../images/debugging_3.png)
 
-   → **watch**를 이용해서 디버깅을 진행하면서 breakpoint로 디버깅이 멈춘 라인의 상태에서 내가 원하는 변수의 값이나 상태 등을 확인 할 수 있다.
+   → **watch**를 이용해서 디버깅을 진행하면서 breakpoint로 디버깅이 멈춘 라인의 상태에서 원하는 변수의 값이나 상태 등을 확인할 수 있습니다.
 
 ## **Chrome-NodeJS 디버깅**
 
@@ -38,6 +38,6 @@ draft: false
 
    ![https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%81%AC%EB%A1%AC_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%8F%84%EA%B5%AC.png](https://github.com/woowa-techcamp-2020/maeng2418-brightchul-0407chan-learn-node/raw/master/NodeStudy/img/%ED%81%AC%EB%A1%AC_%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%8F%84%EA%B5%AC.png)<br/><br/>
 
-3. 여**기서 디버깅 하고싶은 js파일을 선택해 디버깅을 진행 할 수 있습니다.**
+3. 여**기서 디버깅하고 싶은 js 파일을 선택해 디버깅을 진행할 수 있습니다.**
 
    ![](../../images/debugging_4.png)
