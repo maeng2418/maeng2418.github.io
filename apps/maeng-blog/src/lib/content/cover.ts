@@ -14,6 +14,7 @@ const COVERS: Record<string, Cover> = {
   web: { c1: '#6d28d9', c2: '#a78bfa', mark: 'WWW' },
   git: { c1: '#be123c', c2: '#fb7185', mark: 'GIT' },
   nodejs: { c1: '#3f6212', c2: '#84cc16', mark: 'NODE' },
+  'ai news': { c1: '#4f46e5', c2: '#9333ea', mark: 'AI' },
 }
 
 const FALLBACK: Cover = { c1: '#2b3fea', c2: '#6b7cff', mark: '' }
