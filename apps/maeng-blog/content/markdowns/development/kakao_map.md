@@ -8,9 +8,9 @@ draft: false
 
 ## 시작하기
 
-1. [카카오 개발자 사이트](https://developers.kakao.com/)에 로그인한다.
-2. 로그인 후 앱키(자바스크립트)를 발급받는다.
-3. WEB 플랫폼에서 사이트 도메인을 등록한다.
+1. [카카오 개발자 사이트](https://developers.kakao.com/)에 로그인합니다.
+2. 로그인 후 앱키(자바스크립트)를 발급받습니다.
+3. WEB 플랫폼에서 사이트 도메인을 등록합니다.
 
    ![kakaomap.png](../../images/kakao_map_1.png)
 

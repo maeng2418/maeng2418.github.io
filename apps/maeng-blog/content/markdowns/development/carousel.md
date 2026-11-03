@@ -10,9 +10,9 @@ draft: false
 
 ### **요구사항**
 
-1. 터치로 슬라이드를 이동시킬 수 있다.
-2. 양쪽 버튼을 클릭하여 슬라이드를 이동시킬 수 있다.
-3. 무한 반복 슬라이드가 되어야 한다.
+1. 터치로 슬라이드를 이동시킬 수 있습니다.
+2. 양쪽 버튼을 클릭하여 슬라이드를 이동시킬 수 있습니다.
+3. 무한 반복 슬라이드가 되어야 합니다.
 
 ## 구현
 
@@ -30,8 +30,8 @@ draft: false
 </div>
 ```
 
-- carousel-container : 전체적인 케로셀 컨테이너
-- carousel-slide : 슬라이드를 담을 컨테이너(그릇?!) 정도로 이해하면 될 거 같다.
+- carousel-container : 전체적인 캐러셀 컨테이너
+- carousel-slide : 슬라이드를 담는 컨테이너라고 이해하면 됩니다.
 - prev, next : 슬라이드 이동 버튼
 
 ```css
@@ -105,7 +105,7 @@ draft: false
 }
 ```
 
-- CSS는 간략히 설명하자면, carousel-container라는 메인 컨테이너안에 엄청나게 긴 슬라이드 컨테이너 박스 carousel-slide가 있고 이 안에는 여러 슬라이드들이 한 줄로 길게 정렬되어 있다. 그리고 나서 carousel-container에게 overflow: hidden을 주어 엄청나게 긴 carousel-slide 를 숨긴다.
+- CSS를 간략히 설명하면, carousel-container라는 메인 컨테이너 안에 길게 늘어선 슬라이드 컨테이너인 carousel-slide가 있고, 그 안에는 여러 슬라이드들이 한 줄로 정렬되어 있습니다. 이후 carousel-container에 overflow: hidden을 적용하여 길게 늘어선 carousel-slide를 숨깁니다.
 
 ```jsx
 const carouselContainer = document.querySelector('.carousel-container')
@@ -234,8 +234,8 @@ next.addEventListener('click', (e) => shiftSlide(1))
 carouselSlide.addEventListener('transitionend', checkIndex)
 ```
 
-- carousel-slide를 left를 이용해서 직접이동시키는 방식이 아니라 transfrom과 translateX를 이용해서 이동시키는 거 처럼 보이는거라 offsetLeft값을 가져오지 못하여 이를 어떻게 해결할까 하다가 이벤트가 발생하는 지점들을 계산하여 이용하였고 추가적으로 width와 index를 이용하여 이동시켰다.
-- 연속으로 버튼을 누른다던가 할 때, transition이 끝나기 전에 클릭이 되어 범위를 벗어나 의도치 않은 동작이 발생하는 경우가 있어 이를 방지하기 위해 안전코드인 allowShift를 추가하였다.
+- carousel-slide를 left 속성으로 직접 이동시키는 방식이 아니라 transform과 translateX를 이용해 이동하는 것처럼 보이는 방식이라 offsetLeft 값을 가져올 수 없었습니다. 이를 해결하기 위해 이벤트가 발생하는 지점들을 계산하여 활용하고, 추가적으로 width와 index를 이용하여 이동시켰습니다.
+- 연속으로 버튼을 누를 때 transition이 끝나기 전에 클릭이 되어 범위를 벗어나 의도치 않은 동작이 발생하는 경우가 있어, 이를 방지하기 위해 안전 코드인 allowShift를 추가하였습니다.
 
 ## 참고
 
