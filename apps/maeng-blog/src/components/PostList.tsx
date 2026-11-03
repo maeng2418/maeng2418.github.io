@@ -41,6 +41,32 @@ export default function PostList({
   const counts = countByCategory(posts)
   const filtered = filterByCategory(posts, selected)
 
+  // URL query parameter (?category=...) 동기화 — 직접 링크 및 공유 지원
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined') return
+    const params = new URLSearchParams(window.location.search)
+    const cat = params.get('category')
+    if (cat) {
+      const matched = categories.find((c) => c.toLowerCase() === cat.toLowerCase())
+      if (matched) {
+        setSelected(matched)
+      }
+    }
+  }, [categories])
+
+  const handleSelect = (category: string) => {
+    setSelected(category)
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href)
+      if (category === ALL_CATEGORY) {
+        url.searchParams.delete('category')
+      } else {
+        url.searchParams.set('category', category)
+      }
+      window.history.replaceState(null, '', url.pathname + url.search)
+    }
+  }
+
   // 선택 탭의 위치/너비를 세그먼트 컨테이너의 CSS 변수로 — 인디케이터가 CSS transition 으로 미끄러진다
   useLayoutEffect(() => {
     const seg = segRef.current
@@ -61,7 +87,7 @@ export default function PostList({
                 key={category}
                 type="button"
                 aria-pressed={active}
-                onClick={() => setSelected(category)}
+                onClick={() => handleSelect(category)}
                 className={active ? 'is-on' : ''}
               >
                 {category === ALL_CATEGORY ? t('all') : category}
