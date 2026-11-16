@@ -2,6 +2,7 @@
 title: '[AI News] 2026년 11월 3주차 AI 트렌드 리포트: 결정 모델(Decision Model)의 표준화와 Claude Fable 5.2, Gemini 4 세대 교체'
 date: 2026-11-16 09:00:00
 category: 'AI News'
+thumbnail: '../../images/ai-news-2026-11-w3.png'
 draft: false
 ---
 
