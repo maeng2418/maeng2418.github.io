@@ -5,7 +5,7 @@ category: 'AI News'
 draft: false
 ---
 
-지난 7일(2026년 11월 9일~16일)간 프론트엔드 및 풀스택 엔지니어링 생태계에서 공개된 결정 모델(Decision Model) 표준화 동향, 프론티어 모델 세대 교체, 자바스크립트 AI 툴킷 릴리스, 그리고 MCP 참조 서버 보안 패치를 정리했습니다.
+지난 7일(2026년 11월 9일~16일)간 프론트엔드 및 풀스택 엔지니어링 생태계에서 공개된 결정 모델(Decision Model) 표준화 동향, 프론티어 모델 세대 교체, 자바스크립트 AI 툴킷 릴리스, MCP 참조 서버 보안 패치, 그리고 에이전트가 프론트엔드 코드를 쓸 때 참조하는 두 계층(디자인 시스템과 웹 플랫폼 가이드)의 공개를 정리했습니다.
 
 > 💡 **이번 주 핵심 요약 (3줄 요약)**
 >
@@ -76,7 +76,7 @@ Anthropic의 참조 MCP 서버 모음이 서버 3종의 취약점 6건을 고치
 
 ## 2. Weekly Trending Repo (이번 주 급상승 오픈소스)
 
-GitHub 주간 트렌딩(2026년 11월 16일 집계)에서 이번 주 가장 빠르게 성장한 저장소 중 실무 연관성이 높은 세 곳을 골랐습니다.
+GitHub 주간 트렌딩(2026년 11월 16일 집계)에서 이번 주 가장 빠르게 성장한 저장소 중 실무 연관성이 높은 네 곳을 골랐습니다. 마지막 두 곳은 디자인 시스템과 웹 플랫폼 표준이라는 서로 다른 계층에서 에이전트의 코드 생성을 유도하는 도구이므로, 함께 읽으면 역할 분담이 분명해집니다.
 
 ### 2.1 vercel-labs/agent-browser (이번 주 +4,217 stars)
 
@@ -100,10 +100,30 @@ GitHub 주간 트렌딩(2026년 11월 16일 집계)에서 이번 주 가장 빠�
 
 ### 2.3 meta/astryx
 
-- **저장소**: [meta/astryx](https://github.com/meta/astryx) (TypeScript, MIT, 28,839 stars)
-- **최근 릴리스**: v0.7.13(11월 10일)부터 v0.7.16(11월 14일)까지 닷새 사이에 네 번의 패치
-- **핵심 특징**: 저장소 스스로 "완전히 커스터마이즈 가능하고 에이전트가 바로 쓸 수 있는(agent ready)" 오픈소스 디자인 시스템을 표방합니다. 컴포넌트 API와 문서가 에이전트의 코드 생성 대상으로 소비되는 것을 전제로 설계된 점이 기존 디자인 시스템과 다릅니다.
-- **실무 활용**: 디자인 토큰과 컴포넌트를 사람과 에이전트가 같은 계약으로 읽게 만들려는 시도이므로, 사내 디자인 시스템에 에이전트용 메타데이터를 붙이는 작업의 참고 사례가 됩니다.
+- **저장소**: [meta/astryx](https://github.com/meta/astryx) (TypeScript, MIT, 29,049 stars, Beta)
+- **최근 릴리스**: v0.7.13(11월 10일)부터 v0.7.16(11월 14일)까지 닷새 사이에 네 번의 패치가 나왔고, 모든 `@astryxdesign/*` 패키지가 같은 버전으로 함께 배포됩니다.
+- **핵심 특징**:
+  - Meta 안에서 8년간 자란 디자인 시스템을 MIT로 공개한 것입니다. 페이스북·인스타그램·WhatsApp 등 13,000개 이상 앱을 구동하며 검증됐고, 150개 이상의 접근성 컴포넌트와 일곱 가지 기본 테마, 페이지 템플릿을 함께 배포합니다. React 19 이상을 전제하며 빌드 플러그인 없이 미리 빌드된 CSS를 임포트하는 방식입니다.
+  - **스타일링 종속이 없습니다.** 내부 스타일은 StyleX로 작성했지만 소비자에게는 드러나지 않습니다. 프로젝트가 이미 쓰는 Tailwind, CSS Modules, 일반 CSS 어느 쪽이든 `className`으로 덮어쓸 수 있고, 테마는 `defineTheme({ extends, ... })`로 CSS 커스텀 프로퍼티를 갈아끼우는 구조라 컴포넌트 소스를 포크하거나 래핑하지 않고 브랜드화할 수 있습니다. 더 깊이 들어가야 할 때는 `swizzle`이 컴포넌트 소스 전체를 프로젝트로 꺼내 줍니다.
+  - **에이전트가 읽는 표면을 제품의 일부로 둡니다.** `@astryxdesign/cli`의 `init`이 컴포넌트 인덱스를 `AGENTS.md`·`CLAUDE.md`에 써 넣고, `component`·`docs`·`template`·`theme` 명령이 같은 문서를 온디맨드로 돌려줍니다. 출력은 `--detail brief|compact|full`과 `--dense`, `--json`으로 조절되고, `manifest --json`은 명령·플래그·응답 타입·종료 코드를 담은 자기서술 매니페스트를 내놓습니다. CLI가 스크래핑 대상이 아니라 계약이라는 뜻입니다. 문서 사이트는 컴포넌트 문서를 MCP(Streamable HTTP) 서버로도 노출하며, `search`가 압축된 브리프를, `get`이 전체 문서와 예제를 돌려줍니다(브리프 1건당 약 1.5K 토큰).
+  - **Vibe Tests로 API를 측정해서 고칩니다.** 매일 밤 같은 프롬프트 배터리를 네 구성(Astryx, Astryx+Tailwind, shadcn/Tailwind 베이스라인, 순수 HTML)에 던지고, 코드를 만든 에이전트가 스스로를 평가하지 않도록 별도 judge 에이전트가 정확성·접근성·코드 품질·효율성·유지보수성·디자인(진행 중) 여섯 축으로 채점합니다. 이 기록이 실제 API 결정을 바꿨습니다. `Accordion`을 `CollapsibleGroup`으로 개명해 발견성이 5점 만점에 3.5에서 4.7로 올랐고, AI가 생성한 코드에는 StyleX 전용 `xstyle`보다 `className`이 더 나은 오버라이드 수단임을 확인했으며, 요소당 스타일 결정 수는 약 1.7로 순수 Tailwind의 약 2.3보다 낮습니다.
+  - **제약을 API에 새깁니다.** props는 `variant`, `size`처럼 유한한 타입으로 선언되고, `Button`의 `label`처럼 접근성에 필요한 값은 선택이 아니라 필수입니다. 자유로운 조합 대신 정해진 선택지를 주는 방식으로 에이전트가 틀릴 여지를 줄이고, 그래도 없는 기능이 필요하면 `npx astryx gap-report`로 미지원 패턴을 보고하게 합니다. 환각으로 흘리지 않고 리포트로 남기는 쪽을 택한 것입니다.
+- **실무 활용**: 사내 디자인 시스템에 에이전트용 계약(문서 인덱스, 자기서술 매니페스트, 제약 기반 props)을 붙이는 작업의 참고 사례입니다. 다만 아직 Beta(0.x)이고 React 19 이상을 전제하므로, 도입 판단은 자체 컴포넌트로 같은 프롬프트 배터리를 돌려 비교하는 편이 안전합니다. 공개 스코어카드에는 베이스라인이 더 많은 밤을 이긴 기록도 그대로 남아 있습니다.
+
+### 2.4 GoogleChrome/modern-web-guidance-src (배포 저장소 GoogleChrome/modern-web-guidance)
+
+- **저장소**: [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) (TypeScript, Apache-2.0, 7,397 stars). 실제로 설치하는 대상은 배포 저장소 [GoogleChrome/modern-web-guidance](https://github.com/GoogleChrome/modern-web-guidance)이고, 소스 저장소는 가이드를 저작·보정·평가하는 코드를 담습니다. 코드는 Apache-2.0, `guides/` 아래 가이드 본문은 CC BY 4.0입니다.
+- **최근 릴리스**: 배포 저장소가 11월 10일 v1.0.0에 도달했습니다. 11월 2일 0.0.197까지 주 단위 0.0.x 패치를 이어 오다 1.0으로 올라선 것입니다.
+- **핵심 특징**:
+  - Google Chrome, Microsoft Edge, Mozilla Firefox, MDN 팀이 함께 관리(steward)합니다. 특정 벤더의 이익이 아니라 플랫폼 표준 쪽에서 나온 도구라는 점이 성격을 결정합니다.
+  - 목적은 코딩 에이전트가 학습 데이터에 흔한 레거시 자바스크립트와 폴리필로 되돌아가는 습관을 끊는 것입니다. View Transitions, CSS Anchor Positioning, `popover`, `field-sizing: content`, `:user-invalid`, `scheduler.yield`, INP 진단, Passkeys, 온디바이스 Built-in AI까지 250개 기능과 203개 실무 유스케이스를 가이드로 제공합니다.
+  - **설치**: `npx modern-web-guidance@latest install`이 대화형 위저드를 띄우고, Vercel Skills CLI(`npx skills add GoogleChrome/modern-web-guidance`), `gh skill install`, Claude Code 플러그인 등 여러 하네스를 지원합니다. 설치되는 스킬 지침 자체는 205토큰 안팎으로 얇게 유지합니다.
+  - **동작**: 에이전트가 `search "animate a dialog modal backdrop"`로 후보를 찾고, `retrieve`로 해당 가이드 하나만 컨텍스트에 넣습니다. 검색은 네트워크 호출도 API 키도 없는 오프라인 임베딩 모델과 BM25로 돌고, npm 패키지가 의존성 없이 자기완결이라 지연과 공급망 위험이 함께 줄어듭니다. 가이드는 eval을 거쳐 모델이 이미 아는 상투적인 내용을 덜어내 토큰 효율을 맞춥니다.
+  - **안정성 게이트**: Origin Trial API나 최근 3개월 안에 한 엔진에만 들어간 불안정 기능은 `search`에는 뜨지만 `retrieve`에서 막힙니다. 개발자가 `set-allow-origin-trials`, `set-allow-volatile-features`로 명시적으로 허용하기 전에는 에이전트가 그 API를 코드에 넣지 못합니다.
+  - `legacy-scan`은 이미 있는 코드에서 레거시 패턴을 찾아 현대화 후보를 뽑습니다. `npx modern-web-guidance@latest legacy-scan .`으로 실행합니다.
+- **실무 활용**: 신규 화면을 에이전트에 맡길 때 "라이브러리를 하나 더 깔지 말고 플랫폼 API로 풀라"는 방향을 잡아 주는 얇은 계층입니다. 설치 수, 호출한 에이전트 이름, 가이드 ID, 에이전트가 만든 검색어를 익명 수집하므로(원문 프롬프트는 수집하지 않습니다), 사내 정책상 필요하면 환경 변수 `DISABLE_TELEMETRY=1`로 끕니다.
+
+두 저장소는 같은 문제를 서로 다른 계층에서 풉니다. Astryx는 "이 화면을 어떤 컴포넌트로 조립할 것인가"라는 질문에 답하는 디자인 시스템 계층이고, Modern Web Guidance는 "그 컴포넌트가 아닌 나머지를 어떤 플랫폼 API로 채울 것인가"라는 질문에 답하는 표준 계층입니다. 디자인 시스템이 컴포넌트 계약과 테마를 쥐고, 레이아웃·전환·폼 검증·성능 같은 부분은 브라우저가 이미 제공하는 API로 채우는 식으로 나누면 두 지침이 서로 충돌하지 않고 각자의 층에서 답을 냅니다. 두 도구 모두 "모델이 알아서 잘하겠지"에 기대지 않고 문서 인덱스, 제약, 평가라는 세 가지 수단으로 결과를 통제한다는 점도 같습니다.
 
 ---
 
