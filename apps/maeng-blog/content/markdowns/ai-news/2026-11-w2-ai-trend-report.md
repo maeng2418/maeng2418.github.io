@@ -2,6 +2,7 @@
 title: '[AI News] 2026년 11월 2주차 AI 트렌드 리포트: Model Context Protocol(MCP) 생태계 확장과 Vercel AI SDK 최신 에이전트 패턴'
 date: 2026-11-09 09:00:00
 category: 'AI News'
+thumbnail: '../../images/ai-news-2026-11-w2.png'
 draft: false
 ---
 

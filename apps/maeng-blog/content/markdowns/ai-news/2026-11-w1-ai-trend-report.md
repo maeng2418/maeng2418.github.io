@@ -2,6 +2,7 @@
 title: '[AI News] 2026년 11월 1주차 AI 트렌드 리포트: Claude Code 프리뷰, NVIDIA Auto-Ontology와 REA 세이프가드 이슈'
 date: 2026-11-04 07:30:00
 category: 'AI News'
+thumbnail: '../../images/ai-news-2026-11-w1.png'
 draft: false
 ---
 
